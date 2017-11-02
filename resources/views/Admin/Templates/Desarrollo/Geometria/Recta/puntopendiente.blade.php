@@ -124,7 +124,7 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Determina la pendiente de la recta que pasa por <b>A(2, 3)</b> y <b>B(7, 5)</b>, e investiga si es paralela a la recta que pasa por <b>C(– 1, 4)</b> y <b>D(4, 6)</b> 
+                                                                                Hallar  la ecuación de la recta que pasa por el punto <b>A(1,5)</b> y tiene pendiente <b>2</b>
                                                                             </p>
                                                                         </div>
                                                                     </div>  
@@ -132,49 +132,58 @@
                                                             </div>
                                                         </div><br>
                                                         <div class="row">
-                                                            <div class="col-xs-12"> Calculamos la pendiente para cada punto:</div>
+                                                            <div class="col-xs-12">Primero identificamos cada elemento de la fórmula:</div>
                                                         </div><br>
                                                         <div class="row">
                                                             <div class="well">
                                                                 <div class="row diff-wrapper">
                                                                     <div class="col-xs-12" align="center">
-                                                                       <font size="3"><table border="0" style="text-align: center;">
-                                                                            <tr>
-                                                                                <td rowspan="2"><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>
-                                                                                <td style="border-bottom: 1px black solid;">5 - 3</td>
-                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-                                                                                <td rowspan="2"><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>
-                                                                                <td style="border-bottom: 1px black solid;">6 - 4</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>7 - 2</td>
-                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-                                                                                <td>4 - ( -1 )</td>
-                                                                            </tr>
-                                                                        </table></font>
+                                                                        <font size="3"><center>
+                                                                                m = <b>2</b>
+                                                                                <br><br>
+                                                                                x<sub>1</sub> = <b>1</b>
+                                                                                <br><br>
+                                                                                y<sub>1</sub> = <b>5</b>
+                                                                            </center></font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">Los sustituimos en la fórmula del punto pendiente y simplificamos la operación:</div>
+                                                        </div><br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                       <font size="3"><center>
+                                                                               y - y<sub>1</sub> = m (x - x<sub>1</sub>)
+                                                                               <br><br>
+                                                                               y - 5 = 2 (x - 1)
+                                                                               <br><br>
+                                                                               y - 5 = 2x - 2
+                                                                               <br><br>
+                                                                               y = 2x - 2 + 5
+                                                                               <br><br>
+                                                                               y = 2x + 3
+                                                                           </center></font>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-xs-12">
-                                                                Obteniendo como resultando las siguientes pendientes:
+                                                                Por lo tanto la ecuación de la recta es:
                                                             </div>
                                                         </div><br>
                                                         <div class="row">
                                                             <div class="well">
                                                                 <div class="row diff-wrapper">
                                                                      <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>m<sub>AB</sub></b> =  </font><font size="4"><sup>2</sup>/<sub>5</sub></font><br><br>
-                                                                         <font size="3"><b>m<sub>CD</sub></b>=  </font><font size="4"><sup>2</sup>/<sub>5</sub></font><br><br>
+                                                                        <font size="3"><b>y = 2x + 3</b></font><br><br>
                                                                     </div>                         
                                                                 </div>
                                                             </div>  
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Como ambas pendientes son iguales <b>(m<sub>AB</sub> = m<sub>CD</sub>)</b>, las rectas son paralelas entre sí.
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
