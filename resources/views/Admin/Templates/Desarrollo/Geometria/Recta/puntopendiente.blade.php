@@ -106,6 +106,7 @@
                                             <div align="center">
                                                 <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(1)">1</button>
                                                 <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(2)">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(3)">3</button>
                                             </div>
                                         </div>
                                     </div>
@@ -198,6 +199,94 @@
                                                 </div>
                                             </div>
                                             <div class="row animated fadeInRightBig" style="display: none;" id="Ejemplo2">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <p style="text-align: justify;">
+                                                                                Averigua si la recta que determina los puntos <b>P(3, 5)</b> y <b>Q(– 2, 3)</b> es perpendicular a la recta que pasa por los puntos <b>D(2, – 1)</b> y <b>F( – 4, 14)</b>. 
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>  
+                                                                </div>
+                                                            </div>
+                                                        </div><br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12"> Calculamos la pendiente para cada punto:</div>
+                                                        </div><br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                       <font size="3"><table border="0" style="text-align: center;">
+                                                                            <tr>
+                                                                                <td rowspan="2"><b>m<sub>PQ</sub> = &nbsp;&nbsp;</b></td>
+                                                                                <td style="border-bottom: 1px black solid;">3 - 5</td>
+                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+                                                                                <td rowspan="2"><b>m<sub>DF</sub> = &nbsp;&nbsp;</b></td>
+                                                                                <td style="border-bottom: 1px black solid;">14 - ( -1 )</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>-2 - 3</td>
+                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+                                                                                <td>-4 - 2</td>
+                                                                            </tr>
+                                                                        </table></font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Obteniendo como resultando las siguientes pendientes:
+                                                            </div>
+                                                        </div><br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                     <div class="col-xs-12" align="center">
+                                                                        <font size="3"><b>m<sub>PQ</sub></b> =  </font><font size="4"><sup>2</sup>/<sub>5</sub></font><br><br>
+                                                                         <font size="3"><b>m<sub>DF</sub></b> =  </font><font size="4">-<sup>5</sup>/<sub>2</sub></font><br><br>
+                                                                    </div>                         
+                                                                </div>
+                                                            </div>  
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Como m<sub>DF</sub> = <sup>1</sup>/<sub>m<sub>PQ</sub></sub>, las rectas son perpendiculares, es decir:
+                                                                <br><br>
+                                                                Despejando la ecuación, se cumple que <b><sup>2</sup>/<sub>5</sub>(- <sup>5</sup>/<sub>2</sub>) = -1</b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="panel panel-warning">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <p style="text-align: justify;">
+                                                                        <br>
+                                                                        * Es importante que recuerdes que si las pendientes son iguales <b>(m1 = m2)</b>, las rectas son paralelas entre sí.
+                                                                        <br><br>
+                                                                        * Las rectas son perpendiculares si sus pendientes tienen signos diferentes, es decir <b>m1 = -<sup>1</sup>/<sub>m2</sub></b>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row animated fadeInRightBig" style="display: none;" id="Ejemplo3">
                                                 <div class="row">
                                                     <div class="col-md-8">
                                                         <div class="row">
@@ -1266,6 +1355,7 @@ function cambioEjemplo(opc)
         case 1:
         {
             $("#Ejemplo2").fadeOut(0);
+            $("#Ejemplo3").fadeOut(0);
             $("#Ejemplo1").fadeIn(300);
             $('#Ejemplo1').removeAttr('class').attr('class', '');
             $('#Ejemplo1').addClass('animated');
@@ -1274,10 +1364,19 @@ function cambioEjemplo(opc)
         case 2:
         {
             $("#Ejemplo1").fadeOut(0);
+            $("#Ejemplo3").fadeOut(0);
             $("#Ejemplo2").fadeIn(300);
             $('#Ejemplo2').removeAttr('class').attr('class', '');
             $('#Ejemplo2').addClass('animated');
             $('#Ejemplo2').addClass('fadeInRightBig');
+        }break;
+        case 3:{
+            $("#Ejemplo1").fadeOut(0);
+            $("#Ejemplo2").fadeOut(0);
+            $("#Ejemplo3").fadeIn(300);
+            $('#Ejemplo3').removeAttr('class').attr('class', '');
+            $('#Ejemplo3').addClass('animated');
+            $('#Ejemplo3').addClass('fadeInRightBig');
         }break;
     }
 }
