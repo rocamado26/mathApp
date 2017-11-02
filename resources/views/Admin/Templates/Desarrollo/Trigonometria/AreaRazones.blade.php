@@ -2126,9 +2126,9 @@ function anguloCalculado(id){
 function tour1(){
     var tour = new Tour({
     steps: [{
-        element: "#tour1-1",
+        element: "#tour1-2",
         title: "Paso 1",
-        content: "Ingresa los valores de los lados y ángulos que encuentras en tu enunciado.       Todos los valores ingresados deben estar expresados en grados. ",
+        content: "Debes de elegir el triángulo que más se adecue a tu ejercicio.",
         placement: "top",
         backdrop: true,
         backdropContainer: '#contenido',
@@ -2140,9 +2140,9 @@ function tour1(){
         }
     },
     {
-        element: "#tour1-2",
+        element: "#tour1-1",
         title: "Paso 2",
-        content: "Debes de elegir el triángulo que más se adecue a tu ejercicio.",
+        content: "Ingresa los valores de los lados y ángulos que encuentras en tu enunciado.       Todos los valores ingresados deben estar expresados en grados.",
         placement: "top",
         backdrop: true,
         backdropContainer: '#contenido',

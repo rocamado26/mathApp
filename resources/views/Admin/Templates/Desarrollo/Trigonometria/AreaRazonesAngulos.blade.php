@@ -244,6 +244,11 @@
                 	<div class="panel-heading">
                     	<h4 class="panel-title">
                         	<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false">Prática</a>
+                            <div class="nav navbar-top-links navbar-right ">
+                                <div class="col-xs-3" id="ayuda_boton">
+                                    <button type="button" onclick="ayuda_prac1()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                </div>
+                            </div>
                         </h4>
                     </div>
                 <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
@@ -265,8 +270,8 @@
                     							<div class="row" id="practica1">
 				                    				<div class="col-xs-12">
 				                    					<div class="row">
-					                                    	<div class="col-xs-6">
-						                                    	<div class="row">
+					                                    	<div class="col-xs-6" id="analisis_ejercicio">
+						                                    	<div class="row" id="op_ejemplo">
 							                                		<div class="col-xs-4">
 								                                		<div align="center">
 				                                                            <div class="radio radio-info radio-inline">
@@ -308,7 +313,7 @@
 							                                			<img src="{{asset('img/iconos/trigonometria/areadesarrollo/ejercicioP1.png')}}"/>	
 							                                		</div>
 							                                	</div><br>
-								                    			<div class="row">
+								                    			<div class="row" id="arrastrar_elementos">
 								                    				<div class="col-xs-12">
 							                                    		<div class="row">
 							                                    			<div class="col-xs-2">
@@ -385,7 +390,7 @@
 								                    		<div class="col-xs-6">
 								                    			<div class="row" id="contenedor">
 							                                    	<div class="col-xs-12">
-							                                    		<div class="row">
+							                                    		<div class="row" id="area_arrastrar1">
 							                                    			<div class="col-lg-2">
 							                                    				
 							                                    			</div>
@@ -400,7 +405,7 @@
 							                                    				<button class="btn btn-primary btn-circle" onclick="verificaEjemplo(1)" type="button"><i class="fa fa-check"></i></button>
 							                                    			</div>
 							                                    		</div>
-							                                    		<div class="row">
+							                                    		<div class="row" id="area_arrastrar2">
 							                                    			<div class="col-lg-2">
 							                                    				
 							                                    			</div>
@@ -415,14 +420,13 @@
 							                                    				<button class="btn btn-primary btn-circle" onclick="verificaEjemplo(2)" type="button"><i class="fa fa-check"></i></button>
 							                                    			</div>
 							                                    		</div>
-							                                    		<div class="row">
+							                                    		<div class="row" id="area_respuesta">
 							                                    			<div class="col-xs-12">
 							                                    				<div class="alert alert-success"><p style="text-align: justify;"><div id="dato">Respuesta : </div></p>
 							                                    				</div>
 							                                    			</div>
 							                                    		</div>
 							                                    	</div>
-							                                    	
 							                                    </div>
 								                    		</div>
 					                                    </div>
@@ -439,7 +443,7 @@
 							                        			</div>
 							                        		</div>
 							                        	</div><br>
-				                    					<div class="row">
+				                    					<div class="row" id="area_arrastrar3">
 							                        		<div class="col-xs-12">
 							                        			<div class="col-xs-2">seno 45°<div id="drop1" style="background: #dcdfe0;width: 100%; height: 80px;"></div></div>
 								                        		<div class="col-xs-2">cot 30°<div id="drop2" style="background: #dcdfe0;width: 100%; height: 80px;"></div></div>
@@ -448,73 +452,73 @@
 								                        		<div class="col-xs-2">tan 60°<div id="drop5" style="background: #dcdfe0;width: 100%; height: 80px;"></div></div>
 								                        		<div class="col-xs-2">seno 30°<div id="drop6" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
 							                        		</div>
-								                        	</div>
-								                        	<div class="row">
-								                        		<div class="col-xs-12">
-								                        			<div class="col-xs-2">sen 60°<div id="drop7" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">sec 45°<div id="drop8" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">tan 30°<div id="drop9" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">cos 45°<div id="drop10" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">cot 60°<div id="drop11" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">csc 30°<div id="drop12" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-								                        		</div>
-								                        	</div>
-								                        	<div class="row">
-								                        		<div class="col-xs-12">
-								                        			<div class="col-xs-2">cos 30°<div id="drop13" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">tan 45°<div id="drop14" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">cot 45°<div id="drop15" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">sec 30°<div id="drop16" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">csc 60°<div id="drop17" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-									                        		<div class="col-xs-2">sec 60°<div id="drop18" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
-								                        		</div>
-								                        	</div><br><br>
-								                        	<div class="row">
-								                        		<div class="col-lg-12">
-								                        			<div class="row">
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame1" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar1.png')}}"/></div>
-									                        			<div class="col-xs-2" align="center"><img id="arrastrame2" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar2.png')}}"/></div>
-									                        			<div class="col-xs-2" align="center"><img id="arrastrame3" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar3.png')}}"/></div>
-									                        			<div class="col-xs-2" align="center"><img id="arrastrame4" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar4.png')}}"/></div>
-									                        			<div class="col-xs-2" align="center"><img id="arrastrame5" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar5.png')}}"/></div>
-									                        			<div class="col-xs-2" align="center"><img id="arrastrame6" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar6.png')}}"/></div>
-								                        			</div>
-								                        		</div>
-								                        	</div>
-								                        	<div class="row">
-								                        		<div class="col-lg-12">
-								                        			<div class="row">
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame7" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar7.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame8" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar8.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame9" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar9.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame10" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar10.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame11" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar11.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame12" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar12.png')}}"/></div>
-								                        			</div>
-								                        		</div>
-								                        	</div>
-								                        	<div class="row">
-								                        		<div class="col-lg-12">
-								                        			<div class="row">
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame13" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar13.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame14" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar14.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame15" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar15.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame16" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar16.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame17" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar17.png')}}"/></div>
-								                        				<div class="col-xs-2" align="center"><img id="arrastrame18" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar18.png')}}"/></div>
-								                        			</div>
-								                        		</div>
-								                        	</div>
+								                        </div>
+							                        	<div class="row">
+							                        		<div class="col-xs-12">
+							                        			<div class="col-xs-2">sen 60°<div id="drop7" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">sec 45°<div id="drop8" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">tan 30°<div id="drop9" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">cos 45°<div id="drop10" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">cot 60°<div id="drop11" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">csc 30°<div id="drop12" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+							                        		</div>
+							                        	</div>
+							                        	<div class="row">
+							                        		<div class="col-xs-12">
+							                        			<div class="col-xs-2">cos 30°<div id="drop13" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">tan 45°<div id="drop14" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">cot 45°<div id="drop15" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">sec 30°<div id="drop16" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">csc 60°<div id="drop17" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+								                        		<div class="col-xs-2">sec 60°<div id="drop18" style="background: #dcdfe0; width: 100%; height: 80px;"></div></div>
+							                        		</div>
+							                        	</div><br><br>
+							                        	<div class="row" id="elementos_arrastrar">
+							                        		<div class="col-lg-12">
+							                        			<div class="row">
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame1" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar1.png')}}"/></div>
+								                        			<div class="col-xs-2" align="center"><img id="arrastrame2" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar2.png')}}"/></div>
+								                        			<div class="col-xs-2" align="center"><img id="arrastrame3" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar3.png')}}"/></div>
+								                        			<div class="col-xs-2" align="center"><img id="arrastrame4" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar4.png')}}"/></div>
+								                        			<div class="col-xs-2" align="center"><img id="arrastrame5" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar5.png')}}"/></div>
+								                        			<div class="col-xs-2" align="center"><img id="arrastrame6" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar6.png')}}"/></div>
+							                        			</div>
+							                        		</div>
+							                        	</div>
+							                        	<div class="row">
+							                        		<div class="col-lg-12">
+							                        			<div class="row">
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame7" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar7.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame8" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar8.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame9" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar9.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame10" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar10.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame11" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar11.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame12" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar12.png')}}"/></div>
+							                        			</div>
+							                        		</div>
+							                        	</div>
+							                        	<div class="row">
+							                        		<div class="col-lg-12">
+							                        			<div class="row">
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame13" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar13.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame14" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar14.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame15" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar15.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame16" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar16.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame17" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar17.png')}}"/></div>
+							                        				<div class="col-xs-2" align="center"><img id="arrastrame18" src="{{asset('img/iconos/trigonometria/areadesarrollo/ar18.png')}}"/></div>
+							                        			</div>
+							                        		</div>
+							                        	</div>
 								                        	<br>
-								                        	<div class="row">
-								                        		<div class="col-xs-8"></div>
-								                        		<div class="col-xs-2">
-								                        			<button type="button" class="btn btn-danger btn-rounded" onclick="recargar();"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
-								                        		</div>
-								                        		<div class="col-xs-2">
-								                        			<button type="button" class="btn btn-primary btn-rounded" onclick="verificaPractica();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-								                        		</div>
-								                        	</div>
+							                        	<div class="row" id="botones_prac2">
+							                        		<div class="col-xs-8"></div>
+							                        		<div class="col-xs-2">
+							                        			<button type="button" class="btn btn-danger btn-rounded" onclick="recargar();"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+							                        		</div>
+							                        		<div class="col-xs-2">
+							                        			<button type="button" class="btn btn-primary btn-rounded" onclick="verificaPractica();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+							                        		</div>
+							                        	</div>
 				                    				</div>
 				                    			</div>
                     						</div>
@@ -557,6 +561,11 @@
                     <div class="panel-heading">
                         <h5 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-expanded="false" class="collapsed">Ánalisis del ejercicio</a>
+                            <div class="nav navbar-top-links navbar-right ">
+                                <div class="col-xs-3" id="ayuda_boton">
+                                    <button type="button" onclick="ayuda_analisis()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                </div>
+                            </div>
                         </h5>
                     </div>
                     <div id="collapseOne1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -577,7 +586,7 @@
 	                                                    </div>
 	                                                </div>
 	                                            </div>
-	                                            <div class="row">
+	                                            <div class="row" id="datos_lados">
 	                                                <div class="col-xs-4">
 	                                                    <label>Hipotenusa</label>
 	                                                    <div class="input-group m-b">
@@ -616,7 +625,7 @@
 	                                                    </div>
 			                                    	</div>
 			                                    </div>
-	                                            <div class="row">
+	                                            <div class="row" id="seleccion_angulo">
 			                                    	<div class="col-xs-4">
 			                                    		<div class="radio radio-info radio-inline">
 			                                                <input type="radio" onchange="" id="tipoAngulo1" value="1" name="tipoAngulo" checked="true">
@@ -647,12 +656,17 @@
                 	<div class="panel-heading">
                     	<h4 class="panel-title">
                         	<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1" class="collapsed" aria-expanded="false">Elaboración del plan</a>
+                            <div class="nav navbar-top-links navbar-right ">
+                                <div class="col-xs-3" id="ayuda_boton">
+                                    <button type="button" onclick="ayuda_plan()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                </div>
+                            </div>
                         </h4>
                     </div>
                  	<div id="collapseTwo1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
                         <div class="panel-body">
                         	<div class="row">
-                        		<div class="col-xs-6">
+                        		<div class="col-xs-6" id="seleccion_funcion">
                     				<div class="row">
                         				<div class="col-xs-12">
                         					<div class="alert alert-info">
@@ -673,7 +687,7 @@
                         				<div class="col-md-4" align="center"><button type="button" class="btn btn-w-m btn-default" onclick="imgCargando('6')">cot ()</button></div>
                         			</div>
                         		</div>
-                        		<div class="col-xs-6">
+                        		<div class="col-xs-6" id="area_respuesta2">
 	                        		<div class="row">
 	                        			<div class="col-xs-12">
 	                        				<div class="alert alert-warning">
@@ -1182,9 +1196,11 @@ var v1=0;
 		if (op==1) {
             document.getElementById('practica1').style.display = 'block';
             document.getElementById('practica2').style.display = 'none';
+            $('#ayuda_boton').html('<button type="button" onclick="ayuda_prac1()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>');
         } else {
             document.getElementById('practica2').style.display = 'block';
             document.getElementById('practica1').style.display = 'none';
+            $('#ayuda_boton').html('<button type="button" onclick="ayuda_prac2()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>');
         }
 	}
 
@@ -1677,5 +1693,227 @@ function ResuelveEjercicio(op,v2){
 	} else {
 		$('#Resultado').append('<br>Error en la información');
 	}
+}
+
+function ayuda_prac1(){
+    var tour = new Tour({
+    steps: [{
+        element: "#op_ejemplo",
+        title: "Paso 1",
+        content: "Selecciona el ejemplo a resolver.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#analisis_ejercicio",
+        title: "Paso 2",
+        content: "Analiza la ilustración del ejercicio.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#arrastrar_elementos",
+        title: "Paso 3",
+        content: "Mantén presionado el clic sobre el elemento y arrástralo.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#area_arrastrar1",
+        title: "Paso 4",
+        content: "Coloca los elementos en los depósitos donde corresponden, construyendo la función trigonométrica correcta. Luego dar clic en el botón.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#area_arrastrar2",
+        title: "Paso 5",
+        content: "Arrastra los elementos que corresponden al despeje de la función anterior. Luego dar clic en el botón.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#area_respuesta",
+        title: "Paso 6",
+        content: "Área donde se muestra la respuesta del ejercicio si lo resolviste de forma correcta.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    }
+    ]});
+    // Initialize the tour
+    tour.init();
+    tour.restart();
+    // Start the tour
+    tour.start();
+}
+
+function ayuda_prac2(){
+    var tour = new Tour({
+    steps: [{
+        element: "#elementos_arrastrar",
+        title: "Paso 1",
+        content: "Selecciona el elemento que deseas arrastrar a su correspondiente razón trigonométrica.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#area_arrastrar3",
+        title: "Paso 2",
+        content: "Coloca el elemento según corresponde a la razón trigonométrica y el ángulo.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#botones_prac2",
+        title: "Paso 2",
+        content: "Luego de colocar todos los elementos dar clic en el botón “Comprobar”. Si deseas reiniciar la práctica dar clic en “Reestablecer”.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    }
+    ]});
+    // Initialize the tour
+    tour.init();
+    tour.restart();
+    // Start the tour
+    tour.start();
+}
+
+function ayuda_analisis(){
+    var tour = new Tour({
+    steps: [{
+        element: "#datos_lados",
+        title: "Paso 1",
+        content: "Ingresa los datos de los lados del triángulo y selecciona que lado deseas encontrar.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#seleccion_angulo",
+        title: "Paso 2",
+        content: "Selecciona el ángulo.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    }
+    ]});
+    // Initialize the tour
+    tour.init();
+    tour.restart();
+    // Start the tour
+    tour.start();
+}
+
+function ayuda_plan(){
+    var tour = new Tour({
+    steps: [{
+        element: "#seleccion_funcion",
+        title: "Paso 1",
+        content: "Selecciona la función trigonométrica con la cual es posible resolver el ejercicio.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    },
+    {
+        element: "#area_respuesta2",
+        title: "Paso 2",
+        content: "Área donde podrás ver la respuesta.",
+        placement: "top",
+        backdrop: true,
+        backdropContainer: '#contenido',
+        onShown: function (tour){
+            $('body').addClass('tour-open')
+        },
+        onHidden: function (tour){
+            $('body').removeClass('tour-close')
+        }
+    }
+    ]});
+    // Initialize the tour
+    tour.init();
+    tour.restart();
+    // Start the tour
+    tour.start();
 }
 </script>

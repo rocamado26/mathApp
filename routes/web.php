@@ -271,3 +271,9 @@ Route::get('/circulo', function () {
 Route::get('/graficas', function () {
     return view('Admin.Templates.Desarrollo.Trigonometria.grafica_funciones');
 });
+/*
+	Llamada al area de desarrollo para identidades.
+*/
+Route::get('/identidades_trigonometricas', function () {
+    return view('Admin.Templates.Desarrollo.Trigonometria.identidades_trigonometricas');
+});

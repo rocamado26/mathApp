@@ -19,7 +19,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a href="#">
+                    <a onclick="CargaOpciones('/graficas','','Desarrollo')">
                         <span class="corner"></span>
                             <div class="icon">
                                 <img src="{{asset('img/iconos/trigonometria/funciones/dominio-recorrido-periodo.png')}}" style="height: 90px; width:170px; overflow: hidden; padding: 2px 10px;  text-align: center;"/>
