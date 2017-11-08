@@ -767,13 +767,16 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class=" col-sm-offset-3 col-sm-3">
-                                                                    <button type="buton" onclick="onSelectExercise(1)"
-                                                                            class="btn btn-info">Pendiente
+                                                                    <button id="btnPendiente" type="buton"
+                                                                            onclick="onSelectExercise(1)"
+                                                                            class="btn btn-info animation_select"
+                                                                            data-animation="flipInX">Pendiente
                                                                     </button>
                                                                 </div>
                                                                 <div type="button" class="col-sm-3">
-                                                                    <button onclick="onSelectExercise(2)"
-                                                                            class="btn btn-info">Coordenadas
+                                                                    <button id="btnPuntos" onclick="onSelectExercise(2)"
+                                                                            class="btn btn-white animation_select"
+                                                                            data-animation="flipInX">Coordenadas
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -2141,12 +2144,103 @@
     function onSelectExercise(opc) {
         if (opc == 1) {
             $("#coordenadas").fadeOut(0);
+            $("#Resultado").fadeOut(0);
+            $('#btnPendiente').removeAttr('class').attr('class', '');
+            $('#btnPendiente').addClass('btn btn-info animation_select');
+            $('#btnPuntos').removeAttr('class').attr('class', '');
+            $('#btnPuntos').addClass('btn btn-white animation_select');
             $("#Puntos").fadeIn(300);
+            document.getElementById("x1P").value = "";
+            document.getElementById("y1P").value = "";
+            document.getElementById("mUpP").value = "";
+            document.getElementById("mDownP").value = "";
         }
         else {
             $("#Puntos").fadeOut(0);
+            $("#Resultado").fadeOut(0);
+            $('#btnPuntos').removeAttr('class').attr('class', '');
+            $('#btnPuntos').addClass('btn btn-info animation_select');
+            $('#btnPendiente').removeAttr('class').attr('class', '');
+            $('#btnPendiente').addClass('btn btn-white animation_select');
             $("#coordenadas").fadeIn(300);
         }
+    }
+
+    function generarResolucionP() {
+        var x1P = document.getElementById("x1P").value;
+        var y1P = document.getElementById("y1P").value;
+        var mUpP = document.getElementById("mUpP").value;
+        var mDownP = document.getElementById("mDownP").value;
+        if (x1P === "" || y1P === "" || mUpP === "") {
+            toastr.error('Debes completar los campos necesarios', 'Lo Siento');
+        }
+        else {
+            if (mDownP === "") {
+                //Es entero
+                $("#solucion").html("<center>Identificamos la fórmula de punto pendiente<br><br>" +
+                    "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+                    "<br><br>" +
+                    "Sustituyendo las variables" +
+                    "</center>");
+                var tempY1P;
+                var tempX1P;
+                if (y1P < 0) {
+                    tempY1P = "( " + y1P + " )";
+                }
+                else {
+                    tempY1P = y1P;
+                }
+                if (x1P < 0) {
+                    tempX1P = "( " + x1P + " )";
+                }
+                else {
+                    tempX1P = x1P;
+                }
+                $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = " + mUpP + " ( x - " + tempX1P + " )</b></font>" +
+                    "<br><br>" +
+                    "Simplificamos la fórmula" +
+                    "<br><br>" +
+                    "</center>");
+                if (y1P < 0) {
+                    y1P = y1P * -1;
+                    tempY1P = "+ " + y1P;
+                }
+                else{
+                    tempY1P = "- "+ y1P;
+                }
+                x1P = x1P * -1;
+                var multi = mUpP * x1P;
+                //alert(multi);
+                var tempMulti;
+                if (multi < 0) {
+                    multi = multi * -1;
+                    tempMulti = "- " + multi;
+                }
+                else {
+                    tempMulti = "+ " + multi;
+                }
+                $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = " + mUpP + "x  " + tempMulti + "</b></font>" +
+                    "<br><br></center>");
+                //$("#Puntos").fadeOut(0);
+                $("#coordenadas").fadeOut(0);
+                $("#Resultado").fadeIn(300);
+            }
+            else {
+                //es fraccionario
+            }
+        }
+    }
+
+    function limpiarResolucionP() {
+        document.getElementById("x1P").value = "";
+        document.getElementById("y1P").value = "";
+        document.getElementById("mUpP").value = "";
+        document.getElementById("mDownP").value = "";
+        $("#Resultado").fadeOut(0);
+        $("#coordenadas").fadeOut(0);
+        $("#Puntos").fadeIn(300);
+        toastr.success('Los campos se limpiaron correctamente', 'Excelente');
+
     }
 
     function multiplicarF(numPT, denPT, numRT, denRT) {
