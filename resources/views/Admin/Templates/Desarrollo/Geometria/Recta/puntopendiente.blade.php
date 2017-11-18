@@ -2205,8 +2205,8 @@
                     y1P = y1P * -1;
                     tempY1P = "+ " + y1P;
                 }
-                else{
-                    tempY1P = "- "+ y1P;
+                else {
+                    tempY1P = "- " + y1P;
                 }
                 x1P = x1P * -1;
                 var multi = mUpP * x1P;
@@ -2220,13 +2220,62 @@
                     tempMulti = "+ " + multi;
                 }
                 $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = " + mUpP + "x  " + tempMulti + "</b></font>" +
-                    "<br><br></center>");
+                    "<br><br>"+
+                    "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
                 //$("#Puntos").fadeOut(0);
                 $("#coordenadas").fadeOut(0);
                 $("#Resultado").fadeIn(300);
             }
             else {
                 //es fraccionario
+                $("#solucion").html("<center>Identificamos la fórmula de punto pendiente<br><br>" +
+                    "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+                    "<br><br>" +
+                    "Sustituyendo las variables" +
+                    "</center>");
+                var tempY1P;
+                var tempX1P;
+                if (y1P < 0) {
+                    tempY1P = "( " + y1P + " )";
+                }
+                else {
+                    tempY1P = y1P;
+                }
+                if (x1P < 0) {
+                    tempX1P = "( " + x1P + " )";
+                }
+                else {
+                    tempX1P = x1P;
+                }
+                $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - " + tempX1P + " )</b></font>" +
+                    "<br><br>" +
+                    "Simplificamos la fórmula" +
+                    "<br><br>" +
+                    "</center>");
+                multiplicarF(mUpP, mDownP, x1P, 1);
+                //alert("REsultado de la multiplicacion: "+numeradorMultiGlobal+ " / "+denominadorMultiGlobal);
+                if (y1P < 0) {
+                    y1P = y1P * -1;
+                    tempY1P = "+ " + y1P;
+                }
+                else {
+                    tempY1P = "- " + y1P;
+                }
+                //despues del igual
+                if (numeradorMultiGlobal < 0) {
+                    numeradorMultiGlobal = numeradorMultiGlobal * -1;
+                    tempMulti = "+ <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
+                }
+                else {
+                    tempMulti = "- <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
+                }
+                //impresión de resultado
+                $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>x  " + tempMulti + "</b></font>" +
+                    "<br><br>"+
+                    "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+                //$("#Puntos").fadeOut(0);
+                $("#coordenadas").fadeOut(0);
+                $("#Resultado").fadeIn(300);
             }
         }
     }
@@ -2241,6 +2290,275 @@
         $("#Puntos").fadeIn(300);
         toastr.success('Los campos se limpiaron correctamente', 'Excelente');
 
+    }
+
+    function generarResolucionC(){
+        //alert("funcion");
+        var x1 = document.getElementById("x1C").value;
+        var y1 = document.getElementById("y1C").value;
+        var x2 = document.getElementById("x2C").value;
+        var y2 = document.getElementById("y2C").value;
+
+        //alert(x1+" , "+y1+" , "+x2+" , "+y2);
+
+        if(x1=="" && y1!=="" && x2=="" && y2=="")
+        {
+            toastr.error('Debes completar los campos necesarios', 'Lo Siento');
+        }
+        else{
+
+            //alert("Entro");
+            $("#solucion").html("<center>Conociendo los puntos A("+x1+","+y1+") y B("+x2+","+y2+") y tomando en cuenta la fórmula de la pendiente,<br><br>"+
+                "<font size='3'><b>"+
+                "<table border='0'>"+
+                "<tr>"+
+                "<td rowspan='2'><b>m = &nbsp;&nbsp;</b></td>"+
+                "<td style='border-bottom: 1px green solid;'>Y<sub>2</sub> - Y<sub>1</sub></td>"+
+                "</tr>"+
+                "<tr>"+
+                "<td>X<sub>2</sub> - X<sub>1</sub></td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>"+
+                "<br>"+
+                "</center>");
+            var impreY;
+            var impreX;
+            if (x1<0) {
+                impreX="( "+x1+" )";
+            }
+            else
+            {
+                impreX=x1;
+            }
+            if (y1<0) {
+                impreY="( "+y1+" )";
+            }
+            else
+            {
+                impreY=y1;
+            }
+            $("#solucion").append("<center>"+
+                "Sustituimos los datos obtenidos:"+
+                "<br><br>"+
+                "<font size='3'><b>"+
+                "<table border='0'>"+
+                "<tr>"+
+                "<td rowspan='2'><b>m = &nbsp;&nbsp;</b></td>"+
+                "<td style='border-bottom: 1px green solid;'>"+y2+" - "+impreY+"</td>"+
+                "</tr>"+
+                "<tr>"+
+                "<td>"+x2+" - "+impreX+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>"+
+                "</center>");
+            var restaX;
+            var restaY;
+            restaX=x2-x1;
+            restaY=y2-y1;
+            restaX=parseFloat(restaX);
+            restaY=parseFloat(restaY);
+            if (restaX % 1 ==0) {
+                restaX=parseInt(restaX);
+            }
+            else
+            {
+                restaX=restaX.toFixed(2);
+            }
+            if (restaY % 1 ==0) {
+                restaY=parseInt(restaY);
+            }
+            else
+            {
+                restaY=restaY.toFixed(2);
+            }
+            var FinalX;
+            var FinalY;
+            var retornoFinal;
+            var redujo;//0 n redujo, 1 si redujo;
+            console.log(restaY," , ",restaX);
+            if (restaX!=0 && restaY!=0) {
+                reduce(restaY,restaX);
+                FinalY=nuevoAn;
+                FinalX=nuevoAd;
+                if (restaX==FinalX) {
+                    redujo=0;
+                }
+                else
+                {
+                    redujo=1;
+                }
+                retornoFinal= FinalY / FinalX;
+                if (retornoFinal %1 ==0) {
+                    FinalY=parseInt(retornoFinal);
+                    FinalX=1;
+                }
+            }
+            else
+            {
+                FinalX=restaY / restaX;
+                if (FinalX % 1 ==0) {
+                    FinalY=parseInt(FinalX);
+                    FinalX=1;
+                }
+                else
+                {
+                    FinalX=restaX;
+                    FinalY=restaY;
+                }
+            }
+            if (redujo==1) {
+                if (FinalX==1) {
+                    $("#solucion").append("<center>"+
+                        "Realizando la división obtenemos que la pendiente es de: "+
+                        "<br><br>"+
+                        "<font size='3'><b>m = "+FinalY+"</b></font>"+
+                        "<br><br>"+
+                        "</center>");
+                    esEnteroFinal(x1,y1,FinalY);
+
+                }
+                else
+                {
+                    $("#solucion").append("<center>"+
+                        "Reduciendo la fracción obtenemos que la pendiente es de: "+
+                        "<br><br>"+
+                        "<font size='3'><b>m = <sup>"+FinalY+"</sup>/<sub>"+FinalX+"</sub></b></font>"+
+                        "<br><br>"+
+                        "</center>");
+                    esFraccionFinal(x1,y1,FinalY,FinalX);
+                }
+            }
+            else{
+                if (FinalX==1) {
+                    $("#solucion").append("<center>"+
+                        "Realizando la división obtenemos que la pendiente es de: "+
+                        "<br><br>"+
+                        "<font size='3'><b>m = "+FinalY+"</b></font>"+
+                        "<br><br>"+
+                        "</center>");
+                    esEnteroFinal(x1,y1,FinalY);
+                }
+                else
+                {
+                    $("#solucion").append("<center>"+
+                        "Así obtenemos que la pendiente es de: "+
+                        "<br><br>"+
+                        "<font size='3'><b>m = <sup>"+FinalY+"</sup>/<sub>"+FinalX+"</sub></b></font>"+
+                        "<br><br>"+
+                        "</center>");
+                    esFraccionFinal(x1,y1,FinalY,FinalX);
+                }
+            }
+
+            //$("#Puntos").fadeOut(0);
+            //$("#Resultado").fadeIn(300);
+
+
+        }
+    }
+
+    function esEnteroFinal(x1P,y1P,mUpP){
+
+        $("#solucion").append("<center>Tomando en cuenta las coordenadas del primero punto, sustituimos estos datos en la fórmula punto pendiente<br><br>" +
+            "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+            "<br><br>" +
+            "Sustituyendo las variables" +
+            "</center>");
+        var tempY1P;
+        var tempX1P;
+        if (y1P < 0) {
+            tempY1P = "( " + y1P + " )";
+        }
+        else {
+            tempY1P = y1P;
+        }
+        if (x1P < 0) {
+            tempX1P = "( " + x1P + " )";
+        }
+        else {
+            tempX1P = x1P;
+        }
+        $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = " + mUpP + " ( x - " + tempX1P + " )</b></font>" +
+            "<br><br>" +
+            "Simplificamos la fórmula" +
+            "<br><br>" +
+            "</center>");
+        if (y1P < 0) {
+            y1P = y1P * -1;
+            tempY1P = "+ " + y1P;
+        }
+        else {
+            tempY1P = "- " + y1P;
+        }
+        x1P = x1P * -1;
+        var multi = mUpP * x1P;
+        //alert(multi);
+        var tempMulti;
+        if (multi < 0) {
+            multi = multi * -1;
+            tempMulti = "- " + multi;
+        }
+        else {
+            tempMulti = "+ " + multi;
+        }
+        $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = " + mUpP + "x  " + tempMulti + "</b></font>" +
+            "<br><br>"+
+            "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+        //$("#Puntos").fadeOut(0);
+        $("#Puntos").fadeOut(0);
+        $("#Resultado").fadeIn(300);
+    }
+
+    function esFraccionFinal(x1P,y1P,mUpP,mDownP){
+        $("#solucion").append("<center>Tomando en cuenta las coordenadas del primero punto, sustituimos estos datos en la fórmula punto pendiente<br><br>" +
+            "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+            "<br><br>" +
+            "Sustituyendo las variables" +
+            "</center>");
+        var tempY1P;
+        var tempX1P;
+        if (y1P < 0) {
+            tempY1P = "( " + y1P + " )";
+        }
+        else {
+            tempY1P = y1P;
+        }
+        if (x1P < 0) {
+            tempX1P = "( " + x1P + " )";
+        }
+        else {
+            tempX1P = x1P;
+        }
+        $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - " + tempX1P + " )</b></font>" +
+            "<br><br>" +
+            "Simplificamos la fórmula" +
+            "<br><br>" +
+            "</center>");
+        multiplicarF(mUpP, mDownP, x1P, 1);
+        //alert("REsultado de la multiplicacion: "+numeradorMultiGlobal+ " / "+denominadorMultiGlobal);
+        if (y1P < 0) {
+            y1P = y1P * -1;
+            tempY1P = "+ " + y1P;
+        }
+        else {
+            tempY1P = "- " + y1P;
+        }
+        //despues del igual
+        if (numeradorMultiGlobal < 0) {
+            numeradorMultiGlobal = numeradorMultiGlobal * -1;
+            tempMulti = "+ <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
+        }
+        else {
+            tempMulti = "- <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
+        }
+        //impresión de resultado
+        $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>x  " + tempMulti + "</b></font>" +
+            "<br><br>"+
+            "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+        $("#Puntos").fadeOut(0);
+        $("#Resultado").fadeIn(300);
     }
 
     function multiplicarF(numPT, denPT, numRT, denRT) {
@@ -2258,24 +2576,26 @@
         reduce(nuevoNum, nuevoDen);
         nuevoNum = nuevoAn;
         nuevoDen = nuevoAd;
-        absNumberN = Math.abs(nuevoNum);
-        absNumberD = Math.abs(nuevoDen);
-        if (absNumberN > absNumberD) {
-            division = nuevoNum / nuevoDen;
-            division = parseInt(division);
-            console.log("division: ", division);
-            if (division != 0) {
-                numeradorMultiGlobal = nuevoNum - (division * nuevoDen);
-                enteroMultiGlobal = division;
-                denominadorMultiGlobal = nuevoDen;
-            }
-        }
-        else {
-            reduce(nuevoNum, nuevoDen);
-            numeradorMultiGlobal = nuevoAn;
-            denominadorMultiGlobal = nuevoAd;
-            enteroMultiGlobal = 0;
-        }
+        numeradorMultiGlobal = nuevoAn;
+        denominadorMultiGlobal = nuevoAd;
+        /*absNumberN = Math.abs(nuevoNum);
+         absNumberD = Math.abs(nuevoDen);
+         if (absNumberN > absNumberD) {
+         division = nuevoNum / nuevoDen;
+         division = parseInt(division);
+         console.log("division: ", division);
+         if (division != 0) {
+         numeradorMultiGlobal = nuevoNum - (division * nuevoDen);
+         enteroMultiGlobal = division;
+         denominadorMultiGlobal = nuevoDen;
+         }
+         }
+         else {
+         reduce(nuevoNum, nuevoDen);
+         numeradorMultiGlobal = nuevoAn;
+         denominadorMultiGlobal = nuevoAd;
+         enteroMultiGlobal = 0;
+         }*/
     }
     function reduce(An, Ad) {
         neg = 1; //1 if positive, -1 if negative
