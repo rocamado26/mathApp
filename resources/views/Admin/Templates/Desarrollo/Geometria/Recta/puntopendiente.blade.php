@@ -286,7 +286,7 @@
                                                                                 Encuentra la ecuación de la recta que
                                                                                 pasa por el punto <b>( – 5, 4 )</b>, si
                                                                                 su pendiente es
-                                                                                <b><sup>3</sup>/<sub>5</sub></b>5
+                                                                                <b><sup>3</sup>/<sub>5</sub></b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -729,11 +729,225 @@
                         </div>
                     </div>
                 </div><!--cierre de la segunda pestaña del acordeon....-->
-                <!--acordeon paso 2...-->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><b>Práctica</b></a>
+                            <div class="nav navbar-top-links navbar-right ">
+                                <div class="col-lg-3">
+                                    <button type="button" onclick="tour3()" class="btn btn-primary btn-xs"><i
+                                                class="fa fa-question-circle"></i></button>
+                                </div>
+                            </div>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class ="row">
+                                <div class="col-lg-12" id="tour3-1">
+                                    <p style="text-align: justify;">
+                                       <td width="80%" style="text-align: center;">Ahora que ya aprendimos un poco sobre como obtener el punto pendiente, completa los siguientes ejemplos, arrastrando los elementos de la parte derecha a los espacios correspondientes en el ejercicio.</td>
+                                    </p><!--cierre de etiqueta p, inicio de teoría-->
+                                    <br><br>
+                                    <div align="center">
+                                        <button class="btn btn-outline btn-primary dim" type="button"
+                                                onclick="cambioPractica(1)">1
+                                        </button>
+                                        <button class="btn btn-outline btn-primary dim" type="button"
+                                                onclick="cambioPractica(2)">2
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div id="tour3-2" class="row col-lg-12">
+                                <!--Ejemplo 1-->
+                                <div id="Practica1" class="row col-lg-12">
+                                    <div class="col-lg-8">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
+                                            </div>
+                                            <div class="panel-body">
+                                                <font size="3">
+                                                    <center>
+                                                        Hallar la ecuación de la recta que pasa por el punto <b>A(3,5)</b> y tiene pendiente 5
+                                                    </center>
+                                                </font>
+                                            </div>
+                                        </div>
+                                        <p style="text-align: justify;">
+                                        <center>
+                                            <br><br>
+                                            Cambiamos los terminos que conocemos en la fórmula punto pendiente
+                                            <br><br>
+                                            <table border="0">
+                                                <tr>
+                                                    <td colspan="7" style="text-align: center;"><font size="4">Y - Y<sub>1</sub> = m ( X - X<sub>1</sub> )</font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="7">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font size="4">Y - &nbsp;</font></td>
+                                                    <td><div class="contenedor" id="5E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
+                                                    <td><font size="4">&nbsp;5&nbsp;</font></td>
+                                                    <td><font size="4">( X -&nbsp;</font></td>
+                                                    <td><div class="contenedor" id="3E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                    <td><font size="4">&nbsp;)</font></td>
+                                                </tr>
+                                            </table>
+                                            <br><br>
+                                            Multiplicamos la pendiente por los valores de X
+                                            <br><br>
+                                            <table border="0">
+                                                <tr>
+                                                    <td><font size="4">Y - &nbsp;</font></td>
+                                                    <td><font size="4">5</font></td>
+                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
+                                                    <td><div class="contenedor" id="5XE1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                    <td><font size="4">&nbsp;-&nbsp;</font></td>
+                                                    <td><div class="contenedor" id="15E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                </tr>
+                                            </table>
+                                        </center>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row col-lg-12">
+                                            <div id="compenentesPractica1" class="col-lg-12 alert alert-warning">
+                                                <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                <br>
+                                                <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                    <img id="pieza5XE1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5x.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <img id="pieza3E1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/3.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <img id="pieza5E1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <img id="pieza15E1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/15.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
+                                                </div>
+                                            </div>
+                                            <div id="ExitoPrac1" class="col-lg-12 alert alert-success" style="display: none;">
+                                                <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                <br>
+                                                <p style="text-align: justify;">
+                                                    Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que el punto pendiente es:
+                                                    <br><br>
+                                                <center><font size="3"><b>y - 5 = 5x - 15</b></font></center>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="botonesPrac1" class="row col-lg-12">
+                                            <center>
+                                                <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica1();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica1(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Ejemplo 2-->
+                                <div id="Practica2" class="row col-lg-12" style="display: none;">
+                                    <div class="col-lg-8">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
+                                            </div>
+                                            <div class="panel-body">
+                                                <font size="3">
+                                                    <center>
+                                                        Hallar la ecuación de la recta que pasa por los puntos <b>A ( -8 , 3 )</b> y <b>B ( 4 , -1 )</b>
+                                                    </center>
+                                                </font>
+                                            </div>
+                                        </div>
+                                        <p style="text-align: justify;">
+                                        <center>
+                                            <br><br>
+                                            Ya que no conocemos la pendiente de la recta, será esto el primer dato que obtendremos, siendo la pendiente de la recta
+                                            <br><br>
+                                            <table border="0">
+                                                <tr>
+                                                    <td><font size="4">m = &nbsp;</font></td>
+                                                    <td><div class="contenedor" id="mE2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                </tr>
+                                            </table>
+                                            <br><br>
+                                            Tomando las coordenadas del punto A, cambiamos los terminos que conocemos en la fórmula punto pendiente
+                                            <br><br>
+                                            <table border="0">
+                                                <tr>
+                                                    <td colspan="7" style="text-align: center;"><font size="4">Y - Y<sub>1</sub> = m ( X - X<sub>1</sub> )</font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="7">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font size="4">Y - &nbsp;</font></td>
+                                                    <td><div class="contenedor" id="3E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
+                                                    <td><font size="4">&nbsp;- <sup>1</sup>/<sub>3</sub> &nbsp;</font></td>
+                                                    <td><font size="4">( X -&nbsp;</font></td>
+                                                    <td><div class="contenedor" id="8E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                    <td><font size="4">&nbsp;)</font></td>
+                                                </tr>
+                                            </table>
+                                            <br><br>
+                                            Multiplicamos la pendiente por los valores de X
+                                            <br><br>
+                                            <table border="0">
+                                                <tr>
+                                                    <td><font size="4">Y - &nbsp;</font></td>
+                                                    <td><font size="4">3</font></td>
+                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
+                                                    <td><font size="4">-<sup>1</sup>/<sub>3</sub>x</font></td>
+                                                    <td><font size="4">&nbsp;-&nbsp;</font></td>
+                                                    <td><div class="contenedor" id="23E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                </tr>
+                                            </table>
+                                        </center>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row col-lg-12">
+                                            <div id="compenentesPractica2" class="col-lg-12 alert alert-warning">
+                                                <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                <br>
+                                                <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                    <img id="pieza23E2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/23.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <img id="piezaME2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/412.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <img id="pieza3E2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/3.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <img id="pieza8E2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/8.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                    <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
+                                                </div>
+                                            </div>
+                                            <div id="ExitoPrac2" class="col-lg-12 alert alert-success" style="display: none;">
+                                                <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                <br>
+                                                <p style="text-align: justify;">
+                                                    Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que el punto pendiente de la recta:
+                                                    <br><br>
+                                                <center><font size="3"><b> y - 3 = -<sup>1</sup>/<sub>3</sub>x - <sup>8</sup>/<sub>3</sub> </b></font></center>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="botonesPrac2" class="row col-lg-12">
+                                            <center>
+                                                <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica2();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica2(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div><!--cierre de ejemplos para la practica-->
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div><!--cierre de la segunda pestaña del acordeon....-->
+                <!--acordeon paso 2...-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><b>Resolución de Ejercicios</b></a>
                             <div class="nav navbar-top-links navbar-right ">
                                 <div class="col-lg-3">
                                     <button type="button" onclick="tour2()" class="btn btn-primary btn-xs"><i
@@ -742,7 +956,7 @@
                             </div>
                         </h4>
                     </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
+                    <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div class="col-lg-12">
                                 <div class="row">
@@ -980,273 +1194,6 @@
     var enteroMultiGlobal;
     var numeradorMultiGlobal;
     var denominadorMultiGlobal;
-    /////////////FUNCIONES PARA GRAFICAR PUNTOS
-    function limpiarResolucion() {
-        brd = JXG.JSXGraph.initBoard('plano1', {
-            boundingbox: [-4, 4, 4, -4],
-            keepaspectratio: true,
-            axis: true,
-            showCopyright: false
-        });
-        p1 = brd.create('point', [0, 0], {visible: true});
-        p2 = brd.create('point', [0, 0], {visible: true});
-        var t = brd.create('text', [0.1, 0.1, function () {
-            var impresionx1 = p1.X();
-            var impresiony1 = p1.Y();
-            var impresionx2 = p2.X();
-            var impresiony2 = p2.Y();
-            imprimir(impresionx1, impresiony1, impresionx2, impresiony2);
-            return impresionx1;
-        }
-        ]);
-    }
-    //limpiarResolucion();
-    function imprimir(impresionx1, impresiony1, impresionx2, impresiony2) {
-        document.getElementById("x1").value = impresionx1;
-        document.getElementById("y1").value = impresiony1;
-        document.getElementById("x2").value = impresionx2;
-        document.getElementById("y2").value = impresiony2;
-    }
-    function datoX1(x1) {
-        if (x1.value != "") {
-            console.log(x1.value);
-            var x1N = parseInt(x1.value);
-            var y1N = parseInt(document.getElementById("y1").value);
-            var x2N = parseInt(document.getElementById("x2").value);
-            var y2N = parseInt(document.getElementById("y2").value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.create('point', [x1.value, document.getElementById("y1").value], {visible: true});
-            p2 = brd.create('point', [document.getElementById("x2").value, document.getElementById("y2").value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function datoY1(y1) {
-        if (y1.value != "") {
-            console.log(y1.value);
-            var x1N = parseInt(document.getElementById("x1").value);
-            var y1N = parseInt(y1.value);
-            var x2N = parseInt(document.getElementById("x2").value);
-            var y2N = parseInt(document.getElementById("y2").value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.createElement('point', [document.getElementById("x1").value, y1.value], {visible: true});
-            p2 = brd.create('point', [document.getElementById("x2").value, document.getElementById("y2").value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function datoX2(x2) {
-        if (x2.value != "") {
-            console.log(x2.value);
-            var x1N = parseInt(document.getElementById("x1").value);
-            var y1N = parseInt(document.getElementById("y1").value);
-            var x2N = parseInt(x2.value);
-            var y2N = parseInt(document.getElementById("y2").value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.create('point', [document.getElementById("x1").value, document.getElementById("y1").value], {visible: true});
-            p2 = brd.create('point', [x2.value, document.getElementById("y2").value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function datoY2(y2) {
-        if (y2.value != "") {
-            console.log(y2.value);
-            var x1N = parseInt(document.getElementById("x1").value);
-            var y1N = parseInt(document.getElementById("y1").value);
-            var x2N = parseInt(document.getElementById("x2").value);
-            var y2N = parseInt(y2.value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.create('point', [document.getElementById("x1").value, document.getElementById("y1").value], {visible: true});
-            p2 = brd.create('point', [document.getElementById("x2").value, y2.value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
     function generarResolucionC() {
 
         var x1C;
@@ -1795,349 +1742,155 @@
                 break;
         }
     }
-    function cambia_practica(opc) {
+    function cambioPractica(opc) {
         switch (opc) {
             case 1: {
-                $("#prac_2").fadeOut(0);
-                $("#prac_3").fadeOut(0);
-                $("#prac_4").fadeOut(0);
-                $("#prac_1").fadeIn(300);
+                $("#Practica2").fadeOut(0);
+                $("#Practica2").fadeIn(300);
             }
                 break;
             case 2: {
-                $("#prac_1").fadeOut(0);
-                $("#prac_3").fadeOut(0);
-                $("#prac_4").fadeOut(0);
-                $("#prac_2").fadeIn(300);
-            }
-                break;
-            case 3: {
-                $("#prac_2").fadeOut(0);
-                $("#prac_1").fadeOut(0);
-                $("#prac_4").fadeOut(0);
-                $("#prac_3").fadeIn(300);
-            }
-                break;
-            case 4: {
-                $("#prac_2").fadeOut(0);
-                $("#prac_3").fadeOut(0);
-                $("#prac_1").fadeOut(0);
-                $("#prac_4").fadeIn(300);
+                $("#Practica1").fadeOut(0);
+                $("#Practica2").fadeIn(300);
             }
                 break;
         }
     }
-    function VerificarEvaluacion1() {
-        if ($('input:radio[name=1rpe]:checked').val() == 1) {
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False1P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P1").fadeOut(0);
+
+    function ComprobarPractica1()
+    {
+        if((document.getElementById('pieza5E1').parentNode.id=='5E1') &&
+            (document.getElementById('pieza3E1').parentNode.id=='3E1') &&
+            (document.getElementById('pieza5XE1').parentNode.id=='5XE1') &&
+            (document.getElementById('pieza15E1').parentNode.id=='15E1'))
+        {
+            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
+            $("#compenentesPractica1").fadeOut(0);
+            $("#botonesPrac1").fadeOut(0);
+            $("#ExitoPrac1").fadeIn(300);
+
         }
-        if ($('input:radio[name=1rpe]:checked').val() == 2) {
-            $("#False1P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False2P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False2P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 3) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False3P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False3P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 4) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False4P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False4P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 5) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-        } else {
-            $("#True5P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 6) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False6P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P1").fadeOut(0);
+        else
+        {
+            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
+            ReestablecerPractica1(1);
         }
     }
-    function limpiarPractica1() {
-        $('input[name=1rpe]').attr('checked', false);
-        $("#False1P1").fadeOut(0);
-        $("#False2P1").fadeOut(0);
-        $("#False3P1").fadeOut(0);
-        $("#False4P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
-        $("#False6P1").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
-    }
-    function VerificarEvaluacion2() {
-        if ($('input:radio[name=2rpe]:checked').val() == 1) {
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False1P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P2").fadeOut(0);
+    function ReestablecerPractica1(opc){
+        if (opc==0) {
+            swal({
+                title: "¿Esta Seguro?",
+                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, borrar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
+                //Limpiando componentes...
+                $("#compenentesPractica1").html(""+
+                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                    "<br>"+
+                    "<div id='contenedorPiezas' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'>"+
+                    "<img id='pieza5XE1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5x.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza3E1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/3.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza5E1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza15E1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/15.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                    "</div>");
+                //Limpiando espacios libres...
+                $("#5E1").html("");
+                $("#3E1").html("");
+                $("#5XE1").html("");
+                $("#15E1").html("");
+            });//cierre del swal
         }
-        if ($('input:radio[name=2rpe]:checked').val() == 2) {
-            $("#False1P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False2P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False2P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 3) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-        } else {
-            $("#True3P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 4) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False4P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False4P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 5) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False5P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False5P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 6) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False6P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P2").fadeOut(0);
+        else
+        {
+            $("#compenentesPractica1").html(""+
+                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                "<br>"+
+                "<div id='contenedorPiezas' ondragenter='return enter(event)' ondragover='return over(event)' ondrop='return drop(event)'>"+
+                "<img id='pieza5XE1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5x.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza3E1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/3.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza5E1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza15E1' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/15.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                "</div>");
+            //Limpiando espacios libres...
+            $("#5E1").html("");
+            $("#3E1").html("");
+            $("#5XE1").html("");
+            $("#15E1").html("");
         }
     }
-    function limpiarPractica2() {
-        $('input[name=2rpe]').attr('checked', false);
-        $("#False1P2").fadeOut(0);
-        $("#False2P2").fadeOut(0);
-        $("#True3P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
-        $("#False5P2").fadeOut(0);
-        $("#False6P2").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
-    }
-    function VerificarEvaluacion3() {
-        if ($('input:radio[name=3rpe]:checked').val() == 1) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P3").fadeOut(0);
+
+    function ComprobarPractica2()
+    {
+        if((document.getElementById('piezaME2').parentNode.id=='mE2') &&
+            (document.getElementById('pieza3E2').parentNode.id=='3E2') &&
+            (document.getElementById('pieza8E2').parentNode.id=='8E2') &&
+            (document.getElementById('pieza23E2').parentNode.id=='23E2'))
+        {
+            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
+            $("#compenentesPractica2").fadeOut(0);
+            $("#botonesPrac2").fadeOut(0);
+            $("#ExitoPrac2").fadeIn(300);
+
         }
-        if ($('input:radio[name=3rpe]:checked').val() == 2) {
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#True2P3").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-        } else {
-            $("#True2P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 3) {
-            $("#True2P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False3P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False3P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 4) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False4P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False4P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 5) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False5P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False5P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 6) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False6P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P3").fadeOut(0);
+        else
+        {
+            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
+            ReestablecerPractica2(1);
         }
     }
-    function limpiarPractica3() {
-        $('input[name=3rpe]').attr('checked', false);
-        $("#True2P3").fadeOut(0);
-        $("#False1P3").fadeOut(0);
-        $("#False3P3").fadeOut(0);
-        $("#False4P3").fadeOut(0);
-        $("#False5P3").fadeOut(0);
-        $("#False6P3").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
-    }
-    function VerificarEvaluacion4() {
-        if ($('input:radio[name=4rpe]:checked').val() == 1) {
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False1P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P4").fadeOut(0);
+    function ReestablecerPractica2(opc){
+        if (opc==0) {
+            swal({
+                title: "¿Esta Seguro?",
+                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, borrar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
+                //Limpiando componentes...
+                $("#compenentesPractica2").html(""+
+                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                    "<br>"+
+                    "<img id='pieza23E2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/23.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='piezaME2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/412.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza3E2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/3.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza8E2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/8.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                    "</div>");
+                //Limpiando espacios libres...
+                $("#mE2").html("");
+                $("#3E2").html("");
+                $("#8E2").html("");
+                $("#23E2").html("");
+            });//cierre del swal
         }
-        if ($('input:radio[name=4rpe]:checked').val() == 2) {
-            $("#False1P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False2P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False2P4").fadeOut(0);
+        else
+        {
+            $("#compenentesPractica2").html(""+
+                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                "<br>"+
+                "<img id='pieza23E2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/23.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='piezaME2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/412.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza3E2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/3.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza8E2' src='{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/8.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                "</div>");
+            //Limpiando espacios libres...
+            $("#mE2").html("");
+            $("#3E2").html("");
+            $("#8E2").html("");
+            $("#23E2").html("");
         }
-        if ($('input:radio[name=4rpe]:checked').val() == 3) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False3P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False3P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 4) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#True4P4").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta', 'Excelente');
-        } else {
-            $("#True4P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 5) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False5P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 6) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P4").fadeOut(0);
-        }
-    }
-    function limpiarPractica4() {
-        $('input[name=4rpe]').attr('checked', false);
-        $("#False1P4").fadeOut(0);
-        $("#False2P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
     }
     //FUNCION PARA CAMBIAR EL TIPO DE EJERCICIO A RESOLVER
 
@@ -2696,6 +2449,44 @@
                     $('body').removeClass('tour-close')
                 }
             }
+            ]
+        });
+        // Initialize the tour
+        tour.init();
+        tour.restart();
+        // Start the tour
+        tour.start();
+    }
+    function tour3() {
+        var tour = new Tour({
+            steps: [{
+                element: "#tour3-1",
+                title: "Paso 1",
+                content: "Presiona cualquiera de los siguientes números para mostrar un ejemplo de punto medio",
+                placement: "top",
+                backdrop: true,
+                backdropContainer: '#wrapper',
+                onShown: function (tour) {
+                    $('body').addClass('tour-open')
+                },
+                onHidden: function (tour) {
+                    $('body').removeClass('tour-close')
+                }
+            },
+                {
+                    element: "#tour3-2",
+                    title: "Paso 2",
+                    content: "Selecciona una de las imagenes colocadas en el segmento Elementos y trasladado a los espacios en gris según consideres es su posicion correcta, luego presiona el boton de comprobar",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour) {
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour) {
+                        $('body').removeClass('tour-close')
+                    }
+                }
             ]
         });
         // Initialize the tour
