@@ -1179,19 +1179,19 @@
 			}break;
 			case 'sc2':{
 				$('#T11').html('<img id="Isen2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dsen2.png">');
-				$('#T12').html('<img id="" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
+				$('#T12').html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
 				$('#T13').html('<img id="Icos2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcos2.png">');
 				$('#T14').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
 			}break;
 			case 'csc2':{
 				$('#T11').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
-				$('#T12').html('<img id="" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
+				$('#T12').html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
 				$('#T13').html('<img id="Icot2"  draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcot2.png">');
 				$('#T14').html('<img id="Icsc2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcsc2.png">');
 			}break;
 			case 'sec2':{
 				$('#T11').html('<img id="Itan2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dtan2.png">');
-				$('#T12').html('<img id="" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
+				$('#T12').html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
 				$('#T13').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
 				$('#T14').html('<img id="Isec2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dsec2.png">');
 			}break;
@@ -1213,6 +1213,9 @@
         })
 	});
 
+    /**
+     * Limpia la tabla donde se colocan las imagenes
+     */
 	function limpiaTabla(){
 		$('#T11').html('');
 		$('#T12').html('');
@@ -1306,7 +1309,26 @@
 							}
 						}
 						}else{
-
+                            if(boton=='sc2'){
+                                if((document.getElementById('Isen2').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
+                                || (document.getElementById('Icos2').parentNode.id=='T11' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
+                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T15')
+                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T15')){
+                                    $('#panelRespuesta').html('<b>El despeje de "1" es corecto, ¡Buen trabajo!</b>');
+                                }else{
+                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T16')
+                                    || (document.getElementById('Isen2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
+                                        $('#panelRespuesta').html('<b>El despeje de "cos2 x" es corecto, ¡Buen trabajo!</b>');
+                                    }else{
+                                        if((document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')
+                                        ||(document.getElementById('Icos2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
+                                            $('#panelRespuesta').html('<b>El despeje de "sen2 x" es corecto, ¡Buen trabajo!</b>');
+                                        }else{
+                                            $('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                                        }
+                                    }
+                                }
+                            }
 						}
 					}
 				}
@@ -1315,7 +1337,7 @@
 	}
 </script>
 <script>
-		/**
+    /**
 	* Función que se ejecuta al arrastrar el elemento. 
 	**/
 	function start(e) {
@@ -1323,7 +1345,6 @@
 	    e.dataTransfer.setData("Text", e.target.id); // Coje el elemento que se va a mover
 	    e.target.style.opacity = '0.4'; 
 	}
-
 	/**
 	* Función que se ejecuta se termina de arrastrar el elemento. 
 	**/
@@ -1331,7 +1352,6 @@
 	    e.target.style.opacity = ''; // Restaura la opacidad del elemento           
 	    e.dataTransfer.clearData("Data");           
 	}
-
 	/**
 	* Función que se ejecuta cuando un elemento arrastrable entra en el elemento desde del que se llama. 
 	**/
@@ -1346,8 +1366,6 @@
 	function over(e) {
 	    if (e.target.id == "contenedorPiezas" || e.target.className == "contenedor")
 	        return false;
-	   // else
-	   // return true;
 	}
 	    
 	/**
