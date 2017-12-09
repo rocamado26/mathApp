@@ -1328,6 +1328,14 @@
                                         }
                                     }
                                 }
+                            }else{
+                                if(boton=='csc2'){
+                                    console.warn('csc2');
+                                }else{
+                                    if(boton=='sec2'){
+                                        console.warn('sec2');
+                                    }
+                                }
                             }
 						}
 					}
