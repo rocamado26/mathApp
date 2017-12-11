@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <!--<div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
                     <a href="#">
@@ -51,7 +51,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <script>

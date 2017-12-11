@@ -63,7 +63,7 @@
                         <li><a onclick="CargaOpciones('/analitica','Geometría','Analítica')">Geometría analítica</a></li>
                         <li><a onclick="CargaOpciones('/pendiente','Geometría','Pendiente de una Recta')">Pendiente de una recta</a></li>
                         <li><a onclick="CargaOpciones('/recta','Geometría','Línea Recta')">Línea Recta</a></li>
-                        <li><a onclick="CargaOpciones('/intersecciones','Geometría','Intersecciones')">Intersecciones</a></li>
+                        <!--<li><a onclick="CargaOpciones('/intersecciones','Geometría','Intersecciones')">Intersecciones</a></li>-->
                         <li><a onclick="CargaOpciones('/conicas','Geometría','Secciones cónicas')">Secciones cónicas</a></li>
                     </ul>
                 </li>

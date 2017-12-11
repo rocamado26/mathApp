@@ -18,15 +18,18 @@
                     <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-sm-offset-3 col-sm-6">
-                                    <p style="text-align: center;">
-                                        Las ecuaciones lineales son siempre de la forma <b> y = mx + b </b>
-                                        <br><br>
-                                        Donde  <b>m</b>  es la pendiente, y la <b>b</b> es el intercepto en y.
-                                        <br><br>
-                                        El intercepto en y esta expresada por <b>(0,b)</b> y es donde la recta corta el eje de y
-                                        <br><br>
-                                        El intercepto en x esta expresada por: <b>(a,0)</b> y es donde la recta corta el eje de x.
+                                <div class="col-sm-offset-2 col-sm-8">
+                                    <p style="text-align: justify;">
+                                        Dada la pendiente <b>m</b> y el intercepto <b>y</b> denominado <b>b</b> de
+                                        una recta, la forma pendiente-intercepto de la ecuación
+                                        de una recta es:
+                                        <br> <center><b>y = mx + b.</b></center>
+                                    <br>
+                                    Si se conoce la pendiente y el intercepto <b>y</b> de una recta,
+                                    se puede escribir una ecuación de la recta en la forma
+                                    pendiente-intercepto
+                                    <br><br>
+                                    Veamos los siguientes ejemplos
                                     </p>
                                 </div>
                                 <div class="col-sm-12">
@@ -59,9 +62,9 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Hallar la ecuación de la recta que pasa
-                                                                                por el punto <b>A(1,5)</b> y tiene
-                                                                                pendiente <b>2</b>
+                                                                                La pendiente <b>(m)</b> de una recta es <b>3</b> y el intercepto en <b>(y)</b>
+                                                                                es <b>6</b>, escribe la ecuación de la recta de la forma
+                                                                                pendiente-intercepto.
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -81,11 +84,9 @@
                                                                     <div class="col-xs-12" align="center">
                                                                         <font size="3">
                                                                             <center>
-                                                                                m = <b>2</b>
+                                                                                m = <b>3</b>
                                                                                 <br><br>
-                                                                                x<sub>1</sub> = <b>1</b>
-                                                                                <br><br>
-                                                                                y<sub>1</sub> = <b>5</b>
+                                                                                b = <b>6</b>
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -94,7 +95,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-xs-12">Los sustituimos en la fórmula del
-                                                                punto pendiente y simplificamos la operación:
+                                                                punto pendiente-intercepto:
                                                             </div>
                                                         </div>
                                                         <br>
@@ -104,11 +105,9 @@
                                                                     <div class="col-xs-12" align="center">
                                                                         <font size="3">
                                                                             <center>
-                                                                                y - y<sub>1</sub> = m (x - x<sub>1</sub>)
+                                                                                y = mx + b
                                                                                 <br><br>
-                                                                                y - 5 = 2 (x - 1)
-                                                                                <br><br>
-                                                                                y -5 = 2x - 2
+                                                                                y = 3x + 6
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -117,7 +116,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-xs-12">
-                                                                Por lo tanto la ecuación punto-pendite de la recta es:
+                                                                Por lo tanto la ecuación punto pendiente-intercepto de la recta es:
                                                             </div>
                                                         </div>
                                                         <br>
@@ -125,8 +124,7 @@
                                                             <div class="well">
                                                                 <div class="row diff-wrapper">
                                                                     <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>y -5 = 2x -
-                                                                                2</b></font><br><br>
+                                                                        <font size="3"><b>y = 3x + 6</b></font><br><br>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -144,24 +142,9 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p style="text-align: justify;">
-                                                                            <br>
-                                                                            Sean los puntos de una recta L:
-                                                                            A(x<sub>1</sub>, y<sub>1</sub>), B(x, y) un
-                                                                            punto arbitrario de ella. Su pendiente es:
-                                                                            <br><br>
-                                                                        <table border="0">
-                                                                            <tr>
-                                                                                <td style="border-bottom: 1px black solid;">
-                                                                                    Y – Y<sub>1</sub></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>X – X<sub>1</sub></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                        <br>
-                                                                        De aquí obtienes la ecuación punto pendiente que
-                                                                        se escribe así: <b>y – y<sub>1</sub> = m( x –
-                                                                            x<sub>1</sub>)</b>
+                                                                            Como puedes observar para encontrar la ecucación pendiente-intercepto de una recta sólo debes
+                                                                            sustituir los valores de la pendiente <b>(m)</b> y el intercepto en y <b>(b)</b> en la fórmula de la
+                                                                            ecuación de una recta.
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -186,10 +169,13 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Encuentra la ecuación de la recta que
-                                                                                pasa por el punto <b>( – 5, 4 )</b>, si
-                                                                                su pendiente es
-                                                                                <b><sup>3</sup>/<sub>5</sub></b>
+                                                                                Si no conoces la pendiente ni el intercepto, sino dos
+                                                                                puntos de una recta, entonces hay que buscar primero la pendiente,
+                                                                                luego el intercepto y al final se escribe la forma
+                                                                                pendiente-intercepto, veamos el siguiente ejemplo
+                                                                                <br><br>
+                                                                                Cual es la ecuación pendiente-intercepto de una recta que pasa por los puntos <b>A(-3, -1)</b>
+                                                                                y <b>B(6, -4)</b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -198,8 +184,7 @@
                                                         </div>
                                                         <br>
                                                         <div class="row">
-                                                            <div class="col-xs-12">Primero identificamos cada elemento
-                                                                de la fórmula:
+                                                            <div class="col-xs-12">Primero identificamos la pendiente de la recta:
                                                             </div>
                                                         </div>
                                                         <br>
@@ -209,11 +194,35 @@
                                                                     <div class="col-xs-12" align="center">
                                                                         <font size="3">
                                                                             <center>
-                                                                                m = <b><sup>3</sup>/<sub>5</sub></b>
-                                                                                <br><br>
-                                                                                x<sub>1</sub> = <b>-5</b>
-                                                                                <br><br>
-                                                                                y<sub>1</sub> = <b>4</b>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2"> m =</td>
+                                                                                        <td style="border-bottom: 1px black solid;">
+                                                                                            y<sub>2</sub> -
+                                                                                            y<sub>1</sub></td>
+                                                                                        <td rowspan="2">&nbsp;=&nbsp;
+                                                                                        </td>
+                                                                                        <td style="border-bottom: 1px black solid;">
+                                                                                            -4 - (-1)
+                                                                                        </td>
+                                                                                        <td rowspan="2">&nbsp;=&nbsp;
+                                                                                        </td>
+                                                                                        <td style="border-bottom: 1px black solid;">
+                                                                                            -3
+                                                                                        </td>
+                                                                                        <td rowspan="2">&nbsp;=&nbsp;
+                                                                                        </td>
+                                                                                        <td style="border-bottom: 1px black solid;">
+                                                                                            <b> - 1</b></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>x<sub>2</sub> -
+                                                                                            x<sub>1</sub></td>
+                                                                                        <td>6 - (-3)</td>
+                                                                                        <td>9</td>
+                                                                                        <td><b>&nbsp;3</b></td>
+                                                                                    </tr>
+                                                                                </table>
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -221,8 +230,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-xs-12">Los sustituimos en la fórmula del
-                                                                punto pendiente y simplificamos la operación:
+                                                            <div class="col-xs-12">Ahora que conocemos la pendiente, obtenes el valor de la intercepción en <b>y</b>, es decir, el valor de <b>b</b>.
+                                                                <br><br>
+                                                                Para eso, usamos uno de los puntos dados (en este caso utilizamos los puntos A) en la fórmula pendiente-intercepto para encontrar el valor de <b>b</b>.
                                                             </div>
                                                         </div>
                                                         <br>
@@ -232,16 +242,15 @@
                                                                     <div class="col-xs-12" align="center">
                                                                         <font size="3">
                                                                             <center>
-                                                                                y - y<sub>1</sub> = m (x - x<sub>1</sub>)
+                                                                                y = mx + b
                                                                                 <br><br>
-                                                                                y - 4 = <sup>3</sup>/<sub>5</sub> (x -
-                                                                                (-5))
+                                                                                -1 = -<sup>1</sup>/<sub>3</sub>(-3) + b
                                                                                 <br><br>
-                                                                                y - 4 = <sup>3</sup>/<sub>5</sub> (x +
-                                                                                5)
+                                                                                -1 = 1 + b
                                                                                 <br><br>
-                                                                                y - 4 = <sup>3</sup>/<sub>5</sub>x +
-                                                                                3</sub>
+                                                                                -1 - 1 = b
+                                                                                <br><br>
+                                                                                b = -2
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -250,7 +259,8 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-xs-12">
-                                                                Por lo tanto la ecuación punto pendiente de la recta es:
+                                                                Ahora que conocemos el valor del intercepto en y <b>(-2)</b>, sustituimos los valores de pendiente e intercepto en la
+                                                                ecuación de la forma pendiente-intercepto.
                                                             </div>
                                                         </div>
                                                         <br>
@@ -258,9 +268,28 @@
                                                             <div class="well">
                                                                 <div class="row diff-wrapper">
                                                                     <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>y - 4 =
-                                                                                <sup>3</sup>/<sub>5</sub>x +
-                                                                                3</b></font><br><br>
+                                                                        <font size="3">
+                                                                                y = mx + b
+                                                                                <br><br>
+                                                                                y = -<sup>1</sup>/<sub>3</sub>x + (-2)
+                                                                                <br><br>
+                                                                                y = -<sup>1</sup>/<sub>3</sub>x - 2
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Por lo tanto la ecuación punto pendiente-intercepto de la recta es:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3"><b>y = -<sup>1</sup>/<sub>3</sub>x - 2</b></font><br><br>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -278,24 +307,13 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p style="text-align: justify;">
-                                                                            <br>
-                                                                            Sean los puntos de una recta L:
-                                                                            A(x<sub>1</sub>, y<sub>1</sub>), B(x, y) un
-                                                                            punto arbitrario de ella. Su pendiente es:
+                                                                            Cuando no conoces el intercepto ni la pendiente de una recta debes de seguir los siguientes pasos:
                                                                             <br><br>
-                                                                        <table border="0">
-                                                                            <tr>
-                                                                                <td style="border-bottom: 1px black solid;">
-                                                                                    Y – Y<sub>1</sub></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>X – X<sub>1</sub></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                        <br>
-                                                                        De aquí obtienes la ecuación punto pendiente que
-                                                                        se escribe así: <b>y – y<sub>1</sub> = m( x –
-                                                                            x<sub>1</sub>)</b>
+                                                                            * Obtener la pendiente de la recta, a traves de la fórmula de la pendiente.
+                                                                            <br><br>
+                                                                            * Obtener el intercepto en "y" utilizando cualquiera de los 2 puntos.
+                                                                            <br><br>
+                                                                            * Utilizar la fórmula de pendiente-intercepto para obtener la ecuación correspondiente.
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -356,9 +374,8 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Hallar la ecuación de la recta que pasa
-                                                                                por el punto <b>A(1,5)</b> y tiene
-                                                                                pendiente <b>2</b>
+                                                                                Halla la ecuación de la recta si su intersecto en y
+                                                                                es <b>b = 4</b> y su pendiente es <b>- <sup>3</sup>/<sub>5</sub> </b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -483,10 +500,7 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Encuentra la ecuación de la recta que
-                                                                                pasa por el punto <b>( – 5, 4 )</b>, si
-                                                                                su pendiente es
-                                                                                <b><sup>3</sup>/<sub>5</sub></b>5
+                                                                                Encuentra la ecucacion punto-intercetpto de los puntos <b>A ( 3 , 8)</b> y <b> B ( -2, 8 )</b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -636,7 +650,7 @@
                                                                     <div class="alert alert-info">
                                                                         <strong>Infórmacion</strong><br>
                                                                         Selecciona el tipo de ejercicio que se te
-                                                                        plantea, si conoces la pendiente o solo tienes
+                                                                        plantea, si conoces la pendiente y el intercepto o si solo tienes
                                                                         los puntos, Ingresa los valores en los campos
                                                                         correspondientes. Luego de ello presiona el
                                                                         botón "Generar" para conocer el resultado y
@@ -649,7 +663,7 @@
                                                                     <button id="btnPendiente" type="buton"
                                                                             onclick="onSelectExercise(1)"
                                                                             class="btn btn-info animation_select"
-                                                                            data-animation="flipInX">Pendiente
+                                                                            data-animation="flipInX">Pendiente e intercepto
                                                                     </button>
                                                                 </div>
                                                                 <div type="button" class="col-sm-3">
@@ -666,7 +680,7 @@
                                                                         <table border="0" width="100%">
                                                                             <tr>
                                                                                 <td colspan="3">
-                                                                                    <center><b>Punto A</b></center>
+                                                                                    <center><b>Intercepto</b></center>
                                                                                 </td>
                                                                                 <td>&nbsp;</td>
                                                                                 <td>
@@ -674,26 +688,22 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td width="30%">
-                                                                                    <center>X<sub>1</sub></center>
+                                                                                <td>&nbsp;</td>
+                                                                                <td  width="30%">
+                                                                                    <center>y (b)</center>
                                                                                 </td>
                                                                                 <td>&nbsp;</td>
-                                                                                <td width="30%">
-                                                                                    <center>Y<sub>1</sub></center>
-                                                                                </td>
                                                                                 <td>&nbsp;</td>
                                                                                 <td width="30%">
                                                                                     <center>&nbsp;</center>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
+                                                                                <td>&nbsp;</td>
                                                                                 <td><input type="number" placeholder="?"
                                                                                            class="form-control" value=""
                                                                                            id="x1P" width="100%"></td>
                                                                                 <td>&nbsp;</td>
-                                                                                <td><input type="number" placeholder="?"
-                                                                                           class="form-control" value=""
-                                                                                           id="y1P" width="100%"></td>
                                                                                 <td>&nbsp;</td>
                                                                                 <td><input type="number" placeholder="?"
                                                                                            class="form-control" value=""
@@ -859,776 +869,7 @@
     var enteroMultiGlobal;
     var numeradorMultiGlobal;
     var denominadorMultiGlobal;
-    /////////////FUNCIONES PARA GRAFICAR PUNTOS
-    function limpiarResolucion() {
-        brd = JXG.JSXGraph.initBoard('plano1', {
-            boundingbox: [-4, 4, 4, -4],
-            keepaspectratio: true,
-            axis: true,
-            showCopyright: false
-        });
-        p1 = brd.create('point', [0, 0], {visible: true});
-        p2 = brd.create('point', [0, 0], {visible: true});
-        var t = brd.create('text', [0.1, 0.1, function () {
-            var impresionx1 = p1.X();
-            var impresiony1 = p1.Y();
-            var impresionx2 = p2.X();
-            var impresiony2 = p2.Y();
-            imprimir(impresionx1, impresiony1, impresionx2, impresiony2);
-            return impresionx1;
-        }
-        ]);
-    }
-    //limpiarResolucion();
-    function imprimir(impresionx1, impresiony1, impresionx2, impresiony2) {
-        document.getElementById("x1").value = impresionx1;
-        document.getElementById("y1").value = impresiony1;
-        document.getElementById("x2").value = impresionx2;
-        document.getElementById("y2").value = impresiony2;
-    }
-    function datoX1(x1) {
-        if (x1.value != "") {
-            console.log(x1.value);
-            var x1N = parseInt(x1.value);
-            var y1N = parseInt(document.getElementById("y1").value);
-            var x2N = parseInt(document.getElementById("x2").value);
-            var y2N = parseInt(document.getElementById("y2").value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.create('point', [x1.value, document.getElementById("y1").value], {visible: true});
-            p2 = brd.create('point', [document.getElementById("x2").value, document.getElementById("y2").value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function datoY1(y1) {
-        if (y1.value != "") {
-            console.log(y1.value);
-            var x1N = parseInt(document.getElementById("x1").value);
-            var y1N = parseInt(y1.value);
-            var x2N = parseInt(document.getElementById("x2").value);
-            var y2N = parseInt(document.getElementById("y2").value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.createElement('point', [document.getElementById("x1").value, y1.value], {visible: true});
-            p2 = brd.create('point', [document.getElementById("x2").value, document.getElementById("y2").value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function datoX2(x2) {
-        if (x2.value != "") {
-            console.log(x2.value);
-            var x1N = parseInt(document.getElementById("x1").value);
-            var y1N = parseInt(document.getElementById("y1").value);
-            var x2N = parseInt(x2.value);
-            var y2N = parseInt(document.getElementById("y2").value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.create('point', [document.getElementById("x1").value, document.getElementById("y1").value], {visible: true});
-            p2 = brd.create('point', [x2.value, document.getElementById("y2").value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function datoY2(y2) {
-        if (y2.value != "") {
-            console.log(y2.value);
-            var x1N = parseInt(document.getElementById("x1").value);
-            var y1N = parseInt(document.getElementById("y1").value);
-            var x2N = parseInt(document.getElementById("x2").value);
-            var y2N = parseInt(y2.value);
-            var mayor;
-            var mayorN;
-            if (x1N > y1N) {
-                if (x1N > x2N) {
-                    if (x1N > y2N) {
-                        mayor = x1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            else {
-                if (y1N > x2N) {
-                    if (y1N > y2N) {
-                        mayor = y1N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-                else {
-                    if (x2N > y2N) {
-                        mayor = x2N;
-                    }
-                    else {
-                        mayor = y2N;
-                    }
-                }
-            }
-            console.log(mayor);
-            mayor = mayor + 2;
-            mayorN = mayor * -1;
-            brd = JXG.JSXGraph.freeBoard(brd);
-            brd = JXG.JSXGraph.initBoard('plano1', {
-                boundingbox: [mayorN, mayor, mayor, mayorN],
-                keepaspectratio: true,
-                axis: true,
-                showCopyright: false
-            });
-            p1 = brd.create('point', [document.getElementById("x1").value, document.getElementById("y1").value], {visible: true});
-            p2 = brd.create('point', [document.getElementById("x2").value, y2.value], {visible: true});
-            var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        }
-    }
-    function generarResolucionC() {
-
-        var x1C;
-        var y1C;
-        var x2C;
-        var y2C;
-        if (document.getElementById("x1C").value != 0) {
-            x1C = parseInt(document.getElementById("x1C").value);
-        }
-        else {
-            x1C = 0;
-        }
-        if (document.getElementById("y1C").value != 0) {
-            y1C = parseInt(document.getElementById("y1C").value);
-        }
-        else {
-            y1C = 0;
-        }
-        if (document.getElementById("x2C").value != 0) {
-            x2C = parseInt(document.getElementById("x2C").value);
-        }
-        else {
-            x2C = 0;
-        }
-        if (document.getElementById("y2C").value != 0) {
-            y2C = parseInt(document.getElementById("y2C").value);
-        }
-        else {
-            y2C = 0;
-        }
-        console.log("Datos obtenidos: ", x1C, y1C, x2C, y2C);
-        //////INICIO DEL PROCEDIMIENTO
-        /*$("#solucion").html("<center>Conociendo los puntos A("+x1+","+y1+"), B("+x2+","+y2+") de la primera recta y los puntos C("+xx1+","+yy1+"), D("+xx2+","+yy2+"), tomando en cuenta la fórmula para encontrar la pendiente, obtenemos:<br><br>"+
-         "<font size='3'><b><table border='0' style='text-align: center;'>"+
-         "<tr>"+
-         "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>y<sub>2</sub> - y<sub>1</sub></td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>y<sub>2</sub> - y<sub>1</sub></td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>x<sub>2</sub> - x<sub>1</sub></td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td>x<sub>2</sub> - x<sub>1</sub></td>"+
-         "</tr>"+
-         "</table></b></font>"+
-         "<br><br>"+
-         "</center>");
-         var impreX;
-         var impreY;
-         var impreXX;
-         var impreYY;
-         if (x1<0) {
-         impreX="( "+x1+" )";
-         }
-         else
-         {
-         impreX=x1;
-         }
-         if (y1<0) {
-         impreY="( "+y1+" )";
-         }
-         else
-         {
-         impreY=y1;
-         }
-         if (xx1<0) {
-         impreXX="( "+xx1+" )";
-         }
-         else
-         {
-         impreXX=xx1;
-         }
-         if (yy1<0) {
-         impreYY="( "+yy1+" )";
-         }
-         else
-         {
-         impreYY=yy1;
-         }
-         $("#solucion").append("<center>Sustituimos los datos obtenidos:"+
-         "<br><br>"+
-         "<font size='3'><b><center><table border='0'>"+
-         "<tr>"+
-         "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>"+y2+" - "+impreY+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>"+yy2+" - "+impreYY+"</td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>"+x2+" - "+impreX+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td>"+xx2+" - "+impreXX+"</td>"+
-         "</tr>"+
-         "</table></center></b></font>"+
-         "<br><br>"+
-         "Realizamos las restas superiores e inferiores:"+
-         "</center>");
-         var restaX;
-         var restaY;
-         var restaXX;
-         var restaYY;
-         restaX=x2-x1;
-         restaY=y2-y1;
-         restaXX=xx2-xx1;
-         restaYY=yy2-yy1;
-         var esResta1=0;
-         var esResta2=0;
-         var esResta11=0;
-         var esResta22=0;
-         var agregarRestaArriba=0;
-         var agregarRestaAbajo=0;
-         if (restaY<0) {
-         esResta1=1;
-         restaY=Math.abs(restaY);
-         }
-         else
-         {
-         esResta1=0;
-         restaY=Math.abs(restaY);
-         }
-         if (restaX<0) {
-         esResta2=1;
-         restaX=Math.abs(restaX);
-         }
-         else
-         {
-         esResta2=0;
-         restaX=Math.abs(restaX);
-         }
-         if ((esResta1==1 && esResta2==0) || (esResta1==0 && esResta2==1)) {
-         //restaY=restaY * -1;
-         agregarRestaArriba=1;
-         restaX=Math.abs(restaX);
-         }
-         else
-         {
-         agregarRestaArriba=0;
-         }
-         //para reordenar los numeros negativos
-         if (restaYY<0) {
-         esResta11=1;
-         restaYY=Math.abs(restaYY);
-         }
-         else
-         {
-         esResta11=0;
-         restaYY=Math.abs(restaYY);
-         }
-         if (restaXX<0) {
-         esResta22=1;
-         restaXX=Math.abs(restaXX);
-         }
-         else
-         {
-         esResta22=0;
-         restaXX=Math.abs(restaXX);
-         }
-         if ((esResta11==1 && esResta22==0) || (esResta11==0 && esResta22==1)) {
-         //restaYY=restaYY * -1;
-         agregarRestaAbajo=1;
-         restaXX=Math.abs(restaXX);
-         }
-         else
-         {
-         agregarRestaAbajo=0;
-         }
-         if (agregarRestaArriba==1 && agregarRestaAbajo==0) {
-         $("#solucion").append("<center><br>"+
-         "<font size='3'><b><center><table border='0'>"+
-         "<tr>"+
-         "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>"+restaX+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td>"+restaXX+"</td>"+
-         "</tr>"+
-         "</table></center></b></font>"+
-         "</center>");
-         restaY=restaY * -1;
-         }
-         if (agregarRestaArriba==0 && agregarRestaAbajo==1) {
-         $("#solucion").append("<center><br>"+
-         "<font size='3'><b><table border='0'>"+
-         "<tr>"+
-         "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>"+restaX+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>"+restaXX+"</td>"+
-         "</tr>"+
-         "</table></b></font>"+
-         "</center>");
-         restaYY=restaYY * -1;
-         }
-         if (agregarRestaArriba==1 && agregarRestaAbajo==1) {
-         $("#solucion").append("<center><br>"+
-         "<font size='3'><b><table border='0'>"+
-         "<tr>"+
-         "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>"+restaX+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>&nbsp;&nbsp;</td>"+
-         "<td>"+restaXX+"</td>"+
-         "</tr>"+
-         "</table></b></font>"+
-         "</center>");
-         restaY=restaY * -1;
-         restaYY=restaYY * -1;
-         }
-         if (agregarRestaArriba==0 && agregarRestaAbajo==0) {
-         $("#solucion").append("<center><br>"+
-         "<font size='3'><b><center><table border='0'>"+
-         "<tr>"+
-         "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>"+restaX+"</td>"+
-         "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-         "<td>"+restaXX+"</td>"+
-         "</tr>"+
-         "</table></center></b></font>"+
-         "</center>");
-         }
-         var paso=0;
-         var paso1=0;
-         console.log(restaY,restaX,restaYY,restaXX);
-         if (restaY==restaYY && restaX==restaXX) {
-         esIgual=1;
-         paso=1;
-         }
-         else
-         {
-         paso=0;
-         }
-         if (Math.abs(restaY)==Math.abs(restaXX) && Math.abs(restaX)==Math.abs(restaYY)) {
-         paso1=1;
-         }
-         else
-         {
-         paso1=0;
-         var numerador;
-         var denominador;
-         var entero;
-         console.log("datos para division: ",restaYY,restaXX,restaY,restaX);
-         multiplicarF(restaYY,restaXX,restaY,restaX);
-         entero=enteroMultiGlobal;
-         numerador=numeradorMultiGlobal;
-         denominador=denominadorMultiGlobal;
-         console.log("obtenido division: ",entero,numerador,denominador);
-         if (entero!=0) {
-         if (numerador==0) {
-         if (entero==-1) {
-         paso1=1;
-         }
-         else
-         {
-         paso1=0;
-         }
-         }
-         else
-         {
-         paso1=0;
-         }
-         }
-         else
-         {
-         if (numerador==-1) {
-         if (denominador==1 || denominador==0) {
-         paso1=1;
-         }
-         else
-         {
-         paso1=0;
-         }
-         }
-         else
-         {
-         paso1=0;
-         }
-         }
-         }
-         if (paso==1) {
-         $("#solucion").append("<center><br>"+
-         "<b>Las rectas son paralelas entre sí, ya que sus pendientes son iguales.</b>"+
-         "</center>");
-         }
-         if (paso1==1) {
-         $("#solucion").append("<center><br>"+
-         "<b>Las rectas son perpendiculares entre sí, ya que el resultado de la multiplicación entre ellas es igual a -1; Es decir:<br><br>"+
-         "<font size='3'><b><table border='0'>"+
-         "<tr>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-         "<td rowspan='2'>&nbsp;(&nbsp;</td>"+
-         "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-         "<td rowspan='2'>&nbsp;)&nbsp;=&nbsp;-1</td>"+
-         "</tr>"+
-         "<tr>"+
-         "<td>"+restaX+"</td>"+
-         "<td>"+restaXX+"</td>"+
-         "</tr>"+
-         "</table></b></font>"+
-         "</b>"+
-         "</center>");
-         }
-         if (paso==0 && paso1==0) {
-         $("#solucion").append("<center><br>"+
-         "<b>Las rectas no son ni paralelas ni perpendiculares entre sí.</b>"+
-         "</center>");
-         }
-         $("#solucion").append("<br><font size='3'><center><button style='button' class='btn btn-warning btn-rounded' onclick='Datos();'>Cambiar Puntos</button></center></font>");
-         graficarPunto(x1,y1,x2,y2,xx1,yy1,xx2,yy2);*/
-        $("#Puntos").fadeOut(0);
-        $("#coordenadas").fadeOut(0);
-        $("#Resultado").fadeIn(300);
-        //$("#grafica").fadeIn(300);
-    }
-    function graficarPunto(x1, y1, x2, y2, xx1, yy1, xx2, yy2) {
-        var x1N = x1;
-        var y1N = y1;
-        var x2N = x2;
-        var y2N = y2;
-        var x1NN = xx1;
-        var y1NN = yy1;
-        var x2NN = xx2;
-        var y2NN = yy2;
-        var mayor;
-        var mayorN;
-        if (x1N > y1N) {
-            if (x1N > x2N) {
-                if (x1N > y2N) {
-                    mayor = x1N;
-                }
-                else {
-                    mayor = y2N;
-                }
-            }
-            else {
-                if (x2N > y2N) {
-                    mayor = x2N;
-                }
-                else {
-                    mayor = y2N;
-                }
-            }
-        }
-        else {
-            if (y1N > x2N) {
-                if (y1N > y2N) {
-                    mayor = y1N;
-                }
-                else {
-                    mayor = y2N;
-                }
-            }
-            else {
-                if (x2N > y2N) {
-                    mayor = x2N;
-                }
-                else {
-                    mayor = y2N;
-                }
-            }
-        }
-        if (mayor > x1NN) {
-            if (mayor > y1NN) {
-                if (mayor > x2NN) {
-                    if (mayor > y2NN) {
-                        mayor = mayor;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-                else {
-                    if (x2NN > y2NN) {
-                        mayor = x2NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-            }
-            else {
-                if (y1NN > x2NN) {
-                    if (y1NN > y2NN) {
-                        mayor = y1NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-                else {
-                    if (x2NN > y2NN) {
-                        mayor = x2NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-            }
-        } else {
-            if (x1NN > y1NN) {
-                if (x1NN > x2NN) {
-                    if (x1NN > y2NN) {
-                        mayor = x1NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                } else {
-                    if (x2NN > y2NN) {
-                        mayor = x2NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-            }
-            else {
-                if (y1NN > x2NN) {
-                    if (y1NN > y2NN) {
-                        mayor = y1NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-                else {
-                    if (x2NN > y2NN) {
-                        mayor = x2NN;
-                    }
-                    else {
-                        mayor = y2NN;
-                    }
-                }
-            }
-        }
-        console.log(mayor);
-        mayor = mayor + 2;
-        mayorN = mayor * -1;
-        //brd = JXG.JSXGraph.freeBoard(brd);
-        brd = JXG.JSXGraph.initBoard('plano1', {
-            boundingbox: [mayorN, mayor, mayor, mayorN],
-            keepaspectratio: true,
-            axis: true,
-            showCopyright: false
-        });
-        p1 = brd.create('point', [x1, y1], {visible: true});
-        p2 = brd.create('point', [x2, y2], {visible: true});
-        p3 = brd.create('point', [xx1, yy1], {visible: true});
-        p4 = brd.create('point', [xx2, yy2], {visible: true});
-        var s1 = brd.create('segment', [p1, p2], {strokeColor: '#01aeef'});
-        var s2 = brd.create('segment', [p3, p4], {strokeColor: '#01aeef'});
-
-    }
-    function Datos() {
-        $("#Resultado").fadeOut(0);
-        $("#grafica").fadeOut(0);
-        $("#Puntos").fadeIn(300);
-    }
-    ////////////
-    function Puntos() {
-        $("#Resultado").fadeOut(0);
-        $("#Puntos").fadeIn(300);
-    }
+    /////////////
     //practica
     function cambioEjemplo(opc) {
         switch (opc) {
@@ -1674,349 +915,19 @@
                 break;
         }
     }
-    function cambia_practica(opc) {
+    function cambioPractica(opc) {
         switch (opc) {
             case 1: {
-                $("#prac_2").fadeOut(0);
-                $("#prac_3").fadeOut(0);
-                $("#prac_4").fadeOut(0);
-                $("#prac_1").fadeIn(300);
+                $("#Practica2").fadeOut(0);
+                $("#Practica1").fadeIn(300);
             }
                 break;
             case 2: {
-                $("#prac_1").fadeOut(0);
-                $("#prac_3").fadeOut(0);
-                $("#prac_4").fadeOut(0);
-                $("#prac_2").fadeIn(300);
-            }
-                break;
-            case 3: {
-                $("#prac_2").fadeOut(0);
-                $("#prac_1").fadeOut(0);
-                $("#prac_4").fadeOut(0);
-                $("#prac_3").fadeIn(300);
-            }
-                break;
-            case 4: {
-                $("#prac_2").fadeOut(0);
-                $("#prac_3").fadeOut(0);
-                $("#prac_1").fadeOut(0);
-                $("#prac_4").fadeIn(300);
+                $("#Practica1").fadeOut(0);
+                $("#Practica2").fadeIn(300);
             }
                 break;
         }
-    }
-    function VerificarEvaluacion1() {
-        if ($('input:radio[name=1rpe]:checked').val() == 1) {
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False1P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 2) {
-            $("#False1P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False2P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False2P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 3) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False3P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False3P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 4) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False4P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False4P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 5) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#False6P1").fadeOut(0);
-            $("#True5P1").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-        } else {
-            $("#True5P1").fadeOut(0);
-        }
-        if ($('input:radio[name=1rpe]:checked').val() == 6) {
-            $("#False1P1").fadeOut(0);
-            $("#False2P1").fadeOut(0);
-            $("#False3P1").fadeOut(0);
-            $("#False4P1").fadeOut(0);
-            $("#True5P1").fadeOut(0);
-            $("#False6P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P1").fadeOut(0);
-        }
-    }
-    function limpiarPractica1() {
-        $('input[name=1rpe]').attr('checked', false);
-        $("#False1P1").fadeOut(0);
-        $("#False2P1").fadeOut(0);
-        $("#False3P1").fadeOut(0);
-        $("#False4P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
-        $("#False6P1").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
-    }
-    function VerificarEvaluacion2() {
-        if ($('input:radio[name=2rpe]:checked').val() == 1) {
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False1P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 2) {
-            $("#False1P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False2P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False2P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 3) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-        } else {
-            $("#True3P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 4) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False4P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False4P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 5) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False5P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False5P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 6) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False6P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P2").fadeOut(0);
-        }
-    }
-    function limpiarPractica2() {
-        $('input[name=2rpe]').attr('checked', false);
-        $("#False1P2").fadeOut(0);
-        $("#False2P2").fadeOut(0);
-        $("#True3P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
-        $("#False5P2").fadeOut(0);
-        $("#False6P2").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
-    }
-    function VerificarEvaluacion3() {
-        if ($('input:radio[name=3rpe]:checked').val() == 1) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 2) {
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#True2P3").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-        } else {
-            $("#True2P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 3) {
-            $("#True2P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False3P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False3P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 4) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False4P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False4P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 5) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False6P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False5P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False5P3").fadeOut(0);
-        }
-        if ($('input:radio[name=3rpe]:checked').val() == 6) {
-            $("#True2P3").fadeOut(0);
-            $("#False3P3").fadeOut(0);
-            $("#False4P3").fadeOut(0);
-            $("#False5P3").fadeOut(0);
-            $("#False1P3").fadeOut(0);
-            $("#False6P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P3").fadeOut(0);
-        }
-    }
-    function limpiarPractica3() {
-        $('input[name=3rpe]').attr('checked', false);
-        $("#True2P3").fadeOut(0);
-        $("#False1P3").fadeOut(0);
-        $("#False3P3").fadeOut(0);
-        $("#False4P3").fadeOut(0);
-        $("#False5P3").fadeOut(0);
-        $("#False6P3").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
-    }
-    function VerificarEvaluacion4() {
-        if ($('input:radio[name=4rpe]:checked').val() == 1) {
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False1P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False1P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 2) {
-            $("#False1P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False2P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False2P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 3) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False3P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False3P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 4) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#True4P4").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta', 'Excelente');
-        } else {
-            $("#True4P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 5) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#False5P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False5P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 6) {
-            $("#False1P4").fadeOut(0);
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#True4P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-        } else {
-            $("#False6P4").fadeOut(0);
-        }
-    }
-    function limpiarPractica4() {
-        $('input[name=4rpe]').attr('checked', false);
-        $("#False1P4").fadeOut(0);
-        $("#False2P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        toastr.success('Infomación borrada', 'Muy Bien');
     }
     //FUNCION PARA CAMBIAR EL TIPO DE EJERCICIO A RESOLVER
 
@@ -2047,111 +958,55 @@
 
     function generarResolucionP() {
         var x1P = document.getElementById("x1P").value;
-        var y1P = document.getElementById("y1P").value;
         var mUpP = document.getElementById("mUpP").value;
         var mDownP = document.getElementById("mDownP").value;
-        if (x1P === "" || y1P === "" || mUpP === "") {
+        if (x1P === "" || mUpP === "") {
             toastr.error('Debes completar los campos necesarios', 'Lo Siento');
         }
         else {
             if (mDownP === "") {
                 //Es entero
-                $("#solucion").html("<center>Identificamos la fórmula de punto pendiente<br><br>" +
-                    "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+                $("#solucion").html("<center>Identificamos la fórmula de pendiente-intercepto<br><br>" +
+                    "<font size='3'><b> y  = m x + b</font>" +
                     "<br><br>" +
                     "Sustituyendo las variables" +
                     "</center>");
-                var tempY1P;
                 var tempX1P;
-                if (y1P < 0) {
-                    tempY1P = "( " + y1P + " )";
-                }
-                else {
-                    tempY1P = y1P;
-                }
                 if (x1P < 0) {
-                    tempX1P = "( " + x1P + " )";
+                    $("#solucion").append("<center><font size='3'><b> y  = " + mUpP + " x " + x1P + " </b></font>" +
+                        "<br><br>" +
+                        "</center>");
                 }
                 else {
-                    tempX1P = x1P;
+                    $("#solucion").append("<center><font size='3'><b> y  = " + mUpP + " x + " + x1P + " </b></font>" +
+                        "<br><br>" +
+                        "</center>");
                 }
-                $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = " + mUpP + " ( x - " + tempX1P + " )</b></font>" +
-                    "<br><br>" +
-                    "Simplificamos la fórmula" +
-                    "<br><br>" +
-                    "</center>");
-                if (y1P < 0) {
-                    y1P = y1P * -1;
-                    tempY1P = "+ " + y1P;
-                }
-                else {
-                    tempY1P = "- " + y1P;
-                }
-                x1P = x1P * -1;
-                var multi = mUpP * x1P;
-                //alert(multi);
-                var tempMulti;
-                if (multi < 0) {
-                    multi = multi * -1;
-                    tempMulti = "- " + multi;
-                }
-                else {
-                    tempMulti = "+ " + multi;
-                }
-                $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = " + mUpP + "x  " + tempMulti + "</b></font>" +
-                    "<br><br>"+
-                    "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+                $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación pendiente-intercepto de la recta</b></font></center>");
                 //$("#Puntos").fadeOut(0);
                 $("#coordenadas").fadeOut(0);
                 $("#Resultado").fadeIn(300);
             }
             else {
                 //es fraccionario
-                $("#solucion").html("<center>Identificamos la fórmula de punto pendiente<br><br>" +
-                    "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+                $("#solucion").html("<center>Identificamos la fórmula de pendiente-intercepto<br><br>" +
+                    "<font size='3'><b> y  = m x + b</font>" +
                     "<br><br>" +
                     "Sustituyendo las variables" +
                     "</center>");
-                var tempY1P;
                 var tempX1P;
-                if (y1P < 0) {
-                    tempY1P = "( " + y1P + " )";
+               if (x1P < 0) {
+                   $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x " + x1P + "</b></font>" +
+                       "<br><br>" +
+                       "</center>");
                 }
                 else {
-                    tempY1P = y1P;
-                }
-                if (x1P < 0) {
-                    tempX1P = "( " + x1P + " )";
-                }
-                else {
-                    tempX1P = x1P;
-                }
-                $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - " + tempX1P + " )</b></font>" +
-                    "<br><br>" +
-                    "Simplificamos la fórmula" +
-                    "<br><br>" +
-                    "</center>");
-                multiplicarF(mUpP, mDownP, x1P, 1);
-                //alert("REsultado de la multiplicacion: "+numeradorMultiGlobal+ " / "+denominadorMultiGlobal);
-                if (y1P < 0) {
-                    y1P = y1P * -1;
-                    tempY1P = "+ " + y1P;
-                }
-                else {
-                    tempY1P = "- " + y1P;
-                }
-                //despues del igual
-                if (numeradorMultiGlobal < 0) {
-                    numeradorMultiGlobal = numeradorMultiGlobal * -1;
-                    tempMulti = "+ <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
-                }
-                else {
-                    tempMulti = "- <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
+                   $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x + " + x1P + "</b></font>" +
+                       "<br><br>" +
+                       "</center>");
                 }
                 //impresión de resultado
-                $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>x  " + tempMulti + "</b></font>" +
-                    "<br><br>"+
-                    "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+                $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación de punto pendiente para el punto dado y su pendiente</b></font></center>");
                 //$("#Puntos").fadeOut(0);
                 $("#coordenadas").fadeOut(0);
                 $("#Resultado").fadeIn(300);
@@ -2161,7 +1016,6 @@
 
     function limpiarResolucionP() {
         document.getElementById("x1P").value = "";
-        document.getElementById("y1P").value = "";
         document.getElementById("mUpP").value = "";
         document.getElementById("mDownP").value = "";
         $("#Resultado").fadeOut(0);
@@ -2217,7 +1071,7 @@
             {
                 impreY=y1;
             }
-            $("#solucion").append("<center>"+
+           /* $("#solucion").append("<center>"+
                 "Sustituimos los datos obtenidos:"+
                 "<br><br>"+
                 "<font size='3'><b>"+
@@ -2231,7 +1085,7 @@
                 "</tr>"+
                 "</table>"+
                 "</b></font>"+
-                "</center>");
+                "</center>");*/
             var restaX;
             var restaY;
             restaX=x2-x1;
@@ -2290,7 +1144,7 @@
             if (redujo==1) {
                 if (FinalX==1) {
                     $("#solucion").append("<center>"+
-                        "Realizando la división obtenemos que la pendiente es de: "+
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
                         "<br><br>"+
                         "<font size='3'><b>m = "+FinalY+"</b></font>"+
                         "<br><br>"+
@@ -2301,7 +1155,7 @@
                 else
                 {
                     $("#solucion").append("<center>"+
-                        "Reduciendo la fracción obtenemos que la pendiente es de: "+
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
                         "<br><br>"+
                         "<font size='3'><b>m = <sup>"+FinalY+"</sup>/<sub>"+FinalX+"</sub></b></font>"+
                         "<br><br>"+
@@ -2312,7 +1166,7 @@
             else{
                 if (FinalX==1) {
                     $("#solucion").append("<center>"+
-                        "Realizando la división obtenemos que la pendiente es de: "+
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
                         "<br><br>"+
                         "<font size='3'><b>m = "+FinalY+"</b></font>"+
                         "<br><br>"+
@@ -2322,7 +1176,7 @@
                 else
                 {
                     $("#solucion").append("<center>"+
-                        "Así obtenemos que la pendiente es de: "+
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
                         "<br><br>"+
                         "<font size='3'><b>m = <sup>"+FinalY+"</sup>/<sub>"+FinalX+"</sub></b></font>"+
                         "<br><br>"+
@@ -2339,103 +1193,182 @@
     }
 
     function esEnteroFinal(x1P,y1P,mUpP){
+        var x1 = document.getElementById("x1C").value;
+        var y1 = document.getElementById("y1C").value;
 
-        $("#solucion").append("<center>Tomando en cuenta las coordenadas del primero punto, sustituimos estos datos en la fórmula punto pendiente<br><br>" +
-            "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+        $("#solucion").append("<center>Ahora necesitamos conocer el valor del intercepto, para ello hacemos uso de la fórmula pendiente intercepto y despejamos el valor de b, es decir:<br><br>" +
+            "<font size='3'><b> y = m x + b</b></font>" +
             "<br><br>" +
-            "Sustituyendo las variables" +
+            "Tomando los valores del punto A ("+x1+" , "+y1+"), sustutimos estos valores en la fórmula" +
+            "<br><br>" +
             "</center>");
         var tempY1P;
         var tempX1P;
-        if (y1P < 0) {
-            tempY1P = "( " + y1P + " )";
-        }
-        else {
-            tempY1P = y1P;
-        }
-        if (x1P < 0) {
-            tempX1P = "( " + x1P + " )";
-        }
-        else {
-            tempX1P = x1P;
-        }
-        $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = " + mUpP + " ( x - " + tempX1P + " )</b></font>" +
+        $("#solucion").append("<center><font size='3'> "+y1+" = " + mUpP + " ("+x1+") + b </font>" +
             "<br><br>" +
-            "Simplificamos la fórmula" +
+            "Realizamos la multiplicación" +
             "<br><br>" +
             "</center>");
-        if (y1P < 0) {
-            y1P = y1P * -1;
-            tempY1P = "+ " + y1P;
-        }
-        else {
-            tempY1P = "- " + y1P;
-        }
-        x1P = x1P * -1;
-        var multi = mUpP * x1P;
-        //alert(multi);
-        var tempMulti;
-        if (multi < 0) {
-            multi = multi * -1;
-            tempMulti = "- " + multi;
-        }
-        else {
-            tempMulti = "+ " + multi;
-        }
-        $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = " + mUpP + "x  " + tempMulti + "</b></font>" +
+
+        var multi = mUpP * x1;
+
+        $("#solucion").append("<center><font size='3'> " + y1 + " = " + multi + " + b</font>" +
             "<br><br>"+
-            "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+            "Despejamos el valor de b</center>" +
+            "<br>");
+            multi = multi * -1;
+        if(multi>0)
+        {
+            $("#solucion").append("<center><font size='3'> " + y1 + " + "+ multi + " = b</font>" +
+                "<br><br>"+
+                "Realizando la ultima operación, obtenemos que b es:</center>" +
+                "<br><br>");
+        }
+        else {
+            $("#solucion").append("<center><font size='3'> " + y1 + " "+ multi+" = b</font>" +
+                "<br><br>"+
+                "Sumando los valores obtenes que b es:</center>" +
+                "<br>");
+        }
+        var sumaB = parseInt(y1) + parseInt(multi);
+        $("#solucion").append("<center><font size='3'><b>b = "+sumaB+"</b></font>" +
+            "<br><br>"+
+            "Ahora que conocemos el valor del intercepto y la pendiente, lo sustituimos en la fórmula de pendiente-intercepto para conocer la ecuacion de la recta</center>");
+        ///////GRAFICANDO EL RESULTADO
+        if (sumaB < 0) {
+            $("#solucion").append("<center><font size='3'><b> y = "+mUpP+"  x " + sumaB + "</b></font>" +
+                "<br><br>" +
+                "</center>");
+        }
+        else {
+            $("#solucion").append("<center><font size='3'><b> y = "+mUpP+"  x + " + sumaB + "</b></font>" +
+                "<br><br>" +
+                "</center>");
+        }
+        //impresión de resultado
+        $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación de punto pendiente para el punto dado y su pendiente</b></font></center>");
+        //$("#Puntos").fadeOut(0);
+
+
         //$("#Puntos").fadeOut(0);
         $("#Puntos").fadeOut(0);
         $("#Resultado").fadeIn(300);
     }
 
     function esFraccionFinal(x1P,y1P,mUpP,mDownP){
+
+        var x1 = document.getElementById("x1C").value;
+        var y1 = document.getElementById("y1C").value;
+
         $("#solucion").append("<center>Tomando en cuenta las coordenadas del primero punto, sustituimos estos datos en la fórmula punto pendiente<br><br>" +
             "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
             "<br><br>" +
             "Sustituyendo las variables" +
-            "</center>");
-        var tempY1P;
-        var tempX1P;
-        if (y1P < 0) {
-            tempY1P = "( " + y1P + " )";
-        }
-        else {
-            tempY1P = y1P;
-        }
-        if (x1P < 0) {
-            tempX1P = "( " + x1P + " )";
-        }
-        else {
-            tempX1P = x1P;
-        }
-        $("#solucion").append("<center><font size='3'><b> y - " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - " + tempX1P + " )</b></font>" +
+            "<br><br></center>");
+
+        $("#solucion").append("<center><font size='3'> "+y1+" = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ("+x1+") + b </font>" +
             "<br><br>" +
-            "Simplificamos la fórmula" +
+            "Realizamos la multiplicación" +
             "<br><br>" +
             "</center>");
-        multiplicarF(mUpP, mDownP, x1P, 1);
-        //alert("REsultado de la multiplicacion: "+numeradorMultiGlobal+ " / "+denominadorMultiGlobal);
-        if (y1P < 0) {
-            y1P = y1P * -1;
-            tempY1P = "+ " + y1P;
+
+        multiplicarF(mUpP, mDownP, x1, 1);
+        var numerador=nuevoAn;
+        var denominador=nuevoAd;
+        if(denominador===1){
+            $("#solucion").append("<center><font size='3'> " + y1 + " = " + numerador + " + b</font>" +
+                "<br><br>"+
+                "Despejamos el valor de b</center>" +
+                "<br>");
+            numerador = numerador * -1;
+            if(numerador>0)
+            {
+                $("#solucion").append("<center><font size='3'> " + y1 + " + "+ numerador + " = b</font>" +
+                    "<br><br>"+
+                    "Realizando la ultima operación, obtenemos que b es:</center>" +
+                    "<br><br>");
+            }
+            else {
+                $("#solucion").append("<center><font size='3'> " + y1 + " "+ numerador+" = b</font>" +
+                    "<br><br>"+
+                    "Sumando los valores obtenes que b es:</center>" +
+                    "<br>");
+            }
+            var sumaB = parseInt(y1) + parseInt(numerador);
+            $("#solucion").append("<center><font size='3'><b>b = "+sumaB+"</b></font>" +
+                "<br><br>"+
+                "Ahora que conocemos el valor del intercepto y la pendiente, lo sustituimos en la fórmula de pendiente-intercepto para conocer la ecuacion de la recta</center>");
+            ///////GRAFICANDO EL RESULTADO
+            if (sumaB < 0) {
+                $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x " + sumaB + "</b></font>" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            else {
+                $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x + " + sumaB + "</b></font>" +
+                    "<br><br>" +
+                    "</center>");
+            }
         }
-        else {
-            tempY1P = "- " + y1P;
+        else{
+            $("#solucion").append("<center><font size='3'> " + y1 + " =  <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> + b</font>" +
+                "<br><br>"+
+                "Despejamos el valor de b</center>" +
+                "<br>");
+
+            numerador= numerador * -1;
+
+            if(numerador>0)
+            {
+                $("#solucion").append("<center><font size='3'> " + y1 + " + <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> = b</font>" +
+                    "<br><br>"+
+                    "Realizando la ultima operación, obtenemos que b es:</center>" +
+                    "<br><br>");
+            }
+            else {
+                $("#solucion").append("<center><font size='3'> " + y1 + " <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> = b</font>" +
+                    "<br><br>"+
+                    "Sumando los valores obtenemos que b es:</center>" +
+                    "<br>");
+            }
+
+            if(y1>0 && numerador>0){
+                var nuevoNume = (y1 * denominador) + numerador;
+                var nuevoDen = denominador;
+            }
+            if(y1<0 && numerador<0){
+                var nuevoNume = (y1 * denominador) - numerador;
+                var nuevoDen = denominador;
+            }
+            if(y1>0 && numerador<0){
+                var nuevoNume = (y1 * denominador) - numerador;
+                var nuevoDen = denominador;
+            }
+            if(y1<0 && numerador>0)
+            {
+                var nuevoNume = (y1 * denominador) + numerador;
+                var nuevoDen = denominador;
+            }
+
+            $("#solucion").append("<center><font size='3'><b>b = <sup>" + nuevoNume + "</sup>/<sub>" + nuevoDen + "</sub></b></font>" +
+                "<br><br>"+
+                "Ahora que conocemos el valor del intercepto y la pendiente, lo sustituimos en la fórmula de pendiente-intercepto para conocer la ecuacion de la recta</center>");
+
+            if (nuevoNume < 0) {
+                $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x <sub>" + nuevoNume + "</sub>/<sub>" + nuevoDen + "</sub></b></font>" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            else {
+                $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x + <sub>" + nuevoNume + "</sub>/<sub>" + nuevoDen + "</sub></b></font>" +
+                    "<br><br>" +
+                    "</center>");
+            }
         }
-        //despues del igual
-        if (numeradorMultiGlobal < 0) {
-            numeradorMultiGlobal = numeradorMultiGlobal * -1;
-            tempMulti = "+ <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
-        }
-        else {
-            tempMulti = "- <sup>" + numeradorMultiGlobal + "</sup>/<sub>" + denominadorMultiGlobal + "</sub>";
-        }
+
         //impresión de resultado
-        $("#solucion").append("<center><font size='3'><b> y " + tempY1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>x  " + tempMulti + "</b></font>" +
-            "<br><br>"+
-            "Siendo esta la fórmula de punto pendiente para el punto dado y su pendiente</center>");
+        $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación de punto pendiente para el punto dado y su pendiente</b></font></center>");
+        //$("#Puntos").fadeOut(0);
         $("#Puntos").fadeOut(0);
         $("#Resultado").fadeIn(300);
     }
