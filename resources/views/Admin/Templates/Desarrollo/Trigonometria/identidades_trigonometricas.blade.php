@@ -921,9 +921,7 @@
                                     	<div class="col-md-6">
                                     		<div class="row">
                                     			<div class="col-md-12">
-                                    				<div class="alert alert-warning" id="panelRespuesta">
-                                    						
-                                    				</div>
+                                    				<div id="panelRespuesta"></div>
                                     			</div>
                                     		</div>
                                     	</div>
@@ -1236,75 +1234,95 @@
 		console.log(boton);
 		if (boton=='sec' || boton=='cos') {
 			if ((document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isec').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec').parentNode.id=='T23' && document.getElementById('Icos').parentNode.id=='T14')) {
-				$('#panelRespuesta').html('<b>El despeje de "Cos" es correcto, ¡Buen trabajo!</b>');
+				$('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                    '<br><b>El despeje de "Cos" es correcto, ¡Buen trabajo!</b></p></div>');
 			} else {
 				if ((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Isec').parentNode.id=='T15')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T15')||(document.getElementById('Icos').parentNode.id=='T12' && document.getElementById('Isec').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')||(document.getElementById('Isec').parentNode.id=='T12' && document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')) {
-					$('#panelRespuesta').html('<b>El despeje de "1" es correcto, ¡Buen trabajo!</b>');
+                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                        '<br><b>El despeje de "1" es correcto, ¡Buen trabajo!</b></p></div>');
 				} else {
 					if ((document.getElementById('Isec').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T23' && document.getElementById('Isec').parentNode.id=='T14')) {
-						$('#panelRespuesta').html('<b>El despeje de "sec" es correcto, ¡Buen trabajo!</b>');
+                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                            '<br><b>El despeje de "sec" es correcto, ¡Buen trabajo!</b></p></div>');
 					} else {
-						$('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                        $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                            '<br><b>El despeje es incorrecto.</b></p></div>');
 					}
 				}
 			}
 		} else {
 			if (boton=='sen'||boton=='csc') {
 				if ((document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icsc').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc').parentNode.id=='T23' && document.getElementById('Isen').parentNode.id=='T14')) {
-					$('#panelRespuesta').html('<b>El despeje de "sen" es correcto, ¡Buen trabajo!</b>');
+                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                        '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
 				} else {
 					if ((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Icsc').parentNode.id=='T15')||(document.getElementById('Iuno').parentNode.id=='T12' && document.getElementById('Icsc').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T15')||(document.getElementById('Isen').parentNode.id=='T12' && document.getElementById('Icsc').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')||(document.getElementById('Icsc').parentNode.id=='T12' && document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')) {
-						$('#panelRespuesta').html('<b>El despeje de "1" es correcto, ¡Buen trabajo!</b>');
+                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                            '<br><b>El despeje de "1" es correcto, ¡Buen trabajo!</b></p></div>');
 					} else {
 						if ((document.getElementById('Icsc').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isen').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T23' && document.getElementById('Icsc').parentNode.id=='T14')) {
-							$('#panelRespuesta').html('<b>El despeje de "csc" es correcto, ¡Buen trabajo!</b>');
+                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                '<br><b>El despeje de "csc" es correcto, ¡Buen trabajo!</b></p></div>');
 						} else {
-							$('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                '<br><b>El despeje es incorrecto.</b></p></div>');
 						}
 					}
 				}
 			} else {
 				if (boton=='tan'||boton=='cot') {
 					if ((document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T23' && document.getElementById('Itan').parentNode.id=='T14')) {
-						$('#panelRespuesta').html('<b>El despeje de "tan" es correcto, ¡Buen trabajo!</b>');
+                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                            '<br><b>El despeje de "tan" es correcto, ¡Buen trabajo!</b></p></div>');
 					} else {
 						if ((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T15')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T15')||(document.getElementById('Itan').parentNode.id=='T12' && document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')||(document.getElementById('Icot').parentNode.id=='T12' && document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')) {
-							$('#panelRespuesta').html('<b>El despeje de "1" es correcto, ¡Buen trabajo!</b>');
+                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                '<br><b>El despeje de "1" es correcto, ¡Buen trabajo!</b></p></div>');
 						} else {
 							if ((document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T23' && document.getElementById('Icot').parentNode.id=='T14')) {
-								$('#panelRespuesta').html('<b>El despeje de "cot" es correcto, ¡Buen trabajo!</b>');
+                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                    '<br><b>El despeje de "cot" es correcto, ¡Buen trabajo!</b></p></div>');
 							} else {
-								$('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                    '<br><b>El despeje es incorrecto.</b></p></div>');
 							}
 						}
 					}
 				} else {
 					if (boton=='tan1') {
 						if ((document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T24')||(document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T23' && document.getElementById('Itan').parentNode.id=='T14')) {
-							$('#panelRespuesta').html('<b>El despeje de "tan" es correcto, ¡Buen trabajo!</b>');
+                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                '<br><b>El despeje de "tan" es correcto, ¡Buen trabajo!</b></p></div>');
 						} else {
 							if ((document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T15')||(document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T15')||(document.getElementById('Itan').parentNode.id=='T12' && document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14')||(document.getElementById('Icos').parentNode.id=='T12' && document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14')) {
-								$('#panelRespuesta').html('<b>El despeje de "sen" es correcto, ¡Buen trabajo!</b>');
+                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                    '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
 							} else {
 								if ((document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T24')||(document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T23' && document.getElementById('Icos').parentNode.id=='T14')) {
-									$('#panelRespuesta').html('<b>El despeje de "cos" es correcto, ¡Buen trabajo!</b>');
+                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                        '<br><b>El despeje de "cos" es correcto, ¡Buen trabajo!</b></p></div>');
 								} else {
-									$('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                        '<br><b>El despeje es incorrecto.</b></p></div>');
 								}
 							}
 						}
 					} else {
 						if(boton=='cot1'){
 							if ((document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Isen').parentNode.id=='T24')||(document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T23' && document.getElementById('Icot').parentNode.id=='T14')) {
-							$('#panelRespuesta').html('<b>El despeje de "Cot" es correcto, ¡Buen trabajo!</b>');
+                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                    '<br><b>El despeje de "Cot" es correcto, ¡Buen trabajo!</b></p></div>');
 						} else {
 							if ((document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T14' && document.getElementById('Isen').parentNode.id=='T15')||(document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T15')||(document.getElementById('Icot').parentNode.id=='T12' && document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14')||(document.getElementById('Isen').parentNode.id=='T12' && document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14')) {
-								$('#panelRespuesta').html('<b>El despeje de "cos" es correcto, ¡Buen trabajo!</b>');
+                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                    '<br><b>El despeje de "cos" es correcto, ¡Buen trabajo!</b></p></div>');
 							} else {
 								if ((document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T24')||(document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T23' && document.getElementById('Isen').parentNode.id=='T14')) {
-									$('#panelRespuesta').html('<b>El despeje de "sen" es correcto, ¡Buen trabajo!</b>');
+                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                        '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
 								} else {
-									$('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                        '<br><b>El despeje es incorrecto.</b></p></div>');
 								}
 							}
 						}
@@ -1312,28 +1330,74 @@
                             if(boton=='sc2'){
                                 if((document.getElementById('Isen2').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
                                 || (document.getElementById('Icos2').parentNode.id=='T11' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
-                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T15')
-                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T15')){
-                                    $('#panelRespuesta').html('<b>El despeje de "1" es corecto, ¡Buen trabajo!</b>');
+                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T16')
+                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')){
+                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                        '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                 }else{
                                     if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T16')
-                                    || (document.getElementById('Isen2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
-                                        $('#panelRespuesta').html('<b>El despeje de "cos2 x" es corecto, ¡Buen trabajo!</b>');
+                                    || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
+                                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                            '<br><b>El despeje de "cos2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                     }else{
                                         if((document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')
-                                        ||(document.getElementById('Icos2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
-                                            $('#panelRespuesta').html('<b>El despeje de "sen2 x" es corecto, ¡Buen trabajo!</b>');
+                                        ||(document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
+                                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                                '<br><b>El despeje de "sen2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                         }else{
-                                            $('#panelRespuesta').html('<b>El despeje es incorrecto, ¡Error!</b>');
+                                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                                '<br><b>El despeje es incorrecto.</b></p></div>');
                                         }
                                     }
                                 }
                             }else{
                                 if(boton=='csc2'){
-                                    console.warn('csc2');
+                                    if((document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
+                                        || (document.getElementById('Icot2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
+                                        || (document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icot2').parentNode.id=='T16')
+                                        ||(document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
+                                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                            '<br><b>El despeje de "csc 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                    }else{
+                                        if((document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
+                                            || (document.getElementById('Icsc2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14')){
+                                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                                '<br><b>El despeje de "cot 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                        }else{
+                                            if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && document.getElementById('Icot2').parentNode.id=='T16')
+                                                ||(document.getElementById('Icsc2').parentNode.id=='T11' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
+                                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                                    '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
+                                            }else{
+                                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                                    '<br><b>El despeje es incorrecto.</b></p></div>');
+                                            }
+                                        }
+                                    }
                                 }else{
                                     if(boton=='sec2'){
-                                        console.warn('sec2');
+                                        if((document.getElementById('Itan2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
+                                            || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
+                                            || (document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Itan2').parentNode.id=='T16')
+                                            ||(document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
+                                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                                '<br><b>El despeje de "sec 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                        }else{
+                                            if((document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
+                                                || (document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14')){
+                                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                                    '<br><b>El despeje de "tan 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                            }else{
+                                                if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Itan2').parentNode.id=='T16')
+                                                    ||(document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
+                                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                                                        '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
+                                                }else{
+                                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                                        '<br><b>El despeje es incorrecto.</b></p></div>');
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
