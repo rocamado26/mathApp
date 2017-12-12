@@ -354,264 +354,224 @@
                                                 <button class="btn btn-outline btn-primary dim" type="button"
                                                         onclick="cambioPractica(2)">2
                                                 </button>
+                                                <button class="btn btn-outline btn-primary dim" type="button"
+                                                        onclick="cambioPractica(3)">3
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="ibox">
                                         <div class="ibox-content" id="tour3-2">
                                             <div class="row animated fadeInRightBig" id="Practica1">
-                                                <div class="row">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">
-                                                                    <center><img
-                                                                                src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font
-                                                                                size="4"><i><b>Problema</b></i></font>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <p style="text-align: justify;">
-                                                                                Halla la ecuación de la recta si su intersecto en y
-                                                                                es <b>b = 4</b> y su pendiente es <b>- <sup>3</sup>/<sub>5</sub> </b>
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                <div class="col-lg-8">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
                                                         </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">Primero identificamos cada elemento
-                                                                de la fórmula:
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                        <font size="3">
-                                                                            <center>
-                                                                                m = <b>2</b>
-                                                                                <br><br>
-                                                                                x<sub>1</sub> = <b>1</b>
-                                                                                <br><br>
-                                                                                y<sub>1</sub> = <b>5</b>
-                                                                            </center>
-                                                                        </font>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">Los sustituimos en la fórmula del
-                                                                punto pendiente y simplificamos la operación:
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                        <font size="3">
-                                                                            <center>
-                                                                                y - y<sub>1</sub> = m (x - x<sub>1</sub>)
-                                                                                <br><br>
-                                                                                y - 5 = 2 (x - 1)
-                                                                                <br><br>
-                                                                                y -5 = 2x - 2
-                                                                            </center>
-                                                                        </font>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Por lo tanto la ecuación punto-pendite de la recta es:
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>y -5 = 2x -
-                                                                                2</b></font><br><br>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                        <div class="panel-body">
+                                                            <font size="3">
+                                                                <center>
+                                                                    Hallar la ecuación pendiente-intercepto que tiene pendiente <b>- <sup>3</sup>/<sub>5</sub></b> e intercepto en <b>4</b>
+                                                                </center>
+                                                            </font>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <div class="panel panel-warning">
-                                                                    <div class="panel-heading">
-                                                                        <center><img
-                                                                                    src="img/iconos/generales/target.png">&nbsp;&nbsp;<font
-                                                                                    size="4"><i><b>Punto de
-                                                                                        apoyo</b></i></font></center>
-                                                                    </div>
-                                                                    <div class="panel-body">
-                                                                        <p style="text-align: justify;">
-                                                                            <br>
-                                                                            Sean los puntos de una recta L:
-                                                                            A(x<sub>1</sub>, y<sub>1</sub>), B(x, y) un
-                                                                            punto arbitrario de ella. Su pendiente es:
-                                                                            <br><br>
-                                                                        <table border="0">
-                                                                            <tr>
-                                                                                <td style="border-bottom: 1px black solid;">
-                                                                                    Y – Y<sub>1</sub></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>X – X<sub>1</sub></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                        <br>
-                                                                        De aquí obtienes la ecuación punto pendiente que
-                                                                        se escribe así: <b>y – y<sub>1</sub> = m( x –
-                                                                            x<sub>1</sub>)</b>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
+                                                    <p style="text-align: justify;">
+                                                    <center>
+                                                        <br><br>
+                                                        Cambiamos los terminos que conocemos en la fórmula de ecuación pendiente intercepto
+                                                        <br><br>
+                                                        <table border="0">
+                                                            <tr>
+                                                                <td colspan="5" style="text-align: center;"><font size="4">y = m x + b</font></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><font size="4">Y = &nbsp;</font></td>
+                                                                <td><div class="contenedor" id="35E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                                <td><font size="4">&nbsp;x&nbsp;</font></td>
+                                                                <td><font size="4">&nbsp;+&nbsp;</font></td>
+                                                                <td><div class="contenedor" id="4E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="row col-lg-12">
+                                                        <div id="compenentesPractica1" class="col-lg-12 alert alert-warning">
+                                                            <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                            <br>
+                                                            <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                                <img id="pieza4E1" src="{{asset('img/iconos/geometria/recta/intercepto/practica1/4.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                <img id="pieza35E1" src="{{asset('img/iconos/geometria/recta/intercepto/practica1/35.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
                                                             </div>
                                                         </div>
+                                                        <div id="ExitoPrac1" class="col-lg-12 alert alert-success" style="display: none;">
+                                                            <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                            <br>
+                                                            <p style="text-align: justify;">
+                                                                Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que la ecuación pendiente-intercepto es:
+                                                                <br><br>
+                                                            <center><font size="3"><b>y = -<sup>3</sup>/<sub>5</sub> x + 4</b></font></center>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="botonesPrac1" class="row col-lg-12">
+                                                        <center>
+                                                            <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica1();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                            <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica1(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                        </center>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row animated fadeInRightBig" style="display: none;"
                                                  id="Practica2">
-                                                <div class="row">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">
-                                                                    <center><img
-                                                                                src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font
-                                                                                size="4"><i><b>Problema</b></i></font>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <p style="text-align: justify;">
-                                                                                Encuentra la ecucacion punto-intercetpto de los puntos <b>A ( 3 , 8)</b> y <b> B ( -2, 8 )</b>
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                <div class="col-lg-8">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
                                                         </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">Primero identificamos cada elemento
-                                                                de la fórmula:
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                        <font size="3">
-                                                                            <center>
-                                                                                m = <b><sup>3</sup>/<sub>5</sub></b>
-                                                                                <br><br>
-                                                                                x<sub>1</sub> = <b>-5</b>
-                                                                                <br><br>
-                                                                                y<sub>1</sub> = <b>4</b>
-                                                                            </center>
-                                                                        </font>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">Los sustituimos en la fórmula del
-                                                                punto pendiente y simplificamos la operación:
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                        <font size="3">
-                                                                            <center>
-                                                                                y - y<sub>1</sub> = m (x - x<sub>1</sub>)
-                                                                                <br><br>
-                                                                                y - 4 = <sup>3</sup>/<sub>5</sub> (x -
-                                                                                (-5))
-                                                                                <br><br>
-                                                                                y - 4 = <sup>3</sup>/<sub>5</sub> (x +
-                                                                                5)
-                                                                                <br><br>
-                                                                                y - 4 = <sup>3</sup>/<sub>5</sub>x +
-                                                                                3</sub>
-                                                                            </center>
-                                                                        </font>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Por lo tanto la ecuación punto pendiente de la recta es:
-                                                            </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>y - 4 =
-                                                                                <sup>3</sup>/<sub>5</sub>x +
-                                                                                3</b></font><br><br>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                        <div class="panel-body">
+                                                            <font size="3">
+                                                                <center>
+                                                                    Hallar la ecuación pendiente-intercepto que pasa por los puntos <b>A ( 3 , 8 )</b> y <b>B ( -2 , 10 )</b>
+                                                                </center>
+                                                            </font>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <div class="panel panel-warning">
-                                                                    <div class="panel-heading">
-                                                                        <center><img
-                                                                                    src="img/iconos/generales/target.png">&nbsp;&nbsp;<font
-                                                                                    size="4"><i><b>Punto de
-                                                                                        apoyo</b></i></font></center>
-                                                                    </div>
-                                                                    <div class="panel-body">
-                                                                        <p style="text-align: justify;">
-                                                                            <br>
-                                                                            Sean los puntos de una recta L:
-                                                                            A(x<sub>1</sub>, y<sub>1</sub>), B(x, y) un
-                                                                            punto arbitrario de ella. Su pendiente es:
-                                                                            <br><br>
-                                                                        <table border="0">
-                                                                            <tr>
-                                                                                <td style="border-bottom: 1px black solid;">
-                                                                                    Y – Y<sub>1</sub></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>X – X<sub>1</sub></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                        <br>
-                                                                        De aquí obtienes la ecuación punto pendiente que
-                                                                        se escribe así: <b>y – y<sub>1</sub> = m( x –
-                                                                            x<sub>1</sub>)</b>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
+                                                    <p style="text-align: justify;">
+                                                    <center>
+                                                        <br><br>
+                                                        Primero encontramos el valor de la pendiente:
+                                                        <br><br>
+                                                        <table border="0">
+                                                            <tr>
+                                                                <td><font size="4">m = &nbsp;</font></td>
+                                                                <td><div class="contenedor" id="25E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                                </tr>
+                                                        </table>
+                                                        <br><br>
+                                                        Una vez conocemos el valor de la pendiente, sustituimos los valores de la ecuacion de pendiente intercepto por los puntos A de la recta conocida, obteniendo::
+                                                        <br><br>
+                                                        <table border="0">
+                                                            <tr>
+                                                                <td><font size="4">b = &nbsp;</font></td>
+                                                                <td><div class="contenedor" id="46E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                            </tr>
+                                                        </table>
+                                                        <br><br>
+                                                        Ahora que conocemos los valores del intercepto y la pendiente, sustituimos los valores de la fórmula para obtener la ecuación pendiente intercepto, es decir:
+                                                        <br><br>
+                                                        <table border="0">
+                                                            <tr>
+                                                                <td colspan="5" style="text-align: center;"><font size="4">y = m x + b</font></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="5">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="5"><font size="4">Y = - <sup>2</sup>/<sub>5</sub>x + <sup>46</sup>/<sub>5</sub> </font></td>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="row col-lg-12">
+                                                        <div id="compenentesPractica2" class="col-lg-12 alert alert-warning">
+                                                            <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                            <br>
+                                                            <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                                <img id="pieza46E2" src="{{asset('img/iconos/geometria/recta/intercepto/practica2/46.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                <img id="pieza25E2" src="{{asset('img/iconos/geometria/recta/intercepto/practica2/25.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
                                                             </div>
                                                         </div>
+                                                        <div id="ExitoPrac2" class="col-lg-12 alert alert-success" style="display: none;">
+                                                            <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                            <br>
+                                                            <p style="text-align: justify;">
+                                                                Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que la ecuación pendiente-intercepto es:
+                                                                <br><br>
+                                                            <center><font size="3"><b>y = -<sup>2</sup>/<sub>5</sub> x + <sup>46</sup>/<sub>5</sub></b></font></center>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="botonesPrac2" class="row col-lg-12">
+                                                        <center>
+                                                            <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica2();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                            <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica2(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                        </center>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row animated fadeInRightBig"  style="display: none;" id="Practica3">
+                                                <div class="col-lg-8">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <font size="3">
+                                                                <center>
+                                                                    Hallar la ecuación pendiente-intercepto que tiene pendiente <b>5</b> e intercepto en <b>-2</b>
+                                                                </center>
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                    <p style="text-align: justify;">
+                                                    <center>
+                                                        <br><br>
+                                                        Cambiamos los terminos que conocemos en la fórmula de ecuación pendiente intercepto
+                                                        <br><br>
+                                                        <table border="0">
+                                                            <tr>
+                                                                <td colspan="5" style="text-align: center;"><font size="4">y = m x + b</font></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><font size="4">Y = &nbsp;</font></td>
+                                                                <td><div class="contenedor" id="5E3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                                <td><font size="4">&nbsp;x&nbsp;</font></td>
+                                                                <td><font size="4">&nbsp;+&nbsp;</font></td>
+                                                                <td><div class="contenedor" id="2E3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="row col-lg-12">
+                                                        <div id="compenentesPractica3" class="col-lg-12 alert alert-warning">
+                                                            <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                            <br>
+                                                            <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                                <img id="pieza2E3" src="{{asset('img/iconos/geometria/recta/intercepto/practica3/2.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                <img id="pieza5E3" src="{{asset('img/iconos/geometria/recta/intercepto/practica3/5.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="ExitoPrac3" class="col-lg-12 alert alert-success" style="display: none;">
+                                                            <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                            <br>
+                                                            <p style="text-align: justify;">
+                                                                Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que la ecuación pendiente-intercepto es:
+                                                                <br><br>
+                                                            <center><font size="3"><b>y = 5 x - 2</b></font></center>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="botonesPrac3" class="row col-lg-12">
+                                                        <center>
+                                                            <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica3();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                            <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica3(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                        </center>
                                                     </div>
                                                 </div>
                                             </div>
@@ -869,6 +829,53 @@
     var enteroMultiGlobal;
     var numeradorMultiGlobal;
     var denominadorMultiGlobal;
+
+    ////FUNCIONES MOVER IMAGENES
+    /**
+     * Función que se ejecuta al arrastrar el elemento.
+     **/
+    function start(e) {
+        e.dataTransfer.effecAllowed = 'move'; // Define el efecto como mover (Es el por defecto)
+        e.dataTransfer.setData("Text", e.target.id); // Coje el elemento que se va a mover
+        e.target.style.opacity = '0.4';
+    }
+
+    /**
+     * Función que se ejecuta se termina de arrastrar el elemento.
+     **/
+    function end(e){
+        e.target.style.opacity = ''; // Restaura la opacidad del elemento
+        e.dataTransfer.clearData("Data");
+    }
+
+    /**
+     * Función que se ejecuta cuando un elemento arrastrable entra en el elemento desde del que se llama.
+     **/
+    function enter(e) {
+        return true;
+    }
+
+    /**
+     * Función que se ejecuta cuando un elemento arrastrable esta sobre el elemento desde del que se llama.
+     * Devuelve false si el objeto se puede soltar en ese elemento y true en caso contrario.
+     **/
+    function over(e) {
+        if (e.target.id == "contenedorPiezas" || e.target.className == "contenedor")
+            return false;
+        // else
+        // return true;
+    }
+
+    /**
+     * Función que se ejecuta cuando un elemento arrastrable se suelta sobre el elemento desde del que se llama.
+     **/
+    function drop(e){
+        e.preventDefault(); // Evita que se ejecute la accion por defecto del elemento soltado.
+        var elementoArrastrado = e.dataTransfer.getData("Text");
+        e.target.appendChild(document.getElementById(elementoArrastrado)); // Coloca el elemento soltado sobre el elemento desde el que se llamo esta funcion
+        //comprobarPuzzle();
+    }
+
     /////////////
     //practica
     function cambioEjemplo(opc) {
@@ -919,12 +926,20 @@
         switch (opc) {
             case 1: {
                 $("#Practica2").fadeOut(0);
+                $("#Practica3").fadeOut(0);
                 $("#Practica1").fadeIn(300);
             }
                 break;
             case 2: {
                 $("#Practica1").fadeOut(0);
+                $("#Practica3").fadeOut(0);
                 $("#Practica2").fadeIn(300);
+            }
+                break;
+            case 3: {
+                $("#Practica1").fadeOut(0);
+                $("#Practica2").fadeOut(0);
+                $("#Practica3").fadeIn(300);
             }
                 break;
         }
@@ -1021,6 +1036,7 @@
         $("#Resultado").fadeOut(0);
         $("#coordenadas").fadeOut(0);
         $("#Puntos").fadeIn(300);
+
         toastr.success('Los campos se limpiaron correctamente', 'Excelente');
 
     }
@@ -1192,6 +1208,17 @@
         }
     }
 
+    function limpiarResolucionC(){
+        document.getElementById("x1C").value = "";
+        document.getElementById("y1C").value = "";
+        document.getElementById("x2C").value = "";
+        document.getElementById("y2C").value = "";
+        $("#Resultado").fadeOut(0);
+        $("#Puntos").fadeOut(0);
+        $("#coordenadas").fadeIn(300);
+        toastr.success('Los campos se limpiaron correctamente', 'Excelente');
+    }
+
     function esEnteroFinal(x1P,y1P,mUpP){
         var x1 = document.getElementById("x1C").value;
         var y1 = document.getElementById("y1C").value;
@@ -1323,7 +1350,7 @@
                 $("#solucion").append("<center><font size='3'> " + y1 + " + <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> = b</font>" +
                     "<br><br>"+
                     "Realizando la ultima operación, obtenemos que b es:</center>" +
-                    "<br><br>");
+                    "<br>");
             }
             else {
                 $("#solucion").append("<center><font size='3'> " + y1 + " <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> = b</font>" +
@@ -1453,6 +1480,186 @@
         //console.log("an: ",An," ad: ",Ad);
     }
 
+
+    function ComprobarPractica1(){
+        if((document.getElementById('pieza35E1').parentNode.id=='35E1') &&
+            (document.getElementById('pieza4E1').parentNode.id=='4E1'))
+        {
+            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
+            $("#compenentesPractica1").fadeOut(0);
+            $("#ExitoPrac1").fadeIn(300);
+
+        }
+        else
+        {
+            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
+            ReestablecerPractica2(1);
+        }
+    }
+
+    function ReestablecerPractica1(opc){
+        if (opc==0) {
+            swal({
+                title: "¿Esta Seguro?",
+                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, borrar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
+                //Limpiando componentes...
+                $("#compenentesPractica1").html(""+
+                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                    "<br>"+
+                    "<img id='pieza4E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/4.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza35E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/35.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                     "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                    "</div>");
+                //Limpiando espacios libres...
+                $("#35E1").html("");
+                $("#4E1").html("");
+                $("#ExitoPrac1").fadeOut(0);
+                $("#compenentesPractica1").fadeIn(100);
+            });//cierre del swal
+        }
+        else
+        {
+            $("#compenentesPractica1").html(""+
+                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                "<br>"+
+                "<img id='pieza4E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/4.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza35E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/35.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                "</div>");
+            //Limpiando espacios libres...
+            $("#35E1").html("");
+            $("#4E1").html("");
+            $("#ExitoPrac1").fadeOut(0);
+            $("#compenentesPractica1").fadeIn(100);
+        }
+    }
+
+    function ComprobarPractica2(){
+        if((document.getElementById('pieza25E2').parentNode.id=='25E2') &&
+            (document.getElementById('pieza46E2').parentNode.id=='46E2'))
+        {
+            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
+            $("#compenentesPractica1").fadeOut(0);
+            $("#ExitoPrac1").fadeIn(300);
+
+        }
+        else
+        {
+            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
+            ReestablecerPractica2(1);
+        }
+    }
+
+    function ReestablecerPractica2(opc){
+        if (opc==0) {
+            swal({
+                title: "¿Esta Seguro?",
+                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, borrar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
+                //Limpiando componentes...
+                $("#compenentesPractica2").html(""+
+                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                    "<br>"+
+                    "<img id='pieza46E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/46.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza25E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/25.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                    "</div>");
+                //Limpiando espacios libres...
+                $("#46E2").html("");
+                $("#25E2").html("");
+                $("#ExitoPrac2").fadeOut(0);
+                $("#compenentesPractica2").fadeIn(100);
+            });//cierre del swal
+        }
+        else
+        {
+            $("#compenentesPractica2").html(""+
+                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                "<br>"+
+                "<img id='pieza46E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/46.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza25E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/25.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                "</div>");
+            //Limpiando espacios libres...
+            $("#46E2").html("");
+            $("#25E2").html("");
+            $("#ExitoPrac2").fadeOut(0);
+            $("#compenentesPractica2").fadeIn(100);
+        }
+    }
+
+    function ComprobarPractica3(){
+        if((document.getElementById('pieza2E3').parentNode.id=='2E3') &&
+            (document.getElementById('pieza5E3').parentNode.id=='5E3'))
+        {
+            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
+            $("#compenentesPractica3").fadeOut(0);
+            $("#ExitoPrac3").fadeIn(300);
+
+        }
+        else
+        {
+            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
+            ReestablecerPractica3(1);
+        }
+    }
+
+    function ReestablecerPractica3(opc){
+        if (opc==0) {
+            swal({
+                title: "¿Esta Seguro?",
+                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, borrar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
+                //Limpiando componentes...
+                $("#compenentesPractica3").html(""+
+                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                    "<br>"+
+                    "<img id='pieza5E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/5.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<img id='pieza2E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/2.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                    "</div>");
+                //Limpiando espacios libres...
+                $("#5E3").html("");
+                $("#2E3").html("");
+                $("#ExitoPrac3").fadeOut(0);
+                $("#compenentesPractica3").fadeIn(100);
+            });//cierre del swal
+        }
+        else
+        {
+            $("#compenentesPractica3").html(""+
+                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                "<br>"+
+                "<img id='pieza5E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/5.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<img id='pieza2E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/2.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
+                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
+                "</div>");
+            //Limpiando espacios libres...
+            $("#5E3").html("");
+            $("#2E3").html("");
+            $("#ExitoPrac3").fadeOut(0);
+            $("#compenentesPractica3").fadeIn(100);
+        }
+    }
 
     function tour1() {
         var tour = new Tour({
