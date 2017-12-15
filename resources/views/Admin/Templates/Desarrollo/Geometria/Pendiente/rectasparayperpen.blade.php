@@ -262,7 +262,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><b>Práctica</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><b>Resolución de Ejercicios</b></a>
                             <div class="nav navbar-top-links navbar-right ">
                                 <div class="col-lg-3">
                                     <button type="button"  onclick="tour2()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
