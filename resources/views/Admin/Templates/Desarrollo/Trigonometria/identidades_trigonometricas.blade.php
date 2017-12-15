@@ -872,7 +872,8 @@
                                     							<button type="button" id="csc2" onclick="imprimeIdentidades(id)" class="btn btn-outline btn-warning"><img id="" src="{{asset('img/iconos/trigonometria/areadesarrollo/identidades/uno.png')}}"> + <img id="" src="{{asset('img/iconos/trigonometria/areadesarrollo/identidades/cot2.png')}}"> = <img id="" src="{{asset('img/iconos/trigonometria/areadesarrollo/identidades/csc2.png')}}"></button>
                                     						</div>
                                     						<div class="col-xs-6">
-                                    							
+                                    							<button type="button" id="agregarMas" onclick="cambiaSignos('menos')" class="btn btn-outline btn-warning" style="display: none"> - </button>
+                                                                <button type="button" id="agregarMenos" onclick="cambiaSignos('mas')" class="btn btn-outline btn-warning" style="display: none"> + </button>
                                     						</div>
                                     					</div>
                                     				</div>
@@ -1180,21 +1181,24 @@
 				$('#T12').html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
 				$('#T13').html('<img id="Icos2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcos2.png">');
 				$('#T14').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
+                document.getElementById('agregarMas').style.display = 'block';
+                document.getElementById('agregarMenos').style.display = 'none';
 			}break;
 			case 'csc2':{
 				$('#T11').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
 				$('#T12').html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
 				$('#T13').html('<img id="Icot2"  draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcot2.png">');
 				$('#T14').html('<img id="Icsc2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcsc2.png">');
+                document.getElementById('agregarMas').style.display = 'block';
+                document.getElementById('agregarMenos').style.display = 'none';
 			}break;
 			case 'sec2':{
 				$('#T11').html('<img id="Itan2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dtan2.png">');
 				$('#T12').html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
 				$('#T13').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
 				$('#T14').html('<img id="Isec2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dsec2.png">');
-			}break;
-			case '12':{
-				
+                document.getElementById('agregarMas').style.display = 'block';
+                document.getElementById('agregarMenos').style.display = 'none';
 			}break;
 		}
 	}
@@ -1228,8 +1232,13 @@
 		$('#T25').html('');
 		$('#T26').html('');
 		$('#panelRespuesta').html('');
+        document.getElementById('agregarMas').style.display = 'none';
+        document.getElementById('agregarMenos').style.display = 'none';
 	}
 
+    /**
+     * Desarrollo de los depejes de las identidades trigonométricas.
+     */
 	function comprobarDesarrollo(){
 		console.log(boton);
 		if (boton=='sec' || boton=='cos') {
@@ -1245,7 +1254,7 @@
                         $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                             '<br><b>El despeje de "sec" es correcto, ¡Buen trabajo!</b></p></div>');
 					} else {
-                        $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                        $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                             '<br><b>El despeje es incorrecto.</b></p></div>');
 					}
 				}
@@ -1264,7 +1273,7 @@
                             $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                 '<br><b>El despeje de "csc" es correcto, ¡Buen trabajo!</b></p></div>');
 						} else {
-                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                 '<br><b>El despeje es incorrecto.</b></p></div>');
 						}
 					}
@@ -1283,7 +1292,7 @@
                                 $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                     '<br><b>El despeje de "cot" es correcto, ¡Buen trabajo!</b></p></div>');
 							} else {
-                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                     '<br><b>El despeje es incorrecto.</b></p></div>');
 							}
 						}
@@ -1302,7 +1311,7 @@
                                     $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                         '<br><b>El despeje de "cos" es correcto, ¡Buen trabajo!</b></p></div>');
 								} else {
-                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                         '<br><b>El despeje es incorrecto.</b></p></div>');
 								}
 							}
@@ -1321,7 +1330,7 @@
                                     $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                         '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
 								} else {
-                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                         '<br><b>El despeje es incorrecto.</b></p></div>');
 								}
 							}
@@ -1335,8 +1344,8 @@
                                     $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                         '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                 }else{
-                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T16')
-                                    || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
+                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('mas').parentNode.id!='T15' && document.getElementById('Isen2').parentNode.id=='T16')
+                                    || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('menos').parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
                                         $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                             '<br><b>El despeje de "cos2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                     }else{
@@ -1345,7 +1354,7 @@
                                             $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                 '<br><b>El despeje de "sen2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                         }else{
-                                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                                 '<br><b>El despeje es incorrecto.</b></p></div>');
                                         }
                                     }
@@ -1369,7 +1378,7 @@
                                                 $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                     '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                             }else{
-                                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                                     '<br><b>El despeje es incorrecto.</b></p></div>');
                                             }
                                         }
@@ -1382,7 +1391,7 @@
                                             ||(document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
                                             $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                 '<br><b>El despeje de "sec 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
-                                        }else{
+                                        }else{13,14,15
                                             if((document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
                                                 || (document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14')){
                                                 $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
@@ -1393,7 +1402,7 @@
                                                     $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                         '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                                 }else{
-                                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;</center><font size="4"><i><b>¡Error!</b></i></font><p>' +
+                                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
                                                         '<br><b>El despeje es incorrecto.</b></p></div>');
                                                 }
                                             }
@@ -1407,6 +1416,30 @@
 			}
 		}
 	}
+
+    function cambiaSignos(id) {
+        if(id=='mas'){
+            var fila=1;
+            for (var i=0;i<6;i++){
+                if(document.getElementById('menos').parentNode.id=='T'+fila+''+(i+1)){
+                    $('#T'+fila+''+(i+1)).html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
+                    document.getElementById('agregarMas').style.display = 'block';
+                    document.getElementById('agregarMenos').style.display = 'none';
+                    break;
+                }
+            }
+        }else{
+            var fila=1;
+            for (var i=0;i<6;i++){
+                if(document.getElementById('mas').parentNode.id=='T'+fila+''+(i+1)){
+                    $('#T'+fila+''+(i+1)).html('<img id="menos" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/menos.png">');
+                    document.getElementById('agregarMas').style.display = 'none';
+                    document.getElementById('agregarMenos').style.display = 'block';
+                    break;
+                }
+            }
+        }
+    }
 </script>
 <script>
     /**
