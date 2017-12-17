@@ -1215,6 +1215,7 @@
         })
 	});
 
+    var signo="mas ";
     /**
      * Limpia la tabla donde se colocan las imagenes
      */
@@ -1234,6 +1235,7 @@
 		$('#panelRespuesta').html('');
         document.getElementById('agregarMas').style.display = 'none';
         document.getElementById('agregarMenos').style.display = 'none';
+        signo="mas";
 	}
 
     /**
@@ -1337,20 +1339,20 @@
 						}
 						}else{
                             if(boton=='sc2'){
-                                if((document.getElementById('Isen2').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
-                                || (document.getElementById('Icos2').parentNode.id=='T11' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
-                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T16')
-                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')){
+                                if((document.getElementById('Isen2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
+                                || (document.getElementById('Icos2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
+                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Isen2').parentNode.id=='T16')
+                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icos2').parentNode.id=='T16')){
                                     $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                         '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                 }else{
-                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('mas').parentNode.id!='T15' && document.getElementById('Isen2').parentNode.id=='T16')
-                                    || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('menos').parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
+                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Isen2').parentNode.id=='T16')
+                                    || (document.getElementById('Iuno').parentNode.id=='T11' && signo=="menos" &&  document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
                                         $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                             '<br><b>El despeje de "cos2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                     }else{
-                                        if((document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')
-                                        ||(document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
+                                        if((document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="menos" &&  document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icos2').parentNode.id=='T16')
+                                        ||(document.getElementById('Iuno').parentNode.id=='T11' && signo=="menos" &&  document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
                                             $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                 '<br><b>El despeje de "sen2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                         }else{
@@ -1361,20 +1363,20 @@
                                 }
                             }else{
                                 if(boton=='csc2'){
-                                    if((document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
-                                        || (document.getElementById('Icot2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
-                                        || (document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icot2').parentNode.id=='T16')
-                                        ||(document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
+                                    if((document.getElementById('Iuno').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
+                                        || (document.getElementById('Icot2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
+                                        || (document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icot2').parentNode.id=='T16')
+                                        ||(document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')){
                                         $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                             '<br><b>El despeje de "csc 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                     }else{
-                                        if((document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
-                                            || (document.getElementById('Icsc2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14')){
+                                        if((document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')
+                                            || (document.getElementById('Icsc2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14')){
                                             $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                 '<br><b>El despeje de "cot 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                         }else{
-                                            if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && document.getElementById('Icot2').parentNode.id=='T16')
-                                                ||(document.getElementById('Icsc2').parentNode.id=='T11' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
+                                            if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icot2').parentNode.id=='T16')
+                                                ||(document.getElementById('Icsc2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
                                                 $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                     '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                             }else{
@@ -1385,20 +1387,20 @@
                                     }
                                 }else{
                                     if(boton=='sec2'){
-                                        if((document.getElementById('Itan2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
-                                            || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
-                                            || (document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Itan2').parentNode.id=='T16')
-                                            ||(document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
+                                        if((document.getElementById('Itan2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
+                                            || (document.getElementById('Iuno').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
+                                            || (document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Itan2').parentNode.id=='T16')
+                                            ||(document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')){
                                             $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                 '<br><b>El despeje de "sec 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                         }else{13,14,15
-                                            if((document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
-                                                || (document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14')){
+                                            if((document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')
+                                                || (document.getElementById('Isec2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14')){
                                                 $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                     '<br><b>El despeje de "tan 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
                                             }else{
-                                                if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Itan2').parentNode.id=='T16')
-                                                    ||(document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
+                                                if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Itan2').parentNode.id=='T16')
+                                                    ||(document.getElementById('Isec2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
                                                     $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
                                                         '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
                                                 }else{
@@ -1425,7 +1427,11 @@
                     $('#T'+fila+''+(i+1)).html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
                     document.getElementById('agregarMas').style.display = 'block';
                     document.getElementById('agregarMenos').style.display = 'none';
+                    signo="mas";
                     break;
+                }
+                if(i==5){
+                    fila=2;i=0;
                 }
             }
         }else{
@@ -1435,7 +1441,11 @@
                     $('#T'+fila+''+(i+1)).html('<img id="menos" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/menos.png">');
                     document.getElementById('agregarMas').style.display = 'none';
                     document.getElementById('agregarMenos').style.display = 'block';
+                    signo="menos";
                     break;
+                }
+                if(i==5){
+                    fila=2;i=0;
                 }
             }
         }
