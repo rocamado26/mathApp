@@ -591,7 +591,7 @@
                                     <div class="ibox">
                                         <div class="ibox-content" id="tour3-2">
                                             <div class="row animated fadeInRightBig" id="Practica1">
-                                                <div class="col-lg-8">
+                                                <div class="col-lg-12">
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
                                                             <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
@@ -599,207 +599,341 @@
                                                         <div class="panel-body">
                                                             <font size="3">
                                                                 <center>
-                                                                    Hallar la ecuación pendiente-intercepto que tiene pendiente <b>- <sup>3</sup>/<sub>5</sub></b> e intercepto en <b>4</b>
+                                                                    Hallar la ecuación de la recta que pasa por el punto <b>(1, 2)</b> y tiene pendiente <b>m = – 5 </b>
                                                                 </center>
                                                             </font>
                                                         </div>
                                                     </div>
-                                                    <p style="text-align: justify;">
-                                                    <center>
-                                                        <br><br>
-                                                        Cambiamos los terminos que conocemos en la fórmula de ecuación pendiente intercepto
-                                                        <br><br>
-                                                        <table border="0">
-                                                            <tr>
-                                                                <td colspan="5" style="text-align: center;"><font size="4">y = m x + b</font></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="7">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><font size="4">Y = &nbsp;</font></td>
-                                                                <td><div class="contenedor" id="35E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                                <td><font size="4">&nbsp;x&nbsp;</font></td>
-                                                                <td><font size="4">&nbsp;+&nbsp;</font></td>
-                                                                <td><div class="contenedor" id="4E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                            </tr>
-                                                        </table>
-                                                    </center>
-                                                    </p>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="row col-lg-12">
-                                                        <div id="compenentesPractica1" class="col-lg-12 alert alert-warning">
-                                                            <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                            <br>
-                                                            <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                                                                <img id="pieza4E1" src="{{asset('img/iconos/geometria/recta/intercepto/practica1/4.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                                <img id="pieza35E1" src="{{asset('img/iconos/geometria/recta/intercepto/practica1/35.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                                <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
-                                                            </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>5x + y – 7 = 0</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe1" value="1" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe1"><b>Ecuación 1</b></label>
+                                                                </div>
+                                                                <div id="True1P1" style="display: none;">
+                                                                    &nbsp;&nbsp;
+                                                                    <span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>
+                                                                </div>
+                                                            </center>
                                                         </div>
-                                                        <div id="ExitoPrac1" class="col-lg-12 alert alert-success" style="display: none;">
-                                                            <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                            <br>
-                                                            <p style="text-align: justify;">
-                                                                Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que la ecuación pendiente-intercepto es:
-                                                                <br><br>
-                                                            <center><font size="3"><b>y = -<sup>3</sup>/<sub>5</sub> x + 4</b></font></center>
-                                                            </p>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>8x + y – 4 = 0</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe2" value="2" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe2"><b>Ecuación 2</b></label>
+                                                                </div>
+                                                                <div id="False2P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>5x + y – 10 = 0</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe3" value="3" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe3"><b>Ecuación 3</b></label>
+                                                                </div>
+                                                                <div id="False3P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
                                                         </div>
                                                     </div>
-                                                    <div id="botonesPrac1" class="row col-lg-12">
-                                                        <center>
-                                                            <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica1();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                            <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica1(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
-                                                        </center>
+                                                    <br><br>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>5x + 3y – 7 = 0</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe4" value="4" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe4"><b>Ecuación 4</b></label>
+                                                                </div>
+                                                                <div id="False4P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>x + 5y – 7 = 0</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe5" value="5" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe5"><b>Ecuación 5</b></label>
+                                                                </div>
+                                                                <div id="False5P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>x + y – 7 = 0</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe6" value="6" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe6"><b>Ecuación 6</b></label>
+                                                                </div>
+                                                                <div id="False6P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row animated fadeInRightBig" style="display: none;"
                                                  id="Practica2">
-                                                <div class="col-lg-8">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">
-                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            <font size="3">
-                                                                <center>
-                                                                    Hallar la ecuación pendiente-intercepto que pasa por los puntos <b>A ( 3 , 8 )</b> y <b>B ( -2 , 10 )</b>
-                                                                </center>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="well" align="center">
+                                                            <font size="3" style="text-align: justify;">
+                                                                Selecciona la gráfica correcta para un punto <b>(-3 , 2)</b> con pendiente <b>- <sup>2</sup>/<sub>5</sub></b>
                                                             </font>
                                                         </div>
-                                                    </div>
-                                                    <p style="text-align: justify;">
-                                                    <center>
                                                         <br><br>
-                                                        Primero encontramos el valor de la pendiente:
-                                                        <br><br>
-                                                        <table border="0">
-                                                            <tr>
-                                                                <td><font size="4">m = &nbsp;</font></td>
-                                                                <td><div class="contenedor" id="25E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                            </tr>
-                                                        </table>
-                                                        <br><br>
-                                                        Una vez conocemos el valor de la pendiente, sustituimos los valores de la ecuacion de pendiente intercepto por los puntos A de la recta conocida, obteniendo::
-                                                        <br><br>
-                                                        <table border="0">
-                                                            <tr>
-                                                                <td><font size="4">b = &nbsp;</font></td>
-                                                                <td><div class="contenedor" id="46E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                            </tr>
-                                                        </table>
-                                                        <br><br>
-                                                        Ahora que conocemos los valores del intercepto y la pendiente, sustituimos los valores de la fórmula para obtener la ecuación pendiente intercepto, es decir:
-                                                        <br><br>
-                                                        <table border="0">
-                                                            <tr>
-                                                                <td colspan="5" style="text-align: center;"><font size="4">y = m x + b</font></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="5">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="5"><font size="4">Y = - <sup>2</sup>/<sub>5</sub>x + <sup>46</sup>/<sub>5</sub> </font></td>
-                                                            </tr>
-                                                        </table>
-                                                    </center>
-                                                    </p>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="row col-lg-12">
-                                                        <div id="compenentesPractica2" class="col-lg-12 alert alert-warning">
-                                                            <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                            <br>
-                                                            <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                                                                <img id="pieza46E2" src="{{asset('img/iconos/geometria/recta/intercepto/practica2/46.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                                <img id="pieza25E2" src="{{asset('img/iconos/geometria/recta/intercepto/practica2/25.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                                <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>5x + y – 17 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe1" value="1" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe1"><b>Ecuación 1</b></label>
+                                                                    </div>
+                                                                    <div id="False1P2" style="display: none;">
+                                                                        &nbsp;&nbsp;
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>15x + 10y – 7 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe2" value="2" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe2"><b>Ecuación 2</b></label>
+                                                                    </div>
+                                                                    <div id="False2P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>x + y – 1 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe3" value="3" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe3"><b>Ecuación 3</b></label>
+                                                                    </div>
+                                                                    <div id="False3P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
                                                             </div>
                                                         </div>
-                                                        <div id="ExitoPrac2" class="col-lg-12 alert alert-success" style="display: none;">
-                                                            <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                            <br>
-                                                            <p style="text-align: justify;">
-                                                                Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que la ecuación pendiente-intercepto es:
-                                                                <br><br>
-                                                            <center><font size="3"><b>y = -<sup>2</sup>/<sub>5</sub> x + <sup>46</sup>/<sub>5</sub></b></font></center>
-                                                            </p>
+                                                        <br><br>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>3x + y – 27 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe4" value="4" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe4"><b>Ecuación 4</b></label>
+                                                                    </div>
+                                                                    <div id="True4P2" style="display: none;">
+                                                                        <span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>3x + y + 27 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe5" value="5" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe5"><b>Ecuación 5</b></label>
+                                                                    </div>
+                                                                    <div id="False5P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>-3x - y + 27 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe6" value="6" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe6"><b>Ecuación 6</b></label>
+                                                                    </div>
+                                                                    <div id="False6P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div id="botonesPrac2" class="row col-lg-12">
-                                                        <center>
-                                                            <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica2();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                            <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica2(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
-                                                        </center>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row animated fadeInRightBig"  style="display: none;" id="Practica3">
-                                                <div class="col-lg-8">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading">
-                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            <font size="3">
-                                                                <center>
-                                                                    Hallar la ecuación pendiente-intercepto que tiene pendiente <b>5</b> e intercepto en <b>-2</b>
-                                                                </center>
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="well" align="center">
+                                                            <font size="3" style="text-align: justify;">
+                                                                Determina la ecuación general de la recta que pasa por los puntos <b>P(1, 2)</b> y <b>Q(3, 4)</b>
                                                             </font>
                                                         </div>
-                                                    </div>
-                                                    <p style="text-align: justify;">
-                                                    <center>
                                                         <br><br>
-                                                        Cambiamos los terminos que conocemos en la fórmula de ecuación pendiente intercepto
-                                                        <br><br>
-                                                        <table border="0">
-                                                            <tr>
-                                                                <td colspan="5" style="text-align: center;"><font size="4">y = m x + b</font></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td colspan="7">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><font size="4">Y = &nbsp;</font></td>
-                                                                <td><div class="contenedor" id="5E3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                                <td><font size="4">&nbsp;x&nbsp;</font></td>
-                                                                <td><font size="4">&nbsp;+&nbsp;</font></td>
-                                                                <td><div class="contenedor" id="2E3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                            </tr>
-                                                        </table>
-                                                    </center>
-                                                    </p>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <div class="row col-lg-12">
-                                                        <div id="compenentesPractica3" class="col-lg-12 alert alert-warning">
-                                                            <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                            <br>
-                                                            <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                                                                <img id="pieza2E3" src="{{asset('img/iconos/geometria/recta/intercepto/practica3/2.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                                <img id="pieza5E3" src="{{asset('img/iconos/geometria/recta/intercepto/practica3/5.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                                <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>-x + y – 7 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe1" value="1" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe1"><b>Ecuación 1</b></label>
+                                                                    </div>
+                                                                    <div id="False1P3" style="display: none;">
+                                                                        &nbsp;&nbsp;
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>- x + y – 1 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe2" value="2" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe2"><b>Ecuación 2</b></label>
+                                                                    </div>
+                                                                    <div id="True2P3" style="display: none;">
+                                                                        <span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>-x + 2y – 7 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe3" value="3" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe3"><b>Ecuación 3</b></label>
+                                                                    </div>
+                                                                    <div id="False3P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
                                                             </div>
                                                         </div>
-                                                        <div id="ExitoPrac3" class="col-lg-12 alert alert-success" style="display: none;">
-                                                            <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                            <br>
-                                                            <p style="text-align: justify;">
-                                                                Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que la ecuación pendiente-intercepto es:
-                                                                <br><br>
-                                                            <center><font size="3"><b>y = 5 x - 2</b></font></center>
-                                                            </p>
+                                                        <br><br>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>- 3x + 3y – 3 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe4" value="4" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe4"><b>Ecuación 4</b></label>
+                                                                    </div>
+                                                                    <div id="False4P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>x - y + 1 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe5" value="5" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe5"><b>Ecuación 5</b></label>
+                                                                    </div>
+                                                                    <div id="False5P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>- 7x + 3y – 5 = 0</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe6" value="6" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe6"><b>Ecuación 6</b></label>
+                                                                    </div>
+                                                                    <div id="False6P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div id="botonesPrac3" class="row col-lg-12">
-                                                        <center>
-                                                            <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica3();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                            <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica3(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
-                                                        </center>
                                                     </div>
                                                 </div>
                                             </div>
@@ -838,8 +972,7 @@
                                                                     <div class="alert alert-info">
                                                                         <strong>Infórmacion</strong><br>
                                                                         Selecciona el tipo de ejercicio que se te
-                                                                        plantea, si conoces la pendiente y el intercepto o si solo tienes
-                                                                        los puntos, Ingresa los valores en los campos
+                                                                        plantea, ingresa los valores en los campos
                                                                         correspondientes. Luego de ello presiona el
                                                                         botón "Generar" para conocer el resultado y
                                                                         procedimiento.
@@ -855,9 +988,15 @@
                                                                     </button>
                                                                 </div>
                                                                 <div type="button" class="col-sm-3">
-                                                                    <button id="btnPuntos" onclick="onSelectExercise(2)"
+                                                                    <button id="btnPuntosPendiente" onclick="onSelectExercise(2)"
                                                                             class="btn btn-white animation_select"
-                                                                            data-animation="flipInX">Coordenadas
+                                                                            data-animation="flipInX">Un punto y pendiente
+                                                                    </button>
+                                                                </div>
+                                                                <div type="button" class="col-sm-3">
+                                                                    <button id="btnPuntos" onclick="onSelectExercise(3)"
+                                                                            class="btn btn-white animation_select"
+                                                                            data-animation="flipInX">Dos puntos
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -930,6 +1069,59 @@
                                                                                         <button type="button"
                                                                                                 class="btn btn-primary btn-rounded"
                                                                                                 onclick="generarResolucionP();">
+                                                                                            <i class="fa fa-check"></i>&nbsp;Generar
+                                                                                        </button>
+                                                                                    </center>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div id="puntoPendiente" style="display: none;"
+                                                                         class="alert alert-warning">
+                                                                        <table border="0" width="100%">
+                                                                            <tr>
+                                                                                <td colspan="3"><center><b>Punto</b></center></td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td><center><b>Pendiente</b><center></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="30%"><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="x1PP" width="100%"></td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td width="30%"><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="y1PP" width="100%"></td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td width="30%"><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="mUPP" width="100%"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="4">&nbsp;</td>
+                                                                                <td style="border-bottom: 1px solid black;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="4">&nbsp;</td>
+                                                                                <td>&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="4">&nbsp;</td>
+                                                                                <td><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="mDPP" width="100%"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="6">
+                                                                                    <center>
+                                                                                        <button type="button"
+                                                                                                class="btn btn-danger btn-rounded"
+                                                                                                onclick="limpiarResolucionPP();">
+                                                                                            <i class="fa fa-repeat"></i>&nbsp;Reestablecer
+                                                                                        </button>&nbsp;&nbsp;
+                                                                                        <button type="button"
+                                                                                                class="btn btn-primary btn-rounded"
+                                                                                                onclick="generarResolucionPP();">
                                                                                             <i class="fa fa-check"></i>&nbsp;Generar
                                                                                         </button>
                                                                                     </center>
@@ -1058,52 +1250,6 @@
     var numeradorMultiGlobal;
     var denominadorMultiGlobal;
 
-    ////FUNCIONES MOVER IMAGENES
-    /**
-     * Función que se ejecuta al arrastrar el elemento.
-     **/
-    function start(e) {
-        e.dataTransfer.effecAllowed = 'move'; // Define el efecto como mover (Es el por defecto)
-        e.dataTransfer.setData("Text", e.target.id); // Coje el elemento que se va a mover
-        e.target.style.opacity = '0.4';
-    }
-
-    /**
-     * Función que se ejecuta se termina de arrastrar el elemento.
-     **/
-    function end(e){
-        e.target.style.opacity = ''; // Restaura la opacidad del elemento
-        e.dataTransfer.clearData("Data");
-    }
-
-    /**
-     * Función que se ejecuta cuando un elemento arrastrable entra en el elemento desde del que se llama.
-     **/
-    function enter(e) {
-        return true;
-    }
-
-    /**
-     * Función que se ejecuta cuando un elemento arrastrable esta sobre el elemento desde del que se llama.
-     * Devuelve false si el objeto se puede soltar en ese elemento y true en caso contrario.
-     **/
-    function over(e) {
-        if (e.target.id == "contenedorPiezas" || e.target.className == "contenedor")
-            return false;
-        // else
-        // return true;
-    }
-
-    /**
-     * Función que se ejecuta cuando un elemento arrastrable se suelta sobre el elemento desde del que se llama.
-     **/
-    function drop(e){
-        e.preventDefault(); // Evita que se ejecute la accion por defecto del elemento soltado.
-        var elementoArrastrado = e.dataTransfer.getData("Text");
-        e.target.appendChild(document.getElementById(elementoArrastrado)); // Coloca el elemento soltado sobre el elemento desde el que se llamo esta funcion
-        //comprobarPuzzle();
-    }
-
     /////////////
     //practica
     function cambioEjemplo(opc) {
@@ -1177,9 +1323,12 @@
     function onSelectExercise(opc) {
         if (opc == 1) {
             $("#coordenadas").fadeOut(0);
+            $("#puntoPendiente").fadeOut(0);
             $("#Resultado").fadeOut(0);
             $('#btnPendiente').removeAttr('class').attr('class', '');
             $('#btnPendiente').addClass('btn btn-info animation_select');
+            $('#btnPuntosPendiente').removeAttr('class').attr('class', '');
+            $('#btnPuntosPendiente').addClass('btn btn-white animation_select');
             $('#btnPuntos').removeAttr('class').attr('class', '');
             $('#btnPuntos').addClass('btn btn-white animation_select');
             $("#Puntos").fadeIn(300);
@@ -1188,11 +1337,26 @@
             document.getElementById("mUpP").value = "";
             document.getElementById("mDownP").value = "";
         }
-        else {
+        if(opc==2){
             $("#Puntos").fadeOut(0);
+            $("#Resultado").fadeOut(0);
+            $("#coordenadas").fadeOut(0);
+            $('#btnPuntos').removeAttr('class').attr('class', '');
+            $('#btnPuntos').addClass('btn btn-white animation_select');
+            $('#btnPendiente').removeAttr('class').attr('class', '');
+            $('#btnPendiente').addClass('btn btn-white animation_select');
+            $('#btnPuntosPendiente').removeAttr('class').attr('class', '');
+            $('#btnPuntosPendiente').addClass('btn btn-info animation_select');
+            $("#puntoPendiente").fadeIn(300);
+        }
+        if(opc==3) {
+            $("#Puntos").fadeOut(0);
+            $("#puntoPendiente").fadeOut(0);
             $("#Resultado").fadeOut(0);
             $('#btnPuntos').removeAttr('class').attr('class', '');
             $('#btnPuntos').addClass('btn btn-info animation_select');
+            $('#btnPuntosPendiente').removeAttr('class').attr('class', '');
+            $('#btnPuntosPendiente').addClass('btn btn-white animation_select');
             $('#btnPendiente').removeAttr('class').attr('class', '');
             $('#btnPendiente').addClass('btn btn-white animation_select');
             $("#coordenadas").fadeIn(300);
@@ -1207,10 +1371,11 @@
             toastr.error('Debes completar los campos necesarios', 'Lo Siento');
         }
         else {
+            ////Es entero
             if (mDownP === "") {
                 //Es entero
                 $("#solucion").html("<center>Identificamos la fórmula de pendiente-intercepto<br><br>" +
-                    "<font size='3'><b> y  = m x + b</font>" +
+                    "<font size='3'><b> y  = m x + b</b></font>" +
                     "<br><br>" +
                     "Sustituyendo las variables" +
                     "</center>");
@@ -1225,11 +1390,71 @@
                         "<br><br>" +
                         "</center>");
                 }
-                $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación pendiente-intercepto de la recta</b></font></center>");
+                var paso=0;
+                if(x1P==0){
+                    $("#solucion").append("<center><font size='3'><b> y  = " + mUpP + " x </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    $("#solucion").append("<center>Despejamos la ecuación igualandola a 0<br>" +
+                        "Ya que el valor entero es igual a 0, se ignora de la ecuación</center><br>");
+                    $("#solucion").append("<center><font size='3'><b> y = " + mUpP + "x </b></font>" +
+                        "<br><br>" +
+                        "Movemos el valor correspondiente a x" +
+                        "<br><br><font size='3'><b> "+ mUpP * -1 + "x + y = 0</b></font>"+
+                        "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                        "</center>");
+                }
+                else{
+                    $("#solucion").append("<center>Despejamos la ecuación igualandola a 0<br>" +
+                        "Primero movemos el valor entero</center><br>");
+                    if(x1P <0 && mUpP <0){
+                        x1P = x1P * -1;
+                        //mUpP = mUpP * -1;
+                        $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = " + mUpP + "x </b></font>" +
+                            "<br><br>" +
+                            "Movemos el valor correspondiente a x" +
+                            "<br><br><font size='3'><b> "+ mUpP * -1 + "x + y +  " + x1P + " = 0</b></font>"+
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "</center>");
+                        paso=1;
+                    }
+                    if(paso==0 && (x1P <0 || mUpP <0)){
+                        if(x1P < 0 && mUpP > 0){
+                            x1P = x1P * -1;
+                            $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = " + mUpP + "x </b></font>" +
+                                "<br><br>" +
+                                "Movemos el valor correspondiente a x" +
+                                "<br><br><font size='3'><b> - "+ mUpP + "x + y  +  " + x1P + " = 0</b></font>"+
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "</center>");
+                            paso=1;
+                        }
+                        if(x1P > 0 && mUpP < 0){
+                            //x1P = x1P * -1;
+                            $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = " + mUpP + "x </b></font>" +
+                                "<br><br>" +
+                                "Movemos el valor correspondiente a x" +
+                                "<br><br><font size='3'><b> "+ mUpP * -1 + "x + y -  " + x1P + " = 0</b></font>"+
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "</center>");
+                            paso=1;
+                        }
+
+                    }
+                    if(paso==0 && (x1P > 0 && mUpP > 0)){
+                        $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = " + mUpP + "x </b></font>" +
+                            "<br><br>" +
+                            "Movemos el valor correspondiente a x" +
+                            "<br><br><font size='3'><b> - "+ mUpP * -1 + "x + y -  " + x1P + " = 0</b></font>"+
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "</center>");
+                    }
+                }
                 //$("#Puntos").fadeOut(0);
                 $("#coordenadas").fadeOut(0);
                 $("#Resultado").fadeIn(300);
             }
+            //Es fraccionario
             else {
                 //es fraccionario
                 $("#solucion").html("<center>Identificamos la fórmula de pendiente-intercepto<br><br>" +
@@ -1238,6 +1463,7 @@
                     "Sustituyendo las variables" +
                     "</center>");
                 var tempX1P;
+
                 if (x1P < 0) {
                     $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x " + x1P + "</b></font>" +
                         "<br><br>" +
@@ -1248,8 +1474,71 @@
                         "<br><br>" +
                         "</center>");
                 }
-                //impresión de resultado
-                $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación de punto pendiente para el punto dado y su pendiente</b></font></center>");
+
+
+                if(x1P == 0){
+                    $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    $("#solucion").append("<center>Despejamos la ecuación igualandola a 0<br>" +
+                        "Ya que el valor entero es igual a 0, se ignora de la ecuación</center><br>");
+                    $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x</b></font>" +
+                        "<br><br>" +
+                        "Movemos el valor correspondiente a x" +
+                        "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y = 0</b></font>"+
+                        "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                        "</center>");
+                }
+                else{
+
+                    $("#solucion").append("<center>Despejamos la ecuación igualandola a 0<br>" +
+                        "Primero movemos el valor entero</center><br>");
+                    var paso=0;
+                    if(x1P <0 && mUpP <0){
+                        x1P = x1P * -1;
+                        //mUpP = mUpP * -1;
+                        $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
+                            "<br><br>" +
+                            "Movemos el valor correspondiente a x" +
+                            "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y +  " + x1P + " = 0</b></font>"+
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "</center>");
+                        paso=1;
+                    }
+                    if(paso==0 && (x1P <0 || mUpP <0)){
+                        if(x1P < 0 && mUpP > 0){
+                            x1P = x1P * -1;
+                            $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
+                                "<br><br>" +
+                                "Movemos el valor correspondiente a x" +
+                                "<br><br><font size='3'><b> - <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x + y  +  " + x1P + " = 0</b></font>"+
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "</center>");
+                            paso=1;
+                        }
+                        if(x1P > 0 && mUpP < 0){
+                            //x1P = x1P * -1;
+                            $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
+                                "<br><br>" +
+                                "Movemos el valor correspondiente a x" +
+                                "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y -  " + x1P + " = 0</b></font>"+
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "</center>");
+                            paso=1;
+                        }
+
+                    }
+                    if(paso==0 && (x1P > 0 && mUpP > 0)){
+                        $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
+                            "<br><br>" +
+                            "Movemos el valor correspondiente a x" +
+                            "<br><br><font size='3'><b> - <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub>x + y -  " + x1P + " = 0</b></font>"+
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "</center>");
+                    }
+                }
+
+
                 //$("#Puntos").fadeOut(0);
                 $("#coordenadas").fadeOut(0);
                 $("#Resultado").fadeIn(300);
@@ -1263,6 +1552,7 @@
         document.getElementById("mDownP").value = "";
         $("#Resultado").fadeOut(0);
         $("#coordenadas").fadeOut(0);
+        $("#puntoPendiente").fadeOut(0);
         $("#Puntos").fadeIn(300);
 
         toastr.success('Los campos se limpiaron correctamente', 'Excelente');
@@ -1709,183 +1999,208 @@
     }
 
 
-    function ComprobarPractica1(){
-        if((document.getElementById('pieza35E1').parentNode.id=='35E1') &&
-            (document.getElementById('pieza4E1').parentNode.id=='4E1'))
-        {
-            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
-            $("#compenentesPractica1").fadeOut(0);
-            $("#ExitoPrac1").fadeIn(300);
-
+    function VerificarEvaluacion1P(){
+        if ($('input:radio[name=1rpe]:checked').val()==1) {
+            $("#False2P1").fadeOut(0);
+            $("#False3P1").fadeOut(0);
+            $("#False4P1").fadeOut(0);
+            $("#False6P1").fadeOut(0);
+            $("#False5P1").fadeOut(0);
+            $("#True1P1").fadeIn(300);
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+        } else {
+            $("#True1P1").fadeOut(0);
         }
-        else
-        {
-            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
-            ReestablecerPractica2(1);
+        if ($('input:radio[name=1rpe]:checked').val()==2) {
+            $("#True1P1").fadeOut(0);
+            $("#False3P1").fadeOut(0);
+            $("#False4P1").fadeOut(0);
+            $("#False6P1").fadeOut(0);
+            $("#False5P1").fadeOut(0);
+            $("#False2P1").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False2P1").fadeOut(0);
         }
-    }
-
-    function ReestablecerPractica1(opc){
-        if (opc==0) {
-            swal({
-                title: "¿Esta Seguro?",
-                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sí, borrar!",
-                closeOnConfirm: false
-            }, function () {
-                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
-                //Limpiando componentes...
-                $("#compenentesPractica1").html(""+
-                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
-                    "<br>"+
-                    "<img id='pieza4E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/4.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                    "<img id='pieza35E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/35.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
-                    "</div>");
-                //Limpiando espacios libres...
-                $("#35E1").html("");
-                $("#4E1").html("");
-                $("#ExitoPrac1").fadeOut(0);
-                $("#compenentesPractica1").fadeIn(100);
-            });//cierre del swal
+        if ($('input:radio[name=1rpe]:checked').val()==3) {
+            $("#True1P1").fadeOut(0);
+            $("#False2P1").fadeOut(0);
+            $("#False4P1").fadeOut(0);
+            $("#False6P1").fadeOut(0);
+            $("#False5P1").fadeOut(0);
+            $("#False3P1").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False3P1").fadeOut(0);
         }
-        else
-        {
-            $("#compenentesPractica1").html(""+
-                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
-                "<br>"+
-                "<img id='pieza4E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/4.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                "<img id='pieza35E1' src='{{asset('img/iconos/geometria/recta/intercepto/practica1/35.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
-                "</div>");
-            //Limpiando espacios libres...
-            $("#35E1").html("");
-            $("#4E1").html("");
-            $("#ExitoPrac1").fadeOut(0);
-            $("#compenentesPractica1").fadeIn(100);
+        if ($('input:radio[name=1rpe]:checked').val()==4) {
+            $("#True1P1").fadeOut(0);
+            $("#False2P1").fadeOut(0);
+            $("#False3P1").fadeOut(0);
+            $("#False6P1").fadeOut(0);
+            $("#False5P1").fadeOut(0);
+            $("#False4P1").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False4P1").fadeOut(0);
         }
-    }
-
-    function ComprobarPractica2(){
-        if((document.getElementById('pieza25E2').parentNode.id=='25E2') &&
-            (document.getElementById('pieza46E2').parentNode.id=='46E2'))
-        {
-            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
-            $("#compenentesPractica1").fadeOut(0);
-            $("#ExitoPrac1").fadeIn(300);
-
+        if ($('input:radio[name=1rpe]:checked').val()==5) {
+            $("#True1P1").fadeOut(0);
+            $("#False2P1").fadeOut(0);
+            $("#False3P1").fadeOut(0);
+            $("#False4P1").fadeOut(0);
+            $("#False6P1").fadeOut(0);
+            $("#False5P1").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False5P1").fadeOut(0);
         }
-        else
-        {
-            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
-            ReestablecerPractica2(1);
+        if ($('input:radio[name=1rpe]:checked').val()==6) {
+            $("#True1P1").fadeOut(0);
+            $("#False2P1").fadeOut(0);
+            $("#False3P1").fadeOut(0);
+            $("#False4P1").fadeOut(0);
+            $("#False5P1").fadeOut(0);
+            $("#False6P1").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False6P1").fadeOut(0);
         }
     }
-
-    function ReestablecerPractica2(opc){
-        if (opc==0) {
-            swal({
-                title: "¿Esta Seguro?",
-                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sí, borrar!",
-                closeOnConfirm: false
-            }, function () {
-                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
-                //Limpiando componentes...
-                $("#compenentesPractica2").html(""+
-                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
-                    "<br>"+
-                    "<img id='pieza46E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/46.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                    "<img id='pieza25E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/25.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
-                    "</div>");
-                //Limpiando espacios libres...
-                $("#46E2").html("");
-                $("#25E2").html("");
-                $("#ExitoPrac2").fadeOut(0);
-                $("#compenentesPractica2").fadeIn(100);
-            });//cierre del swal
+    function VerificarEvaluacion2P(){
+        if ($('input:radio[name=2rpe]:checked').val()==1) {
+            $("#False2P2").fadeOut(0);
+            $("#True4P2").fadeOut(0);
+            $("#False5P2").fadeOut(0);
+            $("#False6P2").fadeOut(0);
+            $("#False3P2").fadeOut(0);
+            $("#False1P2").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False1P2").fadeOut(0);
         }
-        else
-        {
-            $("#compenentesPractica2").html(""+
-                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
-                "<br>"+
-                "<img id='pieza46E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/46.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                "<img id='pieza25E2' src='{{asset('img/iconos/geometria/recta/intercepto/practica2/25.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
-                "</div>");
-            //Limpiando espacios libres...
-            $("#46E2").html("");
-            $("#25E2").html("");
-            $("#ExitoPrac2").fadeOut(0);
-            $("#compenentesPractica2").fadeIn(100);
+        if ($('input:radio[name=2rpe]:checked').val()==2) {
+            $("#False1P2").fadeOut(0);
+            $("#True4P2").fadeOut(0);
+            $("#False5P2").fadeOut(0);
+            $("#False6P2").fadeOut(0);
+            $("#True3P2").fadeOut(0);
+            $("#False2P2").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False2P2").fadeOut(0);
+        }
+        if ($('input:radio[name=2rpe]:checked').val()==3) {
+            $("#False1P2").fadeOut(0);
+            $("#False2P2").fadeOut(0);
+            $("#True4P2").fadeOut(0);
+            $("#False5P2").fadeOut(0);
+            $("#False6P2").fadeOut(0);
+            $("#False3P2").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False3P2").fadeOut(0);
+        }
+        if ($('input:radio[name=2rpe]:checked').val()==4) {
+            $("#False1P2").fadeOut(0);
+            $("#False2P2").fadeOut(0);
+            $("#False5P2").fadeOut(0);
+            $("#False6P2").fadeOut(0);
+            $("#False3P2").fadeOut(0);
+            $("#True4P2").fadeIn(300);
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+        } else {
+            $("#True4P2").fadeOut(0);
+        }
+        if ($('input:radio[name=2rpe]:checked').val()==5) {
+            $("#False1P2").fadeOut(0);
+            $("#False2P2").fadeOut(0);
+            $("#True4P2").fadeOut(0);
+            $("#False6P2").fadeOut(0);
+            $("#False3P2").fadeOut(0);
+            $("#False5P2").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False5P2").fadeOut(0);
+        }
+        if ($('input:radio[name=2rpe]:checked').val()==6) {
+            $("#False1P2").fadeOut(0);
+            $("#False2P2").fadeOut(0);
+            $("#True4P2").fadeOut(0);
+            $("#False5P2").fadeOut(0);
+            $("#False3P2").fadeOut(0);
+            $("#False6P2").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False6P2").fadeOut(0);
         }
     }
-
-    function ComprobarPractica3(){
-        if((document.getElementById('pieza2E3').parentNode.id=='2E3') &&
-            (document.getElementById('pieza5E3').parentNode.id=='5E3'))
-        {
-            swal("Excelente!", "Has despejado completa la practica correctamente", "success");
-            $("#compenentesPractica3").fadeOut(0);
-            $("#ExitoPrac3").fadeIn(300);
-
+    function VerificarEvaluacion3P(){
+        if ($('input:radio[name=3rpe]:checked').val()==1) {
+            $("#True2P3").fadeOut(0);
+            $("#False3P3").fadeOut(0);
+            $("#False4P3").fadeOut(0);
+            $("#False5P3").fadeOut(0);
+            $("#False6P3").fadeOut(0);
+            $("#False1P3").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False1P3").fadeOut(0);
         }
-        else
-        {
-            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
-            ReestablecerPractica3(1);
+        if ($('input:radio[name=3rpe]:checked').val()==2) {
+            $("#False3P3").fadeOut(0);
+            $("#False4P3").fadeOut(0);
+            $("#False5P3").fadeOut(0);
+            $("#False6P3").fadeOut(0);
+            $("#False1P3").fadeOut(0);
+            $("#True2P3").fadeIn(300);
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+        } else {
+            $("#True2P3").fadeOut(0);
         }
-    }
-
-    function ReestablecerPractica3(opc){
-        if (opc==0) {
-            swal({
-                title: "¿Esta Seguro?",
-                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sí, borrar!",
-                closeOnConfirm: false
-            }, function () {
-                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
-                //Limpiando componentes...
-                $("#compenentesPractica3").html(""+
-                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
-                    "<br>"+
-                    "<img id='pieza5E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/5.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                    "<img id='pieza2E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/2.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                    "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
-                    "</div>");
-                //Limpiando espacios libres...
-                $("#5E3").html("");
-                $("#2E3").html("");
-                $("#ExitoPrac3").fadeOut(0);
-                $("#compenentesPractica3").fadeIn(100);
-            });//cierre del swal
+        if ($('input:radio[name=3rpe]:checked').val()==3) {
+            $("#True2P3").fadeOut(0);
+            $("#False4P3").fadeOut(0);
+            $("#False5P3").fadeOut(0);
+            $("#False6P3").fadeOut(0);
+            $("#False1P3").fadeOut(0);
+            $("#False3P3").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False3P3").fadeOut(0);
         }
-        else
-        {
-            $("#compenentesPractica3").html(""+
-                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
-                "<br>"+
-                "<img id='pieza5E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/5.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                "<img id='pieza2E3' src='{{asset('img/iconos/geometria/recta/intercepto/practica3/2.png')}}' draggable='true' ondragstart='start(event)' ondragend='end(event)'/>&nbsp;&nbsp;"+
-                "<div style='background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;'></div>"+
-                "</div>");
-            //Limpiando espacios libres...
-            $("#5E3").html("");
-            $("#2E3").html("");
-            $("#ExitoPrac3").fadeOut(0);
-            $("#compenentesPractica3").fadeIn(100);
+        if ($('input:radio[name=3rpe]:checked').val()==4) {
+            $("#True2P3").fadeOut(0);
+            $("#False3P3").fadeOut(0);
+            $("#False5P3").fadeOut(0);
+            $("#False6P3").fadeOut(0);
+            $("#False1P3").fadeOut(0);
+            $("#False4P3").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False4P3").fadeOut(0);
+        }
+        if ($('input:radio[name=3rpe]:checked').val()==5) {
+            $("#True2P3").fadeOut(0);
+            $("#False3P3").fadeOut(0);
+            $("#False4P3").fadeOut(0);
+            $("#False6P3").fadeOut(0);
+            $("#False1P3").fadeOut(0);
+            $("#False5P3").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False5P3").fadeOut(0);
+        }
+        if ($('input:radio[name=3rpe]:checked').val()==6) {
+            $("#True2P3").fadeOut(0);
+            $("#False3P3").fadeOut(0);
+            $("#False4P3").fadeOut(0);
+            $("#False5P3").fadeOut(0);
+            $("#False1P3").fadeOut(0);
+            $("#False6P3").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        } else {
+            $("#False6P3").fadeOut(0);
         }
     }
 
