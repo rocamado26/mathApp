@@ -810,11 +810,23 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false">Desarrollo</a>
+                                    <div class="nav navbar-top-links navbar-right ">
+                                        <div class="col-xs-3">
+                                            <button type="button" onclick="ayuda_desarrollo()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                        </div>
+                                    </div>
                                 </h4>
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
                                     <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-info">
+                                                Selecciona del tablero la identidad trigonométrica con la cual deseas trabajar.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="paso1_des">
                                     	<div class="col-md-6">
                                     		<div class="row">
 	                                    		<div class="col-md-12">
@@ -882,9 +894,16 @@
                                     	</div>
                                     </div>
                                     <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-info">
+                                                Construye a partir de esta otras identidades trigonométricas, despejando de la forma original. verifica tu despeje al darle clic al botón comprobar.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                     	<div class="col-md-6">
                                     		<div class="row">
-                                    			<div class="col-lg-12">
+                                    			<div class="col-lg-12" id="paso2_des" >
                                     				<div class="alert alert-success">
                                     					<div class="row">
                                     						<div class="col-xs-12" align="center">
@@ -912,9 +931,9 @@
                                     				</div>
                                     			</div>
                                     		</div>
-                                    		<div id="" class="row col-lg-12">
+                                    		<div class="row col-lg-12" id="paso3_des">
 	                                            <center>
-	                                                <button type="button" class="btn btn-primary btn-rounded" onclick="comprobarDesarrollo()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+	                                                <button type="button" id="comprueba" disabled="true" class="btn btn-primary btn-rounded" onclick="comprobarDesarrollo()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
 	                                                <button type="button" class="btn btn-danger btn-rounded" onclick="limpiaTabla()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
 	                                            </center>
 	                                        </div>
@@ -922,7 +941,16 @@
                                     	<div class="col-md-6">
                                     		<div class="row">
                                     			<div class="col-md-12">
-                                    				<div id="panelRespuesta"></div>
+                                                    <div class="spiner-example" style="display: none;" id="carga">
+                                                        <div class="sk-spinner sk-spinner-three-bounce">
+                                                            <div class="sk-bounce1"></div>
+                                                            <div class="sk-bounce2"></div>
+                                                            <div class="sk-bounce3"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="panelRespuesta">
+
+                                                    </div>
                                     			</div>
                                     		</div>
                                     	</div>
@@ -1126,20 +1154,71 @@
 
 	}
 
-	function im(i){
-		return '<img id="I14" src="img/iconos/trigonometria/areadesarrollo/identidades/'+i+'">';
-	}
+    /**
+     * Muestra la ayuda del bloque de desarrollo
+     * */
+	function ayuda_desarrollo() {
+        var tour = new Tour({
+            steps: [{
+                element: "#paso1_des",
+                title: "Paso 1",
+                content: "Haz clic sobre sobre una identidad trigonométrica.",
+                placement: "top",
+                backdrop: true,
+                backdropContainer: '#contenido',
+                onShown: function (tour){
+                    $('body').addClass('tour-open')
+                },
+                onHidden: function (tour){
+                    $('body').removeClass('tour-close')
+                }
+            },
+                {
+                    element: "#paso2_des",
+                    title: "Paso 2",
+                    content: "Pudes jugar despejando la identidad para encontrar otras.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#paso3_des",
+                    title: "Paso 3",
+                    content: "Dar clic sobre el botón “Comprobar” para verificar el ejercicio o “Reestablecer” para reiniciar la práctica.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                }
+            ]});
+        // Initialize the tour
+        tour.init();
+        tour.restart();
+        // Start the tour
+        tour.start();
+    }
 
 	var boton='';
 	function imprimeIdentidades(op){
 		limpiaTabla();
 		boton=op;
+        $('#comprueba').attr("disabled", false);
 		switch(op){
 			case 'sen':{
 				$('#T13').html('<img id="Isen" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dsen.png">');
 				$('#T14').html('<img id="Iuno" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/duno.png">');
 				$('#T24').html('<img id="Icsc" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcsc.png">');
-				
 			}break;
 			case 'cos':{
 				$('#T13').html('<img id="Icos" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/dcos.png">');
@@ -1209,12 +1288,13 @@
         { 
             //$(this).removeClass();
             var oID = $(this).attr("id");
-            console.log(''+oID);
+            //console.log(''+oID);
             imprimeIdentidades(oID);
             //$(this).text('Parrafo ' + index);
         })
 	});
 
+    var signo="mas ";
     /**
      * Limpia la tabla donde se colocan las imagenes
      */
@@ -1234,176 +1314,148 @@
 		$('#panelRespuesta').html('');
         document.getElementById('agregarMas').style.display = 'none';
         document.getElementById('agregarMenos').style.display = 'none';
+        signo="mas";
+        $('#comprueba').attr("disabled", true);
 	}
 
     /**
      * Desarrollo de los depejes de las identidades trigonométricas.
      */
 	function comprobarDesarrollo(){
-		console.log(boton);
+		//console.log(boton);
 		if (boton=='sec' || boton=='cos') {
 			if ((document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isec').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec').parentNode.id=='T23' && document.getElementById('Icos').parentNode.id=='T14')) {
-				$('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                    '<br><b>El despeje de "Cos" es correcto, ¡Buen trabajo!</b></p></div>');
+                imgCargando(true);
 			} else {
 				if ((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Isec').parentNode.id=='T15')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T15')||(document.getElementById('Icos').parentNode.id=='T12' && document.getElementById('Isec').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')||(document.getElementById('Isec').parentNode.id=='T12' && document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')) {
-                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                        '<br><b>El despeje de "1" es correcto, ¡Buen trabajo!</b></p></div>');
+                    imgCargando(true);
 				} else {
 					if ((document.getElementById('Isec').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T23' && document.getElementById('Isec').parentNode.id=='T14')) {
-                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                            '<br><b>El despeje de "sec" es correcto, ¡Buen trabajo!</b></p></div>');
+                        imgCargando(true);
 					} else {
-                        $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                            '<br><b>El despeje es incorrecto.</b></p></div>');
+                        imgCargando(false);
 					}
 				}
 			}
 		} else {
 			if (boton=='sen'||boton=='csc') {
 				if ((document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icsc').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc').parentNode.id=='T23' && document.getElementById('Isen').parentNode.id=='T14')) {
-                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                        '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
+                    imgCargando(true);
 				} else {
 					if ((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Icsc').parentNode.id=='T15')||(document.getElementById('Iuno').parentNode.id=='T12' && document.getElementById('Icsc').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T15')||(document.getElementById('Isen').parentNode.id=='T12' && document.getElementById('Icsc').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')||(document.getElementById('Icsc').parentNode.id=='T12' && document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')) {
-                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                            '<br><b>El despeje de "1" es correcto, ¡Buen trabajo!</b></p></div>');
+                        imgCargando(true);
 					} else {
 						if ((document.getElementById('Icsc').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Isen').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T23' && document.getElementById('Icsc').parentNode.id=='T14')) {
-                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                '<br><b>El despeje de "csc" es correcto, ¡Buen trabajo!</b></p></div>');
+                            imgCargando(true);
 						} else {
-                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                '<br><b>El despeje es incorrecto.</b></p></div>');
+                            imgCargando(false);
 						}
 					}
 				}
 			} else {
 				if (boton=='tan'||boton=='cot') {
 					if ((document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T23' && document.getElementById('Itan').parentNode.id=='T14')) {
-                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                            '<br><b>El despeje de "tan" es correcto, ¡Buen trabajo!</b></p></div>');
+                        imgCargando(true);
 					} else {
 						if ((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T15')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T15')||(document.getElementById('Itan').parentNode.id=='T12' && document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')||(document.getElementById('Icot').parentNode.id=='T12' && document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')) {
-                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                '<br><b>El despeje de "1" es correcto, ¡Buen trabajo!</b></p></div>');
+                            imgCargando(true);
 						} else {
 							if ((document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T24')||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T23' && document.getElementById('Icot').parentNode.id=='T14')) {
-                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                    '<br><b>El despeje de "cot" es correcto, ¡Buen trabajo!</b></p></div>');
+                                imgCargando(true);
 							} else {
-                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                    '<br><b>El despeje es incorrecto.</b></p></div>');
+                                imgCargando(false);
 							}
 						}
 					}
 				} else {
 					if (boton=='tan1') {
 						if ((document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T24')||(document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T23' && document.getElementById('Itan').parentNode.id=='T14')) {
-                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                '<br><b>El despeje de "tan" es correcto, ¡Buen trabajo!</b></p></div>');
+                            imgCargando(true);
 						} else {
 							if ((document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T14' && document.getElementById('Icos').parentNode.id=='T15')||(document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T15')||(document.getElementById('Itan').parentNode.id=='T12' && document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14')||(document.getElementById('Icos').parentNode.id=='T12' && document.getElementById('Itan').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14')) {
-                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                    '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
+                                imgCargando(true);
 							} else {
 								if ((document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Itan').parentNode.id=='T24')||(document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Itan').parentNode.id=='T23' && document.getElementById('Icos').parentNode.id=='T14')) {
-                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                        '<br><b>El despeje de "cos" es correcto, ¡Buen trabajo!</b></p></div>');
+                                    imgCargando(true);
 								} else {
-                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                        '<br><b>El despeje es incorrecto.</b></p></div>');
+                                    imgCargando(false);
 								}
 							}
 						}
 					} else {
 						if(boton=='cot1'){
 							if ((document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Isen').parentNode.id=='T24')||(document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T23' && document.getElementById('Icot').parentNode.id=='T14')) {
-                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                    '<br><b>El despeje de "Cot" es correcto, ¡Buen trabajo!</b></p></div>');
+                                imgCargando(true);
 						} else {
 							if ((document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T14' && document.getElementById('Isen').parentNode.id=='T15')||(document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Isen').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T15')||(document.getElementById('Icot').parentNode.id=='T12' && document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14')||(document.getElementById('Isen').parentNode.id=='T12' && document.getElementById('Icot').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14')) {
-                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                    '<br><b>El despeje de "cos" es correcto, ¡Buen trabajo!</b></p></div>');
+                                imgCargando(true);
 							} else {
 								if ((document.getElementById('Isen').parentNode.id=='T13' && document.getElementById('Icos').parentNode.id=='T14' && document.getElementById('Icot').parentNode.id=='T24')||(document.getElementById('Icos').parentNode.id=='T13' && document.getElementById('Icot').parentNode.id=='T23' && document.getElementById('Isen').parentNode.id=='T14')) {
-                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                        '<br><b>El despeje de "sen" es correcto, ¡Buen trabajo!</b></p></div>');
+                                    imgCargando(true);
 								} else {
-                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                        '<br><b>El despeje es incorrecto.</b></p></div>');
+                                    imgCargando(false);
 								}
 							}
 						}
 						}else{
                             if(boton=='sc2'){
-                                if((document.getElementById('Isen2').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
-                                || (document.getElementById('Icos2').parentNode.id=='T11' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
-                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && document.getElementById('Isen2').parentNode.id=='T16')
-                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')){
-                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                        '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
+                                if((document.getElementById('Isen2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
+                                || (document.getElementById('Icos2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')
+                                || (document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Isen2').parentNode.id=='T16')
+                                ||(document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icos2').parentNode.id=='T16')){
+                                    imgCargando(true);
                                 }else{
-                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('mas').parentNode.id!='T15' && document.getElementById('Isen2').parentNode.id=='T16')
-                                    || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('menos').parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
-                                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                            '<br><b>El despeje de "cos2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                    if((document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Isen2').parentNode.id=='T16')
+                                    || (document.getElementById('Iuno').parentNode.id=='T11' && signo=="menos" &&  document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Icos2').parentNode.id=='T14')){
+                                        imgCargando(true);
                                     }else{
-                                        if((document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icos2').parentNode.id=='T16')
-                                        ||(document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
-                                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                                '<br><b>El despeje de "sen2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                        if((document.getElementById('Isen2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="menos" &&  document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icos2').parentNode.id=='T16')
+                                        ||(document.getElementById('Iuno').parentNode.id=='T11' && signo=="menos" &&  document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icos2').parentNode.id=='T13' && document.getElementById('Isen2').parentNode.id=='T14')){
+                                            imgCargando(true);
                                         }else{
-                                            $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                                '<br><b>El despeje es incorrecto.</b></p></div>');
+                                            imgCargando(false);
                                         }
                                     }
                                 }
                             }else{
                                 if(boton=='csc2'){
-                                    if((document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
-                                        || (document.getElementById('Icot2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
-                                        || (document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Icot2').parentNode.id=='T16')
-                                        ||(document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
-                                        $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                            '<br><b>El despeje de "csc 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                    if((document.getElementById('Iuno').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
+                                        || (document.getElementById('Icot2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14')
+                                        || (document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icot2').parentNode.id=='T16')
+                                        ||(document.getElementById('Icsc2').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')){
+                                        imgCargando(true);
                                     }else{
-                                        if((document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
-                                            || (document.getElementById('Icsc2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14')){
-                                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                                '<br><b>El despeje de "cot 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                        if((document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')
+                                            || (document.getElementById('Icsc2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icot2').parentNode.id=='T14')){
+                                            imgCargando(true);
                                         }else{
-                                            if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && document.getElementById('Icot2').parentNode.id=='T16')
-                                                ||(document.getElementById('Icsc2').parentNode.id=='T11' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
-                                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                                    '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
+                                            if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Icsc2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Icot2').parentNode.id=='T16')
+                                                ||(document.getElementById('Icsc2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Icot2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
+                                                imgCargando(true);
                                             }else{
-                                                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                                    '<br><b>El despeje es incorrecto.</b></p></div>');
+                                                imgCargando(false);
                                             }
                                         }
                                     }
                                 }else{
                                     if(boton=='sec2'){
-                                        if((document.getElementById('Itan2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
-                                            || (document.getElementById('Iuno').parentNode.id=='T11' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
-                                            || (document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && document.getElementById('Itan2').parentNode.id=='T16')
-                                            ||(document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')){
-                                            $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                                '<br><b>El despeje de "sec 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
-                                        }else{13,14,15
-                                            if((document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Iuno').parentNode.id=='T16')
-                                                || (document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14')){
-                                                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                                    '<br><b>El despeje de "tan 2 x" es corecto, ¡Buen trabajo!</b></p></div>');
+                                        if((document.getElementById('Itan2').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
+                                            || (document.getElementById('Iuno').parentNode.id=='T11' && signo=="mas" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14')
+                                            || (document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Itan2').parentNode.id=='T16')
+                                            ||(document.getElementById('Isec2').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14' && signo=="mas" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')){
+                                            imgCargando(true);
+                                        }else{
+                                            if((document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Iuno').parentNode.id=='T16')
+                                                || (document.getElementById('Isec2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Itan2').parentNode.id=='T14')){
+                                                imgCargando(true);
                                             }else{
-                                                if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && document.getElementById('Itan2').parentNode.id=='T16')
-                                                    ||(document.getElementById('Isec2').parentNode.id=='T11' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
-                                                    $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
-                                                        '<br><b>El despeje de "1" es corecto, ¡Buen trabajo!</b></p></div>');
+                                                if((document.getElementById('Iuno').parentNode.id=='T13' && document.getElementById('Isec2').parentNode.id=='T14' && signo=="menos" && document.getElementById(signo).parentNode.id=='T15' && document.getElementById('Itan2').parentNode.id=='T16')
+                                                    ||(document.getElementById('Isec2').parentNode.id=='T11' && signo=="menos" && document.getElementById(signo).parentNode.id=='T12' && document.getElementById('Itan2').parentNode.id=='T13' && document.getElementById('Iuno').parentNode.id=='T14')){
+                                                    imgCargando(true);
                                                 }else{
-                                                    $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
-                                                        '<br><b>El despeje es incorrecto.</b></p></div>');
+                                                    imgCargando(false);
+                                                    /*$('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
+                                                        '<br><b>El despeje es incorrecto.</b></p></div>');*/
                                                 }
                                             }
                                         }
@@ -1417,6 +1469,24 @@
 		}
 	}
 
+    function imgCargando(op){
+        $('#panelRespuesta').html('');
+        document.getElementById('carga').style.display = 'block';
+	    if(op==true){
+            setTimeout(function(){
+                document.getElementById('carga').style.display = 'none';
+                $('#panelRespuesta').html('<div class="alert alert-success" align="center"><center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center><p>' +
+                    '<br><b>El despeje es corecto, ¡Buen trabajo!</b></p></div>');
+            },1000);
+        }else{
+            setTimeout(function(){
+                document.getElementById('carga').style.display = 'none';
+                $('#panelRespuesta').html('<div class="alert alert-danger" align="center"><center><img src="img/iconos/generales/cancel-bold.png">&nbsp;&nbsp;<font size="4"><i><b>¡Error!</b></i></font></center><p>' +
+                    '<br><b>El despeje es incorrecto.</b></p></div>');
+            },1000);
+        }
+    }
+
     function cambiaSignos(id) {
         if(id=='mas'){
             var fila=1;
@@ -1425,7 +1495,11 @@
                     $('#T'+fila+''+(i+1)).html('<img id="mas" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/mas.png">');
                     document.getElementById('agregarMas').style.display = 'block';
                     document.getElementById('agregarMenos').style.display = 'none';
+                    signo="mas";
                     break;
+                }
+                if(i==5){
+                    fila=2;i=0;
                 }
             }
         }else{
@@ -1435,7 +1509,11 @@
                     $('#T'+fila+''+(i+1)).html('<img id="menos" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="img/iconos/trigonometria/areadesarrollo/identidades_des/menos.png">');
                     document.getElementById('agregarMas').style.display = 'none';
                     document.getElementById('agregarMenos').style.display = 'block';
+                    signo="menos";
                     break;
+                }
+                if(i==5){
+                    fila=2;i=0;
                 }
             }
         }
