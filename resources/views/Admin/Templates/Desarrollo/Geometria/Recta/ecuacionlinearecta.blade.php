@@ -20,47 +20,70 @@
                             <div class="row">
                                 <div class="col-sm-offset-2 col-sm-8">
                                     <p style="text-align: justify;">
-                                        La ecuación general de una recta es una expresión de la forma <b>Ax + By + C = 0</b>, donde A, B y C son números reales.
+                                        La ecuación general de una recta es una expresión de la forma <b>Ax + By + C =
+                                            0</b>, donde A, B y C son números reales.
                                         <br><br>
-                                        Se puede llegar a esta ecuación general de la recta desde cualquiera de las ecuaciones ya conocidas, siendo estas:
-                                        <br><br><center>* La ecuación punto-pendiente:<b><br> y - y<sub>1</sub> = m (x - x<sub>1</sub>)</b></center>
-                                        <br><br><center>* La ecuación punto-pendiente:<b><br> y = mx + b</b></center>
-                                        <br><br><center>* La ecuación cuando se conocen dos puntos:<b>
-                                        <table border="0">
-                                            <tr>
-                                                <td style="border-bottom: 1px solid black">
-                                                    y<sub>2</sub> - y<sub>1</sub>
-                                                </td>
-                                                <td rowspan="2">
-                                                    =
-                                                </td>
-                                                <td style="border-bottom: 1px solid black">
-                                                    y - y<sub>1</sub>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    x<sub>2</sub> - x<sub>1</sub>
-                                                </td>
-                                                <td>
-                                                    x - x<sub>1</sub>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        Se puede llegar a esta ecuación general de la recta desde cualquiera de las
+                                        ecuaciones ya conocidas, siendo estas:
+                                        <br><br>
+                                    <center>* La ecuación punto-pendiente:<b><br> y - y<sub>1</sub> = m (x -
+                                            x<sub>1</sub>)</b></center>
+                                    <br><br>
+                                    <center>* La ecuación punto-pendiente:<b><br> y = mx + b</b></center>
+                                    <br><br>
+                                    <center>* La ecuación cuando se conocen dos puntos:<b>
+                                            <table border="0">
+                                                <tr>
+                                                    <td style="border-bottom: 1px solid black">
+                                                        y<sub>2</sub> - y<sub>1</sub>
+                                                    </td>
+                                                    <td rowspan="2">
+                                                        =
+                                                    </td>
+                                                    <td style="border-bottom: 1px solid black">
+                                                        y - y<sub>1</sub>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        x<sub>2</sub> - x<sub>1</sub>
+                                                    </td>
+                                                    <td>
+                                                        x - x<sub>1</sub>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </b></center>
                                     </p>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="ibox">
                                         <div class="ibox-title">
-                                            <h3><center>EJEMPLOS</center></h3>
+                                            <h3>
+                                                <center>EJEMPLOS</center>
+                                            </h3>
                                             <br>
                                             <div class="row">
                                                 <table border="0" align="center">
                                                     <tr>
-                                                        <td><button type="button" class="btn btn-outline btn-primary dim" onclick="cambioEjemplo(1)">1</button></td>
-                                                        <td><button type="button" class="btn btn-outline btn-primary dim" onclick="cambioEjemplo(2)">2</button></td>
-                                                        <td><button type="button" class="btn btn-outline btn-primary dim" onclick="cambioEjemplo(3)">3</button></td>
+                                                        <td>
+                                                            <button type="button"
+                                                                    class="btn btn-outline btn-primary dim"
+                                                                    onclick="cambioEjemplo(1)">1
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button"
+                                                                    class="btn btn-outline btn-primary dim"
+                                                                    onclick="cambioEjemplo(2)">2
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button"
+                                                                    class="btn btn-outline btn-primary dim"
+                                                                    onclick="cambioEjemplo(3)">3
+                                                            </button>
+                                                        </td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -81,7 +104,9 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Hallar la ecuación de la recta que tiene pendiente <b>m = 3</b> e intercepto <b>b = 10</b>
+                                                                                Hallar la ecuación de la recta que tiene
+                                                                                pendiente <b>m = 3</b> e intercepto <b>b
+                                                                                    = 10</b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -91,7 +116,8 @@
                                                         <br>
                                                         <div class="row">
                                                             <div class="col-xs-12">
-                                                                Tenemos que hallar la ecuación de la recta, esto es, <b>y = mx + b</b>
+                                                                Tenemos que hallar la ecuación de la recta, esto es, <b>y
+                                                                    = mx + b</b>
                                                                 <br><br>
                                                                 Usamos la información que tenemos:
                                                                 <br><br>
@@ -112,7 +138,8 @@
                                                                                 <br><br>
                                                                                 y = 3x + 10 .
                                                                                 <br><br>
-                                                                                La ecuación que se pide es <b>y = 3x + 10</b>
+                                                                                La ecuación que se pide es <b>y = 3x +
+                                                                                    10</b>
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -120,7 +147,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-xs-12">Nótese que esta forma principal (simplificada o explícita) también podemos expresarla como una ecuación general:
+                                                            <div class="col-xs-12">Nótese que esta forma principal
+                                                                (simplificada o explícita) también podemos expresarla
+                                                                como una ecuación general:
                                                             </div>
                                                         </div>
                                                         <br>
@@ -132,13 +161,14 @@
                                                                             <center>
                                                                                 y = 3x + 10
                                                                                 <br><br>
-                                                                                Trasladamos el valor de y al lado contrario, es decir:
+                                                                                Trasladamos el valor de y al lado
+                                                                                contrario, es decir:
                                                                                 <br><br>
                                                                                 – y + 3x + 10 = 0
                                                                                 <br><br>
                                                                                 Que luego ordenamos, para quedar
                                                                                 <br><br>
-                                                                                3x – y  +  10 = 0
+                                                                                3x – y + 10 = 0
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -155,7 +185,7 @@
                                                             <div class="well">
                                                                 <div class="row diff-wrapper">
                                                                     <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>3x – y  +  10 = 0</b></font><br><br>
+                                                                        <font size="3"><b>3x – y + 10 = 0</b></font><br><br>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -173,8 +203,12 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p style="text-align: justify;">
-                                                                            Como puedes observar para encontrar la ecucación pendiente-intercepto de una recta sólo debes
-                                                                            sustituir los valores de la pendiente <b>(m)</b> y el intercepto en y <b>(b)</b> en la fórmula de la
+                                                                            Como puedes observar para encontrar la
+                                                                            ecucación pendiente-intercepto de una recta
+                                                                            sólo debes
+                                                                            sustituir los valores de la pendiente
+                                                                            <b>(m)</b> y el intercepto en y <b>(b)</b>
+                                                                            en la fórmula de la
                                                                             ecuación de una recta.
                                                                         </p>
                                                                     </div>
@@ -200,7 +234,9 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Hallar la ecuación de la recta que pasa por el punto <b>A (2, – 4)</b> y que tiene una pendiente de <b> – 1/3</b>
+                                                                                Hallar la ecuación de la recta que pasa
+                                                                                por el punto <b>A (2, – 4)</b> y que
+                                                                                tiene una pendiente de <b> – 1/3</b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -210,7 +246,8 @@
                                                         <br>
                                                         <div class="row">
                                                             <div class="col-xs-12">
-                                                                Tenemos que hallar la ecuación de la recta, esto es, <b>y – y<sub>1</sub> = m(x – x<sub>1</sub>)</b>
+                                                                Tenemos que hallar la ecuación de la recta, esto es, <b>y
+                                                                    – y<sub>1</sub> = m(x – x<sub>1</sub>)</b>
                                                                 <br><br>
                                                                 Usamos la información que tenemos:
                                                                 <br><br>
@@ -231,11 +268,15 @@
                                                                                 <br><br>
                                                                                 Sustituimos en la ecuación
                                                                                 <br><br>
-                                                                                y – (-4) = - <sup>1</sup>/<sub>3</sub>(x – 2)
+                                                                                y – (-4) = - <sup>1</sup>/<sub>3</sub>(x
+                                                                                – 2)
                                                                                 <br><br>
-                                                                                y + 4 = -<sup>1</sup>/<sub>3</sub>(x - 2)
+                                                                                y + 4 = -<sup>1</sup>/<sub>3</sub>(x -
+                                                                                2)
                                                                                 <br><br>
-                                                                                La ecuación que se pide es <b>y + 4 = -<sup>1</sup>/<sub>3</sub>(x - 2)</b>
+                                                                                La ecuación que se pide es <b>y + 4 =
+                                                                                    -<sup>1</sup>/<sub>3</sub>(x -
+                                                                                    2)</b>
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -243,7 +284,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-xs-12">Nótese que esta forma principal (simplificada o explícita) también podemos expresarla como una ecuación general:
+                                                            <div class="col-xs-12">Nótese que esta forma principal
+                                                                (simplificada o explícita) también podemos expresarla
+                                                                como una ecuación general:
                                                             </div>
                                                         </div>
                                                         <br>
@@ -253,9 +296,11 @@
                                                                     <div class="col-xs-12" align="center">
                                                                         <font size="3">
                                                                             <center>
-                                                                                y + 4 = -<sup>1</sup>/<sub>3</sub>(x - 2)
+                                                                                y + 4 = -<sup>1</sup>/<sub>3</sub>(x -
+                                                                                2)
                                                                                 <br><br>
-                                                                                Trasladamos el valor de 3 al lado derecho, es decir:
+                                                                                Trasladamos el valor de 3 al lado
+                                                                                derecho, es decir:
                                                                                 <br><br>
                                                                                 3 (y + 4) = -1 (x - 2)
                                                                                 <br><br>
@@ -304,8 +349,12 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p style="text-align: justify;">
-                                                                            Como puedes observar para encontrar la ecucación pendiente-intercepto de una recta sólo debes
-                                                                            sustituir los valores de la pendiente <b>(m)</b> y el intercepto en y <b>(b)</b> en la fórmula de la
+                                                                            Como puedes observar para encontrar la
+                                                                            ecucación pendiente-intercepto de una recta
+                                                                            sólo debes
+                                                                            sustituir los valores de la pendiente
+                                                                            <b>(m)</b> y el intercepto en y <b>(b)</b>
+                                                                            en la fórmula de la
                                                                             ecuación de una recta.
                                                                         </p>
                                                                     </div>
@@ -331,7 +380,9 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12">
                                                                             <p style="text-align: justify;">
-                                                                                Determina la ecuación general de la recta que pasa por los puntos <b>P(4 , 3)</b> y <b>Q(-3 , -2)</b>
+                                                                                Determina la ecuación general de la
+                                                                                recta que pasa por los puntos <b>P(4 ,
+                                                                                    3)</b> y <b>Q(-3 , -2)</b>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -341,7 +392,8 @@
                                                         <br>
                                                         <div class="row">
                                                             <div class="col-xs-12">
-                                                                Tenemos que hallar la ecuación de la recta, esto es, <b><table border="0">
+                                                                Tenemos que hallar la ecuación de la recta, esto es, <b>
+                                                                    <table border="0">
                                                                         <tr>
                                                                             <td style="border-bottom: 1px solid black">
                                                                                 y<sub>2</sub> - y<sub>1</sub>
@@ -361,7 +413,8 @@
                                                                                 x - x<sub>1</sub>
                                                                             </td>
                                                                         </tr>
-                                                                    </table></b>
+                                                                    </table>
+                                                                </b>
                                                                 <br><br>
                                                                 Usamos la información que tenemos:
                                                                 <br><br>
@@ -387,7 +440,7 @@
                                                                                 <table border="0">
                                                                                     <tr>
                                                                                         <td style="border-bottom: 1px solid black">
-                                                                                           -2 - 3
+                                                                                            -2 - 3
                                                                                         </td>
                                                                                         <td rowspan="2">
                                                                                             =
@@ -406,7 +459,8 @@
                                                                                     </tr>
                                                                                 </table>
                                                                                 <br><br>
-                                                                                La ecuación que se pide es <b><table border="0">
+                                                                                La ecuación que se pide es <b>
+                                                                                    <table border="0">
                                                                                         <tr>
                                                                                             <td style="border-bottom: 1px solid black">
                                                                                                 -2 - 3
@@ -426,7 +480,8 @@
                                                                                                 x - 4
                                                                                             </td>
                                                                                         </tr>
-                                                                                    </table></b>
+                                                                                    </table>
+                                                                                </b>
                                                                             </center>
                                                                         </font>
                                                                     </div>
@@ -434,7 +489,9 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-xs-12">Nótese que esta forma principal (simplificada o explícita) también podemos expresarla como una ecuación general:
+                                                            <div class="col-xs-12">Nótese que esta forma principal
+                                                                (simplificada o explícita) también podemos expresarla
+                                                                como una ecuación general:
                                                             </div>
                                                         </div>
                                                         <br>
@@ -490,7 +547,8 @@
                                                                                     </tr>
                                                                                 </table>
                                                                                 <br><br>
-                                                                                Pasamos las divisiones a multiplicar a los lados contrarios, es decir:
+                                                                                Pasamos las divisiones a multiplicar a
+                                                                                los lados contrarios, es decir:
                                                                                 <br><br>
                                                                                 - 7 (y - 3) = - 5 (x - 4)
                                                                                 <br><br>
@@ -498,7 +556,8 @@
                                                                                 <br><br>
                                                                                 -7y + 21 = - 5x + 20
                                                                                 <br><br>
-                                                                                Pasamos los valores de la izquierda a la derecha
+                                                                                Pasamos los valores de la izquierda a la
+                                                                                derecha
                                                                                 <br><br>
                                                                                 5x - 7y + 21 - 20 = 0
                                                                                 <br><br>
@@ -539,8 +598,12 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p style="text-align: justify;">
-                                                                            Como puedes observar para encontrar la ecucación pendiente-intercepto de una recta sólo debes
-                                                                            sustituir los valores de la pendiente <b>(m)</b> y el intercepto en y <b>(b)</b> en la fórmula de la
+                                                                            Como puedes observar para encontrar la
+                                                                            ecucación pendiente-intercepto de una recta
+                                                                            sólo debes
+                                                                            sustituir los valores de la pendiente
+                                                                            <b>(m)</b> y el intercepto en y <b>(b)</b>
+                                                                            en la fórmula de la
                                                                             ecuación de una recta.
                                                                         </p>
                                                                     </div>
@@ -594,12 +657,15 @@
                                                 <div class="col-lg-12">
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
-                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
+                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font
+                                                                        size="4"><i><b>Problema a
+                                                                            Resolver</b></i></font></center>
                                                         </div>
                                                         <div class="panel-body">
                                                             <font size="3">
                                                                 <center>
-                                                                    Hallar la ecuación de la recta que pasa por el punto <b>(1, 2)</b> y tiene pendiente <b>m = – 5 </b>
+                                                                    Hallar la ecuación de la recta que pasa por el punto
+                                                                    <b>(1, 2)</b> y tiene pendiente <b>m = – 5 </b>
                                                                 </center>
                                                             </font>
                                                         </div>
@@ -611,12 +677,14 @@
                                                                 <h3>5x + y – 7 = 0</h3>
                                                                 <br>
                                                                 <div class="radio radio-info radio-inline">
-                                                                    <input type="radio" id="1rpe1" value="1" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <input type="radio" id="1rpe1" value="1" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
                                                                     <label for="1rpe1"><b>Ecuación 1</b></label>
                                                                 </div>
                                                                 <div id="True1P1" style="display: none;">
                                                                     &nbsp;&nbsp;
-                                                                    <span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>
+                                                                    <span class="badge badge-primary"><i
+                                                                                class="fa fa-thumbs-up"></i></span>
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -629,11 +697,13 @@
                                                                 <h3>8x + y – 4 = 0</h3>
                                                                 <br>
                                                                 <div class="radio radio-info radio-inline">
-                                                                    <input type="radio" id="1rpe2" value="2" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <input type="radio" id="1rpe2" value="2" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
                                                                     <label for="1rpe2"><b>Ecuación 2</b></label>
                                                                 </div>
                                                                 <div id="False2P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -646,11 +716,13 @@
                                                                 <h3>5x + y – 10 = 0</h3>
                                                                 <br>
                                                                 <div class="radio radio-info radio-inline">
-                                                                    <input type="radio" id="1rpe3" value="3" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <input type="radio" id="1rpe3" value="3" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
                                                                     <label for="1rpe3"><b>Ecuación 3</b></label>
                                                                 </div>
                                                                 <div id="False3P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -663,11 +735,13 @@
                                                                 <h3>5x + 3y – 7 = 0</h3>
                                                                 <br>
                                                                 <div class="radio radio-info radio-inline">
-                                                                    <input type="radio" id="1rpe4" value="4" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <input type="radio" id="1rpe4" value="4" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
                                                                     <label for="1rpe4"><b>Ecuación 4</b></label>
                                                                 </div>
                                                                 <div id="False4P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -680,11 +754,13 @@
                                                                 <h3>x + 5y – 7 = 0</h3>
                                                                 <br>
                                                                 <div class="radio radio-info radio-inline">
-                                                                    <input type="radio" id="1rpe5" value="5" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <input type="radio" id="1rpe5" value="5" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
                                                                     <label for="1rpe5"><b>Ecuación 5</b></label>
                                                                 </div>
                                                                 <div id="False5P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -697,11 +773,13 @@
                                                                 <h3>x + y – 7 = 0</h3>
                                                                 <br>
                                                                 <div class="radio radio-info radio-inline">
-                                                                    <input type="radio" id="1rpe6" value="6" name="1rpe" onclick="VerificarEvaluacion1P();">
+                                                                    <input type="radio" id="1rpe6" value="6" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
                                                                     <label for="1rpe6"><b>Ecuación 6</b></label>
                                                                 </div>
                                                                 <div id="False6P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
                                                                 </div>
                                                             </center>
                                                         </div>
@@ -714,7 +792,8 @@
                                                     <div class="row">
                                                         <div class="well" align="center">
                                                             <font size="3" style="text-align: justify;">
-                                                                Selecciona la gráfica correcta para un punto <b>(-3 , 2)</b> con pendiente <b>- <sup>2</sup>/<sub>5</sub></b>
+                                                                Selecciona la gráfica correcta para un punto <b>(-3 ,
+                                                                    2)</b> con pendiente <b>- <sup>2</sup>/<sub>5</sub></b>
                                                             </font>
                                                         </div>
                                                         <br><br>
@@ -725,12 +804,15 @@
                                                                     <h3>5x + y – 17 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="2rpe1" value="1" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <input type="radio" id="2rpe1" value="1"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
                                                                         <label for="2rpe1"><b>Ecuación 1</b></label>
                                                                     </div>
                                                                     <div id="False1P2" style="display: none;">
                                                                         &nbsp;&nbsp;
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -743,11 +825,14 @@
                                                                     <h3>15x + 10y – 7 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="2rpe2" value="2" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <input type="radio" id="2rpe2" value="2"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
                                                                         <label for="2rpe2"><b>Ecuación 2</b></label>
                                                                     </div>
                                                                     <div id="False2P2" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -760,11 +845,14 @@
                                                                     <h3>x + y – 1 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="2rpe3" value="3" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <input type="radio" id="2rpe3" value="3"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
                                                                         <label for="2rpe3"><b>Ecuación 3</b></label>
                                                                     </div>
                                                                     <div id="False3P2" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -777,11 +865,14 @@
                                                                     <h3>3x + y – 27 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="2rpe4" value="4" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <input type="radio" id="2rpe4" value="4"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
                                                                         <label for="2rpe4"><b>Ecuación 4</b></label>
                                                                     </div>
                                                                     <div id="True4P2" style="display: none;">
-                                                                        <span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>
+                                                                        <span class="badge badge-primary"><i
+                                                                                    class="fa fa-thumbs-up"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -794,11 +885,14 @@
                                                                     <h3>3x + y + 27 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="2rpe5" value="5" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <input type="radio" id="2rpe5" value="5"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
                                                                         <label for="2rpe5"><b>Ecuación 5</b></label>
                                                                     </div>
                                                                     <div id="False5P2" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -811,11 +905,14 @@
                                                                     <h3>-3x - y + 27 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="2rpe6" value="6" name="2rpe" onclick="VerificarEvaluacion2P();">
+                                                                        <input type="radio" id="2rpe6" value="6"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
                                                                         <label for="2rpe6"><b>Ecuación 6</b></label>
                                                                     </div>
                                                                     <div id="False6P2" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -823,12 +920,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row animated fadeInRightBig"  style="display: none;" id="Practica3">
+                                            <div class="row animated fadeInRightBig" style="display: none;"
+                                                 id="Practica3">
                                                 <div class="col-md-12">
                                                     <div class="row">
                                                         <div class="well" align="center">
                                                             <font size="3" style="text-align: justify;">
-                                                                Determina la ecuación general de la recta que pasa por los puntos <b>P(1, 2)</b> y <b>Q(3, 4)</b>
+                                                                Determina la ecuación general de la recta que pasa por
+                                                                los puntos <b>P(1, 2)</b> y <b>Q(3, 4)</b>
                                                             </font>
                                                         </div>
                                                         <br><br>
@@ -839,12 +938,15 @@
                                                                     <h3>-x + y – 7 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe1" value="1" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <input type="radio" id="3rpe1" value="1"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
                                                                         <label for="3rpe1"><b>Ecuación 1</b></label>
                                                                     </div>
                                                                     <div id="False1P3" style="display: none;">
                                                                         &nbsp;&nbsp;
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -857,11 +959,14 @@
                                                                     <h3>- x + y – 1 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe2" value="2" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <input type="radio" id="3rpe2" value="2"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
                                                                         <label for="3rpe2"><b>Ecuación 2</b></label>
                                                                     </div>
                                                                     <div id="True2P3" style="display: none;">
-                                                                        <span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>
+                                                                        <span class="badge badge-primary"><i
+                                                                                    class="fa fa-thumbs-up"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -874,11 +979,14 @@
                                                                     <h3>-x + 2y – 7 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe3" value="3" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <input type="radio" id="3rpe3" value="3"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
                                                                         <label for="3rpe3"><b>Ecuación 3</b></label>
                                                                     </div>
                                                                     <div id="False3P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -891,11 +999,14 @@
                                                                     <h3>- 3x + 3y – 3 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe4" value="4" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <input type="radio" id="3rpe4" value="4"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
                                                                         <label for="3rpe4"><b>Ecuación 4</b></label>
                                                                     </div>
                                                                     <div id="False4P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -908,11 +1019,14 @@
                                                                     <h3>x - y + 1 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe5" value="5" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <input type="radio" id="3rpe5" value="5"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
                                                                         <label for="3rpe5"><b>Ecuación 5</b></label>
                                                                     </div>
                                                                     <div id="False5P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -925,11 +1039,14 @@
                                                                     <h3>- 7x + 3y – 5 = 0</h3>
                                                                     <br>
                                                                     <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe6" value="6" name="3rpe" onclick="VerificarEvaluacion3P();">
+                                                                        <input type="radio" id="3rpe6" value="6"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
                                                                         <label for="3rpe6"><b>Ecuación 6</b></label>
                                                                     </div>
                                                                     <div id="False6P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
                                                                 </center>
                                                             </div>
@@ -948,7 +1065,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><b>Resolución de Ejercicios</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><b>Resolución de
+                                    Ejercicios</b></a>
                             <div class="nav navbar-top-links navbar-right ">
                                 <div class="col-lg-3">
                                     <button type="button" onclick="tour2()" class="btn btn-primary btn-xs"><i
@@ -984,13 +1102,16 @@
                                                                     <button id="btnPendiente" type="buton"
                                                                             onclick="onSelectExercise(1)"
                                                                             class="btn btn-info animation_select"
-                                                                            data-animation="flipInX">Pendiente e intercepto
+                                                                            data-animation="flipInX">Pendiente e
+                                                                        intercepto
                                                                     </button>
                                                                 </div>
                                                                 <div type="button" class="col-sm-3">
-                                                                    <button id="btnPuntosPendiente" onclick="onSelectExercise(2)"
+                                                                    <button id="btnPuntosPendiente"
+                                                                            onclick="onSelectExercise(2)"
                                                                             class="btn btn-white animation_select"
-                                                                            data-animation="flipInX">Un punto y pendiente
+                                                                            data-animation="flipInX">Un punto y
+                                                                        pendiente
                                                                     </button>
                                                                 </div>
                                                                 <div type="button" class="col-sm-3">
@@ -1016,7 +1137,7 @@
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>&nbsp;</td>
-                                                                                <td  width="30%">
+                                                                                <td width="30%">
                                                                                     <center>y (b)</center>
                                                                                 </td>
                                                                                 <td>&nbsp;</td>
@@ -1080,26 +1201,45 @@
                                                                          class="alert alert-warning">
                                                                         <table border="0" width="100%">
                                                                             <tr>
-                                                                                <td colspan="3"><center><b>Punto</b></center></td>
+                                                                                <td colspan="3">
+                                                                                    <center><b>Punto</b></center>
+                                                                                </td>
                                                                                 <td>&nbsp;</td>
-                                                                                <td><center><b>Pendiente</b><center></td>
+                                                                                <td>
+                                                                                    <center><b>Pendiente</b>
+                                                                                        <center>
+                                                                                </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td width="30%"><input type="number" placeholder="?"
-                                                                                           class="form-control" value=""
-                                                                                           id="x1PP" width="100%"></td>
+                                                                                <td width="30%"><input type="number"
+                                                                                                       placeholder="?"
+                                                                                                       class="form-control"
+                                                                                                       value=""
+                                                                                                       id="x1PP"
+                                                                                                       width="100%">
+                                                                                </td>
                                                                                 <td>&nbsp;</td>
-                                                                                <td width="30%"><input type="number" placeholder="?"
-                                                                                           class="form-control" value=""
-                                                                                           id="y1PP" width="100%"></td>
+                                                                                <td width="30%"><input type="number"
+                                                                                                       placeholder="?"
+                                                                                                       class="form-control"
+                                                                                                       value=""
+                                                                                                       id="y1PP"
+                                                                                                       width="100%">
+                                                                                </td>
                                                                                 <td>&nbsp;</td>
-                                                                                <td width="30%"><input type="number" placeholder="?"
-                                                                                           class="form-control" value=""
-                                                                                           id="mUPP" width="100%"></td>
+                                                                                <td width="30%"><input type="number"
+                                                                                                       placeholder="?"
+                                                                                                       class="form-control"
+                                                                                                       value=""
+                                                                                                       id="mUPP"
+                                                                                                       width="100%">
+                                                                                </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td colspan="4">&nbsp;</td>
-                                                                                <td style="border-bottom: 1px solid black;">&nbsp;</td>
+                                                                                <td style="border-bottom: 1px solid black;">
+                                                                                    &nbsp;
+                                                                                </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td colspan="4">&nbsp;</td>
@@ -1337,7 +1477,7 @@
             document.getElementById("mUpP").value = "";
             document.getElementById("mDownP").value = "";
         }
-        if(opc==2){
+        if (opc == 2) {
             $("#Puntos").fadeOut(0);
             $("#Resultado").fadeOut(0);
             $("#coordenadas").fadeOut(0);
@@ -1349,7 +1489,7 @@
             $('#btnPuntosPendiente').addClass('btn btn-info animation_select');
             $("#puntoPendiente").fadeIn(300);
         }
-        if(opc==3) {
+        if (opc == 3) {
             $("#Puntos").fadeOut(0);
             $("#puntoPendiente").fadeOut(0);
             $("#Resultado").fadeOut(0);
@@ -1390,8 +1530,8 @@
                         "<br><br>" +
                         "</center>");
                 }
-                var paso=0;
-                if(x1P==0){
+                var paso = 0;
+                if (x1P == 0) {
                     $("#solucion").append("<center><font size='3'><b> y  = " + mUpP + " x </b></font>" +
                         "<br><br>" +
                         "</center>");
@@ -1400,53 +1540,53 @@
                     $("#solucion").append("<center><font size='3'><b> y = " + mUpP + "x </b></font>" +
                         "<br><br>" +
                         "Movemos el valor correspondiente a x" +
-                        "<br><br><font size='3'><b> "+ mUpP * -1 + "x + y = 0</b></font>"+
-                        "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                        "<br><br><font size='3'><b> " + mUpP * -1 + "x + y = 0</b></font>" +
+                        "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                         "</center>");
                 }
-                else{
+                else {
                     $("#solucion").append("<center>Despejamos la ecuación igualandola a 0<br>" +
                         "Primero movemos el valor entero</center><br>");
-                    if(x1P <0 && mUpP <0){
+                    if (x1P < 0 && mUpP < 0) {
                         x1P = x1P * -1;
                         //mUpP = mUpP * -1;
                         $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = " + mUpP + "x </b></font>" +
                             "<br><br>" +
                             "Movemos el valor correspondiente a x" +
-                            "<br><br><font size='3'><b> "+ mUpP * -1 + "x + y +  " + x1P + " = 0</b></font>"+
-                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "<br><br><font size='3'><b> " + mUpP * -1 + "x + y +  " + x1P + " = 0</b></font>" +
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                             "</center>");
-                        paso=1;
+                        paso = 1;
                     }
-                    if(paso==0 && (x1P <0 || mUpP <0)){
-                        if(x1P < 0 && mUpP > 0){
+                    if (paso == 0 && (x1P < 0 || mUpP < 0)) {
+                        if (x1P < 0 && mUpP > 0) {
                             x1P = x1P * -1;
                             $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = " + mUpP + "x </b></font>" +
                                 "<br><br>" +
                                 "Movemos el valor correspondiente a x" +
-                                "<br><br><font size='3'><b> - "+ mUpP + "x + y  +  " + x1P + " = 0</b></font>"+
-                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "<br><br><font size='3'><b> - " + mUpP + "x + y  +  " + x1P + " = 0</b></font>" +
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                                 "</center>");
-                            paso=1;
+                            paso = 1;
                         }
-                        if(x1P > 0 && mUpP < 0){
+                        if (x1P > 0 && mUpP < 0) {
                             //x1P = x1P * -1;
                             $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = " + mUpP + "x </b></font>" +
                                 "<br><br>" +
                                 "Movemos el valor correspondiente a x" +
-                                "<br><br><font size='3'><b> "+ mUpP * -1 + "x + y -  " + x1P + " = 0</b></font>"+
-                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "<br><br><font size='3'><b> " + mUpP * -1 + "x + y -  " + x1P + " = 0</b></font>" +
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                                 "</center>");
-                            paso=1;
+                            paso = 1;
                         }
 
                     }
-                    if(paso==0 && (x1P > 0 && mUpP > 0)){
+                    if (paso == 0 && (x1P > 0 && mUpP > 0)) {
                         $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = " + mUpP + "x </b></font>" +
                             "<br><br>" +
                             "Movemos el valor correspondiente a x" +
-                            "<br><br><font size='3'><b> - "+ mUpP * -1 + "x + y -  " + x1P + " = 0</b></font>"+
-                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "<br><br><font size='3'><b> - " + mUpP * -1 + "x + y -  " + x1P + " = 0</b></font>" +
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                             "</center>");
                     }
                 }
@@ -1476,7 +1616,7 @@
                 }
 
 
-                if(x1P == 0){
+                if (x1P == 0) {
                     $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>  x </b></font>" +
                         "<br><br>" +
                         "</center>");
@@ -1485,55 +1625,55 @@
                     $("#solucion").append("<center><font size='3'><b> y = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x</b></font>" +
                         "<br><br>" +
                         "Movemos el valor correspondiente a x" +
-                        "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y = 0</b></font>"+
-                        "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                        "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y = 0</b></font>" +
+                        "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                         "</center>");
                 }
-                else{
+                else {
 
                     $("#solucion").append("<center>Despejamos la ecuación igualandola a 0<br>" +
                         "Primero movemos el valor entero</center><br>");
-                    var paso=0;
-                    if(x1P <0 && mUpP <0){
+                    var paso = 0;
+                    if (x1P < 0 && mUpP < 0) {
                         x1P = x1P * -1;
                         //mUpP = mUpP * -1;
                         $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
                             "<br><br>" +
                             "Movemos el valor correspondiente a x" +
-                            "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y +  " + x1P + " = 0</b></font>"+
-                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y +  " + x1P + " = 0</b></font>" +
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                             "</center>");
-                        paso=1;
+                        paso = 1;
                     }
-                    if(paso==0 && (x1P <0 || mUpP <0)){
-                        if(x1P < 0 && mUpP > 0){
+                    if (paso == 0 && (x1P < 0 || mUpP < 0)) {
+                        if (x1P < 0 && mUpP > 0) {
                             x1P = x1P * -1;
                             $("#solucion").append("<center><font size='3'><b> y + " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
                                 "<br><br>" +
                                 "Movemos el valor correspondiente a x" +
-                                "<br><br><font size='3'><b> - <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x + y  +  " + x1P + " = 0</b></font>"+
-                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "<br><br><font size='3'><b> - <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x + y  +  " + x1P + " = 0</b></font>" +
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                                 "</center>");
-                            paso=1;
+                            paso = 1;
                         }
-                        if(x1P > 0 && mUpP < 0){
+                        if (x1P > 0 && mUpP < 0) {
                             //x1P = x1P * -1;
                             $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
                                 "<br><br>" +
                                 "Movemos el valor correspondiente a x" +
-                                "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y -  " + x1P + " = 0</b></font>"+
-                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                                "<br><br><font size='3'><b> <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub> x + y -  " + x1P + " = 0</b></font>" +
+                                "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                                 "</center>");
-                            paso=1;
+                            paso = 1;
                         }
 
                     }
-                    if(paso==0 && (x1P > 0 && mUpP > 0)){
+                    if (paso == 0 && (x1P > 0 && mUpP > 0)) {
                         $("#solucion").append("<center><font size='3'><b> y - " + x1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> x </b></font>" +
                             "<br><br>" +
                             "Movemos el valor correspondiente a x" +
-                            "<br><br><font size='3'><b> - <sup>" + mUpP * -1 + "</sup>/<sub>" + mDownP + "</sub>x + y -  " + x1P + " = 0</b></font>"+
-                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>"+
+                            "<br><br><font size='3'><b> - <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub>x + y -  " + x1P + " = 0</b></font>" +
+                            "<br><br><font size='3'><b>Siendo esta le ecuación de la recta</b></font>" +
                             "</center>");
                     }
                 }
@@ -1559,7 +1699,591 @@
 
     }
 
-    function generarResolucionC(){
+    function generarResolucionPP() {
+        var x1P = document.getElementById("x1PP").value;
+        var y1P = document.getElementById("y1PP").value;
+        var mUpP = document.getElementById("mUPP").value;
+        var mDownP = document.getElementById("mDPP").value;
+        if (x1P === "" || y1P === "" || mUpP === "") {
+            toastr.error('Debes completar los campos necesarios', 'Lo Siento');
+        }
+        else {
+            ////Es entero
+            if (mDownP === "") {
+                //Es entero
+                $("#solucion").html("<center>Identificamos la fórmula de punto-pendiente<br><br>" +
+                    "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+                    "<br><br>" +
+                    "Sustituyendo las variables" +
+                    "<br><br>" +
+                    "</center>");
+                var tempX1P;
+                if (x1P < 0 && y1P < 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - (" + y1P + ") = " + mUpP + " ( x - (" + x1P + ") ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (x1P > 0 && y1P < 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - (" + y1P + ") = " + mUpP + " ( x - " + x1P + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (x1P < 0 && y1P > 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - " + y1P + " = " + mUpP + " ( x - (" + x1P + ") ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (x1P > 0 && y1P > 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - " + y1P + " = " + mUpP + " ( x - " + x1P + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                $("#solucion").append("<center>Multiplicamos la pendiente por los valores del parentesis" +
+                    "<br><br>" +
+                    "</center>");
+                //////MULTIPLICANDO VALORES
+                var paso = 0;
+                var muX1 = 0;
+                if (x1P < 0 && y1P < 0) {
+                    var y1P2 = y1P * -1;
+                    x1P = x1P * -1;
+                    muX1 = mUpP * x1P;
+                    if (muX1 < 0) {
+                        $("#solucion").append("<center><font size='3'><b> y + " + y1P2 + " = " + mUpP + "x  " + muX1 + " </b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    else {
+                        $("#solucion").append("<center><font size='3'><b> y + " + y1P2 + " = " + mUpP + "x + " + muX1 + " </b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    paso = 1;
+                }
+                if (paso === 0 && (x1P > 0 && y1P < 0)) {
+                    var y1P2 = y1P * -1;
+                    x1P = x1P * -1;
+                    muX1 = mUpP * x1P;
+                    if (muX1 < 0) {
+                        $("#solucion").append("<center><font size='3'><b> y + " + y1P2 + " = " + mUpP + "x  " + muX1 + " </b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    else {
+                        $("#solucion").append("<center><font size='3'><b> y + " + y1P2 + " = " + mUpP + "x + " + muX1 + " </b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    paso = 1;
+
+                }
+                if (paso === 0 && (x1P < 0 && y1P > 0)) {
+                    x1P = x1P * -1;
+                    muX1 = x1P * mUpP;
+                    if (muX1 < 0) {
+                        $("#solucion").append("<center><font size='3'><b> y - " + y1P + " = " + mUpP + "x " + muX1 + "</b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    else {
+                        $("#solucion").append("<center><font size='3'><b> y + " + y1P + " = " + mUpP + "x + " + muX1 + "</b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    paso = 1;
+                }
+                if (paso === 0 && (x1P > 0 && y1P > 0)) {
+                    x1P = x1P * -1;
+                    muX1 = mUpP * x1P;
+                    if (muX1 < 0) {
+                        $("#solucion").append("<center><font size='3'><b> y - " + y1P + " = " + mUpP + "x  " + muX1 + "</b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    else {
+                        $("#solucion").append("<center><font size='3'><b> y + " + y1P + " = " + mUpP + "x + " + muX1 + " </b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+
+                }
+                ////PASAMOS LOS VALORES AL LADO CONTRARIO
+                var resultadoEnteros;
+                var paso2 = 0;
+                $("#solucion").append("<center>Igualamos la ecuación a 0" +
+                    "<br><br>" +
+                    "</center>");
+                if (mUpP < 0 && muX1 < 0) {
+                    mUpP = mUpP * -1; //sera positivo
+                    muX1 = muX1 * -1; // sera positivo
+                    if (y1P < 0) {
+                        y1P = y1P * -1;
+                        resultadoEnteros = parseInt(y1P) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + y1P + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(y1P2) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y - " + y1P + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    paso2 = 1;
+                }
+                if (paso2 === 0 && (mUpP < 0 && muX1 > 0)) {
+                    mUpP = mUpP * -1; //sera positivo
+                    muX1 = muX1 * -1; // sera negativo
+                    if (y1P < 0) {
+                        y1P = y1P * -1;
+                        resultadoEnteros = parseInt(y1P) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + y1P + "  " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(y1P2) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y - " + y1P + "  " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    paso2 = 1;
+                }
+                if (paso2 === 0 && (mUpP > 0 && muX1 < 0)) {
+                    mUpP = mUpP * -1; //sera negativo
+                    muX1 = muX1 * -1; // sera positivo
+                    if (y1P < 0) {
+                        y1P = y1P * -1;
+                        resultadoEnteros = parseInt(y1P) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + y1P + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(y1P2) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y - " + y1P + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    paso2 = 1;
+                }
+                if (paso2 === 0 && (mUpP > 0 && muX1 > 0)) {
+                    mUpP = mUpP * -1; //sera negativo
+                    muX1 = muX1 * -1; // sera negativo
+                    resultadoEnteros = parseInt(y1P) + parseInt(muX1);
+                    if (y1P < 0) {
+                        y1P = y1P * -1;
+                        resultadoEnteros = parseInt(y1P) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + y1P + " " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(y1P2) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y - " + y1P + " " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                }
+
+
+                $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuacion general de la recta</font></center>");
+
+                $("#coordenadas").fadeOut(0);
+                $("#Resultado").fadeIn(300);
+            }
+            //Es fraccionario
+            else {
+                //es fraccionario
+                $("#solucion").html("<center>Identificamos la fórmula de punto-pendiente<br><br>" +
+                    "<font size='3'><b> y - y<sub>1</sub> = m ( x - x<sub>1</sub> )</b></font>" +
+                    "<br><br>" +
+                    "Sustituyendo las variables" +
+                    "<br><br>" +
+                    "</center>");
+                var tempX1P;
+                if (x1P < 0 && y1P < 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - (" + y1P + ") = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - (" + x1P + ") ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (x1P > 0 && y1P < 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - (" + y1P + ") = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - " + x1P + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (x1P < 0 && y1P > 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - " + y1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - (" + x1P + ") ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (x1P > 0 && y1P > 0) {
+                    $("#solucion").append("<center><font size='3'><b> y - " + y1P + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ( x - " + x1P + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                $("#solucion").append("<center>Pasamos el denominador de la pendiente a multiplicar al lado contrario" +
+                    "<br><br>" +
+                    "</center>");
+                //////Pasando el valor del fraccionario
+                var paso3 = 0;
+                if (x1P < 0 && y1P < 0) {
+                    y1P = y1P * -1; //pasa a positivo
+                    x1P = x1P * -1; // pasa a positivo
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + " ( y + " + y1P + " ) = " + mUpP + " ( x +" + x1P + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    paso3 = 1;
+                }
+                if (paso3 === 0 && (x1P > 0 && y1P < 0)) {
+                    y1P = y1P * -1; // pasa a positivo
+                    var x1P2 = x1P;
+                    x1P = x1P * -1; //pasa a negativo
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + " ( y + " + y1P + " ) = " + mUpP + " ( x " + x1P2 + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    paso3 = 1;
+                }
+                if (paso3 === 0 && (x1P < 0 && y1P > 0)) {
+                    var y1P2 = y1P * -1;
+                    y1P = y1P * -1; // pasa a negativo
+                    x1P = x1P * -1; // pasa a positivo
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + " ( y " + y1P2 + " ) = " + mUpP + "( x + " + x1P + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    paso3 = 1;
+                }
+                if (paso3 === 0 && (x1P > 0 && y1P > 0)) {
+                    var y1P2 = y1P * -1;
+                    y1P = y1P * -1; // pasa a negativo
+                    var x1P2 = x1P * -1;
+                    x1P = x1P * -1; // pasa a negativo
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + " ( y " + y1P2 + " ) = " + mUpP + " ( x " + x1P2 + " ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+
+                $("#solucion").append("<center>Realizamos las multiplicaciones" +
+                    "<br><br>" +
+                    "</center>");
+                //////MULTIPLICANDO VALORES
+                var muX1 = 0;
+                var muY1 = 0;
+                muY1 = parseInt(mDownP) * parseInt(y1P);
+                muX1 = parseInt(mUpP) * parseInt(x1P);
+
+                if (muY1 < 0 && muX1 < 0){
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + "y " + muY1 + " = " + mUpP + "x " + muX1 + "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    //paso=1;
+                }
+                if (muY1 > 0 && muX1 < 0){
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + "y + " + muY1 + " = " + mUpP + "x " + muX1 + "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    //paso=1;
+                }
+                if (muY1 < 0 && muX1 > 0){
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + "y " + muY1 + " = " + mUpP + "x + " + muX1 + "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    paso=1;
+                }
+                if (muY1 > 0 && muX1 > 0){
+                    $("#solucion").append("<center><font size='3'><b> " + mDownP + "y + " + muY1 + " = " + mUpP + "x + " + muX1 + "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    paso=1;
+                }
+
+                ////PASAMOS LOS VALORES AL LADO CONTRARIO
+                var resultadoEnteros;
+                var paso2 = 0;
+                $("#solucion").append("<center>Igualamos la ecuación a 0" +
+                    "<br><br>" +
+                    "</center>");
+                if (mUpP < 0 && muX1 < 0) {
+                    mUpP = mUpP * -1; //sera positivo
+                    muX1 = muX1 * -1; // sera positivo
+                    if (muY1 < 0) {
+                        //y1P = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + muY1 + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        //var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + muY1 + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    paso2 = 1;
+                }
+                if (paso2 === 0 && (mUpP < 0 && muX1 > 0)) {
+                    mUpP = mUpP * -1; //sera positivo
+                    muX1 = muX1 * -1; // sera negativo
+                    if (muY1 < 0) {
+                        //y1P = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + muY1 + "  " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        //var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + muY1 + " " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    paso2 = 1;
+                }
+                if (paso2 === 0 && (mUpP > 0 && muX1 < 0)) {
+                    mUpP = mUpP * -1; //sera negativo
+                    muX1 = muX1 * -1; // sera positivo
+                    if (muY1 < 0) {
+                        //y1P = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + muY1 + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        //var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + muY1 + " + " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    paso2 = 1;
+                }
+                if (paso2 === 0 && (mUpP > 0 && muX1 > 0)) {
+                    mUpP = mUpP * -1; //sera negativo
+                    muX1 = muX1 * -1; // sera negativo
+                    //resultadoEnteros = parseInt(y1P) + parseInt(muX1);
+                    if (muY1 < 0) {
+                        //y1P = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + muY1 + " " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                    else {
+                        //var y1P2 = y1P * -1;
+                        resultadoEnteros = parseInt(muY1) + parseInt(muX1);
+                        $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + muY1 + " " + muX1 + " =  0 </b></font>" +
+                            "<br><br>" +
+                            "Sumando los valores enteros obtenemos" +
+                            "<br><br>" +
+                            "</center>");
+                        if (resultadoEnteros < 0) {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        } else {
+                            $("#solucion").append("<center><font size='3'><b> " + mUpP + "x + " + mDownP + "y + " + resultadoEnteros + " =  0 </b></font>" +
+                                "<br><br>" +
+                                "</center>");
+                        }
+                    }
+                }
+
+
+                $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuacion general de la recta</font></center>");
+
+                $("#coordenadas").fadeOut(0);
+                $("#Resultado").fadeIn(300);
+            }
+        }
+    }
+
+    function limpiarResolucionPP() {
+        document.getElementById("x1PP").value = "";
+        document.getElementById("y1PP").value = "";
+        document.getElementById("mUPP").value = "";
+        document.getElementById("mDPP").value = "";
+        $("#Resultado").fadeOut(0);
+        $("#coordenadas").fadeOut(0);
+        $("#Puntos").fadeOut(0);
+        $("#puntoPendiente").fadeIn(300);
+
+        toastr.success('Los campos se limpiaron correctamente', 'Excelente');
+
+    }
+
+    function generarResolucionC() {
         //alert("funcion");
         var x1 = document.getElementById("x1C").value;
         var y1 = document.getElementById("y1C").value;
@@ -1568,42 +2292,39 @@
 
         //alert(x1+" , "+y1+" , "+x2+" , "+y2);
 
-        if(x1=="" && y1!=="" && x2=="" && y2=="")
-        {
+        if (x1 == "" && y1 !== "" && x2 == "" && y2 == "") {
             toastr.error('Debes completar los campos necesarios', 'Lo Siento');
         }
-        else{
+        else {
 
             //alert("Entro");
-            $("#solucion").html("<center>Conociendo los puntos A("+x1+","+y1+") y B("+x2+","+y2+") y tomando en cuenta la fórmula de la pendiente,<br><br>"+
-                "<font size='3'><b>"+
-                "<table border='0'>"+
-                "<tr>"+
-                "<td rowspan='2'><b>m = &nbsp;&nbsp;</b></td>"+
-                "<td style='border-bottom: 1px green solid;'>Y<sub>2</sub> - Y<sub>1</sub></td>"+
-                "</tr>"+
-                "<tr>"+
-                "<td>X<sub>2</sub> - X<sub>1</sub></td>"+
-                "</tr>"+
-                "</table>"+
-                "</b></font>"+
-                "<br>"+
+            $("#solucion").html("<center>Conociendo los puntos A(" + x1 + "," + y1 + ") y B(" + x2 + "," + y2 + ") y tomando en cuenta la fórmula de la pendiente,<br><br>" +
+                "<font size='3'><b>" +
+                "<table border='0'>" +
+                "<tr>" +
+                "<td rowspan='2'><b>m = &nbsp;&nbsp;</b></td>" +
+                "<td style='border-bottom: 1px green solid;'>Y<sub>2</sub> - Y<sub>1</sub></td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>X<sub>2</sub> - X<sub>1</sub></td>" +
+                "</tr>" +
+                "</table>" +
+                "</b></font>" +
+                "<br>" +
                 "</center>");
             var impreY;
             var impreX;
-            if (x1<0) {
-                impreX="( "+x1+" )";
+            if (x1 < 0) {
+                impreX = "( " + x1 + " )";
             }
-            else
-            {
-                impreX=x1;
+            else {
+                impreX = x1;
             }
-            if (y1<0) {
-                impreY="( "+y1+" )";
+            if (y1 < 0) {
+                impreY = "( " + y1 + " )";
             }
-            else
-            {
-                impreY=y1;
+            else {
+                impreY = y1;
             }
             /* $("#solucion").append("<center>"+
              "Sustituimos los datos obtenidos:"+
@@ -1622,100 +2343,93 @@
              "</center>");*/
             var restaX;
             var restaY;
-            restaX=x2-x1;
-            restaY=y2-y1;
-            restaX=parseFloat(restaX);
-            restaY=parseFloat(restaY);
-            if (restaX % 1 ==0) {
-                restaX=parseInt(restaX);
+            restaX = x2 - x1;
+            restaY = y2 - y1;
+            restaX = parseFloat(restaX);
+            restaY = parseFloat(restaY);
+            if (restaX % 1 == 0) {
+                restaX = parseInt(restaX);
             }
-            else
-            {
-                restaX=restaX.toFixed(2);
+            else {
+                restaX = restaX.toFixed(2);
             }
-            if (restaY % 1 ==0) {
-                restaY=parseInt(restaY);
+            if (restaY % 1 == 0) {
+                restaY = parseInt(restaY);
             }
-            else
-            {
-                restaY=restaY.toFixed(2);
+            else {
+                restaY = restaY.toFixed(2);
             }
             var FinalX;
             var FinalY;
             var retornoFinal;
             var redujo;//0 n redujo, 1 si redujo;
-            console.log(restaY," , ",restaX);
-            if (restaX!=0 && restaY!=0) {
-                reduce(restaY,restaX);
-                FinalY=nuevoAn;
-                FinalX=nuevoAd;
-                if (restaX==FinalX) {
-                    redujo=0;
+            console.log(restaY, " , ", restaX);
+            if (restaX != 0 && restaY != 0) {
+                reduce(restaY, restaX);
+                FinalY = nuevoAn;
+                FinalX = nuevoAd;
+                if (restaX == FinalX) {
+                    redujo = 0;
                 }
-                else
-                {
-                    redujo=1;
+                else {
+                    redujo = 1;
                 }
-                retornoFinal= FinalY / FinalX;
-                if (retornoFinal %1 ==0) {
-                    FinalY=parseInt(retornoFinal);
-                    FinalX=1;
-                }
-            }
-            else
-            {
-                FinalX=restaY / restaX;
-                if (FinalX % 1 ==0) {
-                    FinalY=parseInt(FinalX);
-                    FinalX=1;
-                }
-                else
-                {
-                    FinalX=restaX;
-                    FinalY=restaY;
+                retornoFinal = FinalY / FinalX;
+                if (retornoFinal % 1 == 0) {
+                    FinalY = parseInt(retornoFinal);
+                    FinalX = 1;
                 }
             }
-            if (redujo==1) {
-                if (FinalX==1) {
-                    $("#solucion").append("<center>"+
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
-                        "<br><br>"+
-                        "<font size='3'><b>m = "+FinalY+"</b></font>"+
-                        "<br><br>"+
+            else {
+                FinalX = restaY / restaX;
+                if (FinalX % 1 == 0) {
+                    FinalY = parseInt(FinalX);
+                    FinalX = 1;
+                }
+                else {
+                    FinalX = restaX;
+                    FinalY = restaY;
+                }
+            }
+            if (redujo == 1) {
+                if (FinalX == 1) {
+                    $("#solucion").append("<center>" +
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
+                        "<br><br>" +
+                        "<font size='3'><b>m = " + FinalY + "</b></font>" +
+                        "<br><br>" +
                         "</center>");
-                    esEnteroFinal(x1,y1,FinalY);
+                    esEnteroFinal(x1, y1, FinalY);
 
                 }
-                else
-                {
-                    $("#solucion").append("<center>"+
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
-                        "<br><br>"+
-                        "<font size='3'><b>m = <sup>"+FinalY+"</sup>/<sub>"+FinalX+"</sub></b></font>"+
-                        "<br><br>"+
+                else {
+                    $("#solucion").append("<center>" +
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
+                        "<br><br>" +
+                        "<font size='3'><b>m = <sup>" + FinalY + "</sup>/<sub>" + FinalX + "</sub></b></font>" +
+                        "<br><br>" +
                         "</center>");
-                    esFraccionFinal(x1,y1,FinalY,FinalX);
+                    esFraccionFinal(x1, y1, FinalY, FinalX);
                 }
             }
-            else{
-                if (FinalX==1) {
-                    $("#solucion").append("<center>"+
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
-                        "<br><br>"+
-                        "<font size='3'><b>m = "+FinalY+"</b></font>"+
-                        "<br><br>"+
+            else {
+                if (FinalX == 1) {
+                    $("#solucion").append("<center>" +
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
+                        "<br><br>" +
+                        "<font size='3'><b>m = " + FinalY + "</b></font>" +
+                        "<br><br>" +
                         "</center>");
-                    esEnteroFinal(x1,y1,FinalY);
+                    esEnteroFinal(x1, y1, FinalY);
                 }
-                else
-                {
-                    $("#solucion").append("<center>"+
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: "+
-                        "<br><br>"+
-                        "<font size='3'><b>m = <sup>"+FinalY+"</sup>/<sub>"+FinalX+"</sub></b></font>"+
-                        "<br><br>"+
+                else {
+                    $("#solucion").append("<center>" +
+                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
+                        "<br><br>" +
+                        "<font size='3'><b>m = <sup>" + FinalY + "</sup>/<sub>" + FinalX + "</sub></b></font>" +
+                        "<br><br>" +
                         "</center>");
-                    esFraccionFinal(x1,y1,FinalY,FinalX);
+                    esFraccionFinal(x1, y1, FinalY, FinalX);
                 }
             }
 
@@ -1726,7 +2440,7 @@
         }
     }
 
-    function limpiarResolucionC(){
+    function limpiarResolucionC() {
         document.getElementById("x1C").value = "";
         document.getElementById("y1C").value = "";
         document.getElementById("x2C").value = "";
@@ -1737,19 +2451,19 @@
         toastr.success('Los campos se limpiaron correctamente', 'Excelente');
     }
 
-    function esEnteroFinal(x1P,y1P,mUpP){
+    function esEnteroFinal(x1P, y1P, mUpP) {
         var x1 = document.getElementById("x1C").value;
         var y1 = document.getElementById("y1C").value;
 
         $("#solucion").append("<center>Ahora necesitamos conocer el valor del intercepto, para ello hacemos uso de la fórmula pendiente intercepto y despejamos el valor de b, es decir:<br><br>" +
             "<font size='3'><b> y = m x + b</b></font>" +
             "<br><br>" +
-            "Tomando los valores del punto A ("+x1+" , "+y1+"), sustutimos estos valores en la fórmula" +
+            "Tomando los valores del punto A (" + x1 + " , " + y1 + "), sustutimos estos valores en la fórmula" +
             "<br><br>" +
             "</center>");
         var tempY1P;
         var tempX1P;
-        $("#solucion").append("<center><font size='3'> "+y1+" = " + mUpP + " ("+x1+") + b </font>" +
+        $("#solucion").append("<center><font size='3'> " + y1 + " = " + mUpP + " (" + x1 + ") + b </font>" +
             "<br><br>" +
             "Realizamos la multiplicación" +
             "<br><br>" +
@@ -1758,35 +2472,34 @@
         var multi = mUpP * x1;
 
         $("#solucion").append("<center><font size='3'> " + y1 + " = " + multi + " + b</font>" +
-            "<br><br>"+
+            "<br><br>" +
             "Despejamos el valor de b</center>" +
             "<br>");
         multi = multi * -1;
-        if(multi>0)
-        {
-            $("#solucion").append("<center><font size='3'> " + y1 + " + "+ multi + " = b</font>" +
-                "<br><br>"+
+        if (multi > 0) {
+            $("#solucion").append("<center><font size='3'> " + y1 + " + " + multi + " = b</font>" +
+                "<br><br>" +
                 "Realizando la ultima operación, obtenemos que b es:</center>" +
                 "<br><br>");
         }
         else {
-            $("#solucion").append("<center><font size='3'> " + y1 + " "+ multi+" = b</font>" +
-                "<br><br>"+
+            $("#solucion").append("<center><font size='3'> " + y1 + " " + multi + " = b</font>" +
+                "<br><br>" +
                 "Sumando los valores obtenes que b es:</center>" +
                 "<br>");
         }
         var sumaB = parseInt(y1) + parseInt(multi);
-        $("#solucion").append("<center><font size='3'><b>b = "+sumaB+"</b></font>" +
-            "<br><br>"+
+        $("#solucion").append("<center><font size='3'><b>b = " + sumaB + "</b></font>" +
+            "<br><br>" +
             "Ahora que conocemos el valor del intercepto y la pendiente, lo sustituimos en la fórmula de pendiente-intercepto para conocer la ecuacion de la recta</center>");
         ///////GRAFICANDO EL RESULTADO
         if (sumaB < 0) {
-            $("#solucion").append("<center><font size='3'><b> y = "+mUpP+"  x " + sumaB + "</b></font>" +
+            $("#solucion").append("<center><font size='3'><b> y = " + mUpP + "  x " + sumaB + "</b></font>" +
                 "<br><br>" +
                 "</center>");
         }
         else {
-            $("#solucion").append("<center><font size='3'><b> y = "+mUpP+"  x + " + sumaB + "</b></font>" +
+            $("#solucion").append("<center><font size='3'><b> y = " + mUpP + "  x + " + sumaB + "</b></font>" +
                 "<br><br>" +
                 "</center>");
         }
@@ -1800,7 +2513,7 @@
         $("#Resultado").fadeIn(300);
     }
 
-    function esFraccionFinal(x1P,y1P,mUpP,mDownP){
+    function esFraccionFinal(x1P, y1P, mUpP, mDownP) {
 
         var x1 = document.getElementById("x1C").value;
         var y1 = document.getElementById("y1C").value;
@@ -1811,37 +2524,36 @@
             "Sustituyendo las variables" +
             "<br><br></center>");
 
-        $("#solucion").append("<center><font size='3'> "+y1+" = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> ("+x1+") + b </font>" +
+        $("#solucion").append("<center><font size='3'> " + y1 + " = <sup>" + mUpP + "</sup>/<sub>" + mDownP + "</sub> (" + x1 + ") + b </font>" +
             "<br><br>" +
             "Realizamos la multiplicación" +
             "<br><br>" +
             "</center>");
 
         multiplicarF(mUpP, mDownP, x1, 1);
-        var numerador=nuevoAn;
-        var denominador=nuevoAd;
-        if(denominador===1){
+        var numerador = nuevoAn;
+        var denominador = nuevoAd;
+        if (denominador === 1) {
             $("#solucion").append("<center><font size='3'> " + y1 + " = " + numerador + " + b</font>" +
-                "<br><br>"+
+                "<br><br>" +
                 "Despejamos el valor de b</center>" +
                 "<br>");
             numerador = numerador * -1;
-            if(numerador>0)
-            {
-                $("#solucion").append("<center><font size='3'> " + y1 + " + "+ numerador + " = b</font>" +
-                    "<br><br>"+
+            if (numerador > 0) {
+                $("#solucion").append("<center><font size='3'> " + y1 + " + " + numerador + " = b</font>" +
+                    "<br><br>" +
                     "Realizando la ultima operación, obtenemos que b es:</center>" +
                     "<br><br>");
             }
             else {
-                $("#solucion").append("<center><font size='3'> " + y1 + " "+ numerador+" = b</font>" +
-                    "<br><br>"+
+                $("#solucion").append("<center><font size='3'> " + y1 + " " + numerador + " = b</font>" +
+                    "<br><br>" +
                     "Sumando los valores obtenes que b es:</center>" +
                     "<br>");
             }
             var sumaB = parseInt(y1) + parseInt(numerador);
-            $("#solucion").append("<center><font size='3'><b>b = "+sumaB+"</b></font>" +
-                "<br><br>"+
+            $("#solucion").append("<center><font size='3'><b>b = " + sumaB + "</b></font>" +
+                "<br><br>" +
                 "Ahora que conocemos el valor del intercepto y la pendiente, lo sustituimos en la fórmula de pendiente-intercepto para conocer la ecuacion de la recta</center>");
             ///////GRAFICANDO EL RESULTADO
             if (sumaB < 0) {
@@ -1855,48 +2567,46 @@
                     "</center>");
             }
         }
-        else{
+        else {
             $("#solucion").append("<center><font size='3'> " + y1 + " =  <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> + b</font>" +
-                "<br><br>"+
+                "<br><br>" +
                 "Despejamos el valor de b</center>" +
                 "<br>");
 
-            numerador= numerador * -1;
+            numerador = numerador * -1;
 
-            if(numerador>0)
-            {
+            if (numerador > 0) {
                 $("#solucion").append("<center><font size='3'> " + y1 + " + <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> = b</font>" +
-                    "<br><br>"+
+                    "<br><br>" +
                     "Realizando la ultima operación, obtenemos que b es:</center>" +
                     "<br>");
             }
             else {
                 $("#solucion").append("<center><font size='3'> " + y1 + " <sup>" + numerador + "</sup>/<sub>" + denominador + "</sub> = b</font>" +
-                    "<br><br>"+
+                    "<br><br>" +
                     "Sumando los valores obtenemos que b es:</center>" +
                     "<br>");
             }
 
-            if(y1>0 && numerador>0){
+            if (y1 > 0 && numerador > 0) {
                 var nuevoNume = (y1 * denominador) + numerador;
                 var nuevoDen = denominador;
             }
-            if(y1<0 && numerador<0){
+            if (y1 < 0 && numerador < 0) {
                 var nuevoNume = (y1 * denominador) - numerador;
                 var nuevoDen = denominador;
             }
-            if(y1>0 && numerador<0){
+            if (y1 > 0 && numerador < 0) {
                 var nuevoNume = (y1 * denominador) - numerador;
                 var nuevoDen = denominador;
             }
-            if(y1<0 && numerador>0)
-            {
+            if (y1 < 0 && numerador > 0) {
                 var nuevoNume = (y1 * denominador) + numerador;
                 var nuevoDen = denominador;
             }
 
             $("#solucion").append("<center><font size='3'><b>b = <sup>" + nuevoNume + "</sup>/<sub>" + nuevoDen + "</sub></b></font>" +
-                "<br><br>"+
+                "<br><br>" +
                 "Ahora que conocemos el valor del intercepto y la pendiente, lo sustituimos en la fórmula de pendiente-intercepto para conocer la ecuacion de la recta</center>");
 
             if (nuevoNume < 0) {
@@ -1999,206 +2709,206 @@
     }
 
 
-    function VerificarEvaluacion1P(){
-        if ($('input:radio[name=1rpe]:checked').val()==1) {
+    function VerificarEvaluacion1P() {
+        if ($('input:radio[name=1rpe]:checked').val() == 1) {
             $("#False2P1").fadeOut(0);
             $("#False3P1").fadeOut(0);
             $("#False4P1").fadeOut(0);
             $("#False6P1").fadeOut(0);
             $("#False5P1").fadeOut(0);
             $("#True1P1").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
         } else {
             $("#True1P1").fadeOut(0);
         }
-        if ($('input:radio[name=1rpe]:checked').val()==2) {
+        if ($('input:radio[name=1rpe]:checked').val() == 2) {
             $("#True1P1").fadeOut(0);
             $("#False3P1").fadeOut(0);
             $("#False4P1").fadeOut(0);
             $("#False6P1").fadeOut(0);
             $("#False5P1").fadeOut(0);
             $("#False2P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False2P1").fadeOut(0);
         }
-        if ($('input:radio[name=1rpe]:checked').val()==3) {
+        if ($('input:radio[name=1rpe]:checked').val() == 3) {
             $("#True1P1").fadeOut(0);
             $("#False2P1").fadeOut(0);
             $("#False4P1").fadeOut(0);
             $("#False6P1").fadeOut(0);
             $("#False5P1").fadeOut(0);
             $("#False3P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False3P1").fadeOut(0);
         }
-        if ($('input:radio[name=1rpe]:checked').val()==4) {
+        if ($('input:radio[name=1rpe]:checked').val() == 4) {
             $("#True1P1").fadeOut(0);
             $("#False2P1").fadeOut(0);
             $("#False3P1").fadeOut(0);
             $("#False6P1").fadeOut(0);
             $("#False5P1").fadeOut(0);
             $("#False4P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False4P1").fadeOut(0);
         }
-        if ($('input:radio[name=1rpe]:checked').val()==5) {
+        if ($('input:radio[name=1rpe]:checked').val() == 5) {
             $("#True1P1").fadeOut(0);
             $("#False2P1").fadeOut(0);
             $("#False3P1").fadeOut(0);
             $("#False4P1").fadeOut(0);
             $("#False6P1").fadeOut(0);
             $("#False5P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False5P1").fadeOut(0);
         }
-        if ($('input:radio[name=1rpe]:checked').val()==6) {
+        if ($('input:radio[name=1rpe]:checked').val() == 6) {
             $("#True1P1").fadeOut(0);
             $("#False2P1").fadeOut(0);
             $("#False3P1").fadeOut(0);
             $("#False4P1").fadeOut(0);
             $("#False5P1").fadeOut(0);
             $("#False6P1").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False6P1").fadeOut(0);
         }
     }
-    function VerificarEvaluacion2P(){
-        if ($('input:radio[name=2rpe]:checked').val()==1) {
+    function VerificarEvaluacion2P() {
+        if ($('input:radio[name=2rpe]:checked').val() == 1) {
             $("#False2P2").fadeOut(0);
             $("#True4P2").fadeOut(0);
             $("#False5P2").fadeOut(0);
             $("#False6P2").fadeOut(0);
             $("#False3P2").fadeOut(0);
             $("#False1P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False1P2").fadeOut(0);
         }
-        if ($('input:radio[name=2rpe]:checked').val()==2) {
+        if ($('input:radio[name=2rpe]:checked').val() == 2) {
             $("#False1P2").fadeOut(0);
             $("#True4P2").fadeOut(0);
             $("#False5P2").fadeOut(0);
             $("#False6P2").fadeOut(0);
             $("#True3P2").fadeOut(0);
             $("#False2P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False2P2").fadeOut(0);
         }
-        if ($('input:radio[name=2rpe]:checked').val()==3) {
+        if ($('input:radio[name=2rpe]:checked').val() == 3) {
             $("#False1P2").fadeOut(0);
             $("#False2P2").fadeOut(0);
             $("#True4P2").fadeOut(0);
             $("#False5P2").fadeOut(0);
             $("#False6P2").fadeOut(0);
             $("#False3P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False3P2").fadeOut(0);
         }
-        if ($('input:radio[name=2rpe]:checked').val()==4) {
+        if ($('input:radio[name=2rpe]:checked').val() == 4) {
             $("#False1P2").fadeOut(0);
             $("#False2P2").fadeOut(0);
             $("#False5P2").fadeOut(0);
             $("#False6P2").fadeOut(0);
             $("#False3P2").fadeOut(0);
             $("#True4P2").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
         } else {
             $("#True4P2").fadeOut(0);
         }
-        if ($('input:radio[name=2rpe]:checked').val()==5) {
+        if ($('input:radio[name=2rpe]:checked').val() == 5) {
             $("#False1P2").fadeOut(0);
             $("#False2P2").fadeOut(0);
             $("#True4P2").fadeOut(0);
             $("#False6P2").fadeOut(0);
             $("#False3P2").fadeOut(0);
             $("#False5P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False5P2").fadeOut(0);
         }
-        if ($('input:radio[name=2rpe]:checked').val()==6) {
+        if ($('input:radio[name=2rpe]:checked').val() == 6) {
             $("#False1P2").fadeOut(0);
             $("#False2P2").fadeOut(0);
             $("#True4P2").fadeOut(0);
             $("#False5P2").fadeOut(0);
             $("#False3P2").fadeOut(0);
             $("#False6P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False6P2").fadeOut(0);
         }
     }
-    function VerificarEvaluacion3P(){
-        if ($('input:radio[name=3rpe]:checked').val()==1) {
+    function VerificarEvaluacion3P() {
+        if ($('input:radio[name=3rpe]:checked').val() == 1) {
             $("#True2P3").fadeOut(0);
             $("#False3P3").fadeOut(0);
             $("#False4P3").fadeOut(0);
             $("#False5P3").fadeOut(0);
             $("#False6P3").fadeOut(0);
             $("#False1P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False1P3").fadeOut(0);
         }
-        if ($('input:radio[name=3rpe]:checked').val()==2) {
+        if ($('input:radio[name=3rpe]:checked').val() == 2) {
             $("#False3P3").fadeOut(0);
             $("#False4P3").fadeOut(0);
             $("#False5P3").fadeOut(0);
             $("#False6P3").fadeOut(0);
             $("#False1P3").fadeOut(0);
             $("#True2P3").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
         } else {
             $("#True2P3").fadeOut(0);
         }
-        if ($('input:radio[name=3rpe]:checked').val()==3) {
+        if ($('input:radio[name=3rpe]:checked').val() == 3) {
             $("#True2P3").fadeOut(0);
             $("#False4P3").fadeOut(0);
             $("#False5P3").fadeOut(0);
             $("#False6P3").fadeOut(0);
             $("#False1P3").fadeOut(0);
             $("#False3P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False3P3").fadeOut(0);
         }
-        if ($('input:radio[name=3rpe]:checked').val()==4) {
+        if ($('input:radio[name=3rpe]:checked').val() == 4) {
             $("#True2P3").fadeOut(0);
             $("#False3P3").fadeOut(0);
             $("#False5P3").fadeOut(0);
             $("#False6P3").fadeOut(0);
             $("#False1P3").fadeOut(0);
             $("#False4P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False4P3").fadeOut(0);
         }
-        if ($('input:radio[name=3rpe]:checked').val()==5) {
+        if ($('input:radio[name=3rpe]:checked').val() == 5) {
             $("#True2P3").fadeOut(0);
             $("#False3P3").fadeOut(0);
             $("#False4P3").fadeOut(0);
             $("#False6P3").fadeOut(0);
             $("#False1P3").fadeOut(0);
             $("#False5P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False5P3").fadeOut(0);
         }
-        if ($('input:radio[name=3rpe]:checked').val()==6) {
+        if ($('input:radio[name=3rpe]:checked').val() == 6) {
             $("#True2P3").fadeOut(0);
             $("#False3P3").fadeOut(0);
             $("#False4P3").fadeOut(0);
             $("#False5P3").fadeOut(0);
             $("#False1P3").fadeOut(0);
             $("#False6P3").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False6P3").fadeOut(0);
         }
