@@ -277,3 +277,10 @@ Route::get('/graficas', function () {
 Route::get('/identidades_trigonometricas', function () {
     return view('Admin.Templates.Desarrollo.Trigonometria.identidades_trigonometricas');
 });
+
+/*
+*	Llamada al area de desarrollo para intervalos.
+*/
+Route::get('/intervalosDes', function () {
+    return view('Admin.Templates.Desarrollo.Desigualdades.Intervalos.intervalos');
+});
