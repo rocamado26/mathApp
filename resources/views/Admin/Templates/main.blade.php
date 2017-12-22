@@ -19,6 +19,8 @@
     <link href="css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jsxgraph.css" />
     <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ism/css/my-slider.css"/>
+    <script src="ism/js/ism-2.2.min.js"></script>
     <!-- Contenedor para más css -->
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     @yield('css')
@@ -37,7 +39,30 @@
         <!-- Contenedor principal-->
         <div class="wrapper wrapper-content">
             <div id="contenido">
-            
+                <div class="col-sm-offset-1 col-lg-offset-1 col-sm-10 col-lg-10">
+                    <div class="ism-slider" data-play_type="once" id="my-slider">
+                        <ol>
+                            <li>
+                                <img src="ism/image/slides/_u/1513926577620_391576.jpg">
+                            </li>
+                            <li>
+                                <img src="ism/image/slides/_u/1513926575843_262266.jpg">
+                            </li>
+                            <li>
+                                <img src="ism/image/slides/_u/1513926575011_133926.jpg">
+                            </li>
+                            <li>
+                                <img src="ism/image/slides/_u/1513926574455_227839.jpg">
+                            </li>
+                            <li>
+                                <img src="ism/image/slides/_u/1513926572892_388869.jpg">
+                            </li>
+                            <li>
+                                <img src="ism/image/slides/_u/1513926562636_837246.jpg">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
             </div>
             <!-- Contenedor para el pié de página-->
             @include('Admin.Templates.Globales.PiePagina')
