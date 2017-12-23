@@ -1436,6 +1436,7 @@
                 break;
         }
     }
+
     function cambioPractica(opc) {
         switch (opc) {
             case 1: {
@@ -2064,29 +2065,29 @@
                 muY1 = parseInt(mDownP) * parseInt(y1P);
                 muX1 = parseInt(mUpP) * parseInt(x1P);
 
-                if (muY1 < 0 && muX1 < 0){
+                if (muY1 < 0 && muX1 < 0) {
                     $("#solucion").append("<center><font size='3'><b> " + mDownP + "y " + muY1 + " = " + mUpP + "x " + muX1 + "</b></font>" +
                         "<br><br>" +
                         "</center>");
                     //paso=1;
                 }
-                if (muY1 > 0 && muX1 < 0){
+                if (muY1 > 0 && muX1 < 0) {
                     $("#solucion").append("<center><font size='3'><b> " + mDownP + "y + " + muY1 + " = " + mUpP + "x " + muX1 + "</b></font>" +
                         "<br><br>" +
                         "</center>");
                     //paso=1;
                 }
-                if (muY1 < 0 && muX1 > 0){
+                if (muY1 < 0 && muX1 > 0) {
                     $("#solucion").append("<center><font size='3'><b> " + mDownP + "y " + muY1 + " = " + mUpP + "x + " + muX1 + "</b></font>" +
                         "<br><br>" +
                         "</center>");
-                    paso=1;
+                    paso = 1;
                 }
-                if (muY1 > 0 && muX1 > 0){
+                if (muY1 > 0 && muX1 > 0) {
                     $("#solucion").append("<center><font size='3'><b> " + mDownP + "y + " + muY1 + " = " + mUpP + "x + " + muX1 + "</b></font>" +
                         "<br><br>" +
                         "</center>");
-                    paso=1;
+                    paso = 1;
                 }
 
                 ////PASAMOS LOS VALORES AL LADO CONTRARIO
@@ -2298,146 +2299,581 @@
         else {
 
             //alert("Entro");
-            $("#solucion").html("<center>Conociendo los puntos A(" + x1 + "," + y1 + ") y B(" + x2 + "," + y2 + ") y tomando en cuenta la fórmula de la pendiente,<br><br>" +
+            $("#solucion").html("<center>Conociendo los puntos A(" + x1 + "," + y1 + ") y B(" + x2 + "," + y2 + "), y la fórmula cuando conocemos 2 puntos<br><br>" +
                 "<font size='3'><b>" +
                 "<table border='0'>" +
                 "<tr>" +
-                "<td rowspan='2'><b>m = &nbsp;&nbsp;</b></td>" +
-                "<td style='border-bottom: 1px green solid;'>Y<sub>2</sub> - Y<sub>1</sub></td>" +
+                "<td style='border-bottom: 1px solid black'>" +
+                "y<sub>2</sub> - y<sub>1</sub>" +
+                "</td>" +
+                "<td rowspan='2'>" +
+                "=" +
+                "</td>" +
+                "<td style='border-bottom: 1px solid black'>" +
+                "y - y<sub>1</sub>" +
+                "</td>" +
                 "</tr>" +
                 "<tr>" +
-                "<td>X<sub>2</sub> - X<sub>1</sub></td>" +
+                "<td>" +
+                "x<sub>2</sub> - x<sub>1</sub>" +
+                "</td>" +
+                "<td>" +
+                "x - x<sub>1</sub>" +
+                "</td>" +
                 "</tr>" +
                 "</table>" +
                 "</b></font>" +
                 "<br>" +
+                "Sustituimos los valores en la fórmula" +
+                "<br><br>" +
                 "</center>");
             var impreY;
             var impreX;
-            if (x1 < 0) {
-                impreX = "( " + x1 + " )";
-            }
-            else {
-                impreX = x1;
-            }
-            if (y1 < 0) {
-                impreY = "( " + y1 + " )";
-            }
-            else {
-                impreY = y1;
-            }
-            /* $("#solucion").append("<center>"+
-             "Sustituimos los datos obtenidos:"+
-             "<br><br>"+
-             "<font size='3'><b>"+
-             "<table border='0'>"+
-             "<tr>"+
-             "<td rowspan='2'><b>m = &nbsp;&nbsp;</b></td>"+
-             "<td style='border-bottom: 1px green solid;'>"+y2+" - "+impreY+"</td>"+
-             "</tr>"+
-             "<tr>"+
-             "<td>"+x2+" - "+impreX+"</td>"+
-             "</tr>"+
-             "</table>"+
-             "</b></font>"+
-             "</center>");*/
-            var restaX;
-            var restaY;
-            restaX = x2 - x1;
-            restaY = y2 - y1;
-            restaX = parseFloat(restaX);
-            restaY = parseFloat(restaY);
-            if (restaX % 1 == 0) {
-                restaX = parseInt(restaX);
-            }
-            else {
-                restaX = restaX.toFixed(2);
-            }
-            if (restaY % 1 == 0) {
-                restaY = parseInt(restaY);
-            }
-            else {
-                restaY = restaY.toFixed(2);
-            }
-            var FinalX;
-            var FinalY;
-            var retornoFinal;
-            var redujo;//0 n redujo, 1 si redujo;
-            console.log(restaY, " , ", restaX);
-            if (restaX != 0 && restaY != 0) {
-                reduce(restaY, restaX);
-                FinalY = nuevoAn;
-                FinalX = nuevoAd;
-                if (restaX == FinalX) {
-                    redujo = 0;
-                }
-                else {
-                    redujo = 1;
-                }
-                retornoFinal = FinalY / FinalX;
-                if (retornoFinal % 1 == 0) {
-                    FinalY = parseInt(retornoFinal);
-                    FinalX = 1;
-                }
-            }
-            else {
-                FinalX = restaY / restaX;
-                if (FinalX % 1 == 0) {
-                    FinalY = parseInt(FinalX);
-                    FinalX = 1;
-                }
-                else {
-                    FinalX = restaX;
-                    FinalY = restaY;
-                }
-            }
-            if (redujo == 1) {
-                if (FinalX == 1) {
-                    $("#solucion").append("<center>" +
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
-                        "<br><br>" +
-                        "<font size='3'><b>m = " + FinalY + "</b></font>" +
-                        "<br><br>" +
-                        "</center>");
-                    esEnteroFinal(x1, y1, FinalY);
 
-                }
-                else {
-                    $("#solucion").append("<center>" +
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
-                        "<br><br>" +
-                        "<font size='3'><b>m = <sup>" + FinalY + "</sup>/<sub>" + FinalX + "</sub></b></font>" +
-                        "<br><br>" +
-                        "</center>");
-                    esFraccionFinal(x1, y1, FinalY, FinalX);
-                }
+            if (x1 < 0 && y1 < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" + y2 + " - ( " + y1 + " )" +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y - ( " + y1 + " )" +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    "" + x2 + " - ( " + x1 + " )" +
+                    "</td>" +
+                    "<td style='text-align: center;'>" +
+                    "x - ( " + x1 + " )" +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las operaciones del lado izquierdo" +
+                    "<br><br>" +
+                    "</center>");
             }
-            else {
-                if (FinalX == 1) {
-                    $("#solucion").append("<center>" +
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
-                        "<br><br>" +
-                        "<font size='3'><b>m = " + FinalY + "</b></font>" +
-                        "<br><br>" +
-                        "</center>");
-                    esEnteroFinal(x1, y1, FinalY);
-                }
-                else {
-                    $("#solucion").append("<center>" +
-                        "Realizando las operaciones correspondientes sabemos que la pendiente es de: " +
-                        "<br><br>" +
-                        "<font size='3'><b>m = <sup>" + FinalY + "</sup>/<sub>" + FinalX + "</sub></b></font>" +
-                        "<br><br>" +
-                        "</center>");
-                    esFraccionFinal(x1, y1, FinalY, FinalX);
-                }
+            if (x1 < 0 && y1 >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    " " + y2 + " -  " + y1 + " " +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y - " + y1 + "" +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    x2 + " - ( " + x1 + " ) " +
+                    "</td>" +
+                    "<td style='text-align: center;'|>" +
+                    "x - ( " + x1 + " )" +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las operaciones del lado izquierdo" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 >= 0 && y1 < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "" + y2 + " -  ( " + y1 + " )" +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y - ( " + y1 + " )" +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    "" + x2 + " - " + x1 + "" +
+                    "</td>" +
+                    "<td style='text-align: center;'>" +
+                    "x - " + x1 + "" +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las operaciones del lado izquierdo" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 >= 0 && y1 >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "" + y2 + " - " + y1 + "" +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y - " + y1 + "" +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    "" + x2 + " - " + x1 + "" +
+                    "</td>" +
+                    "<td style='text-align: center;'>" +
+                    "x - " + x1 +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las operaciones del lado izquierdo" +
+                    "<br><br>" +
+                    "</center>");
             }
 
+
+            var operacionArriba = parseInt(y2) - parseInt(y1);
+            var operacionAbajo = parseInt(x2) - parseInt(x1);
+
+            if (x1 < 0 && y1 < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0' style='text-align: center;'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" + operacionArriba + "" +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y + " + y1 * -1 + " " +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    "" + operacionAbajo + " " +
+                    "</td>" +
+                    "<td style='text-align: center;'>" +
+                    "x + " + x1 * -1 + " " +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Pasamos los valores que dividen a multiplicar a su lado contrario" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 < 0 && y1 >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    " " + operacionArriba + " " +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y - " + y1 + "" +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td>" +
+                    "" + operacionAbajo + "" +
+                    "</td>" +
+                    "<td>" +
+                    "x + " + x1 * -1 + " " +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Pasamos los valores que dividen a multiplicar a su lado contrario" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 >= 0 && y1 < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    " " + operacionArriba + " " +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y +" + y1 * -1 + " " +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    "" + operacionAbajo + "" +
+                    "</td>" +
+                    "<td style='text-align: center;'>" +
+                    "x - " + x1 + "" +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Pasamos los valores que dividen a multiplicar a su lado contrario" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 >= 0 && y1 >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "<table border='0'>" +
+                    "<tr>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "" + operacionArriba + "" +
+                    "</td>" +
+                    "<td rowspan='2'>" +
+                    "=" +
+                    "</td>" +
+                    "<td style='border-bottom: 1px solid black; text-align: center;'>" +
+                    "y - " + y1 + "" +
+                    "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<td style='text-align: center;'>" +
+                    "" + operacionAbajo + "" +
+                    "</td>" +
+                    "<td style='text-align: center;'>" +
+                    "x - " + x1 +
+                    "</td>" +
+                    "</tr>" +
+                    "</table>" +
+                    "</b></font>" +
+                    "<br>" +
+                    "Pasamos los valores que dividen a multiplicar a su lado contrario" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+            if (x1 < 0 && y1 < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + " ( y + " + y1 * -1 + " ) = " + operacionArriba + " ( x + " + x1 * -1 + " )" +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Realizamos las multiplicaciones" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 < 0 && y1 >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + " ( y - " + y1 + " ) = " + operacionArriba + " ( x + " + x1 * -1 + " )" +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Realizamos las multiplicaciones" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 >= 0 && y1 < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + " ( y - " + y1 * -1 + " ) = " + operacionArriba + " ( x - " + x1 + " )" +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Realizamos las multiplicaciones" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (x1 >= 0 && y1 >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + " ( y - " + y1 + " ) = " + operacionArriba + " ( x - " + x1 + " )" +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Realizamos las multiplicaciones" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+            var multiplicacionIzquierda = parseInt(operacionAbajo) * (parseInt(y1) * -1);
+            var multiplicacionDerecha = parseInt(operacionArriba) * (parseInt(x1) * -1);
+
+            if (multiplicacionDerecha < 0 && multiplicacionIzquierda < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + "y " + multiplicacionIzquierda + " = " + operacionArriba + "x " + multiplicacionDerecha + " " +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Igualamos los valores a 0" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (multiplicacionDerecha < 0 && multiplicacionIzquierda >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + "y + " + multiplicacionIzquierda + " = " + operacionArriba + "x " + multiplicacionDerecha + "" +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Igualamos los valores a 0" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (multiplicacionDerecha >= 0 && multiplicacionIzquierda < 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + "y " + multiplicacionIzquierda + " = " + operacionArriba + "x + " + multiplicacionDerecha + " " +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Igualamos los valores a 0" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            if (multiplicacionDerecha >= 0 && multiplicacionIzquierda >= 0) {
+                $("#solucion").append("<center><font size='3'><b>" +
+                    "" + operacionAbajo + "y + " + multiplicacionIzquierda + " = " + operacionArriba + "x + " + multiplicacionDerecha + "" +
+                    "</b></font>" +
+                    "<br><br>" +
+                    "Igualamos los valores a 0" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+            ///IGUALANDO VALORES A CERO
+
+            if (operacionArriba < 0 && multiplicacionDerecha < 0) {
+                if (operacionAbajo < 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + " =  0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Operamos los enteros" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo < 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y + " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + " = 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + "= 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y + " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + "= 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+            if (operacionArriba < 0 && multiplicacionDerecha >= 0) {
+                if (operacionAbajo < 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + " =  0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Operamos los enteros" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo < 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y + " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + " = 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + "= 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y + " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + "= 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+            if (operacionArriba >= 0 && multiplicacionDerecha < 0) {
+                if (operacionAbajo < 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + " =  0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Operamos los enteros" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo < 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y + " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + " = 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + "= 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y + " + multiplicacionIzquierda + " + " + multiplicacionDerecha * -1 + "= 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+            if (operacionArriba >= 0 && multiplicacionDerecha >= 0) {
+                if (operacionAbajo < 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + " =  0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Operamos los enteros" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo < 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y + " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + " = 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + "= 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0 && multiplicacionIzquierda >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y + " + multiplicacionIzquierda + "  " + multiplicacionDerecha * -1 + "= 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "Igualamos los valores a 0" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+
+            var nuevoEntero = parseInt(multiplicacionIzquierda) + (parseInt(multiplicacionDerecha) * -1);
+
+            if (operacionArriba < 0 && nuevoEntero < 0) {
+                if (operacionAbajo < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y " + nuevoEntero + " =  0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >=0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y " + nuevoEntero + "= 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+            if (operacionArriba < 0 && nuevoEntero >= 0) {
+                if (operacionAbajo < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y + " + nuevoEntero + " = 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y + " + nuevoEntero + " = 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+            if (operacionArriba >= 0 && nuevoEntero < 0) {
+                if (operacionAbajo < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y " + nuevoEntero + " =  0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >=0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y " + nuevoEntero + "= 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+            if (operacionArriba >= 0 && nuevoEntero >= 0) {
+                if (operacionAbajo < 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x " + operacionAbajo + "y + " + nuevoEntero + " = 0" +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+                if (operacionAbajo >= 0) {
+                    $("#solucion").append("<center><font size='3'><b>" +
+                        "" + operacionArriba * -1 + "x + " + operacionAbajo + "y + " + nuevoEntero + " = 0 " +
+                        "</b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                }
+            }
+
+
+            $("#solucion").append("<center><font size='3'><b>Siendo esta la ecuación de la recta</b></font></center>");
             //$("#Puntos").fadeOut(0);
             //$("#Resultado").fadeIn(300);
-
+            //$("#coordenadas").fadeOut(0);
+            $("#Resultado").fadeIn(300);
 
         }
+
     }
 
     function limpiarResolucionC() {
