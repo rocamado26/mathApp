@@ -15,41 +15,673 @@
                     <!---->
                     <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-sm-offset-2 col-sm-8">
+                                    <p style="text-align: justify;">
+                                        Para encontrar la distancia del punto <b>P(r,s)</b> a la recta
+                                        <b>Ax + By + C = 0</b>, utilizas la fórmula siguiente:
+                                        <br><br>
+                                        <center>
+                                            <font size="3">
+                                                <table border="0">
+                                                    <tr>
+                                                        <td rowspan="2">d =&nbsp;</td>
+                                                        <td style="border-bottom: 1px solid black;">| Ar + Bs + C |</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: center;">√ A<sup>2</sup> + B<sup>2</sup></td>
+                                                    </tr>
+                                                </table>
+                                            </font>
+                                        </center>
+                                    <br><br>
+                                    Veamos los siguientes ejemplos para comprender de mejor manera como obtener la distancia de un punto a la recta
+                                    </p>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="ibox">
+                                        <div class="ibox-title">
+                                            <h3>
+                                                <center>EJEMPLOS</center>
+                                            </h3>
+                                            <br>
                                             <div class="row">
-                                                <div class="col-md-12">
-                                                    <strong>Rectas Paralelas</strong>
-                                                    <p style="text-align: justify;">
-                                                        <br>Si dos rectas son paralelas, tienen la misma inclinación, de modo que las rectas paralelas tienen la misma pendiente.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <center><img width="50%" height="50%" src="{{asset('img/iconos/geometria/analitica/pendiente/paraperpen/teoria1.png')}}"></center>
-                                                </div>
+                                                <table border="0" align="center">
+                                                    <tr>
+                                                        <td>
+                                                            <button type="button"
+                                                                    class="btn btn-outline btn-primary dim"
+                                                                    onclick="cambioEjemplo(1)">1
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button"
+                                                                    class="btn btn-outline btn-primary dim"
+                                                                    onclick="cambioEjemplo(2)">2
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button"
+                                                                    class="btn btn-outline btn-primary dim"
+                                                                    onclick="cambioEjemplo(3)">3
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <strong>Rectas Perpendiculares</strong>
-                                                    <p style="text-align: justify;">
-                                                        <br>Si dos rectas son perpendiculares, se cortan formando un ángulo de 90º, esto significa que sus inclinaciones deben diferir en 90º.
-                                                        <br><br>
-                                                        También signifca que sus pendientes tienen signos diferentes.
-                                                    </p>
+                                        <div class="ibox-content" id="tour1-2">
+                                            <div class="row animated fadeInRightBig" id="Ejemplo1">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img
+                                                                                src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font
+                                                                                size="4"><i><b>Problema</b></i></font>
+                                                                    </center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <p style="text-align: justify;">
+                                                                                Calcular la distancia del punto <b>P (-2 , 3 )</b> a la recta <b> 3x + 2y - 7</b>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Primero identificamos que valor representa a cada punto de la fórmula, es decir:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                r = <b>-2</b>
+                                                                                <br><br>
+                                                                                s = <b>3</b>
+                                                                                <br><br>
+                                                                                A = <b>3</b>
+                                                                                <br><br>
+                                                                                B = <b>2</b>
+                                                                                <br><br>
+                                                                                C = <b>-7</b>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Sustituimos estos datos en la fórmula
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 3(-2) + 2(3) + (-7) |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ (3)<sup>2</sup> + (2)<sup>2</sup></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizamos las multiplicaciones
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| -6 + 6 -7 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ 9 + 4</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizamos las sumas
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| -7 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ 13</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Obtenemos la raíz de 13
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| -7 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">3.71</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizando la division obtenemos que la distancia es de:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <b>2.02</b>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="panel panel-warning">
+                                                                    <div class="panel-heading">
+                                                                        <center><img
+                                                                                    src="img/iconos/generales/target.png">&nbsp;&nbsp;<font
+                                                                                    size="4"><i><b>Punto de
+                                                                                        apoyo</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <p style="text-align: justify;">
+                                                                            Como puedes observar, para conocer la distancia de un punto a la recta, es necesario conocer la ecuacion general de esta recta y el punto del cual
+                                                                            deseamos conocer la distancia, teniendo estos 2 valores, se te sera facil conocer la distancia
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <center><img width="50%" height="50%" src="{{asset('img/iconos/geometria/analitica/pendiente/paraperpen/teoria2.png')}}"></center>
+                                            <div class="row animated fadeInRightBig" style="display: none;"
+                                                 id="Ejemplo2">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img
+                                                                                src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font
+                                                                                size="4"><i><b>Problema</b></i></font>
+                                                                    </center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <p style="text-align: justify;">
+                                                                                Calcular la distancia del punto <b>P (-3 , -7 )</b> a la recta <b> x - 5y + 3</b>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Primero identificamos que valor representa a cada punto de la fórmula, es decir:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                r = <b>-3</b>
+                                                                                <br><br>
+                                                                                s = <b>-7</b>
+                                                                                <br><br>
+                                                                                A = <b>1</b>
+                                                                                <br><br>
+                                                                                B = <b>-5</b>
+                                                                                <br><br>
+                                                                                C = <b>3</b>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Sustituimos estos datos en la fórmula
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 1(-3) + (-5)(-7) + 3 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ (1)<sup>2</sup> + (-5)<sup>2</sup></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizamos las multiplicaciones
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| -3 + 35 + 3 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ 1 + 25</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizamos las sumas
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 35 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ 26</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Obtenemos la raíz de 26
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 35 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">5.10</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizando la division obtenemos que la distancia es de:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <b>6.86</b>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="panel panel-warning">
+                                                                    <div class="panel-heading">
+                                                                        <center><img
+                                                                                    src="img/iconos/generales/target.png">&nbsp;&nbsp;<font
+                                                                                    size="4"><i><b>Punto de
+                                                                                        apoyo</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <p style="text-align: justify;">
+                                                                            Como puedes observar, para conocer la distancia de un punto a la recta, es necesario conocer la ecuacion general de esta recta y el punto del cual
+                                                                            deseamos conocer la distancia, teniendo estos 2 valores, se te sera facil conocer la distancia
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row animated fadeInRightBig" style="display: none;"
+                                                 id="Ejemplo3">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img
+                                                                                src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font
+                                                                                size="4"><i><b>Problema</b></i></font>
+                                                                    </center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <p style="text-align: justify;">
+                                                                                Calcular la distancia del punto <b>P (4 , 8 )</b> a la recta <b> 3x + 5y + 8</b>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Primero identificamos que valor representa a cada punto de la fórmula, es decir:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                r = <b>4</b>
+                                                                                <br><br>
+                                                                                s = <b>8</b>
+                                                                                <br><br>
+                                                                                A = <b>3</b>
+                                                                                <br><br>
+                                                                                B = <b>5</b>
+                                                                                <br><br>
+                                                                                C = <b>8</b>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Sustituimos estos datos en la fórmula
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 3(4) + 5(8) + 8 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ (3)<sup>2</sup> + (5)<sup>2</sup></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizamos las multiplicaciones
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 12 + 40 + 8 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ 9 + 25</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizamos las sumas
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 60 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">√ 34</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Obtenemos la raíz de 34
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <table border="0">
+                                                                                    <tr>
+                                                                                        <td rowspan="2">d =&nbsp;</td>
+                                                                                        <td style="border-bottom: 1px solid black;">| 60 |</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="text-align: center;">5.83</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                Realizando la division obtenemos que la distancia es de:
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="well">
+                                                                <div class="row diff-wrapper">
+                                                                    <div class="col-xs-12" align="center">
+                                                                        <font size="3">
+                                                                            <center>
+                                                                                <b>10.29</b>
+                                                                            </center>
+                                                                        </font>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="panel panel-warning">
+                                                                    <div class="panel-heading">
+                                                                        <center><img
+                                                                                    src="img/iconos/generales/target.png">&nbsp;&nbsp;<font
+                                                                                    size="4"><i><b>Punto de
+                                                                                        apoyo</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <p style="text-align: justify;">
+                                                                            Como puedes observar, para conocer la distancia de un punto a la recta, es necesario conocer la ecuacion general de esta recta y el punto del cual
+                                                                            deseamos conocer la distancia, teniendo estos 2 valores, se te sera facil conocer la distancia
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div><!--panel body teoría-->
+                                </div>
+                            </div>
+                        </div><!--panel body teoría-->
                     </div><!--cieere div collpase-->
                 </div><!--cierre panel defaul teoría-->
                 <div class="panel panel-default">
@@ -1225,28 +1857,52 @@ function Puntos(){
     $("#Puntos").fadeIn(300);
 }
 //practica
-function cambioEjemplo(opc)
-{
-    switch(opc)
-    {
-        case 1:
-        {
+function cambioEjemplo(opc) {
+    switch (opc) {
+        case 1: {
             $("#Ejemplo2").fadeOut(0);
+            $("#Ejemplo3").fadeOut(0);
+            $("#Ejemplo4").fadeOut(0);
             $("#Ejemplo1").fadeIn(300);
             $('#Ejemplo1').removeAttr('class').attr('class', '');
             $('#Ejemplo1').addClass('animated');
             $('#Ejemplo1').addClass('fadeInRightBig');
-        }break;
-        case 2:
-        {
+        }
+            break;
+        case 2: {
             $("#Ejemplo1").fadeOut(0);
+            $("#Ejemplo3").fadeOut(0);
+            $("#Ejemplo4").fadeOut(0);
             $("#Ejemplo2").fadeIn(300);
             $('#Ejemplo2').removeAttr('class').attr('class', '');
             $('#Ejemplo2').addClass('animated');
             $('#Ejemplo2').addClass('fadeInRightBig');
-        }break;
+        }
+            break;
+        case 3: {
+            $("#Ejemplo1").fadeOut(0);
+            $("#Ejemplo2").fadeOut(0);
+            $("#Ejemplo4").fadeOut(0);
+            $("#Ejemplo3").fadeIn(300);
+            $('#Ejemplo3').removeAttr('class').attr('class', '');
+            $('#Ejemplo3').addClass('animated');
+            $('#Ejemplo3').addClass('fadeInRightBig');
+        }
+            break;
+        case 4: {
+            $("#Ejemplo1").fadeOut(0);
+            $("#Ejemplo2").fadeOut(0);
+            $("#Ejemplo3").fadeOut(0);
+            $("#Ejemplo4").fadeIn(300);
+            $('#Ejemplo4').removeAttr('class').attr('class', '');
+            $('#Ejemplo4').addClass('animated');
+            $('#Ejemplo4').addClass('fadeInRightBig');
+        }
+            break;
     }
 }
+
+
 function cambia_practica(opc){
     switch(opc)
     {
