@@ -687,7 +687,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>Ejemplos</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>Práctica</b></a>
                             <div class="nav navbar-top-links navbar-right ">
                                 <div class="col-lg-3">
                                     <button type="button"  onclick="tour1()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
@@ -699,187 +699,418 @@
                         <div class="panel-body">
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="row" id="tour1-1">
+                                    <div class="row" id="tour3-1">
                                         <div class="col-xs-12">
                                             <div align="center">
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(1)">1</button>
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(2)">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button"
+                                                        onclick="cambioPractica(1)">1
+                                                </button>
+                                                <button class="btn btn-outline btn-primary dim" type="button"
+                                                        onclick="cambioPractica(2)">2
+                                                </button>
+                                                <button class="btn btn-outline btn-primary dim" type="button"
+                                                        onclick="cambioPractica(3)">3
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ibox" >
-                                        <div class="ibox-content" id="tour1-2">
-                                            <div class="row animated fadeInRightBig" id="Ejemplo1">
-                                                <div class="row">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">
-                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <p style="text-align: justify;">
-                                                                                Determina la pendiente de la recta que pasa por <b>A(2, 3)</b> y <b>B(7, 5)</b>, e investiga si es paralela a la recta que pasa por <b>C(– 1, 4)</b> y <b>D(4, 6)</b> 
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>  
-                                                                </div>
-                                                            </div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="col-xs-12"> Calculamos la pendiente para cada punto:</div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                       <font size="3"><table border="0" style="text-align: center;">
-                                                                            <tr>
-                                                                                <td rowspan="2"><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>
-                                                                                <td style="border-bottom: 1px black solid;">5 - 3</td>
-                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-                                                                                <td rowspan="2"><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>
-                                                                                <td style="border-bottom: 1px black solid;">6 - 4</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>7 - 2</td>
-                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-                                                                                <td>4 - ( -1 )</td>
-                                                                            </tr>
-                                                                        </table></font>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                    <div class="ibox">
+                                        <div class="ibox-content" id="tour3-2">
+                                            <div class="row animated fadeInRightBig" id="Practica1">
+                                                <div class="col-lg-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font
+                                                                        size="4"><i><b>Problema a
+                                                                            Resolver</b></i></font></center>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Obteniendo como resultando las siguientes pendientes:
-                                                            </div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                     <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>m<sub>AB</sub></b> =  </font><font size="4"><sup>2</sup>/<sub>5</sub></font><br><br>
-                                                                         <font size="3"><b>m<sub>CD</sub></b>=  </font><font size="4"><sup>2</sup>/<sub>5</sub></font><br><br>
-                                                                    </div>                         
-                                                                </div>
-                                                            </div>  
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Como ambas pendientes son iguales <b>(m<sub>AB</sub> = m<sub>CD</sub>)</b>, las rectas son paralelas entre sí.
-                                                            </div>
+                                                        <div class="panel-body">
+                                                            <font size="3">
+                                                                <center>
+                                                                    Calcular la distancia del punto <b>P ( 5 , 3 )</b> a la recta <b>x + 3y - 5</b>
+                                                                </center>
+                                                            </font>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <div class="panel panel-warning">
-                                                                    <div class="panel-heading">
-                                                                        <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
-                                                                    </div>
-                                                                    <div class="panel-body">
-                                                                        <p style="text-align: justify;">
-                                                                        <br>
-                                                                        * Es importante que recuerdes que si las pendientes son iguales <b>(m1 = m2)</b>, las rectas son paralelas entre sí.
-                                                                        <br><br>
-                                                                        * Las rectas son perpendiculares si sus pendientes tienen signos diferentes, es decir <b>m1 = -<sup>1</sup>/<sub>m2</sub></b>
-                                                                        </p>
-                                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>d = 2.85</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe1" value="1" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe1"><b>Ecuación 1</b></label>
                                                                 </div>
-                                                            </div> 
+                                                                <div id="True1P1" style="display: none;">
+                                                                    &nbsp;&nbsp;
+                                                                    <span class="badge badge-primary"><i
+                                                                                class="fa fa-thumbs-up"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>d = 3.85</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe2" value="2" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe2"><b>Ecuación 2</b></label>
+                                                                </div>
+                                                                <div id="False2P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>d = 1.85</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe3" value="3" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe3"><b>Ecuación 3</b></label>
+                                                                </div>
+                                                                <div id="False3P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>d = 2.25</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe4" value="4" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe4"><b>Ecuación 4</b></label>
+                                                                </div>
+                                                                <div id="False4P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>d = 1.25</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe5" value="5" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe5"><b>Ecuación 5</b></label>
+                                                                </div>
+                                                                <div id="False5P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-lg-1">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <center>
+                                                                <br>
+                                                                <h3>d = 3.25</h3>
+                                                                <br>
+                                                                <div class="radio radio-info radio-inline">
+                                                                    <input type="radio" id="1rpe6" value="6" name="1rpe"
+                                                                           onclick="VerificarEvaluacion1P();">
+                                                                    <label for="1rpe6"><b>Ecuación 6</b></label>
+                                                                </div>
+                                                                <div id="False6P1" style="display: none;">
+                                                                    <span class="badge badge-danger"><i
+                                                                                class="fa fa-thumbs-down"></i></span>
+                                                                </div>
+                                                            </center>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row animated fadeInRightBig" style="display: none;" id="Ejemplo2">
-                                                <div class="row">
-                                                    <div class="col-md-8">
+                                            <div class="row animated fadeInRightBig" style="display: none;"
+                                                 id="Practica2">
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="well" align="center">
+                                                            <font size="3" style="text-align: justify;">
+                                                                Calcular la distancia del punto <b>P ( 8 , 7 )</b> a la recta <b>5x - 8y + 2</b>
+                                                            </font>
+                                                        </div>
+                                                        <br><br>
                                                         <div class="row">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">
-                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <p style="text-align: justify;">
-                                                                                Averigua si la recta que determina los puntos <b>P(3, 5)</b> y <b>Q(– 2, 3)</b> es perpendicular a la recta que pasa por los puntos <b>D(2, – 1)</b> y <b>F( – 4, 14)</b>. 
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>  
-                                                                </div>
-                                                            </div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="col-xs-12"> Calculamos la pendiente para cada punto:</div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                    <div class="col-xs-12" align="center">
-                                                                       <font size="3"><table border="0" style="text-align: center;">
-                                                                            <tr>
-                                                                                <td rowspan="2"><b>m<sub>PQ</sub> = &nbsp;&nbsp;</b></td>
-                                                                                <td style="border-bottom: 1px black solid;">3 - 5</td>
-                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-                                                                                <td rowspan="2"><b>m<sub>DF</sub> = &nbsp;&nbsp;</b></td>
-                                                                                <td style="border-bottom: 1px black solid;">14 - ( -1 )</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>-2 - 3</td>
-                                                                                <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-                                                                                <td>-4 - 2</td>
-                                                                            </tr>
-                                                                        </table></font>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 0.57</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe1" value="1"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe1"><b>Ecuación 1</b></label>
                                                                     </div>
-                                                                </div>
+                                                                    <div id="False1P2" style="display: none;">
+                                                                        &nbsp;&nbsp;
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 5.12</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe2" value="2"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe2"><b>Ecuación 2</b></label>
+                                                                    </div>
+                                                                    <div id="False2P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 2.75</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe3" value="3"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe3"><b>Ecuación 3</b></label>
+                                                                    </div>
+                                                                    <div id="False3P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
                                                             </div>
                                                         </div>
+                                                        <br><br>
                                                         <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Obteniendo como resultando las siguientes pendientes:
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 1.48</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe4" value="4"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe4"><b>Ecuación 4</b></label>
+                                                                    </div>
+                                                                    <div id="True4P2" style="display: none;">
+                                                                        <span class="badge badge-primary"><i
+                                                                                    class="fa fa-thumbs-up"></i></span>
+                                                                    </div>
+                                                                </center>
                                                             </div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="well">
-                                                                <div class="row diff-wrapper">
-                                                                     <div class="col-xs-12" align="center">
-                                                                        <font size="3"><b>m<sub>PQ</sub></b> =  </font><font size="4"><sup>2</sup>/<sub>5</sub></font><br><br>
-                                                                         <font size="3"><b>m<sub>DF</sub></b> =  </font><font size="4">-<sup>5</sup>/<sub>2</sub></font><br><br>
-                                                                    </div>                         
-                                                                </div>
-                                                            </div>  
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-xs-12">
-                                                                Como m<sub>DF</sub> = <sup>1</sup>/<sub>m<sub>PQ</sub></sub>, las rectas son perpendiculares, es decir:
-                                                                <br><br>
-                                                                Despejando la ecuación, se cumple que <b><sup>2</sup>/<sub>5</sub>(- <sup>5</sup>/<sub>2</sub>) = -1</b>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 1.95</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe5" value="5"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe5"><b>Ecuación 5</b></label>
+                                                                    </div>
+                                                                    <div id="False5P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>2.15</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="2rpe6" value="6"
+                                                                               name="2rpe"
+                                                                               onclick="VerificarEvaluacion2P();">
+                                                                        <label for="2rpe6"><b>Ecuación 6</b></label>
+                                                                    </div>
+                                                                    <div id="False6P2" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                </div>
+                                            </div>
+                                            <div class="row animated fadeInRightBig" style="display: none;"
+                                                 id="Practica3">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="well" align="center">
+                                                            <font size="3" style="text-align: justify;">
+                                                                Calcular la distancia del punto <b>P ( -3 , 7 )</b> a la recta <b>5x + 3y + 10</b>
+                                                            </font>
+                                                        </div>
+                                                        <br><br>
                                                         <div class="row">
-                                                            <div class="col-xs-12">
-                                                                <div class="panel panel-warning">
-                                                                    <div class="panel-heading">
-                                                                        <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 3.75</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe1" value="1"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe1"><b>Ecuación 1</b></label>
                                                                     </div>
-                                                                    <div class="panel-body">
-                                                                        <p style="text-align: justify;">
-                                                                        <br>
-                                                                        * Es importante que recuerdes que si las pendientes son iguales <b>(m1 = m2)</b>, las rectas son paralelas entre sí.
-                                                                        <br><br>
-                                                                        * Las rectas son perpendiculares si sus pendientes tienen signos diferentes, es decir <b>m1 = -<sup>1</sup>/<sub>m2</sub></b>
-                                                                        </p>
+                                                                    <div id="False1P3" style="display: none;">
+                                                                        &nbsp;&nbsp;
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
                                                                     </div>
-                                                                </div>
+                                                                </center>
                                                             </div>
-                                                        </div> 
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 2.74</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe2" value="2"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe2"><b>Ecuación 2</b></label>
+                                                                    </div>
+                                                                    <div id="True2P3" style="display: none;">
+                                                                        <span class="badge badge-primary"><i
+                                                                                    class="fa fa-thumbs-up"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 1.85</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe3" value="3"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe3"><b>Ecuación 3</b></label>
+                                                                    </div>
+                                                                    <div id="False3P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                        </div>
+                                                        <br><br>
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 2.91</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe4" value="4"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe4"><b>Ecuación 4</b></label>
+                                                                    </div>
+                                                                    <div id="False4P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>d = 1.25</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe5" value="5"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe5"><b>Ecuación 5</b></label>
+                                                                    </div>
+                                                                    <div id="False5P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                            <div class="col-lg-1">
+                                                                &nbsp;
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <center>
+                                                                    <br>
+                                                                    <h3>2.37</h3>
+                                                                    <br>
+                                                                    <div class="radio radio-info radio-inline">
+                                                                        <input type="radio" id="3rpe6" value="6"
+                                                                               name="3rpe"
+                                                                               onclick="VerificarEvaluacion3P();">
+                                                                        <label for="3rpe6"><b>Ecuación 6</b></label>
+                                                                    </div>
+                                                                    <div id="False6P3" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                    </div>
+                                                                </center>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -894,7 +1125,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><b>Práctica</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><b>Resolución de ejercicios</b></a>
                             <div class="nav navbar-top-links navbar-right ">
                                 <div class="col-lg-3">
                                     <button type="button"  onclick="tour2()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
@@ -923,66 +1154,102 @@
                                                             <div class="row">
                                                                 <div class="col-xs-12">
                                                                     <div id="Puntos" class="alert alert-warning">
+
                                                                         <table border="0" width="100%">
                                                                             <tr>
-                                                                                <td colspan="3"><center><b>Punto A</b></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td colspan="3"><center><b>Punto B</b></center></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td width="20%"><center>X<sub>1</sub></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td width="20%"><center>Y<sub>1</sub></center></td> 
-                                                                                <td>&nbsp;</td> 
-                                                                                <td width="20%"><center>X<sub>2</sub></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td width="20%"><center>Y<sub>2</sub></center></td>  
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="x1" width="100%"></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="y1" width="100%"></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="x2" width="100%"></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="y2" width="100%"></td>
-                                                                            </tr>
-                                                                        </table>
-                                                                        <br><br>
-                                                                        <table border="0" width="100%">
-                                                                            <tr>
-                                                                                <td colspan="3"><center><b>Punto C</b></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td colspan="3"><center><b>Punto D</b></center></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td width="20%"><center>X<sub>1</sub></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td width="20%"><center>Y<sub>1</sub></center></td> 
-                                                                                <td>&nbsp;</td> 
-                                                                                <td width="20%"><center>X<sub>2</sub></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td width="20%"><center>Y<sub>2</sub></center></td>  
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="xx1" width="100%"></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="yy1" width="100%"></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="xx2" width="100%"></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td><input type="number" placeholder="?" class="form-control" value="" id="yy2" width="100%"></td>
-                                                                            </tr>
-                                                                            <tr>
+                                                                                <td colspan="2"><center><b>Puntos</b></center></td>
                                                                                 <td>&nbsp;</td>
+                                                                                <td colspan="7"><center><b>Recta</b></center></td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td colspan="3"><center><button type="button" class="btn btn-danger btn-rounded" onclick="limpiarResolucion();"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button></center></td>
-                                                                                <td>&nbsp;</td> 
-                                                                                <td colspan="3"><center><button type="button" class="btn btn-primary btn-rounded" onclick="generarResolucion();"><i class="fa fa-check"></i>&nbsp;Generar</button></center></td>
+                                                                                <td>
+                                                                                    <center><b>X</b></center>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <center><b>Y</b></center>
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    <center><b>A</b></center>
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    <center><b>B</b></center>
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    <center><b>C</b></center>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <input type="number" placeholder="?" class="form-control" value="" id="x" width="100%">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="number" placeholder="?" class="form-control" value="" id="y" width="100%">
+                                                                                </td>
+                                                                                <td  width="5%">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="number" placeholder="?" class="form-control" value="" id="a" width="100%">
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button id="btn1Yes" class="btn btn-info" type="button" onclick="changeButtonMenos()">+</button>
+                                                                                    <button id="btn1No" class="btn btn-info" type="button" onclick="changeButtonMas()" style="display: none;">-</button>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="number" placeholder="?" class="form-control" value="" id="b" width="100%">
+                                                                                </td>
+                                                                                <td>
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button id="btn2Yes" class="btn btn-info" type="button" onclick="changeButtonMenos2()">+</button>
+                                                                                    <button id="btn2No" class="btn btn-info" type="button" onclick="changeButtonMas2()" style="display: none;">-</button>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="number" placeholder="?" class="form-control" value="" id="c" width="100%">
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="10">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                               <td colspan="5">
+                                                                                   <center><button type="button"
+                                                                                           class="btn btn-danger btn-rounded"
+                                                                                           onclick="limpiarResolucion();">
+                                                                                       <i class="fa fa-repeat"></i>&nbsp;Reestablecer
+                                                                                   </button></center>
+                                                                               </td>
+                                                                                <td colspan="5">
+                                                                                    <center><button type="button"
+                                                                                            class="btn btn-primary btn-rounded"
+                                                                                            onclick="generarResolucion();">
+                                                                                        <i class="fa fa-check"></i>&nbsp;Generar
+                                                                                    </button></center>
+                                                                                </td>
                                                                             </tr>
                                                                         </table>
-                                                                    </div>                                                                    
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <br><br>
@@ -990,7 +1257,7 @@
                                                                 <div class="col-lg-12">
                                                                     <div id="Resultado" class="alert alert-success" style="display: none;">
                                                                         <div id="solucion">
-                                                                            
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1023,835 +1290,10 @@
 </div><!--cierre con el primer div -->
 <script>
 //resolucion de ejercicios
-var nuevoAd;
-var nuevoAn;
-var enteroMultiGlobal;
-var numeradorMultiGlobal;
-var denominadorMultiGlobal;
+var tipoBoton1=1;//1- mas, 2 - menos
+var tipoBoton2=1;//1- mas, 2 - menos
 /////////////FUNCIONES PARA GRAFICAR PUNTOS
-function limpiarResolucion()
-{
-    brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-4,4,4,-4], keepaspectratio:true, axis:true,showCopyright:false});
-    p1 = brd.create('point',[0,0],{visible:true});
-    p2 = brd.create('point',[0,0],{visible:true});
-        var t = brd.create('text', [0.1,0.1, function() { 
-        var impresionx1=p1.X();
-        var impresiony1=p1.Y();
-        var impresionx2=p2.X();
-        var impresiony2=p2.Y();
-        imprimir(impresionx1,impresiony1,impresionx2,impresiony2);
-        return impresionx1;
-        }
-        ]);
-}  
-//limpiarResolucion();  
-function imprimir(impresionx1,impresiony1,impresionx2,impresiony2)
-{
-    document.getElementById("x1").value=impresionx1;
-    document.getElementById("y1").value=impresiony1;
-    document.getElementById("x2").value=impresionx2;
-    document.getElementById("y2").value=impresiony2;
-}
-function datoX1(x1){
-    if(x1.value!="")
-    {
-        console.log(x1.value);
-        var x1N = parseInt(x1.value);
-        var y1N = parseInt(document.getElementById("y1").value);
-        var x2N = parseInt(document.getElementById("x2").value);
-        var y2N = parseInt(document.getElementById("y2").value);
-        var mayor;
-        var mayorN;
-        if (x1N>y1N) {
-            if (x1N>x2N) {
-                if (x1N>y2N) {
-                    mayor=x1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        else
-        {
-            if (y1N>x2N) {
-                if (y1N>y2N) {
-                    mayor=y1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        console.log(mayor);
-        mayor=mayor+2;
-        mayorN=mayor * -1;
-        brd = JXG.JSXGraph.freeBoard(brd);
-        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[mayorN,mayor,mayor,mayorN], keepaspectratio:true, axis:true,showCopyright:false});
-        p1 = brd.create('point',[x1.value,document.getElementById("y1").value],{visible:true});
-        p2 = brd.create('point',[document.getElementById("x2").value,document.getElementById("y2").value],{visible:true});
-        var s1 = brd.create('segment',[p1, p2],{strokeColor:'#01aeef'});
-    }
-}
-function datoY1(y1){
-    if(y1.value!="")
-    {
-        console.log(y1.value);
-        var x1N = parseInt(document.getElementById("x1").value);
-        var y1N = parseInt(y1.value);
-        var x2N = parseInt(document.getElementById("x2").value);
-        var y2N = parseInt(document.getElementById("y2").value);
-        var mayor;
-        var mayorN;
-        if (x1N>y1N) {
-            if (x1N>x2N) {
-                if (x1N>y2N) {
-                    mayor=x1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        else
-        {
-            if (y1N>x2N) {
-                if (y1N>y2N) {
-                    mayor=y1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        console.log(mayor);
-        mayor=mayor+2;
-        mayorN=mayor * -1;
-        brd = JXG.JSXGraph.freeBoard(brd);
-        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[mayorN,mayor,mayor,mayorN], keepaspectratio:true, axis:true,showCopyright:false});
-        p1 = brd.createElement('point',[document.getElementById("x1").value,y1.value],{visible:true});
-        p2 = brd.create('point',[document.getElementById("x2").value,document.getElementById("y2").value],{visible:true});
-        var s1 = brd.create('segment',[p1, p2],{strokeColor:'#01aeef'});   
-    }
-}
-function datoX2(x2){
-    if(x2.value!="")
-    {
-        console.log(x2.value);
-        var x1N = parseInt(document.getElementById("x1").value);
-        var y1N = parseInt(document.getElementById("y1").value);
-        var x2N = parseInt(x2.value);
-        var y2N = parseInt(document.getElementById("y2").value);
-        var mayor;
-        var mayorN;
-        if (x1N>y1N) {
-            if (x1N>x2N) {
-                if (x1N>y2N) {
-                    mayor=x1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        else
-        {
-            if (y1N>x2N) {
-                if (y1N>y2N) {
-                    mayor=y1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        console.log(mayor);
-        mayor=mayor+2;
-        mayorN=mayor * -1;
-        brd = JXG.JSXGraph.freeBoard(brd);
-        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[mayorN,mayor,mayor,mayorN], keepaspectratio:true, axis:true,showCopyright:false});
-        p1 = brd.create('point',[document.getElementById("x1").value,document.getElementById("y1").value],{visible:true});
-        p2 = brd.create('point',[x2.value,document.getElementById("y2").value],{visible:true});
-        var s1 = brd.create('segment',[p1, p2],{strokeColor:'#01aeef'});
-    }
-}
-function datoY2(y2){
-    if(y2.value!="")
-    {
-        console.log(y2.value);
-        var x1N = parseInt(document.getElementById("x1").value);
-        var y1N = parseInt(document.getElementById("y1").value);
-        var x2N = parseInt(document.getElementById("x2").value);
-        var y2N = parseInt(y2.value);
-        var mayor;
-        var mayorN;
-        if (x1N>y1N) {
-            if (x1N>x2N) {
-                if (x1N>y2N) {
-                    mayor=x1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        else
-        {
-            if (y1N>x2N) {
-                if (y1N>y2N) {
-                    mayor=y1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        console.log(mayor);
-        mayor=mayor+2;
-        mayorN=mayor * -1;
-        brd = JXG.JSXGraph.freeBoard(brd);
-        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[mayorN,mayor,mayor,mayorN], keepaspectratio:true, axis:true,showCopyright:false});
-        p1 = brd.create('point',[document.getElementById("x1").value,document.getElementById("y1").value],{visible:true});
-        p2 = brd.create('point',[document.getElementById("x2").value,y2.value],{visible:true});
-        var s1 = brd.create('segment',[p1, p2],{strokeColor:'#01aeef'});
-    }
-}
-function generarResolucion()
-{
-    var x1;
-    var y1;
-    var x2;
-    var y2;
-    var xx1;
-    var yy1;
-    var xx2;
-    var yy2;
-    if (document.getElementById("x1").value!=0) {
-        x1=parseInt(document.getElementById("x1").value);
-    }
-    else
-    {
-        x1=0;
-    }
-    if (document.getElementById("y1").value!=0) {
-        y1=parseInt(document.getElementById("y1").value);
-    }
-    else
-    {
-        y1=0;
-    }
-    if (document.getElementById("x2").value!=0) {
-        x2=parseInt(document.getElementById("x2").value);
-    }
-    else
-    {
-        x2=0;
-    }
-    if (document.getElementById("y2").value!=0) {
-        y2=parseInt(document.getElementById("y2").value);
-    }
-    else
-    {
-        y2=0;
-    }
-    if (document.getElementById("xx1").value!=0) {
-        xx1=parseInt(document.getElementById("xx1").value);
-    }
-    else
-    {
-        xx1=0;
-    }
-    if (document.getElementById("yy1").value!=0) {
-        yy1=parseInt(document.getElementById("yy1").value);
-    }
-    else
-    {
-        yy1=0;
-    }
-    if (document.getElementById("xx2").value!=0) {
-        xx2=parseInt(document.getElementById("xx2").value);
-    }
-    else
-    {
-        xx2=0;
-    }
-    if (document.getElementById("yy2").value!=0) {
-        yy2=parseInt(document.getElementById("yy2").value);
-    }
-    else
-    {
-        yy2=0;
-    }
-    //////INICIO DEL PROCEDIMIENTO
-    $("#solucion").html("<center>Conociendo los puntos A("+x1+","+y1+"), B("+x2+","+y2+") de la primera recta y los puntos C("+xx1+","+yy1+"), D("+xx2+","+yy2+"), tomando en cuenta la fórmula para encontrar la pendiente, obtenemos:<br><br>"+
-        "<font size='3'><b><table border='0' style='text-align: center;'>"+
-                                "<tr>"+
-                                    "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-                                    "<td style='border-bottom: 1px black solid;'>y<sub>2</sub> - y<sub>1</sub></td>"+
-                                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                                    "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-                                    "<td style='border-bottom: 1px black solid;'>y<sub>2</sub> - y<sub>1</sub></td>"+
-                                "</tr>"+
-                                "<tr>"+
-                                    "<td>x<sub>2</sub> - x<sub>1</sub></td>"+
-                                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                                    "<td>x<sub>2</sub> - x<sub>1</sub></td>"+
-                                "</tr>"+
-                            "</table></b></font>"+
-        "<br><br>"+
-        "</center>");
-        var impreX;
-        var impreY;
-        var impreXX;
-        var impreYY;
-        if (x1<0) {
-            impreX="( "+x1+" )";
-        }
-        else
-        {
-            impreX=x1;
-        }
-        if (y1<0) {
-            impreY="( "+y1+" )";
-        }
-        else
-        {
-            impreY=y1;
-        }
-        if (xx1<0) {
-            impreXX="( "+xx1+" )";
-        }
-        else
-        {
-            impreXX=xx1;
-        }
-        if (yy1<0) {
-            impreYY="( "+yy1+" )";
-        }
-        else
-        {
-            impreYY=yy1;
-        }
-        $("#solucion").append("<center>Sustituimos los datos obtenidos:"+
-        "<br><br>"+
-        "<font size='3'><b><center><table border='0'>"+
-            "<tr>"+
-                "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-                "<td style='border-bottom: 1px black solid;'>"+y2+" - "+impreY+"</td>"+
-                "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-                "<td style='border-bottom: 1px black solid;'>"+yy2+" - "+impreYY+"</td>"+
-            "</tr>"+
-            "<tr>"+
-                "<td>"+x2+" - "+impreX+"</td>"+
-                "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                "<td>"+xx2+" - "+impreXX+"</td>"+
-            "</tr>"+
-        "</table></center></b></font>"+
-        "<br><br>"+
-        "Realizamos las restas superiores e inferiores:"+
-        "</center>");
-        var restaX;
-        var restaY;
-        var restaXX;
-        var restaYY;
-        restaX=x2-x1;
-        restaY=y2-y1;
-        restaXX=xx2-xx1;
-        restaYY=yy2-yy1;
-        var esResta1=0;
-        var esResta2=0;
-        var esResta11=0;
-        var esResta22=0;
-        var agregarRestaArriba=0;
-        var agregarRestaAbajo=0;
-        if (restaY<0) {
-            esResta1=1;
-            restaY=Math.abs(restaY);
-        }
-        else
-        {
-            esResta1=0;
-            restaY=Math.abs(restaY);   
-        }
-        if (restaX<0) {
-            esResta2=1;
-            restaX=Math.abs(restaX);
-        }
-        else
-        {
-            esResta2=0;
-            restaX=Math.abs(restaX);   
-        }
-        if ((esResta1==1 && esResta2==0) || (esResta1==0 && esResta2==1)) {
-            //restaY=restaY * -1;
-            agregarRestaArriba=1;
-            restaX=Math.abs(restaX);
-        }
-        else
-        {
-            agregarRestaArriba=0;
-        }
-        //para reordenar los numeros negativos
-        if (restaYY<0) {
-            esResta11=1;
-            restaYY=Math.abs(restaYY);
-        }
-        else
-        {
-            esResta11=0;
-            restaYY=Math.abs(restaYY);   
-        }
-        if (restaXX<0) {
-            esResta22=1;
-            restaXX=Math.abs(restaXX);
-        }
-        else
-        {
-            esResta22=0;
-            restaXX=Math.abs(restaXX);   
-        }
-        if ((esResta11==1 && esResta22==0) || (esResta11==0 && esResta22==1)) {
-            //restaYY=restaYY * -1;
-            agregarRestaAbajo=1;
-            restaXX=Math.abs(restaXX);
-        }
-        else
-        {
-            agregarRestaAbajo=0;
-        }
-        if (agregarRestaArriba==1 && agregarRestaAbajo==0) {
-            $("#solucion").append("<center><br>"+
-            "<font size='3'><b><center><table border='0'>"+
-                "<tr>"+
-                    "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-                "</tr>"+
-                "<tr>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>"+restaX+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td>"+restaXX+"</td>"+
-                "</tr>"+
-            "</table></center></b></font>"+
-            "</center>"); 
-            restaY=restaY * -1;   
-        }
-        if (agregarRestaArriba==0 && agregarRestaAbajo==1) {
-         $("#solucion").append("<center><br>"+
-            "<font size='3'><b><table border='0'>"+
-                "<tr>"+
-                    "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+                    
-                    "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-                "</tr>"+
-                "<tr>"+
-                    "<td>"+restaX+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>"+restaXX+"</td>"+
-                "</tr>"+
-            "</table></b></font>"+
-            "</center>");
-            restaYY=restaYY * -1;       
-        }
-        if (agregarRestaArriba==1 && agregarRestaAbajo==1) {
-            $("#solucion").append("<center><br>"+
-            "<font size='3'><b><table border='0'>"+
-                "<tr>"+
-                    "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+                    
-                    "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-                "</tr>"+
-                "<tr>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>"+restaX+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>&nbsp;&nbsp;</td>"+
-                    "<td>"+restaXX+"</td>"+
-                "</tr>"+
-            "</table></b></font>"+
-            "</center>");
-            restaY=restaY * -1;
-            restaYY=restaYY * -1;
-        }
-        if (agregarRestaArriba==0 && agregarRestaAbajo==0) {
-            $("#solucion").append("<center><br>"+
-            "<font size='3'><b><center><table border='0'>"+
-                "<tr>"+
-                    "<td rowspan='2'><b>m<sub>AB</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td rowspan='2'><b>m<sub>CD</sub> = &nbsp;&nbsp;</b></td>"+
-                    "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-                "</tr>"+
-                "<tr>"+
-                    "<td>"+restaX+"</td>"+
-                    "<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>"+
-                    "<td>"+restaXX+"</td>"+
-                "</tr>"+
-            "</table></center></b></font>"+
-            "</center>");
-        }
-        var paso=0;
-        var paso1=0;
-        console.log(restaY,restaX,restaYY,restaXX);
-        if (restaY==restaYY && restaX==restaXX) {
-            esIgual=1;
-            paso=1;
-        }
-        else
-        {
-            paso=0;
-        }
-        if (Math.abs(restaY)==Math.abs(restaXX) && Math.abs(restaX)==Math.abs(restaYY)) {
-            paso1=1;
-        }
-        else
-        {
-            paso1=0;
-            var numerador;
-            var denominador;
-            var entero;
-            console.log("datos para division: ",restaYY,restaXX,restaY,restaX);
-            multiplicarF(restaYY,restaXX,restaY,restaX);
-            entero=enteroMultiGlobal;
-            numerador=numeradorMultiGlobal;
-            denominador=denominadorMultiGlobal;
-            console.log("obtenido division: ",entero,numerador,denominador);
-            if (entero!=0) {
-                if (numerador==0) {
-                    if (entero==-1) {
-                        paso1=1;
-                    }
-                    else
-                    {
-                        paso1=0;
-                    }
-                }
-                else
-                {
-                    paso1=0;
-                }
-            }
-            else
-            {
-                if (numerador==-1) {
-                    if (denominador==1 || denominador==0) {
-                        paso1=1;
-                    }
-                    else
-                    {
-                        paso1=0;
-                    }
-                }
-                else
-                {
-                    paso1=0;
-                }
-            }
-        }
-        if (paso==1) {
-            $("#solucion").append("<center><br>"+
-                "<b>Las rectas son paralelas entre sí, ya que sus pendientes son iguales.</b>"+
-                "</center>");
-        }
-        if (paso1==1) {
-            $("#solucion").append("<center><br>"+
-                "<b>Las rectas son perpendiculares entre sí, ya que el resultado de la multiplicación entre ellas es igual a -1; Es decir:<br><br>"+
-                "<font size='3'><b><table border='0'>"+
-                    "<tr>"+
-                        "<td style='border-bottom: 1px black solid;'>"+restaY+"</td>"+
-                        "<td rowspan='2'>&nbsp;(&nbsp;</td>"+
-                        "<td style='border-bottom: 1px black solid;'>"+restaYY+"</td>"+
-                        "<td rowspan='2'>&nbsp;)&nbsp;=&nbsp;-1</td>"+
-                    "</tr>"+
-                    "<tr>"+
-                        "<td>"+restaX+"</td>"+
-                        "<td>"+restaXX+"</td>"+
-                    "</tr>"+
-                "</table></b></font>"+
-                "</b>"+
-                "</center>");   
-        }
-        if (paso==0 && paso1==0) {
-            $("#solucion").append("<center><br>"+
-                "<b>Las rectas no son ni paralelas ni perpendiculares entre sí.</b>"+
-                "</center>"); 
-        }
-        $("#solucion").append("<br><font size='3'><center><button style='button' class='btn btn-warning btn-rounded' onclick='Datos();'>Cambiar Puntos</button></center></font>");
-        graficarPunto(x1,y1,x2,y2,xx1,yy1,xx2,yy2);
-        $("#Puntos").fadeOut(0);
-        $("#Resultado").fadeIn(300);
-        $("#grafica").fadeIn(300);
-}
-function graficarPunto(x1,y1,x2,y2,xx1,yy1,xx2,yy2){
-        var x1N = x1;
-        var y1N = y1;
-        var x2N = x2;
-        var y2N = y2;
-        var x1NN = xx1;
-        var y1NN = yy1;
-        var x2NN = xx2;
-        var y2NN = yy2;
-        var mayor;
-        var mayorN;
-        if (x1N>y1N) {
-            if (x1N>x2N) {
-                if (x1N>y2N) {
-                    mayor=x1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        else
-        {
-            if (y1N>x2N) {
-                if (y1N>y2N) {
-                    mayor=y1N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-            else
-            {
-                if (x2N>y2N) {
-                    mayor=x2N;
-                }
-                else
-                {
-                    mayor=y2N;
-                }
-            }
-        }
-        if (mayor>x1NN) {
-            if (mayor>y1NN) {
-                if (mayor>x2NN) {
-                    if (mayor>y2NN) {
-                        mayor=mayor;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }
-                else
-                {
-                    if (x2NN>y2NN) {
-                        mayor=x2NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }
-            }
-            else
-            {
-                if (y1NN>x2NN) {
-                    if (y1NN>y2NN) {
-                        mayor=y1NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    } 
-                }
-                else
-                {
-                    if (x2NN>y2NN) {
-                        mayor=x2NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }
-            }
-        }else{
-            if (x1NN>y1NN) {
-                if (x1NN>x2NN) {
-                    if (x1NN>y2NN) {
-                        mayor=x1NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }else{
-                    if (x2NN>y2NN) {
-                        mayor=x2NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }
-            }
-            else
-            {
-                if (y1NN>x2NN) {
-                    if (y1NN>y2NN) {
-                        mayor=y1NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }
-                else
-                {
-                    if (x2NN>y2NN) {
-                        mayor=x2NN;
-                    }
-                    else
-                    {
-                        mayor=y2NN;
-                    }
-                }
-            }
-        }
-        console.log(mayor);
-        mayor=mayor+2;
-        mayorN=mayor * -1;
-        //brd = JXG.JSXGraph.freeBoard(brd);
-        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[mayorN,mayor,mayor,mayorN], keepaspectratio:true, axis:true,showCopyright:false});
-        p1 = brd.create('point',[x1,y1],{visible:true});
-        p2 = brd.create('point',[x2,y2],{visible:true});
-        p3 = brd.create('point',[xx1,yy1],{visible:true});
-        p4 = brd.create('point',[xx2,yy2],{visible:true});
-        var s1 = brd.create('segment',[p1, p2],{strokeColor:'#01aeef'}); 
-        var s2 = brd.create('segment',[p3, p4],{strokeColor:'#01aeef'}); 
 
-}
-function Datos(){
-    $("#Resultado").fadeOut(0);
-    $("#grafica").fadeOut(0);
-    $("#Puntos").fadeIn(300);
-}
-////////////
 function Puntos(){
     $("#Resultado").fadeOut(0);
     $("#Puntos").fadeIn(300);
@@ -1902,433 +1344,717 @@ function cambioEjemplo(opc) {
     }
 }
 
+function cambioPractica(opc) {
+    switch (opc) {
+        case 1: {
+            $("#Practica2").fadeOut(0);
+            $("#Practica3").fadeOut(0);
+            $("#Practica1").fadeIn(300);
+        }
+            break;
+        case 2: {
+            $("#Practica1").fadeOut(0);
+            $("#Practica3").fadeOut(0);
+            $("#Practica2").fadeIn(300);
+        }
+            break;
+        case 3: {
+            $("#Practica1").fadeOut(0);
+            $("#Practica2").fadeOut(0);
+            $("#Practica3").fadeIn(300);
+        }
+            break;
+    }
+}
 
-function cambia_practica(opc){
-    switch(opc)
-    {
-        case 1:
-        {
-            $("#prac_2").fadeOut(0);
-            $("#prac_3").fadeOut(0);
-            $("#prac_4").fadeOut(0);
-            $("#prac_1").fadeIn(300);
-        }break;
-        case 2:
-        {
-            $("#prac_1").fadeOut(0);
-            $("#prac_3").fadeOut(0);
-            $("#prac_4").fadeOut(0);
-            $("#prac_2").fadeIn(300);
-        }break;
-        case 3:
-        {
-            $("#prac_2").fadeOut(0);
-            $("#prac_1").fadeOut(0);
-            $("#prac_4").fadeOut(0);
-            $("#prac_3").fadeIn(300);
-        }break;
-        case 4:
-        {
-            $("#prac_2").fadeOut(0);
-            $("#prac_3").fadeOut(0);
-            $("#prac_1").fadeOut(0);
-            $("#prac_4").fadeIn(300);
-        }break;
-    }
-}
-function VerificarEvaluacion1(){
-    if ($('input:radio[name=1rpe]:checked').val()==1) {
+function VerificarEvaluacion1P() {
+    if ($('input:radio[name=1rpe]:checked').val() == 1) {
         $("#False2P1").fadeOut(0);
         $("#False3P1").fadeOut(0);
         $("#False4P1").fadeOut(0);
         $("#False6P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
-        $("#False1P1").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        $("#False5P1").fadeOut(0);
+        $("#True1P1").fadeIn(300);
+        toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
     } else {
-        $("#False1P1").fadeOut(0);
+        $("#True1P1").fadeOut(0);
     }
-    if ($('input:radio[name=1rpe]:checked').val()==2) {
-        $("#False1P1").fadeOut(0);
+    if ($('input:radio[name=1rpe]:checked').val() == 2) {
+        $("#True1P1").fadeOut(0);
         $("#False3P1").fadeOut(0);
         $("#False4P1").fadeOut(0);
         $("#False6P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
+        $("#False5P1").fadeOut(0);
         $("#False2P1").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False2P1").fadeOut(0);
     }
-    if ($('input:radio[name=1rpe]:checked').val()==3) {
-        $("#False1P1").fadeOut(0);
+    if ($('input:radio[name=1rpe]:checked').val() == 3) {
+        $("#True1P1").fadeOut(0);
         $("#False2P1").fadeOut(0);
         $("#False4P1").fadeOut(0);
         $("#False6P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
+        $("#False5P1").fadeOut(0);
         $("#False3P1").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False3P1").fadeOut(0);
     }
-    if ($('input:radio[name=1rpe]:checked').val()==4) {
-        $("#False1P1").fadeOut(0);
+    if ($('input:radio[name=1rpe]:checked').val() == 4) {
+        $("#True1P1").fadeOut(0);
         $("#False2P1").fadeOut(0);
         $("#False3P1").fadeOut(0);
         $("#False6P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
+        $("#False5P1").fadeOut(0);
         $("#False4P1").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False4P1").fadeOut(0);
     }
-    if ($('input:radio[name=1rpe]:checked').val()==5) {
-        $("#False1P1").fadeOut(0);
+    if ($('input:radio[name=1rpe]:checked').val() == 5) {
+        $("#True1P1").fadeOut(0);
         $("#False2P1").fadeOut(0);
         $("#False3P1").fadeOut(0);
         $("#False4P1").fadeOut(0);
         $("#False6P1").fadeOut(0);
-        $("#True5P1").fadeIn(300);
-        toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+        $("#False5P1").fadeIn(300);
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
-        $("#True5P1").fadeOut(0);
+        $("#False5P1").fadeOut(0);
     }
-    if ($('input:radio[name=1rpe]:checked').val()==6) {
-        $("#False1P1").fadeOut(0);
+    if ($('input:radio[name=1rpe]:checked').val() == 6) {
+        $("#True1P1").fadeOut(0);
         $("#False2P1").fadeOut(0);
         $("#False3P1").fadeOut(0);
         $("#False4P1").fadeOut(0);
-        $("#True5P1").fadeOut(0);
+        $("#False5P1").fadeOut(0);
         $("#False6P1").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False6P1").fadeOut(0);
     }
 }
-function limpiarPractica1(){
-    $('input[name=1rpe]').attr('checked',false);
-    $("#False1P1").fadeOut(0);
-    $("#False2P1").fadeOut(0);
-    $("#False3P1").fadeOut(0);
-    $("#False4P1").fadeOut(0);
-    $("#True5P1").fadeOut(0);
-    $("#False6P1").fadeOut(0); 
-    toastr.success('Infomación borrada','Muy Bien');  
-}
-function VerificarEvaluacion2(){
-    if ($('input:radio[name=2rpe]:checked').val()==1) {
+function VerificarEvaluacion2P() {
+    if ($('input:radio[name=2rpe]:checked').val() == 1) {
         $("#False2P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
+        $("#True4P2").fadeOut(0);
         $("#False5P2").fadeOut(0);
         $("#False6P2").fadeOut(0);
-        $("#True3P2").fadeOut(0);
+        $("#False3P2").fadeOut(0);
         $("#False1P2").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False1P2").fadeOut(0);
     }
-    if ($('input:radio[name=2rpe]:checked').val()==2) {
+    if ($('input:radio[name=2rpe]:checked').val() == 2) {
         $("#False1P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
+        $("#True4P2").fadeOut(0);
         $("#False5P2").fadeOut(0);
         $("#False6P2").fadeOut(0);
         $("#True3P2").fadeOut(0);
         $("#False2P2").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False2P2").fadeOut(0);
     }
-    if ($('input:radio[name=2rpe]:checked').val()==3) {
+    if ($('input:radio[name=2rpe]:checked').val() == 3) {
         $("#False1P2").fadeOut(0);
         $("#False2P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
+        $("#True4P2").fadeOut(0);
         $("#False5P2").fadeOut(0);
         $("#False6P2").fadeOut(0);
-        $("#True3P2").fadeIn(300);
-        toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+        $("#False3P2").fadeIn(300);
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
-        $("#True3P2").fadeOut(0);
+        $("#False3P2").fadeOut(0);
     }
-    if ($('input:radio[name=2rpe]:checked').val()==4) {
+    if ($('input:radio[name=2rpe]:checked').val() == 4) {
         $("#False1P2").fadeOut(0);
         $("#False2P2").fadeOut(0);
         $("#False5P2").fadeOut(0);
         $("#False6P2").fadeOut(0);
-        $("#True3P2").fadeOut(0);
-        $("#False4P2").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        $("#False3P2").fadeOut(0);
+        $("#True4P2").fadeIn(300);
+        toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
     } else {
-        $("#False4P2").fadeOut(0);
+        $("#True4P2").fadeOut(0);
     }
-    if ($('input:radio[name=2rpe]:checked').val()==5) {
+    if ($('input:radio[name=2rpe]:checked').val() == 5) {
         $("#False1P2").fadeOut(0);
         $("#False2P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
+        $("#True4P2").fadeOut(0);
         $("#False6P2").fadeOut(0);
-        $("#True3P2").fadeOut(0);
+        $("#False3P2").fadeOut(0);
         $("#False5P2").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False5P2").fadeOut(0);
     }
-    if ($('input:radio[name=2rpe]:checked').val()==6) {
+    if ($('input:radio[name=2rpe]:checked').val() == 6) {
         $("#False1P2").fadeOut(0);
         $("#False2P2").fadeOut(0);
-        $("#False4P2").fadeOut(0);
+        $("#True4P2").fadeOut(0);
         $("#False5P2").fadeOut(0);
-        $("#True3P2").fadeOut(0);
+        $("#False3P2").fadeOut(0);
         $("#False6P2").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False6P2").fadeOut(0);
     }
 }
-function limpiarPractica2(){
-    $('input[name=2rpe]').attr('checked',false);
-    $("#False1P2").fadeOut(0);
-    $("#False2P2").fadeOut(0);
-    $("#True3P2").fadeOut(0);
-    $("#False4P2").fadeOut(0);
-    $("#False5P2").fadeOut(0);
-    $("#False6P2").fadeOut(0); 
-    toastr.success('Infomación borrada','Muy Bien');  
-}
-function VerificarEvaluacion3(){
-    if ($('input:radio[name=3rpe]:checked').val()==1) {
+function VerificarEvaluacion3P() {
+    if ($('input:radio[name=3rpe]:checked').val() == 1) {
         $("#True2P3").fadeOut(0);
         $("#False3P3").fadeOut(0);
         $("#False4P3").fadeOut(0);
         $("#False5P3").fadeOut(0);
         $("#False6P3").fadeOut(0);
         $("#False1P3").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False1P3").fadeOut(0);
     }
-    if ($('input:radio[name=3rpe]:checked').val()==2) {
+    if ($('input:radio[name=3rpe]:checked').val() == 2) {
         $("#False3P3").fadeOut(0);
         $("#False4P3").fadeOut(0);
         $("#False5P3").fadeOut(0);
         $("#False6P3").fadeOut(0);
         $("#False1P3").fadeOut(0);
         $("#True2P3").fadeIn(300);
-        toastr.success('Has seleccionado la respuesta correcta, continua practicando','Excelente');
+        toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
     } else {
         $("#True2P3").fadeOut(0);
     }
-    if ($('input:radio[name=3rpe]:checked').val()==3) {
+    if ($('input:radio[name=3rpe]:checked').val() == 3) {
         $("#True2P3").fadeOut(0);
         $("#False4P3").fadeOut(0);
         $("#False5P3").fadeOut(0);
         $("#False6P3").fadeOut(0);
         $("#False1P3").fadeOut(0);
         $("#False3P3").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False3P3").fadeOut(0);
     }
-    if ($('input:radio[name=3rpe]:checked').val()==4) {
+    if ($('input:radio[name=3rpe]:checked').val() == 4) {
         $("#True2P3").fadeOut(0);
         $("#False3P3").fadeOut(0);
         $("#False5P3").fadeOut(0);
         $("#False6P3").fadeOut(0);
         $("#False1P3").fadeOut(0);
         $("#False4P3").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False4P3").fadeOut(0);
     }
-    if ($('input:radio[name=3rpe]:checked').val()==5) {
+    if ($('input:radio[name=3rpe]:checked').val() == 5) {
         $("#True2P3").fadeOut(0);
         $("#False3P3").fadeOut(0);
         $("#False4P3").fadeOut(0);
         $("#False6P3").fadeOut(0);
         $("#False1P3").fadeOut(0);
         $("#False5P3").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False5P3").fadeOut(0);
     }
-    if ($('input:radio[name=3rpe]:checked').val()==6) {
+    if ($('input:radio[name=3rpe]:checked').val() == 6) {
         $("#True2P3").fadeOut(0);
         $("#False3P3").fadeOut(0);
         $("#False4P3").fadeOut(0);
         $("#False5P3").fadeOut(0);
         $("#False1P3").fadeOut(0);
         $("#False6P3").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
+        toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
     } else {
         $("#False6P3").fadeOut(0);
     }
 }
-function limpiarPractica3(){
-    $('input[name=3rpe]').attr('checked',false);
-    $("#True2P3").fadeOut(0);
-    $("#False1P3").fadeOut(0);
-    $("#False3P3").fadeOut(0);
-    $("#False4P3").fadeOut(0);
-    $("#False5P3").fadeOut(0);
-    $("#False6P3").fadeOut(0); 
-    toastr.success('Infomación borrada','Muy Bien');  
+
+function changeButtonMenos(){
+    tipoBoton1=2;
+    $("#btn1Yes").fadeOut(0);
+    $("#btn1No").fadeIn(100);
+
 }
-function VerificarEvaluacion4(){
-    if ($('input:radio[name=4rpe]:checked').val()==1) {
-        $("#False2P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False1P4").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
-    } else {
-        $("#False1P4").fadeOut(0);
-    }
-    if ($('input:radio[name=4rpe]:checked').val()==2) {
-        $("#False1P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#False2P4").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
-    } else {
-        $("#False2P4").fadeOut(0);
-    }
-    if ($('input:radio[name=4rpe]:checked').val()==3) {
-        $("#False1P4").fadeOut(0);
-        $("#False2P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#False3P4").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
-    } else {
-        $("#False3P4").fadeOut(0);
-    }
-    if ($('input:radio[name=4rpe]:checked').val()==4) {
-        $("#False1P4").fadeOut(0);
-        $("#False2P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#True4P4").fadeIn(300);
-        toastr.success('Has seleccionado la respuesta correcta','Excelente');
-    } else {
-        $("#True4P4").fadeOut(0);
-    }
-    if ($('input:radio[name=4rpe]:checked').val()==5) {
-        $("#False1P4").fadeOut(0);
-        $("#False2P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False6P4").fadeOut(0);
-        $("#False5P4").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
-    } else {
-        $("#False5P4").fadeOut(0);
-    }
-    if ($('input:radio[name=4rpe]:checked').val()==6) {
-        $("#False1P4").fadeOut(0);
-        $("#False2P4").fadeOut(0);
-        $("#False3P4").fadeOut(0);
-        $("#True4P4").fadeOut(0);
-        $("#False5P4").fadeOut(0);
-        $("#False6P4").fadeIn(300);
-        toastr.error('Has seleccionado la respuesta incorrecta','Lo Siento');
-    } else {
-        $("#False6P4").fadeOut(0);
-    }
-}
-function limpiarPractica4(){
-    $('input[name=4rpe]').attr('checked',false);
-    $("#False1P4").fadeOut(0);
-    $("#False2P4").fadeOut(0);
-    $("#False3P4").fadeOut(0);
-    $("#True4P4").fadeOut(0);
-    $("#False5P4").fadeOut(0);
-    $("#False6P4").fadeOut(0); 
-    toastr.success('Infomación borrada','Muy Bien');  
+function changeButtonMas(){
+    tipoBoton1=1;
+    $("#btn1No").fadeOut(0);
+    $("#btn1Yes").fadeIn(100);
+
 }
 
+function changeButtonMenos2(){
+    tipoBoton2=2;
+    $("#btn2Yes").fadeOut(0);
+    $("#btn2No").fadeIn(100);
 
-function multiplicarF(numPT,denPT,numRT,denRT){
-    var nuevoEnte=0;
-    var nuevoNum=0;
-    var nuevoDen=0;
-    var absNumberN;
-    var absNumberD;
-    var division=0;
-    //0--->Menor    1--->Mayor
-    var esMenor=0;
-    //si el valor del entero se encuentra vacio
-    nuevoNum=numPT * numRT;
-    nuevoDen=denPT * denRT;
-    reduce(nuevoNum,nuevoDen);
-    nuevoNum=nuevoAn;
-    nuevoDen=nuevoAd;
-    absNumberN=Math.abs(nuevoNum);
-    absNumberD=Math.abs(nuevoDen);
-    if (absNumberN>absNumberD) {
-        division=nuevoNum/nuevoDen;
-        division=parseInt(division);
-        console.log("division: ",division);
-        if (division!=0) {
-            numeradorMultiGlobal=nuevoNum-(division*nuevoDen);
-            enteroMultiGlobal=division;
-            denominadorMultiGlobal=nuevoDen;
+}
+function changeButtonMas2(){
+    tipoBoton2=1;
+    $("#btn2No").fadeOut(0);
+    $("#btn2Yes").fadeIn(100);
+
+}
+
+function limpiarResolucion(){
+    //alert("Limpiando");
+    document.getElementById("x").value="";
+    document.getElementById("y").value="";
+    document.getElementById("a").value="";
+    document.getElementById("b").value="";
+    document.getElementById("c").value="";
+    $("#Resultado").fadeOut(0);
+    toastr.success('Los campos se limpiaron correctamente', 'Excelente');
+}
+
+function generarResolucion(){
+    //alert("Generando");
+    var x,y,a,b,c;
+    var multiplicacion=0;
+    x=document.getElementById("x").value;
+    y=document.getElementById("y").value;
+    a=document.getElementById("a").value;
+    b=document.getElementById("b").value;
+    c=document.getElementById("c").value;
+    if(x=="" || y==""){
+        toastr.error('Ambos puntos son necesarios concerlos', 'Alto');
+    }
+    else{
+        if(a==""){
+            a=1;
         }
-    }
-    else
-    {
-        reduce(nuevoNum,nuevoDen);
-        numeradorMultiGlobal=nuevoAn;
-        denominadorMultiGlobal=nuevoAd;
-        enteroMultiGlobal=0;
+        if(b=="")
+        {
+            b=1;
+        }
+        if(c==""){
+            c=1;
+        }
+
+        //creando solucion
+
+        if(tipoBoton1==1 && tipoBoton2==1){
+            /*multiplicacion = (parseInt(x) * parseInt(a)) + (parseInt(y) * parseInt(b)) + parseInt(c);
+            multiplicacion = Math.abs(multiplicacion);*/
+
+            $("#solucion").html("<center>Conociendo los puntos y los valores de la recta los sustituimos en la fórmula de la distancia" +
+                "<br><br><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>" +
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+a+"("+x+") + "+b+"("+y+") + "+c+" |</td>" +
+                        "</tr>"+
+                        "<tr>"+
+                        "+<td style='text-align: center;'>√ ("+a+")<sup>2</sup> + ("+b+")<sup>2</sup></td>"+
+                    "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Realizamos las operaciones" +
+                "<br><br>" +
+                "</center>");
+
+                var ax = parseInt(a) * parseInt(x);
+                var by = parseInt(b) * parseInt(y);
+                var aC= Math.pow(parseInt(a),2);
+                var bC= Math.pow(parseInt(b),2);
+
+            if(by<0){
+                $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+"  "+by+" + "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            else{
+                $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+" + "+by+" + "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+                var sumaArriba = ax + by + parseInt(c);
+                var sumaAbajo = aC + bC;
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+sumaArriba+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ "+sumaAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Obtenemos el absoluto y la raíz cuadrada" +
+                "<br><br>" +
+                "</center>");
+
+                var absArriba = Math.abs(sumaArriba);
+                var raizAbajo = Math.sqrt(sumaAbajo);
+                raizAbajo = raizAbajo.toFixed(2);
+
+                var distancia= absArriba / raizAbajo;
+
+                distancia = distancia.toFixed(2);
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'> "+absArriba+" </td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>"+raizAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Por lo tanto, la distancia es de: " +
+                "<font size='3'><b>"+distancia+"</b></font>" +
+                "<br><br>" +
+                "</center>");
+
+        }
+        if(tipoBoton1==1 && tipoBoton2==2){
+            multiplicacion = (parseInt(x) * parseInt(a)) + (parseInt(y) * parseInt(b)) - parseInt(c);
+            multiplicacion = Math.abs(multiplicacion);
+
+            c = Math.abs(c);
+
+            $("#solucion").html("<center>Conociendo los puntos y los valores de la recta los sustituimos en la fórmula de la distancia<br><br>" +
+                "<font size='3'><b>" +
+                "<table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+a+"("+x+") + "+b+"("+y+") - "+c+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ ("+a+")<sup>2</sup> + ("+b+")<sup>2</sup></td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Realizamos las operaciones" +
+                "<br><br>" +
+                "</center>");
+
+            var ax = parseInt(a) * parseInt(x);
+            var by = parseInt(b) * parseInt(y);
+            var aC= Math.pow(parseInt(a),2);
+            var bC= Math.pow(parseInt(b),2);
+
+            if(by<0){
+                $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+"  "+by+" + "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            else{
+                $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+" + "+by+" + "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+            var sumaArriba = ax + by - parseInt(c);
+            var sumaAbajo = aC + bC;
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+sumaArriba+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ "+sumaAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Obtenemos el absoluto y la raíz cuadrada" +
+                "<br><br>" +
+                "</center>");
+
+            var absArriba = Math.abs(sumaArriba);
+            var raizAbajo = Math.sqrt(sumaAbajo);
+            raizAbajo = raizAbajo.toFixed(2);
+
+            var distancia= absArriba / raizAbajo;
+
+            distancia = distancia.toFixed(2);
+
+            $("#solucion").append("<center><font size='3'><b><table border='0'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'> "+absArriba+" </td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>"+raizAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Por lo tanto, la distancia es de: " +
+                "<font size='3'><b>"+distancia+"</b></font>" +
+                "<br><br>" +
+                "</center>");
+
+
+        }
+        if(tipoBoton1==2 && tipoBoton2==1){
+            multiplicacion = (parseInt(x) * parseInt(a)) - (parseInt(y) * parseInt(b)) + parseInt(c);
+            multiplicacion = Math.abs(multiplicacion);
+
+            b = Math.abs(b);
+
+            $("#solucion").html("<center>Conociendo los puntos y los valores de la recta los sustituimos en la fórmula de la distancia<br><br>" +
+                "<font size='3'><b>" +
+                "<table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+a+"("+x+") - "+b+"("+y+") + "+c+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ ("+a+")<sup>2</sup> + (- "+b+")<sup>2</sup></td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Realizamos las operaciones" +
+                "<br><br>" +
+                "</center>");
+
+            var ax = parseInt(a) * parseInt(x);
+            var by = (parseInt(b) * - 1) * parseInt(y);
+            var aC= Math.pow(parseInt(a),2);
+            var bC= Math.pow(parseInt(b),2);
+
+            if(by<0){
+                $("#solucion").append("<center><font size='3'><b><table border='0'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+"  "+by+" + "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            else{
+                $("#solucion").append("<center><font size='3'><b><table border='0'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+" + "+by+" + "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+            var sumaArriba = ax + by + parseInt(c);
+            var sumaAbajo = aC + bC;
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+sumaArriba+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ "+sumaAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Obtenemos el absoluto y la raíz cuadrada" +
+                "<br><br>" +
+                "</center>");
+
+            var absArriba = Math.abs(sumaArriba);
+            var raizAbajo = Math.sqrt(sumaAbajo);
+            raizAbajo = raizAbajo.toFixed(2);
+
+            var distancia= absArriba / raizAbajo;
+
+            distancia = distancia.toFixed(2);
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'> "+absArriba+" </td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>"+raizAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Por lo tanto, la distancia es de: " +
+                "<font size='3'><b>"+distancia+"</b></font>" +
+                "<br><br>" +
+                "</center>");
+
+        }
+        if(tipoBoton1==2 && tipoBoton2==2){
+            multiplicacion = (parseInt(x) * parseInt(a)) - (parseInt(y) * parseInt(b)) - parseInt(c);
+            multiplicacion = Math.abs(multiplicacion);
+
+            b = Math.abs(b);
+            c = Math.abs(c);
+
+            $("#solucion").html("<center>Conociendo los puntos y los valores de la recta los sustituimos en la fórmula de la distancia<br><br>" +
+                "<font size='3'><b>" +
+                "<table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+a+"("+x+") - "+b+"("+y+") - "+c+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ ("+a+")<sup>2</sup> + ( - "+b+")<sup>2</sup></td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Realizamos las operaciones" +
+                "<br><br>" +
+                "</center>");
+
+            var ax = parseInt(a) * parseInt(x);
+            var by = (parseInt(b) * - 1) * parseInt(y);
+            var aC= Math.pow(parseInt(a),2);
+            var bC= Math.pow(parseInt(b),2);
+
+            if(by<0){
+                $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+"  "+by+" - "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+            else{
+                $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>" +
+                    "<tr>"+
+                    "<td rowspan='2'>d =&nbsp;</td>" +
+                    "<td style='border-bottom: 1px solid black;'>| "+ax+" + "+by+" - "+c+" |</td>" +
+                    "</tr>"+
+                    "<tr>"+
+                    "+<td style='text-align: center;'>√ "+aC+" + "+bC+"</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</b></font>" +
+                    "<br>" +
+                    "Realizamos las sumas" +
+                    "<br><br>" +
+                    "</center>");
+            }
+
+            var sumaArriba = ax + by - parseInt(c);
+            var sumaAbajo = aC + bC;
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'>| "+sumaArriba+" |</td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>√ "+sumaAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Obtenemos el absoluto y la raíz cuadrada" +
+                "<br><br>" +
+                "</center>");
+
+            var absArriba = Math.abs(sumaArriba);
+            var raizAbajo = Math.sqrt(sumaAbajo);
+            raizAbajo = raizAbajo.toFixed(2);
+
+            var distancia= absArriba / raizAbajo;
+
+            distancia = distancia.toFixed(2);
+
+            $("#solucion").append("<center><font size='3'><b><table border='0' style='text-align: center;'>"+
+                "<tr>"+
+                "<td rowspan='2'>d =&nbsp;</td>"+
+                "<td style='border-bottom: 1px solid black;'> "+absArriba+" </td>"+
+                "</tr>"+
+                "<tr>"+
+                "+<td style='text-align: center;'>"+raizAbajo+"</td>"+
+                "</tr>"+
+                "</table>"+
+                "</b></font>" +
+                "<br>" +
+                "Por lo tanto, la distancia es de: " +
+                "<font size='3'><b>"+distancia+"</b></font>" +
+                "<br><br>" +
+                "</center>");
+
+        }
+        //alert(multiplicacion);
+        $("#Resultado").fadeIn(300);
+
     }
 }
-function reduce(An,Ad) {
-  neg=1; //1 if positive, -1 if negative
-  //convert to strings
-  var ng=An+'';
-  var dg=Ad+''
-  if(ng.indexOf('-')!=-1){  //check to see if answer is negative.
-    neg=-1
-  }
-  if(dg.indexOf('-')!=-1){
-    neg=-1
-  }
-  if(ng.indexOf('-')!=-1&&dg.indexOf('-')!=-1)  {//if both numerator and denominator are negative the answer is positive
-    neg=1
-  }
-  var factorX //highest common factor
-
-  if ( An == 0 || Ad == 0 ) {
-    factorX=1;
-    return;
-  }
-
-  An = Math.abs( An );
-  Ad = Math.abs( Ad );
-
-  var factorX = 1;
-
-  //Find common factors of Numerator and Denominator
-  for ( var x = 2; x <= Math.min( An, Ad ); x ++ ) {
-    var check1 = An / x;
-    if ( check1 == Math.round( check1 ) ) {
-      var check2 = Ad / x;
-      if ( check2 == Math.round( check2 ) ) {
-        factorX = x;
-      }
-    }
-  }
-
-  An=(An/factorX)*neg;  //divide by highest common factor to reduce fraction then multiply by neg to make positive or negative
-  Ad=Ad/factorX;  //divide by highest common factor to reduce fraction
-  nuevoAn=An;
-  nuevoAd=Ad;
-  //console.log("an: ",An," ad: ",Ad);
-}
-
 
 function tour1(){
     var tour = new Tour({
