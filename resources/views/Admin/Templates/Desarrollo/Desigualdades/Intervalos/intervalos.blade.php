@@ -124,9 +124,54 @@
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-md-6"></div>
                                         <div class="col-md-6">
-                                            <div class="jxgbox" id="plano1" style="width: 300px;height: 300px; "></div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-info">
+                                                        <p>Ingresa el valor para <b>m </b>y <b>n</b>. <br>
+                                                            Si dejas un campo en blanco se asume que es infinito.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor m</label>
+                                                    <input type="number" class="form-control" id="valorM">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor n</label>
+                                                    <input type="number" class="form-control" id="valorN">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-info">
+                                                        <p>
+                                                            Presiona el tipo de intervalo de tu ejercicio.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row text-center">
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(1)"><b>[ m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(2)"><b>] m,n [</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(3)"><b>] m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(4)"><b>[ m,n [</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="jxgbox" id="plano1" style="width: 450px;height: 300px; "></div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,10 +184,59 @@
     </div>
 </div>
 <script>
-    brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-5,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
-    p1 = brd.createElement('point',[1,0],{visible:false});
-    p2 = brd.createElement('point',[-2,0],{visible:false});
-    var t1 = brd.create('text',[1,0.6," ] "],{fontSize:25,cssClass:""});
-    var t2 = brd.create('text',[-2,0.6," [ "],{fontSize:25,cssClass:""});
-    var l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:2,snapSizeX:5});
+    brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+    var p1;
+    var p2;
+    var t1;
+    var t2;
+    var l1;
+    //dibujaIntervalo();
+
+    function dibujaIntervalo(op){
+        brd = JXG.JSXGraph.freeBoard(brd);
+        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+        var punto1=0;
+        var punto2=0;
+        if($('#valorM').val()==''){
+            punto1=-10000;
+        }else{
+            punto1=$('#valorM').val();
+        }
+        if($('#valorN').val()==''){
+            punto2=10000;
+        }else{
+            punto2=$('#valorN').val();
+        }
+        console.warn('M',punto1);
+        console.warn('N',punto2);
+        if(op==1){
+            p1 = brd.createElement('point',[punto1,0],{visible:false});
+            p2 = brd.createElement('point',[punto2,0],{visible:false});
+            t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+            t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+        }else {
+            if(op==2){
+                p1 = brd.createElement('point',[punto1,0],{visible:false});
+                p2 = brd.createElement('point',[punto2,0],{visible:false});
+                t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+            }else{
+                if(op==3){
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                }else{
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                }
+            }
+        }
+    }
 </script>
