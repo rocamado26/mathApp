@@ -129,7 +129,17 @@
                                                 <div class="col-md-12">
                                                     <div class="alert alert-info">
                                                         <p>Ingresa el valor para <b>m </b>y <b>n</b>. <br>
-                                                            Si dejas un campo en blanco se asume que es infinito.
+                                                            Si dejas un campo en blanco se asume que es infinito. <br>
+                                                            Presiona el tipo de intervalo de tu ejercicio.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-warning">
+                                                        <p>
+                                                            Conjunto <b>A</b>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -142,16 +152,6 @@
                                                 <div class="col-sm-6">
                                                     <label for="">Valor n</label>
                                                     <input type="number" class="form-control" id="valorN">
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="alert alert-info">
-                                                        <p>
-                                                            Presiona el tipo de intervalo de tu ejercicio.
-                                                        </p>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <br>
@@ -169,9 +169,52 @@
                                                     <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(4)"><b>[ m,n [</b></button>
                                                 </div>
                                             </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-warning">
+                                                        <p>
+                                                            Conjunto <b>B</b>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor m</label>
+                                                    <input type="number" class="form-control" id="valorM2">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor n</label>
+                                                    <input type="number" class="form-control" id="valorN2">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row text-center">
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(1)"><b>[ m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(2)"><b>] m,n [</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(3)"><b>] m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(4)"><b>[ m,n [</b></button>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="jxgbox" id="plano1" style="width: 450px;height: 300px; "></div>
+                                            <div class="row">
+                                                <div class="jxgbox" id="plano1" style="width: 450px;height: 300px; "></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-lg-offset-8 col-lg-4">
+                                                    <button type="button" class="btn btn-danger btn-rounded" onclick="limpiaGrafica()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -192,9 +235,12 @@
     var l1;
     //dibujaIntervalo();
 
-    function dibujaIntervalo(op){
+    function limpiaGrafica() {
         brd = JXG.JSXGraph.freeBoard(brd);
         brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+    }
+
+    function dibujaIntervalo(op){
         var punto1=0;
         var punto2=0;
         if($('#valorM').val()==''){
@@ -235,6 +281,51 @@
                     t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
                     t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
                     l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                }
+            }
+        }
+    }
+    function dibujaIntervalo2(op){
+        var punto1=0;
+        var punto2=0;
+        if($('#valorM2').val()==''){
+            punto1=-10000;
+        }else{
+            punto1=$('#valorM2').val();
+        }
+        if($('#valorN2').val()==''){
+            punto2=10000;
+        }else{
+            punto2=$('#valorN2').val();
+        }
+        console.warn('M',punto1);
+        console.warn('N',punto2);
+        if(op==1){
+            p1 = brd.createElement('point',[punto1,0],{visible:false});
+            p2 = brd.createElement('point',[punto2,0],{visible:false});
+            t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+            t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+        }else {
+            if(op==2){
+                p1 = brd.createElement('point',[punto1,0],{visible:false});
+                p2 = brd.createElement('point',[punto2,0],{visible:false});
+                t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+            }else{
+                if(op==3){
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+                }else{
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
                 }
             }
         }
