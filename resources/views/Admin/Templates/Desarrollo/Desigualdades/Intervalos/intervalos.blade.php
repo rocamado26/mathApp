@@ -43,16 +43,17 @@
                                                 <br>Los intervalos finitos pueden ser cerrados, abiertos o semiabiertos.
                                                 Sean <b> a </b>y <b>b</b> dos números reales tales que <b> a < b</b>.
                                                 <br><br>
-                                                <strong>Intervalo cerrado</strong><br>
-                                                Es el conjunto de números reales formado por a, b y todos los comprendidos entre ambos.
+                                                <strong>Intervalo cerrado [ m, n ]</strong><br>
+                                                <img src="img/iconos/desigualdades/desarrollo/intervalos/intervalo-c.PNG" class="img-responsive">
+                                                <br>
+                                                <strong>Intervalo abierto ] m, n [</strong><br>
+                                                <img src="img/iconos/desigualdades/desarrollo/intervalos/intervalo-a-a.PNG" class="img-responsive">
+                                                <br>
+                                                <strong>Intervalo semiabierto a izquierda (o semicerrado a derecha) ] m, n ]</strong><br>
+                                                <img src="/img/iconos/desigualdades/desarrollo/intervalos/intervalo-a-c.PNG" class="img-responsive">
                                                 <br><br>
-                                                <strong>Intervalo cerrado</strong><br>
-                                                Es el conjunto de los números reales comprendidos entre a y b. <br><br>
-                                                <strong>Intervalo semiabierto a izquierda (o semicerrado a derecha)</strong><br>
-                                                Es el conjunto de números reales formado por b y los números comprendidos entre a y b.
-                                                <br><br>
-                                                <strong>Intervalo semiabierto a derecha (o semicerrado a izquierda)</strong><br>
-                                                Es el conjunto de números reales formado por a y los números comprendidos entre a y b.
+                                                <strong>Intervalo semiabierto a derecha (o semicerrado a izquierda) [ m, n [</strong><br>
+                                                <img src="/img/iconos/desigualdades/desarrollo/intervalos/intervalo-c-i.PNG" class="img-responsive">
                                                 <br><br>
                                                 <strong></strong><br>
                                             </p>
@@ -66,7 +67,13 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify;">
-
+                                                                <b>Menor que " < "</b> : x < 5: x es menor que 5, todos los menores que 5 sin incluir a 5
+                                                                <br><br>
+                                                                <b>Menor igual que " ≤ " </b>: x ≤ 8: x es menor o igual que 8, todos los menores que 8 incluyendo a 8
+                                                                <br><br>
+                                                                <b>Mayor que " > " </b>: x > 3: x es mayor que 3, todos los mayores que 3 sin incluir a 3
+                                                                <br><br>
+                                                                <b>Mayor igual que " ≤ "</b> : x ≤ 8: x es menor o igual que 8, todos los menores que 8 incluyendo a 8
                                                             </p>
                                                         </div>
                                                     </div>
@@ -116,7 +123,100 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
-
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-info">
+                                                        <p>Ingresa el valor para <b>m </b>y <b>n</b>. <br>
+                                                            Si dejas un campo en blanco se asume que es infinito. <br>
+                                                            Presiona el tipo de intervalo de tu ejercicio.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-warning">
+                                                        <p>
+                                                            Conjunto <b>A</b>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor m</label>
+                                                    <input type="number" class="form-control" id="valorM">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor n</label>
+                                                    <input type="number" class="form-control" id="valorN">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row text-center">
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(1)"><b>[ m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(2)"><b>] m,n [</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(3)"><b>] m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(4)"><b>[ m,n [</b></button>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-warning">
+                                                        <p>
+                                                            Conjunto <b>B</b>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor m</label>
+                                                    <input type="number" class="form-control" id="valorM2">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label for="">Valor n</label>
+                                                    <input type="number" class="form-control" id="valorN2">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row text-center">
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(1)"><b>[ m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(2)"><b>] m,n [</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(3)"><b>] m,n ]</b></button>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(4)"><b>[ m,n [</b></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="jxgbox" id="plano1" style="width: 450px;height: 300px; "></div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-lg-offset-8 col-lg-4">
+                                                    <button type="button" class="btn btn-danger btn-rounded" onclick="limpiaGrafica()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -126,3 +226,108 @@
         </div>
     </div>
 </div>
+<script>
+    brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+    var p1;
+    var p2;
+    var t1;
+    var t2;
+    var l1;
+    //dibujaIntervalo();
+
+    function limpiaGrafica() {
+        brd = JXG.JSXGraph.freeBoard(brd);
+        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+    }
+
+    function dibujaIntervalo(op){
+        var punto1=0;
+        var punto2=0;
+        if($('#valorM').val()==''){
+            punto1=-10000;
+        }else{
+            punto1=$('#valorM').val();
+        }
+        if($('#valorN').val()==''){
+            punto2=10000;
+        }else{
+            punto2=$('#valorN').val();
+        }
+        console.warn('M',punto1);
+        console.warn('N',punto2);
+        if(op==1){
+            p1 = brd.createElement('point',[punto1,0],{visible:false});
+            p2 = brd.createElement('point',[punto2,0],{visible:false});
+            t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+            t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+        }else {
+            if(op==2){
+                p1 = brd.createElement('point',[punto1,0],{visible:false});
+                p2 = brd.createElement('point',[punto2,0],{visible:false});
+                t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+            }else{
+                if(op==3){
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                }else{
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                }
+            }
+        }
+    }
+    function dibujaIntervalo2(op){
+        var punto1=0;
+        var punto2=0;
+        if($('#valorM2').val()==''){
+            punto1=-10000;
+        }else{
+            punto1=$('#valorM2').val();
+        }
+        if($('#valorN2').val()==''){
+            punto2=10000;
+        }else{
+            punto2=$('#valorN2').val();
+        }
+        console.warn('M',punto1);
+        console.warn('N',punto2);
+        if(op==1){
+            p1 = brd.createElement('point',[punto1,0],{visible:false});
+            p2 = brd.createElement('point',[punto2,0],{visible:false});
+            t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+            t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+        }else {
+            if(op==2){
+                p1 = brd.createElement('point',[punto1,0],{visible:false});
+                p2 = brd.createElement('point',[punto2,0],{visible:false});
+                t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+            }else{
+                if(op==3){
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+                }else{
+                    p1 = brd.createElement('point',[punto1,0],{visible:false});
+                    p2 = brd.createElement('point',[punto2,0],{visible:false});
+                    t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+                    t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+                }
+            }
+        }
+    }
+</script>
