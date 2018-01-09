@@ -250,6 +250,12 @@ Route::get('/ecuacionLineaRecta', function () {
 Route::get('/distanciaPuntoRecta', function () {
     return view('Admin.Templates.Desarrollo.Geometria.Recta.distanciapuntorecta');
 });
+/*
+	Llamada al area de desarrollo para Geometría - conica, circulo, radio, circunferencia
+*/
+Route::get('/radioCirculo', function () {
+    return view('Admin.Templates.Desarrollo.Geometria.Conicas.circulogeneral');
+});
 /////////////////////////////////
 ///FIN GEOMETRIA ANALITICA/////
 //////////////////////////////
