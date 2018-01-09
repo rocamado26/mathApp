@@ -588,203 +588,110 @@
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <div class ="row">
-                                <div class="col-lg-12" id="tour3-1">
-                                    <p style="text-align: justify;">
-                                       <td width="80%" style="text-align: center;">Ahora que ya aprendimos un poco sobre como obtener el punto pendiente, completa los siguientes ejemplos, arrastrando los elementos de la parte derecha a los espacios correspondientes en el ejercicio.</td>
-                                    </p><!--cierre de etiqueta p, inicio de teoría-->
-                                    <br><br>
-                                    <div align="center">
-                                        <button class="btn btn-outline btn-primary dim" type="button"
-                                                onclick="cambioPractica(1)">1
-                                        </button>
-                                        <button class="btn btn-outline btn-primary dim" type="button"
-                                                onclick="cambioPractica(2)">2
-                                        </button>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="ibox">
+                                        <div class="ibox-content" id="tour2-1">
+                                            <div class="row animated fadeInRightBig" id="resol_ejercicios">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-xs-12">
+                                                                    <div class="alert alert-info">
+                                                                        <strong>Infórmacion</strong><br>
+                                                                        Ingresa las coordenadas del centro del circulo y el radio de este, luego de ello presiona el botón generar
+                                                                        para conocer el proceso y su respectiva respuesta.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="col-ms-12">
+                                                                    <div id="Puntos" class="alert alert-warning">
+                                                                        <table border="0" width="100%">
+                                                                            <tr>
+                                                                                <td colspan="3">
+                                                                                    <center><b>Centro</b></center>
+                                                                                </td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td>
+                                                                                    <center><b>Radio</b></center>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td width="30%">
+                                                                                    <center>X<sub>1</sub></center>
+                                                                                </td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td width="30%">
+                                                                                    <center>Y<sub>1</sub></center>
+                                                                                </td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td width="30%">
+                                                                                    <center>&nbsp;</center>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="x1" width="100%"></td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="y1" width="100%"></td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td><input type="number" placeholder="?"
+                                                                                           class="form-control" value=""
+                                                                                           id="radio" width="100%"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="3">
+                                                                                    <center>
+                                                                                        <button type="button"
+                                                                                                class="btn btn-danger btn-rounded"
+                                                                                                onclick="limpiarResolucion();">
+                                                                                            <i class="fa fa-repeat"></i>&nbsp;Reestablecer
+                                                                                        </button>
+                                                                                    </center>
+                                                                                </td>
+                                                                                <td>&nbsp;</td>
+                                                                                <td colspan="3">
+                                                                                    <center>
+                                                                                        <button type="button"
+                                                                                                class="btn btn-primary btn-rounded"
+                                                                                                onclick="generarResolucion();">
+                                                                                            <i class="fa fa-check"></i>&nbsp;Generar
+                                                                                        </button>
+                                                                                    </center>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br><br>
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div id="Resultado" class="alert alert-success"
+                                                                         style="display: none;">
+                                                                        <div id="solucion">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <br><br>
-                            <div id="tour3-2" class="row col-lg-12">
-                                <!--Ejemplo 1-->
-                                <div id="Practica1" class="row col-lg-12">
-                                    <div class="col-lg-8">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
-                                            </div>
-                                            <div class="panel-body">
-                                                <font size="3">
-                                                    <center>
-                                                        Selecciona la ecuación de la circunferencia con centro <b>(4 , 5)</b> y radio <b>4</b>
-                                                    </center>
-                                                </font>
-                                            </div>
-                                        </div>
-                                        <p style="text-align: justify;">
-                                        <center>
-                                            <br><br>
-                                            Cambiamos los terminos que conocemos en la fórmula punto pendiente
-                                            <br><br>
-                                            <table border="0">
-                                                <tr>
-                                                    <td colspan="7" style="text-align: center;"><font size="4">Y - Y<sub>1</sub> = m ( X - X<sub>1</sub> )</font></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="7">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><font size="4">Y - &nbsp;</font></td>
-                                                    <td><div class="contenedor" id="5E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
-                                                    <td><font size="4">&nbsp;5&nbsp;</font></td>
-                                                    <td><font size="4">( X -&nbsp;</font></td>
-                                                    <td><div class="contenedor" id="3E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                    <td><font size="4">&nbsp;)</font></td>
-                                                </tr>
-                                            </table>
-                                            <br><br>
-                                            Multiplicamos la pendiente por los valores de X
-                                            <br><br>
-                                            <table border="0">
-                                                <tr>
-                                                    <td><font size="4">Y - &nbsp;</font></td>
-                                                    <td><font size="4">5</font></td>
-                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
-                                                    <td><div class="contenedor" id="5XE1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                    <td><font size="4">&nbsp;-&nbsp;</font></td>
-                                                    <td><div class="contenedor" id="15E1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                </tr>
-                                            </table>
-                                        </center>
-                                        </p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="row col-lg-12">
-                                            <div id="compenentesPractica1" class="col-lg-12 alert alert-warning">
-                                                <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                <br>
-                                                <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                                                    <img id="pieza5XE1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5x.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <img id="pieza3E1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/3.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <img id="pieza5E1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/5.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <img id="pieza15E1" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA1/15.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
-                                                </div>
-                                            </div>
-                                            <div id="ExitoPrac1" class="col-lg-12 alert alert-success" style="display: none;">
-                                                <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                <br>
-                                                <p style="text-align: justify;">
-                                                    Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que el punto pendiente es:
-                                                    <br><br>
-                                                <center><font size="3"><b>y - 5 = 5x - 15</b></font></center>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div id="botonesPrac1" class="row col-lg-12">
-                                            <center>
-                                                <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica1();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica1(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
-                                            </center>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Ejemplo 2-->
-                                <div id="Practica2" class="row col-lg-12" style="display: none;">
-                                    <div class="col-lg-8">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <center><img src="img/iconos/generales/calculation.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Problema a Resolver</b></i></font></center>
-                                            </div>
-                                            <div class="panel-body">
-                                                <font size="3">
-                                                    <center>
-                                                        Hallar la ecuación de la recta que pasa por los puntos <b>A ( -8 , 3 )</b> y <b>B ( 4 , -1 )</b>
-                                                    </center>
-                                                </font>
-                                            </div>
-                                        </div>
-                                        <p style="text-align: justify;">
-                                        <center>
-                                            <br><br>
-                                            Ya que no conocemos la pendiente de la recta, será esto el primer dato que obtendremos, siendo la pendiente de la recta
-                                            <br><br>
-                                            <table border="0">
-                                                <tr>
-                                                    <td><font size="4">m = &nbsp;</font></td>
-                                                    <td><div class="contenedor" id="mE2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                </tr>
-                                            </table>
-                                            <br><br>
-                                            Tomando las coordenadas del punto A, cambiamos los terminos que conocemos en la fórmula punto pendiente
-                                            <br><br>
-                                            <table border="0">
-                                                <tr>
-                                                    <td colspan="7" style="text-align: center;"><font size="4">Y - Y<sub>1</sub> = m ( X - X<sub>1</sub> )</font></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="7">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><font size="4">Y - &nbsp;</font></td>
-                                                    <td><div class="contenedor" id="3E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
-                                                    <td><font size="4">&nbsp;- <sup>1</sup>/<sub>3</sub> &nbsp;</font></td>
-                                                    <td><font size="4">( X -&nbsp;</font></td>
-                                                    <td><div class="contenedor" id="8E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                    <td><font size="4">&nbsp;)</font></td>
-                                                </tr>
-                                            </table>
-                                            <br><br>
-                                            Multiplicamos la pendiente por los valores de X
-                                            <br><br>
-                                            <table border="0">
-                                                <tr>
-                                                    <td><font size="4">Y - &nbsp;</font></td>
-                                                    <td><font size="4">3</font></td>
-                                                    <td><font size="4">&nbsp;=&nbsp;</font></td>
-                                                    <td><font size="4">-<sup>1</sup>/<sub>3</sub>x</font></td>
-                                                    <td><font size="4">&nbsp;-&nbsp;</font></td>
-                                                    <td><div class="contenedor" id="23E2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                </tr>
-                                            </table>
-                                        </center>
-                                        </p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="row col-lg-12">
-                                            <div id="compenentesPractica2" class="col-lg-12 alert alert-warning">
-                                                <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                <br>
-                                                <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
-                                                    <img id="pieza23E2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/23.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <img id="piezaME2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/412.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <img id="pieza3E2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/3.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <img id="pieza8E2" src="{{asset('img/iconos/geometria/recta/puntopendiente/PRACTICA2/8.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
-                                                    <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
-                                                </div>
-                                            </div>
-                                            <div id="ExitoPrac2" class="col-lg-12 alert alert-success" style="display: none;">
-                                                <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                <br>
-                                                <p style="text-align: justify;">
-                                                    Excelente, has resuelto de manera correcta la practica, por lo cual ahora sabes que el punto pendiente de la recta:
-                                                    <br><br>
-                                                <center><font size="3"><b> y - 3 = -<sup>1</sup>/<sub>3</sub>x - <sup>8</sup>/<sub>3</sub> </b></font></center>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div id="botonesPrac2" class="row col-lg-12">
-                                            <center>
-                                                <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica2();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                <button type="button" class="btn btn-danger btn-rounded" onclick="ReestablecerPractica2(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
-                                            </center>
-                                        </div>
-                                    </div>
-                                </div><!--cierre de ejemplos para la practica-->
-                            </div>
-                            <br>
                         </div>
                     </div>
                 </div><!--cierre de la segunda pestaña del acordeon....-->
@@ -794,11 +701,6 @@
 </div><!--cierre con el primer div -->
 <script>
     //resolucion de ejercicios
-    var nuevoAd;
-    var nuevoAn;
-    var enteroMultiGlobal;
-    var numeradorMultiGlobal;
-    var denominadorMultiGlobal;
 
     ////FUNCIONES MOVER IMAGENES
     function cambioPractica(opc) {
@@ -1032,6 +934,369 @@
             toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
         } else {
             $("#False6P3").fadeOut(0);
+        }
+    }
+
+    function limpiarResolucion(){
+        $("#Resultado").fadeOut(0);
+        document.getElementById("x1").value="";
+        document.getElementById("y1").value="";
+        document.getElementById("radio").value="";
+
+    }
+
+    function generarResolucion(){
+        var x1 = document.getElementById("x1").value;
+        var y1 = document.getElementById("y1").value;
+        var radio = document.getElementById("radio").value;
+
+        if(x1 == "" || y1== "" || radio== ""){
+            toastr.error("Debes completar todos los datos para continuar","Error!!");
+        }
+        else{
+            if(x1=="0" && y1=="0"){
+                //canonica
+                var radioCuadrado = Math.pow(radio,2);
+                $("#solucion").html("<center>Ya que contiene un centro en el origen ( 0 , 0 ), aplicamos la fórmula canonica de la circunferencia, es decir:<br><br>" +
+                    "<font size='3'><b>r = √ ( x - 0 )<sup>2</sup> + ( y - 0 )<sup>2</sup></b></font>" +
+                    "<br><br>" +
+                    "Sustituyendo las variables" +
+                    "<br><br>"+
+                    "<font size='3'><b>"+radio+" = √ x<sup>2</sup> + y<sup>2</sup></b></font>"+
+                    "<br><br>"+
+                    "<font size='3'><b>("+radio+")<sup>2</sup> = ( √ x<sup>2</sup> + y<sup>2</sup> )<sup>2</sup></b></font>"+
+                    "<br><br>"+
+                    "<font size='3'><b>"+radio+"<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup></b></font>"+
+                    "<br><br>"+
+                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + y<sup>2</sup></b></font>"+
+                    "<br><br>"+
+                    "<font size='3'>Siendo esta la ecuación canónica de la circunferencia</font>"+
+                    "</center>");
+            }
+            else{
+                //ecuacion ordinaria
+                if(x1 < 0 && y1 < 0){
+                    var x1Temp = Math.abs(x1);
+                    var y1Temp = Math.abs(y1);
+                    var radioCuadrado = Math.pow(radio,2);
+                    $("#solucion").html("<center>Ya que no contiene un centro en el origen ( 0 , 0 ), aplicamos la fórmula ordinaria de la circunferencia, es decir:<br><br>" +
+                        "<font size='3'><b>r = √ ( x - ("+x1+") )<sup>2</sup> + ( y - ("+y1+") )<sup>2</sup></b></font>" +
+                        "<br><br>" +
+                        "Sustituyendo las variables" +
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+" = √ ( x + "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>("+radio+")<sup>2</sup> = ( √ ( x + "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" )<sup>2</sup>)<sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+"<sup>2</sup> =  ( x + "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radioCuadrado+" =  ( x + "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'>Siendo esta la ecuación canónica de la circunferencia, ahora para conocer la ecuación general, realizamos el binomio cuadrado perfecto de los parentesis</font>"+
+                        "<br><br></center>");
+                    //creando binomio
+                    var dobleX = 2 * parseInt(x1Temp);
+                    var terminoX2 = Math.pow(x1Temp,2);
+                    var dobleY = 2 * parseInt(y1Temp);
+                    var terminoY2 = Math.pow(y1Temp,2);
+                    var radioNuevo = radioCuadrado * -1;
+                    var sumaEnteros = (terminoX2 * -1) + (terminoY2 * -1) + radioNuevo;
+                    if(radioNuevo < 0){
+                        if(sumaEnteros<0){
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x + "+dobleY+"y "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }else{
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x + "+dobleY+"y + "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }
+                    }else{
+                        if(sumaEnteros<0){
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x + "+dobleY+"y  "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }else{
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x + "+dobleY+"y  + "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }
+                    }
+                }
+                if(x1 < 0 && y1 > 0){
+                    var x1Temp = Math.abs(x1);
+                    var y1Temp = Math.abs(y1);
+                    var radioCuadrado = Math.pow(radio,2);
+                    $("#solucion").html("<center>Ya que no contiene un centro en el origen ( 0 , 0 ), aplicamos la fórmula ordinaria de la circunferencia, es decir:<br><br>" +
+                        "<font size='3'><b>r = √ ( x - ("+x1+") )<sup>2</sup> + ( y - "+y1+" )<sup>2</sup></b></font>" +
+                        "<br><br>" +
+                        "Sustituyendo las variables" +
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+" = √ ( x + "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>("+radio+")<sup>2</sup> = ( √ ( x + "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" )<sup>2</sup>)<sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+"<sup>2</sup> =  ( x + "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radioCuadrado+" =  ( x + "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'>Siendo esta la ecuación canónica de la circunferencia, ahora para conocer la ecuación general, realizamos el binomio cuadrado perfecto de los parentesis</font>"+
+                        "</center>");
+                        //creando binomio
+                        var dobleX = 2 * parseInt(x1Temp);
+                        var terminoX2 = Math.pow(x1Temp,2);
+                        var dobleY = 2 * parseInt(y1Temp);
+                        var terminoY2 = Math.pow(y1Temp,2);
+                        var radioNuevo = radioCuadrado * -1;
+                        var sumaEnteros = (terminoX2 * -1) + terminoY2 + radioNuevo;
+                        if(radioNuevo < 0){
+                            if(sumaEnteros<0){
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x - "+dobleY+"y "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }else{
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x - "+dobleY+"y + "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }
+                        }else{
+                            if(sumaEnteros<0){
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x - "+dobleY+"y  "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }else{
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + "+dobleX+"x  - "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> + "+dobleX+"x - "+dobleY+"y  + "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }
+                        }
+                }
+                if(x1 > 0 && y1 < 0){
+                    var x1Temp = Math.abs(x1);
+                    var y1Temp = Math.abs(y1);
+                    var radioCuadrado = Math.pow(radio,2);
+                    $("#solucion").html("<center>Ya que no contiene un centro en el origen ( 0 , 0 ), aplicamos la fórmula ordinaria de la circunferencia, es decir:<br><br>" +
+                        "<font size='3'><b>r = √ ( x - "+x1+" )<sup>2</sup> + ( y - ("+y1+") )<sup>2</sup></b></font>" +
+                        "<br><br>" +
+                        "Sustituyendo las variables" +
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+" = √ ( x - "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>("+radio+")<sup>2</sup> = ( √ ( x - "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" )<sup>2</sup>)<sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+"<sup>2</sup> =  ( x - "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radioCuadrado+" =  ( x - "+x1Temp+" )<sup>2</sup> + ( y + "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'>Siendo esta la ecuación canónica de la circunferencia, ahora para conocer la ecuación general, realizamos el binomio cuadrado perfecto de los parentesis</font>"+
+                        "</center>");
+                        //creando binomio
+                        var dobleX = 2 * parseInt(x1Temp);
+                        var terminoX2 = Math.pow(x1Temp,2);
+                        var dobleY = 2 * parseInt(y1Temp);
+                        var terminoY2 = Math.pow(y1Temp,2);
+                        var radioNuevo = radioCuadrado * -1;
+                        var sumaEnteros = terminoX2 + (terminoY2 * -1) + radioNuevo;
+                        if(radioNuevo < 0){
+                            if(sumaEnteros<0){
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x + "+dobleY+"y "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }else{
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x + "+dobleY+"y + "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }
+                        }else{
+                            if(sumaEnteros<0){
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x + "+dobleY+"y  "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }else{
+                                $("#solucion").append("<center>" +
+                                    "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+"</b></font>" +
+                                    "<br><br>" +
+                                    "Trasladamos el valor del radio al lado opuesto" +
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> + "+dobleY+"y - "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x - "+dobleY+"y  + "+sumaEnteros+" = 0</b></font>"+
+                                    "<br><br>"+
+                                    "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                    "</center>");
+                            }
+                        }
+                }
+                if(x1 > 0 && y1 > 0){
+                    var x1Temp = Math.abs(x1);
+                    var y1Temp = Math.abs(y1);
+                    var radioCuadrado = Math.pow(radio,2);
+                    $("#solucion").html("<center>Ya que no contiene un centro en el origen ( 0 , 0 ), aplicamos la fórmula ordinaria de la circunferencia, es decir:<br><br>" +
+                        "<font size='3'><b>r = √ ( x - "+x1+" )<sup>2</sup> + ( y - "+y1+" )<sup>2</sup></b></font>" +
+                        "<br><br>" +
+                        "Sustituyendo las variables" +
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+" = √ ( x - "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>("+radio+")<sup>2</sup> = ( √ ( x - "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" )<sup>2</sup>)<sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radio+"<sup>2</sup> =  ( x - "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'><b>"+radioCuadrado+" =  ( x - "+x1Temp+" )<sup>2</sup> + ( y - "+y1Temp+" ) <sup>2</sup></b></font>"+
+                        "<br><br>"+
+                        "<font size='3'>Siendo esta la ecuación canónica de la circunferencia, ahora para conocer la ecuación general, realizamos el binomio cuadrado perfecto de los parentesis</font>"+
+                        "</center>");
+                    //creando binomio
+                    var dobleX = 2 * parseInt(x1Temp);
+                    var terminoX2 = Math.pow(x1Temp,2);
+                    var dobleY = 2 * parseInt(y1Temp);
+                    var terminoY2 = Math.pow(y1Temp,2);
+                    var radioNuevo = radioCuadrado * -1;
+                    var sumaEnteros = terminoX2 + terminoY2 + radioNuevo;
+                    if(radioNuevo < 0){
+                        if(sumaEnteros<0){
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x - "+dobleY+"y "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }else{
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x - "+dobleY+"y + "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }
+                    }else{
+                        if(sumaEnteros<0){
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x - "+dobleY+"y  "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }else{
+                            $("#solucion").append("<center>" +
+                                "<font size='3'><b>"+radioCuadrado+" = x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+"</b></font>" +
+                                "<br><br>" +
+                                "Trasladamos el valor del radio al lado opuesto" +
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> - "+dobleX+"x  + "+terminoX2+" + y<sup>2</sup> - "+dobleY+"y + "+terminoY2+" + "+radioNuevo+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'><b>x<sup>2</sup> + y<sup>2</sup> - "+dobleX+"x - "+dobleY+"y  + "+sumaEnteros+" = 0</b></font>"+
+                                "<br><br>"+
+                                "<font size='3'>Siendo esta la ecuación general de la circunferencia</font>"+
+                                "</center>");
+                        }
+                    }
+                }
+            }
+            $("#Resultado").fadeIn(300);
         }
     }
 
