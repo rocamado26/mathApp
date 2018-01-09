@@ -207,7 +207,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="row">
-                                                <div class="jxgbox" id="plano1" style="width: 450px;height: 300px; "></div>
+                                                <div class="jxgbox" id="plano1" style="width: 450px;height: 300px;"></div>
                                             </div>
                                             <br>
                                             <div class="row">
@@ -233,6 +233,7 @@
     var t1;
     var t2;
     var l1;
+    var opAnterior=0;
     //dibujaIntervalo();
 
     function limpiaGrafica() {
@@ -243,6 +244,11 @@
     function dibujaIntervalo(op){
         var punto1=0;
         var punto2=0;
+        //limpiaGrafica();
+        //if(opAnterior!=0){
+          //  dibujaIntervalo2(opAnterior);
+        //}
+        //opAnterior=op;
         if($('#valorM').val()==''){
             punto1=-10000;
         }else{
@@ -288,6 +294,8 @@
     function dibujaIntervalo2(op){
         var punto1=0;
         var punto2=0;
+        //limpiaGrafica();
+        //dibujaIntervalo(opAnterior);
         if($('#valorM2').val()==''){
             punto1=-10000;
         }else{
