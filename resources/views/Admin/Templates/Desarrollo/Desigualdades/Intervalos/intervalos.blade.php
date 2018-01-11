@@ -241,6 +241,8 @@
         brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
         cambiaClassbtnP1(5);
         cambiaClassbtnP2(5);
+        opP1=0;
+        opP2=0;
     }
 
     function dibujaIntervalo(op){
@@ -420,7 +422,8 @@
     }
 
     function grafica() {
-        limpiaGrafica();
+        brd = JXG.JSXGraph.freeBoard(brd);
+        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
         dibujaIntervalo(opP1);
         dibujaIntervalo2(opP2);
     }
