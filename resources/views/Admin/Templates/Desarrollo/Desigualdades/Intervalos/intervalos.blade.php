@@ -111,7 +111,146 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div align="center">
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambiaEjemplo(1)">1</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambiaEjemplo(2)">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambiaEjemplo(3)">3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="ibox ui-resizable">
+                                                <div class="ibox-content">
+                                                    <div id="ej1" class="row animated bounceInRight">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                            </div>
+                                                                            <div class="col-xs-12">
 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                            </div>
+                                                                            <div class="col-xs-12">
+                                                                                <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+
+                                                        </div>
+                                                    </div>
+                                                    <div id="ej2" class="row animated bounceInRight"style="display: none;">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                            </div>
+                                                                            <div class="col-xs-12">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                            </div>
+                                                                            <div class="col-xs-12">
+                                                                                <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+
+                                                        </div>
+                                                    </div>
+                                                    <div id="ej3" class="row animated bounceInRight"style="display: none;">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                            </div>
+                                                                            <div class="col-xs-12">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                            </div>
+                                                                            <div class="col-xs-12">
+                                                                                <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -426,5 +565,25 @@
         brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
         dibujaIntervalo(opP1);
         dibujaIntervalo2(opP2);
+    }
+
+    function cambiaEjemplo(op){
+        switch (op){
+            case 1:{
+                $('#ej1').show();
+                $('#ej2').hide();
+                $('#ej3').hide();
+            }break;
+            case 2:{
+                $('#ej1').hide();
+                $('#ej2').show();
+                $('#ej3').hide();
+            }break;
+            case 3:{
+                $('#ej1').hide();
+                $('#ej2').hide();
+                $('#ej3').show();
+            }break;
+        }
     }
 </script>
