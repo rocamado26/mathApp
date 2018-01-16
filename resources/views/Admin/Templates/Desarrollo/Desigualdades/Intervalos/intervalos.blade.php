@@ -134,7 +134,7 @@
                                                                     <div class="panel-body">
                                                                         <div class="row">
                                                                             <div class="col-xs-12">
-                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
+                                                                                Restar los conjuntos <b>A</b> y <b>B</b> , donde <b>A = ] -1,4 ]</b> y <b>B = ] 2,5 [</b>:
                                                                             </div>
                                                                             <div class="col-xs-12">
 
@@ -143,18 +143,21 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <br>
                                                             <div class="row">
                                                                 <div class="panel panel-default">
                                                                     <div class="panel-heading">
-                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Resolución</b></i></font></center>
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <div class="row">
                                                                             <div class="col-xs-12">
-                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
-                                                                            </div>
-                                                                            <div class="col-xs-12">
+                                                                                <p style="text-align: justify;">
+                                                                                    Dibujamos los dos conjuntos en la recta numérica y evaluamos que números están en el conjunto <b>A</b> que no estén en <b>B</b>.
+                                                                                </p>
+                                                                                <!--
                                                                                 <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
+                                                                                -->
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -162,7 +165,19 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <p style="text-align: justify;">
+                                                                        <b>A – B: Diferencia A menos B :</b>
+                                                                        <br><br>
+                                                                        Contiene los números que están en <b>A</b>, pero que no se
+                                                                        encuentran en <b>B</b>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div id="ej2" class="row animated bounceInRight"style="display: none;">
@@ -175,27 +190,25 @@
                                                                     <div class="panel-body">
                                                                         <div class="row">
                                                                             <div class="col-xs-12">
-                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
-                                                                            </div>
-                                                                            <div class="col-xs-12">
-
+                                                                                <p style="text-align: justify;">
+                                                                                    Desarrolla la intersección de los conjuntos <b>A</b> y <b>B</b>, donde <b>A = ] -2,7 ]</b> y <b>B = ] 0,9 [ </b>:
+                                                                                </p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <br>
                                                             <div class="row">
                                                                 <div class="panel panel-default">
                                                                     <div class="panel-heading">
-                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Resolución</b></i></font></center>
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <div class="row">
                                                                             <div class="col-xs-12">
-                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
-                                                                            </div>
-                                                                            <div class="col-xs-12">
-                                                                                <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
+                                                                                <br>
+                                                                                Dibujamos los dos conjuntos en la recta numérica y evaluamos que números son comunes en el conjunto <b>A</b> y en <b>B</b>.
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -203,7 +216,19 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <p style="text-align: justify;">
+                                                                        <b>A ∩ B: Intersección de A con B</b>
+                                                                        <br><br>
+                                                                        Contiene todos los números que son comunes a <b>A</b> y
+                                                                        a <b>B</b>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div id="ej3" class="row animated bounceInRight"style="display: none;">
@@ -215,28 +240,23 @@
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <div class="row">
-                                                                            <div class="col-xs-12">
-                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
-                                                                            </div>
-                                                                            <div class="col-xs-12">
-
+                                                                            <div class="col-xs-12"><br>
+                                                                                Desarrolla la unión de los conjuntos <b>A</b> y <b>B</b>, donde <b>A = ] -2,7 ]</b> y <b>B = ] 4,10 [</b>:
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            <br>
                                                             <div class="row">
                                                                 <div class="panel panel-default">
                                                                     <div class="panel-heading">
-                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Resolución</b></i></font></center>
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <div class="row">
-                                                                            <div class="col-xs-12">
-                                                                                Hallar las razones trigonométricas del ángulo α del triángulo siguiente:
-                                                                            </div>
-                                                                            <div class="col-xs-12">
-                                                                                <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
+                                                                            <div class="col-xs-12"><br>
+                                                                                Dibujamos los dos conjuntos en la recta numérica y el nuevo conjunto contiene todos los números del conjunto <b>A</b> y del conjunto <b>B</b>.
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -244,7 +264,19 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <p style="text-align: justify;">
+                                                                        <b>A ∪ B: Unión de A con B :</b>
+                                                                        <br><br>
+                                                                        Contiene todos los números de <b>A</b> más todos los
+                                                                        números de <b>B</b>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
