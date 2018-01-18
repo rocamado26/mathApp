@@ -256,6 +256,12 @@ Route::get('/distanciaPuntoRecta', function () {
 Route::get('/radioCirculo', function () {
     return view('Admin.Templates.Desarrollo.Geometria.Conicas.circulogeneral');
 });
+/*
+	Llamada al area de desarrollo para Geometría - parabola
+*/
+Route::get('/parabola', function () {
+    return view('Admin.Templates.Desarrollo.Geometria.Conicas.parabola');
+});
 /////////////////////////////////
 ///FIN GEOMETRIA ANALITICA/////
 //////////////////////////////
