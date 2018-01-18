@@ -136,9 +136,6 @@
                                                                             <div class="col-xs-12">
                                                                                 Restar los conjuntos <b>A</b> y <b>B</b> , donde <b>A = ] -1,4 ]</b> y <b>B = ] 2,5 [</b>:
                                                                             </div>
-                                                                            <div class="col-xs-12">
-
-                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -155,9 +152,10 @@
                                                                                 <p style="text-align: justify;">
                                                                                     Dibujamos los dos conjuntos en la recta numérica y evaluamos que números están en el conjunto <b>A</b> que no estén en <b>B</b>.
                                                                                 </p>
-                                                                                <!--
-                                                                                <center><img src="img/iconos/trigonometria/areadesarrollo/ejemplo1.png"></center>
-                                                                                -->
+                                                                                <br><br>
+                                                                                <center><img src="img/iconos/desigualdades/desarrollo/intervalos/ejm1.png" class="img-responsive"></center>
+                                                                                <br><br>
+                                                                                Entonces el conjunto solución de <b>A - B = ] -1,2 ]</b>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -209,6 +207,10 @@
                                                                             <div class="col-xs-12">
                                                                                 <br>
                                                                                 Dibujamos los dos conjuntos en la recta numérica y evaluamos que números son comunes en el conjunto <b>A</b> y en <b>B</b>.
+                                                                                <br><br>
+                                                                                <center><img src="img/iconos/desigualdades/desarrollo/intervalos/ejm2.png"  class="img-responsive"></center>
+                                                                                <br><br>
+                                                                                Entonces el conjunto solución de <b>A ∩ B = ] 0,7 ]</b>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -257,6 +259,10 @@
                                                                         <div class="row">
                                                                             <div class="col-xs-12"><br>
                                                                                 Dibujamos los dos conjuntos en la recta numérica y el nuevo conjunto contiene todos los números del conjunto <b>A</b> y del conjunto <b>B</b>.
+                                                                                <br><br>
+                                                                                <center><img src="img/iconos/desigualdades/desarrollo/intervalos/ejm3.png" class="img-responsive"></center>
+                                                                                <br><br>
+                                                                                Entonces el conjunto solución de <b>A ∪ B = ] -2,10 ]</b>
                                                                             </div>
                                                                         </div>
                                                                     </div>
