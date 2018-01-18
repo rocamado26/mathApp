@@ -111,7 +111,184 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
-
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div align="center">
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambiaEjemplo(1)">1</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambiaEjemplo(2)">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="cambiaEjemplo(3)">3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="ibox ui-resizable">
+                                                <div class="ibox-content">
+                                                    <div id="ej1" class="row animated bounceInRight">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                Restar los conjuntos <b>A</b> y <b>B</b> , donde <b>A = ] -1,4 ]</b> y <b>B = ] 2,5 [</b>:
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Resolución</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                <p style="text-align: justify;">
+                                                                                    Dibujamos los dos conjuntos en la recta numérica y evaluamos que números están en el conjunto <b>A</b> que no estén en <b>B</b>.
+                                                                                </p>
+                                                                                <br><br>
+                                                                                <center><img src="img/iconos/desigualdades/desarrollo/intervalos/ejm1.png" class="img-responsive"></center>
+                                                                                <br><br>
+                                                                                Entonces el conjunto solución de <b>A - B = ] -1,2 ]</b>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <p style="text-align: justify;">
+                                                                        <b>A – B: Diferencia A menos B :</b>
+                                                                        <br><br>
+                                                                        Contiene los números que están en <b>A</b>, pero que no se
+                                                                        encuentran en <b>B</b>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="ej2" class="row animated bounceInRight"style="display: none;">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                <p style="text-align: justify;">
+                                                                                    Desarrolla la intersección de los conjuntos <b>A</b> y <b>B</b>, donde <b>A = ] -2,7 ]</b> y <b>B = ] 0,9 [ </b>:
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Resolución</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                <br>
+                                                                                Dibujamos los dos conjuntos en la recta numérica y evaluamos que números son comunes en el conjunto <b>A</b> y en <b>B</b>.
+                                                                                <br><br>
+                                                                                <center><img src="img/iconos/desigualdades/desarrollo/intervalos/ejm2.png"  class="img-responsive"></center>
+                                                                                <br><br>
+                                                                                Entonces el conjunto solución de <b>A ∩ B = ] 0,7 ]</b>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <p style="text-align: justify;">
+                                                                        <b>A ∩ B: Intersección de A con B</b>
+                                                                        <br><br>
+                                                                        Contiene todos los números que son comunes a <b>A</b> y
+                                                                        a <b>B</b>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="ej3" class="row animated bounceInRight"style="display: none;">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12"><br>
+                                                                                Desarrolla la unión de los conjuntos <b>A</b> y <b>B</b>, donde <b>A = ] -2,7 ]</b> y <b>B = ] 4,10 [</b>:
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">
+                                                                        <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Resolución</b></i></font></center>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12"><br>
+                                                                                Dibujamos los dos conjuntos en la recta numérica y el nuevo conjunto contiene todos los números del conjunto <b>A</b> y del conjunto <b>B</b>.
+                                                                                <br><br>
+                                                                                <center><img src="img/iconos/desigualdades/desarrollo/intervalos/ejm3.png" class="img-responsive"></center>
+                                                                                <br><br>
+                                                                                Entonces el conjunto solución de <b>A ∪ B = ] -2,10 ]</b>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <p style="text-align: justify;">
+                                                                        <b>A ∪ B: Unión de A con B :</b>
+                                                                        <br><br>
+                                                                        Contiene todos los números de <b>A</b> más todos los
+                                                                        números de <b>B</b>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -124,17 +301,17 @@
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="alert alert-info">
-                                                        <p>Ingresa el valor para <b>m </b>y <b>n</b>. <br>
-                                                            Si dejas un campo en blanco se asume que es infinito. <br>
-                                                            Presiona el tipo de intervalo de tu ejercicio.
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                        <div class="col-md-12">
+                                            <div class="alert alert-info">
+                                                <p>Ingresa el valor para <b>m </b>y <b>n</b>. <br>
+                                                    Si dejas un campo en blanco se asume que es infinito. <br>
+                                                    Presiona el tipo de intervalo de tu ejercicio.
+                                                </p>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="alert alert-warning">
@@ -157,16 +334,16 @@
                                             <br>
                                             <div class="row text-center">
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(1)"><b>[ m,n ]</b></button>
+                                                    <button id="btn1p1" class="btn btn-default  dim " onclick="seleccionBtn(1,1)"><b>[ m,n ]</b></button>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(2)"><b>] m,n [</b></button>
+                                                    <button id="btn2p1" class="btn btn-default  dim " onclick="seleccionBtn(1,2)"><b>] m,n [</b></button>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(3)"><b>] m,n ]</b></button>
+                                                    <button id="btn3p1" class="btn btn-default  dim " onclick="seleccionBtn(1,3)"><b>] m,n ]</b></button>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo(4)"><b>[ m,n [</b></button>
+                                                    <button id="btn4p1" class="btn btn-default  dim " onclick="seleccionBtn(1,4)"><b>[ m,n [</b></button>
                                                 </div>
                                             </div>
                                             <br>
@@ -192,16 +369,16 @@
                                             <br>
                                             <div class="row text-center">
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(1)"><b>[ m,n ]</b></button>
+                                                    <button id="btn1p2" class="btn btn-default  dim " onclick="seleccionBtn(2,1)"><b>[ m,n ]</b></button>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(2)"><b>] m,n [</b></button>
+                                                    <button id="btn2p2" class="btn btn-default  dim " onclick="seleccionBtn(2,2)"><b>] m,n [</b></button>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(3)"><b>] m,n ]</b></button>
+                                                    <button id="btn3p2" class="btn btn-default  dim " onclick="seleccionBtn(2,3)"><b>] m,n ]</b></button>
                                                 </div>
                                                 <div class="col-sm-3">
-                                                    <button class="btn btn-outline btn-default" onclick="dibujaIntervalo2(4)"><b>[ m,n [</b></button>
+                                                    <button id="btn4p2" class="btn btn-default  dim " onclick="seleccionBtn(2,4)"><b>[ m,n [</b></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -211,8 +388,9 @@
                                             </div>
                                             <br>
                                             <div class="row">
-                                                <div class="col-lg-offset-8 col-lg-4">
+                                                <div class="col-lg-offset-4 col-lg-8">
                                                     <button type="button" class="btn btn-danger btn-rounded" onclick="limpiaGrafica()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                    <button type="button" class="btn btn-primary btn-rounded" onclick="grafica()"><i class="fa fa-check"></i>&nbsp; Graficar &nbsp;&nbsp;&nbsp;&nbsp;</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,22 +411,21 @@
     var t1;
     var t2;
     var l1;
-    var opAnterior=0;
-    //dibujaIntervalo();
-
+    var opP1=0;
+    var opP2=0;
     function limpiaGrafica() {
         brd = JXG.JSXGraph.freeBoard(brd);
         brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+        cambiaClassbtnP1(5);
+        cambiaClassbtnP2(5);
+        opP1=0;
+        opP2=0;
     }
 
     function dibujaIntervalo(op){
         var punto1=0;
         var punto2=0;
-        //limpiaGrafica();
-        //if(opAnterior!=0){
-          //  dibujaIntervalo2(opAnterior);
-        //}
-        //opAnterior=op;
+        opP1=op;
         if($('#valorM').val()==''){
             punto1=-10000;
         }else{
@@ -266,27 +443,29 @@
             p2 = brd.createElement('point',[punto2,0],{visible:false});
             t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
             t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
-            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:5});
         }else {
             if(op==2){
                 p1 = brd.createElement('point',[punto1,0],{visible:false});
                 p2 = brd.createElement('point',[punto2,0],{visible:false});
                 t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
                 t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
-                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:5});
             }else{
                 if(op==3){
                     p1 = brd.createElement('point',[punto1,0],{visible:false});
                     p2 = brd.createElement('point',[punto2,0],{visible:false});
                     t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
                     t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
-                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:5});
                 }else{
-                    p1 = brd.createElement('point',[punto1,0],{visible:false});
-                    p2 = brd.createElement('point',[punto2,0],{visible:false});
-                    t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
-                    t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
-                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4});
+                    if(op==4){
+                        p1 = brd.createElement('point',[punto1,0],{visible:false});
+                        p2 = brd.createElement('point',[punto2,0],{visible:false});
+                        t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+                        t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                        l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:5});
+                    }
                 }
             }
         }
@@ -294,8 +473,7 @@
     function dibujaIntervalo2(op){
         var punto1=0;
         var punto2=0;
-        //limpiaGrafica();
-        //dibujaIntervalo(opAnterior);
+        opP2=op;
         if($('#valorM2').val()==''){
             punto1=-10000;
         }else{
@@ -313,29 +491,137 @@
             p2 = brd.createElement('point',[punto2,0],{visible:false});
             t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
             t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
-            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+            l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:3,strokeColor:'#d02049'});
         }else {
             if(op==2){
                 p1 = brd.createElement('point',[punto1,0],{visible:false});
                 p2 = brd.createElement('point',[punto2,0],{visible:false});
                 t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
                 t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
-                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+                l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:3,strokeColor:'#d02049'});
             }else{
                 if(op==3){
                     p1 = brd.createElement('point',[punto1,0],{visible:false});
                     p2 = brd.createElement('point',[punto2,0],{visible:false});
                     t1 = brd.create('text',[punto1,0," ] "],{fontSize:25,cssClass:""});
                     t2 = brd.create('text',[punto2,0," ] "],{fontSize:25,cssClass:""});
-                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:3,strokeColor:'#d02049'});
                 }else{
-                    p1 = brd.createElement('point',[punto1,0],{visible:false});
-                    p2 = brd.createElement('point',[punto2,0],{visible:false});
-                    t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
-                    t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
-                    l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:4,strokeColor:'#d02049'});
+                    if(op==4){
+                        p1 = brd.createElement('point',[punto1,0],{visible:false});
+                        p2 = brd.createElement('point',[punto2,0],{visible:false});
+                        t1 = brd.create('text',[punto1,0," [ "],{fontSize:25,cssClass:""});
+                        t2 = brd.create('text',[punto2,0," [ "],{fontSize:25,cssClass:""});
+                        l1 = brd.createElement('line', [p1,p2],{straightFirst:false, straightLast:false, strokeWidth:3,strokeColor:'#d02049'});
+                    }
                 }
             }
+        }
+    }
+
+    function cambiaClassbtnP1(op) {
+        switch (op){
+            case 1:{
+                $("#btn1p1").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+                $("#btn2p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+            case 2:{
+                $("#btn1p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn2p1").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+                $("#btn3p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+            case 3:{
+                $("#btn1p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim ");
+                $("#btn2p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p1").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+                $("#btn4p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+            case 4:{
+                $("#btn1p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn2p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p1").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+            }break;
+            case 5:{
+                $("#btn1p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn2p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p1").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+        }
+    }
+    function cambiaClassbtnP2(op) {
+        switch (op){
+            case 1:{
+                $("#btn1p2").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+                $("#btn2p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+            case 2:{
+                $("#btn1p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn2p2").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+                $("#btn3p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+            case 3:{
+                $("#btn1p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim ");
+                $("#btn2p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p2").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+                $("#btn4p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+            case 4:{
+                $("#btn1p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn2p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p2").removeClass( "btn btn-default  dim " ).addClass( "btn btn-primary  dim " );
+            }break;
+            case 5:{
+                $("#btn1p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn2p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn3p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+                $("#btn4p2").removeClass( "btn btn-primary  dim " ).addClass( "btn btn-default  dim " );
+            }break;
+        }
+    }
+
+    function seleccionBtn(op,p) {
+        if(op==1){
+            opP1=p;
+            cambiaClassbtnP1(p);
+        }else{
+            opP2=p;
+            cambiaClassbtnP2(p);
+        }
+    }
+
+    function grafica() {
+        brd = JXG.JSXGraph.freeBoard(brd);
+        brd = JXG.JSXGraph.initBoard('plano1',{boundingbox:[-7,5,5,-5], keepaspectratio:true, axis:true,showCopyright:false});
+        dibujaIntervalo(opP1);
+        dibujaIntervalo2(opP2);
+    }
+
+    function cambiaEjemplo(op){
+        switch (op){
+            case 1:{
+                $('#ej1').show();
+                $('#ej2').hide();
+                $('#ej3').hide();
+            }break;
+            case 2:{
+                $('#ej1').hide();
+                $('#ej2').show();
+                $('#ej3').hide();
+            }break;
+            case 3:{
+                $('#ej1').hide();
+                $('#ej2').hide();
+                $('#ej3').show();
+            }break;
         }
     }
 </script>
