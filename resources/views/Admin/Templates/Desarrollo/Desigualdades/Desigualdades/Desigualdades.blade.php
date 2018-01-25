@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins  animated fadeInUpBig">
             <div class="ibox-title">
-                <h5>Intervalos <small>-Generalidades</small></h5>
+                <h5>Desigualdades <small>-Generalidades</small></h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -116,7 +116,35 @@
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <input type="text" class="form-control" placeholder="Introducir desigualdad">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" id="solucion">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <input type="text" id="termino1" class="form-control" placeholder="Primer termino">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" id="termino2" class="form-control" placeholder="Segundo termino">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <button class="" type="button">Procesar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -126,3 +154,28 @@
         </div>
     </div>
 </div>
+<script>
+    function pasoSolucion() {
+        console.warn('Holaaaa');
+    }
+
+    function operar(op){
+        switch (op){
+            case 1:{
+
+            }break;
+            case 2:{
+
+            }break;
+            case 3:{
+
+            }break;
+            case 4:{
+
+            }break;
+            case 5:{
+
+            }break;
+        }
+    }
+</script>
