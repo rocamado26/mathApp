@@ -117,32 +117,83 @@
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <input type="text" class="form-control" placeholder="Introducir desigualdad">
+                                        <div class="col-xs-12">
+                                            <div class="input-group">
+                                                <input type="text" id="termino1" class="form-control" placeholder="Introducir desigualdad">
+                                                <div class="input-group-btn">
+                                                    <button type="button" id="btn1" onclick="cambiaBoton(2)" class="btn btn-danger"><b>></b></button>
+                                                    <button type="button" id="btn2" onclick="cambiaBoton(3)" style="display: none;" class="btn btn-danger"><b>≥</b></button>
+                                                    <button type="button" id="btn3" onclick="cambiaBoton(4)" style="display: none;" class="btn btn-danger"><b><</b></button>
+                                                    <button type="button" id="btn4" onclick="cambiaBoton(1)" style="display: none;" class="btn btn-danger"><b>≤</b></button>
+                                                </div>
+                                                <input type="text" id="termino2" class="form-control" placeholder="Introducir desigualdad">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-primary" onclick="pasaLabel()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-12" id="solucion">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <input type="text" id="termino1" class="form-control" placeholder="Primer termino">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" id="termino2" class="form-control" placeholder="Segundo termino">
-                                                        </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="alert alert-warning">
+                                                <label for="">Terminos: </label><br><br>
+                                                <div class="row">
+                                                    <div class="col-xs-5 text-right">
+                                                        <label style="font-size: 20px" id="areaResolucion1"></label>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <button class="" type="button">Procesar</button>
-                                                        </div>
+                                                    <div class="col-xs-2 text-center">
+                                                        <label style="font-size: 20px" id="areaResolucion2"></label>
+                                                    </div>
+                                                    <div class="col-xs-5 text-left">
+                                                        <label style="font-size: 20px" id="areaResolucion3"></label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
+                                            <div class="alert alert-warning">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="">N° Termino</label>
+                                                        <input type="text" class="form-control" placeholder="Primer termino">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="">N° Termino</label>
+                                                        <input type="text" class="form-control" placeholder="Segundo termino">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-3 text-center">
+                                                        <button type="button" class="btn btn-info">&nbsp; + &nbsp;</button>
+                                                    </div>
+                                                    <div class="col-md-3 text-center">
+                                                        <button type="button" class="btn btn-info">&nbsp; - &nbsp;</button>
+                                                    </div>
+                                                    <div class="col-md-3 text-center">
+                                                        <button type="button" class="btn btn-info">&nbsp; * &nbsp;</button>
+                                                    </div>
+                                                    <div class="col-md-3 text-center">
+                                                        <button type="button" class="btn btn-info">&nbsp; / &nbsp;</button>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-3 text-center">
+                                                        <button type="button" class="btn btn-info"><font face='symbol'>&#222</font></button>
+                                                    </div>
+                                                    <div class="col-md-3 text-center">
+                                                        <button type="button" class="btn btn-info"><font face='symbol'>&#220</font></button>
+                                                    </div>
+                                                    <div class="col-md-3 text-center">
 
+                                                    </div>
+                                                    <div class="col-md-3 text-center">
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -155,6 +206,7 @@
     </div>
 </div>
 <script>
+    var opBtn=1;
     function pasoSolucion() {
         console.warn('Holaaaa');
     }
@@ -176,6 +228,46 @@
             case 5:{
 
             }break;
+        }
+    }
+
+    /**
+     * Inserta en el label donde se hara el desarrollo del ejercicio
+     */
+    function pasaLabel() {
+        if(opBtn==1){
+            $('#areaResolucion1').html(''+$('#termino1').val());
+            $('#areaResolucion2').html('>');
+            $('#areaResolucion3').html(''+$('#termino2').val());
+        }else{
+            if(opBtn==2){
+                $('#areaResolucion1').html(''+$('#termino1').val());
+                $('#areaResolucion2').html('≥');
+                $('#areaResolucion3').html(''+$('#termino2').val());
+            }else{
+                if(opBtn==3){
+                    $('#areaResolucion1').html(''+$('#termino1').val());
+                    $('#areaResolucion2').html('<');
+                    $('#areaResolucion3').html(''+$('#termino2').val());
+                }else{
+                    $('#areaResoliucion1').html(''+$('#termino1').val());
+                    $('#areaResolucion2').html('≤');
+                    $('#areaResolucion3').html(''+$('#termino2').val());
+                }
+            }
+        }
+    }
+
+    /**
+     * Cambia el boton segun se presione.
+     * @param op boton a visualizar.
+     */
+    function cambiaBoton(op){
+        switch(op){
+            case 1:{$('#btn1').show();$('#btn2').hide();$('#btn3').hide();$('#btn4').hide();opBtn=1;}break;
+            case 2:{$('#btn1').hide();$('#btn2').show();$('#btn3').hide();$('#btn4').hide();opBtn=2;}break;
+            case 3:{$('#btn1').hide();$('#btn2').hide();$('#btn3').show();$('#btn4').hide();opBtn=3;}break;
+            case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;}break;
         }
     }
 </script>
