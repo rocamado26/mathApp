@@ -235,6 +235,7 @@
      * Inserta en el label donde se hara el desarrollo del ejercicio
      */
     function pasaLabel() {
+        divideTerminos();
         if(opBtn==1){
             $('#areaResolucion1').html(''+$('#termino1').val());
             $('#areaResolucion2').html('>');
@@ -269,5 +270,13 @@
             case 3:{$('#btn1').hide();$('#btn2').hide();$('#btn3').show();$('#btn4').hide();opBtn=3;}break;
             case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;}break;
         }
+    }
+
+    function divideTerminos(){
+        var funcion=$('#termino1').val()+''+$('#termino2').val();
+        var arreglo=funcion.split('+');
+        //for(var i=0;i<){}
+        console.warn('split:',arreglo);
+        console.warn('split:',arreglo.length);
     }
 </script>
