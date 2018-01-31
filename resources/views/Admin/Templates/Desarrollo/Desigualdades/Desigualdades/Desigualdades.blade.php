@@ -276,17 +276,23 @@
         var funcion=$('#termino1').val()+''+$('#termino2').val();
         var f=[];
         var inicio=0;
-        console.warn('funcion:',funcion);
-        console.warn('funcion:',funcion.length);
+        //console.warn('funcion:',funcion);
+        //console.warn('funcion:',funcion.length);
         var c="";
+        //console.warn('c222:',funcion.substr(0,2));
+        //console.warn('c222:',funcion.substr(2,2));
+        //console.warn('2222:',funcion.substr(4,6));
         for(var i=0;i<funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
                 //c=c+funcion.charAt(i);
-                console.warn('c1:',funcion.substr(inicio,i));
+                //console.warn('i',i);
+                //console.warn('inicio-antes',inicio);
+                console.warn('c1:',funcion.substr(inicio,i-inicio));
                 inicio=i;
+                //console.warn('inicio-des',inicio);
             }
-            if(i==funcion.length){
-                console.warn('c1:',funcion.substr(inicio,i));
+            if(i+1==funcion.length){
+                console.warn('c1:',funcion.substr(inicio,funcion.length-inicio));
             }
         }
     }
