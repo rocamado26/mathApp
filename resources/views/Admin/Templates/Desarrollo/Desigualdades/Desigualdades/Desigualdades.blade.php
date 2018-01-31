@@ -274,9 +274,20 @@
 
     function divideTerminos(){
         var funcion=$('#termino1').val()+''+$('#termino2').val();
-        var arreglo=funcion.split('+');
-        //for(var i=0;i<){}
-        console.warn('split:',arreglo);
-        console.warn('split:',arreglo.length);
+        var f=[];
+        var inicio=0;
+        console.warn('funcion:',funcion);
+        console.warn('funcion:',funcion.length);
+        var c="";
+        for(var i=0;i<funcion.length;i++){
+            if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
+                //c=c+funcion.charAt(i);
+                console.warn('c1:',funcion.substr(inicio,i));
+                inicio=i;
+            }
+            if(i==funcion.length){
+                console.warn('c1:',funcion.substr(inicio,i));
+            }
+        }
     }
 </script>
