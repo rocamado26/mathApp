@@ -136,13 +136,16 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <div class="alert alert-info">
+                                                <label for="">Terminos: <b id="nTerminos"></b></label>
+                                            </div>
+
                                             <div class="alert alert-warning">
-                                                <label for="">Terminos: </label><br><br>
                                                 <div class="row">
-                                                    <div class="col-xs-5 text-right">
+                                                    <div class="col-xs-6 text-right">
                                                         <label style="font-size: 20px" id="areaResolucion1"></label>
                                                     </div>
-                                                    <div class="col-xs-2 text-center">
+                                                    <div class="col-xs-1 text-center">
                                                         <label style="font-size: 20px" id="areaResolucion2"></label>
                                                     </div>
                                                     <div class="col-xs-5 text-left">
@@ -272,28 +275,38 @@
         }
     }
 
+    var Terminos=[];
+    /**
+     * Divide la cadena en términos.
+     */
     function divideTerminos(){
-        var funcion=$('#termino1').val()+''+$('#termino2').val();
-        var f=[];
+        var funcion=$('#termino1').val();
+        Terminos=[];
         var inicio=0;
-        //console.warn('funcion:',funcion);
-        //console.warn('funcion:',funcion.length);
-        var c="";
-        //console.warn('c222:',funcion.substr(0,2));
-        //console.warn('c222:',funcion.substr(2,2));
-        //console.warn('2222:',funcion.substr(4,6));
-        for(var i=0;i<funcion.length;i++){
+        for(var i=1;i<funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
-                //c=c+funcion.charAt(i);
-                //console.warn('i',i);
-                //console.warn('inicio-antes',inicio);
-                console.warn('c1:',funcion.substr(inicio,i-inicio));
+                Terminos.push(funcion.substr(inicio,i-inicio));
                 inicio=i;
-                //console.warn('inicio-des',inicio);
             }
             if(i+1==funcion.length){
-                console.warn('c1:',funcion.substr(inicio,funcion.length-inicio));
+                Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
         }
+        funcion=$('#termino2').val();
+        inicio=0;
+        for(var i=1;i<funcion.length;i++){
+            if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
+                Terminos.push(funcion.substr(inicio,i-inicio));
+                inicio=i;
+            }
+            if(i+1==funcion.length){
+                Terminos.push(funcion.substr(inicio,funcion.length-inicio));
+            }
+        }
+        $('#nTerminos').html('');
+        for(var i=0;i<Terminos.length;i++){
+            $('#nTerminos').append('&nbsp;&nbsp;&nbsp; t'+''+(i+1)+' ( '+Terminos[i]+' )&nbsp;&nbsp;&nbsp;');
+        }
+        console.warn('data:',Terminos);
     }
 </script>
