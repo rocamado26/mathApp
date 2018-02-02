@@ -159,11 +159,11 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <label for="">N° Termino</label>
-                                                        <input type="text" class="form-control" placeholder="Primer termino">
+                                                        <input type="number" class="form-control" id="T1" placeholder="Primer termino">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <label for="">N° Termino</label>
-                                                        <input type="text" class="form-control" placeholder="Segundo termino">
+                                                        <input type="number" class="form-control" id="T2" placeholder="Segundo termino">
                                                     </div>
                                                 </div>
                                                 <br>
@@ -184,10 +184,10 @@
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info"><font face='symbol'>&#222</font></button>
+                                                        <button type="button" onclick="cambiaLado(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info"><font face='symbol'>&#220</font></button>
+                                                        <button type="button" onclick="cambiaLado(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
 
@@ -276,19 +276,23 @@
     }
 
     var Terminos=[];
+    var lado=[];
     /**
      * Divide la cadena en términos.
      */
     function divideTerminos(){
         var funcion=$('#termino1').val();
         Terminos=[];
+        lado=[];
         var inicio=0;
         for(var i=1;i<funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
                 Terminos.push(funcion.substr(inicio,i-inicio));
+                lado.push(true);
                 inicio=i;
             }
             if(i+1==funcion.length){
+                lado.push(true);
                 Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
         }
@@ -297,9 +301,11 @@
         for(var i=1;i<funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
                 Terminos.push(funcion.substr(inicio,i-inicio));
+                lado.push(false);
                 inicio=i;
             }
             if(i+1==funcion.length){
+                lado.push(false);
                 Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
         }
@@ -307,6 +313,24 @@
         for(var i=0;i<Terminos.length;i++){
             $('#nTerminos').append('&nbsp;&nbsp;&nbsp; t'+''+(i+1)+' ( '+Terminos[i]+' )&nbsp;&nbsp;&nbsp;');
         }
-        console.warn('data:',Terminos);
+        console.warn('terminos:',Terminos);
+        console.warn('lados:',lado);
+    }
+
+    function cambiaLado(miembro){
+        if(miembro==true){
+
+        }else{
+            var tempF=Terminos[$('#T1').val()-1];
+            Terminos[$('#T1').val()-1]=Terminos[Terminos.length-1];
+            Terminos[Terminos.length-1]=tempF;
+
+            var temp=false;
+            lado[$('#T1').val()-1]=lado[lado.length-1];
+            lado[lado.length-1]=temp;
+
+            console.warn('terminos:',Terminos);
+            console.warn('lados:',lado);
+        }
     }
 </script>
