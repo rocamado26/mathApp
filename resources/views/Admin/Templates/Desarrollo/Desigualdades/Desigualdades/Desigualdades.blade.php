@@ -318,19 +318,27 @@
     }
 
     function cambiaLado(miembro){
+        var tempF="";
         if(miembro==true){
-
+            tempF=Terminos[$('#T1').val()-1];
+            for(var i=0;i<lado.length;i++){
+                if(lado[i]==false){
+                    Terminos[$('#T1').val()-1]=Terminos[i];
+                    Terminos[i]=tempF;
+                    lado[i]=true;
+                    break;
+                }
+            }
         }else{
-            var tempF=Terminos[$('#T1').val()-1];
+            tempF=Terminos[$('#T1').val()-1];
             Terminos[$('#T1').val()-1]=Terminos[Terminos.length-1];
             Terminos[Terminos.length-1]=tempF;
 
             var temp=false;
             lado[$('#T1').val()-1]=lado[lado.length-1];
             lado[lado.length-1]=temp;
-
-            console.warn('terminos:',Terminos);
-            console.warn('lados:',lado);
         }
+        console.warn('terminos:',Terminos);
+        console.warn('lados:',lado);
     }
 </script>
