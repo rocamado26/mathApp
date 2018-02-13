@@ -318,25 +318,44 @@
     }
 
     function cambiaLado(miembro){
-        var tempF="";
-        if(miembro==true){
-            tempF=Terminos[$('#T1').val()-1];
+        var c=0;
+        var a=[];
+        var d=[];
+        var b=0;
+        c=$('#T1').val()-1;
+        if(miembro==false){
             for(var i=0;i<lado.length;i++){
-                if(lado[i]==false){
-                    Terminos[$('#T1').val()-1]=Terminos[i];
-                    Terminos[i]=tempF;
-                    lado[i]=true;
-                    break;
+                if(i!=c){
+                    a.push(Terminos[i]);
+                    d.push(lado[i]);
+                }else{
+                    b=i;
                 }
             }
+            a.push(Terminos[b]);
+            d.push(false);
+            lado=d;
+            Terminos=a;
         }else{
-            tempF=Terminos[$('#T1').val()-1];
-            Terminos[$('#T1').val()-1]=Terminos[Terminos.length-1];
-            Terminos[Terminos.length-1]=tempF;
-
-            var temp=false;
-            lado[$('#T1').val()-1]=lado[lado.length-1];
-            lado[lado.length-1]=temp;
+            for(var i=0;i<lado.length;i++){
+                if(lado[i]!=false){
+                    a.push(Terminos[i]);
+                    d.push(lado[i]);
+                }else{
+                    if(b==0){
+                        a.push("");
+                        d.push(true);
+                        b=i
+                    }
+                    if(i!=c){
+                        a.push(Terminos[i]);
+                        d.push(lado[i]);
+                    }
+                }
+            }
+            a[b]=Terminos[c];
+            lado=d;
+            Terminos=a;
         }
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
