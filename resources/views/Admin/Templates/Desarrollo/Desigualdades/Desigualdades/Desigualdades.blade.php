@@ -169,16 +169,16 @@
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; + &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(1)" class="btn btn-info">&nbsp; + &nbsp;</button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; - &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(2)" class="btn btn-info">&nbsp; - &nbsp;</button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; * &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(3)" class="btn btn-info">&nbsp; * &nbsp;</button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; / &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(4)" class="btn btn-info">&nbsp; / &nbsp;</button>
                                                     </div>
                                                 </div>
                                                 <br>
@@ -315,6 +315,31 @@
         }
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
+    }
+
+    function operaciones(op){
+        var a=Number(Terminos[$('#T1').val()-1]);
+        var b=Number(Terminos[$('#T2').val()-1]);
+        console.warn('termino a:',a);
+        console.warn('termino b:',b);
+        switch (op){
+                /*Suma de terminos*/
+            case 1:{
+                console.warn('suma de terminos:',a+b);
+            }break;
+                /*Reta de terminos*/
+            case 2:{
+                console.warn('suma de terminos:',a-b);
+            }break;
+                /*Multiplicacion de terminos*/
+            case 3:{
+                console.warn('suma de terminos:',a*b);
+            }break;
+                /*Division de terminos*/
+            case 4:{
+                console.warn('suma de terminos:',a/b);
+            }break;
+        }
     }
 
     function cambiaLado(miembro){
