@@ -145,7 +145,7 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="alert alert-info" id="area-grafica"><b>Área para graficar</b><br>
-                                                Ingresa los 2 focos y un punto cualquiera de la párabola para dibujarla
+                                                Ingresa los 2 focos y un punto cualquiera de la elipse para dibujarla
                                             </div><br>
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@
     steps: [{
         element: "#config",
         title: "Paso 1",
-        content: "Ingresa los valores de los focos y un punto de la parabola e identifica el efecto que tendrá la gráfica. Dar clic en el botón “Comprobar”",
+        content: "Ingresa los valores de los focos y un punto de la elipse e identifica el efecto que tendrá la gráfica. Dar clic en el botón “Comprobar”",
         placement: "top",
         backdrop: true,
         backdropContainer: '#contenido',
