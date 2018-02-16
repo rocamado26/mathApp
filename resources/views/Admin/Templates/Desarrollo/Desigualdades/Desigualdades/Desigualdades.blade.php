@@ -317,31 +317,42 @@
         console.warn('lados:',lado);
     }
 
+    /**
+     * Realiza las 4 operaciones básicas
+     * @param op según la operación a realizar
+     */
     function operaciones(op){
         var a=Number(Terminos[$('#T1').val()-1]);
         var b=Number(Terminos[$('#T2').val()-1]);
         console.warn('termino a:',a);
         console.warn('termino b:',b);
-        switch (op){
-                /*Suma de terminos*/
-            case 1:{
-                console.warn('suma de terminos:',a+b);
-            }break;
-                /*Reta de terminos*/
-            case 2:{
-                console.warn('suma de terminos:',a-b);
-            }break;
-                /*Multiplicacion de terminos*/
-            case 3:{
-                console.warn('suma de terminos:',a*b);
-            }break;
-                /*Division de terminos*/
-            case 4:{
-                console.warn('suma de terminos:',a/b);
-            }break;
+        if(valida(1)){
+            switch (op){
+                    /*Suma de terminos*/
+                case 1:{
+                    console.warn('suma de terminos:',a+b);
+
+                }break;
+                    /*Reta de terminos*/
+                case 2:{
+                    console.warn('suma de terminos:',a-b);
+                }break;
+                    /*Multiplicacion de terminos*/
+                case 3:{
+                    console.warn('suma de terminos:',a*b);
+                }break;
+                    /*Division de terminos*/
+                case 4:{
+                    console.warn('suma de terminos:',a/b);
+                }break;
+            }
         }
     }
 
+    /**
+     * Cambia de lado el término seleccionado
+     * @param miembro boolean que indica al lado para el cual se movera
+     */
     function cambiaLado(miembro){
         var c=0;
         var a=[];
@@ -357,7 +368,7 @@
                     b=i;
                 }
             }
-            a.push(Terminos[b]);
+            a.push(''+Number(Terminos[b])*(-1));
             d.push(false);
             lado=d;
             Terminos=a;
@@ -378,11 +389,29 @@
                     }
                 }
             }
-            a[b]=Terminos[c];
+            a[b]=""+Number(Terminos[c])*(-1);
             lado=d;
             Terminos=a;
         }
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
+
+    }
+
+    function valida(op){
+        switch (op){
+            case 1:{
+                if((lado[$('#T1').val()-1]==true && lado[$('#T2').val()-1]==true) || (lado[$('#T1').val()-1]==false && lado[$('#T2').val()-1]==false)){
+                    alert('Si es posible operar');
+                    return true;
+                }else{
+                    alert('No es posible operar');
+                    return false;
+                }
+            }break;
+            case 2:{
+
+            }break;
+        }
     }
 </script>
