@@ -128,7 +128,7 @@
                                                 </div>
                                                 <input type="text" id="termino2" class="form-control" placeholder="Introducir desigualdad">
                                                 <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-primary" onclick="pasaLabel()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                                    <button type="button" class="btn btn-primary" onclick="inciarFuncion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -210,8 +210,8 @@
 </div>
 <script>
     var opBtn=1;
-    function pasoSolucion() {
-        console.warn('Holaaaa');
+    function inciarFuncion() {
+        pasaLabel($('#termino1').val(),$('#termino2').val());
     }
 
     function operar(op){
@@ -237,26 +237,26 @@
     /**
      * Inserta en el label donde se hara el desarrollo del ejercicio
      */
-    function pasaLabel() {
-        divideTerminos();
+    function pasaLabel(termino1,termino2) {
+        divideTerminos(termino1,termino2);
         if(opBtn==1){
-            $('#areaResolucion1').html(''+$('#termino1').val());
+            $('#areaResolucion1').html(''+termino1);
             $('#areaResolucion2').html('>');
-            $('#areaResolucion3').html(''+$('#termino2').val());
+            $('#areaResolucion3').html(''+termino2);
         }else{
             if(opBtn==2){
-                $('#areaResolucion1').html(''+$('#termino1').val());
+                $('#areaResolucion1').html(''+termino1);
                 $('#areaResolucion2').html('≥');
-                $('#areaResolucion3').html(''+$('#termino2').val());
+                $('#areaResolucion3').html(''+termino2);
             }else{
                 if(opBtn==3){
-                    $('#areaResolucion1').html(''+$('#termino1').val());
+                    $('#areaResolucion1').html(''+termino1);
                     $('#areaResolucion2').html('<');
-                    $('#areaResolucion3').html(''+$('#termino2').val());
+                    $('#areaResolucion3').html(''+termino2);
                 }else{
-                    $('#areaResoliucion1').html(''+$('#termino1').val());
+                    $('#areaResoliucion1').html(''+termino1);
                     $('#areaResolucion2').html('≤');
-                    $('#areaResolucion3').html(''+$('#termino2').val());
+                    $('#areaResolucion3').html(''+termino2);
                 }
             }
         }
@@ -280,8 +280,8 @@
     /**
      * Divide la cadena en términos.
      */
-    function divideTerminos(){
-        var funcion=$('#termino1').val();
+    function divideTerminos(termino1,termino2){
+        var funcion=termino1;
         Terminos=[];
         lado=[];
         var inicio=0;
@@ -296,15 +296,15 @@
                 Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
         }
-        funcion=$('#termino2').val();
+        funcion=termino2;
         inicio=0;
-        for(var i=1;i<funcion.length;i++){
+        for(var i=1;i<=funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
                 Terminos.push(funcion.substr(inicio,i-inicio));
                 lado.push(false);
                 inicio=i;
             }
-            if(i+1==funcion.length){
+            if(i==funcion.length){
                 lado.push(false);
                 Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
@@ -359,47 +359,57 @@
         var d=[];
         var b=0;
         c=$('#T1').val()-1;
-        if(miembro==false){
-            for(var i=0;i<lado.length;i++){
-                if(i!=c){
-                    a.push(Terminos[i]);
-                    d.push(lado[i]);
-                }else{
-                    b=i;
-                }
-            }
-            a.push(''+Number(Terminos[b])*(-1));
-            d.push(false);
-            lado=d;
-            Terminos=a;
-        }else{
-            for(var i=0;i<lado.length;i++){
-                if(lado[i]!=false){
-                    a.push(Terminos[i]);
-                    d.push(lado[i]);
-                }else{
-                    if(b==0){
-                        a.push("");
-                        d.push(true);
-                        b=i
-                    }
+        debugger;
+        if(valida(2,miembro)){
+            if(miembro==false){
+                for(var i=0;i<lado.length;i++){
                     if(i!=c){
                         a.push(Terminos[i]);
                         d.push(lado[i]);
+                    }else{
+                        b=i;
                     }
                 }
+                a.push(''+Number(Terminos[b])*(-1));
+                d.push(false);
+                lado=d;
+                Terminos=a;
+            }else{
+                for(var i=0;i<lado.length;i++){
+                    if(lado[i]!=false){
+                        a.push(Terminos[i]);
+                        d.push(lado[i]);
+                    }else{
+                        if(b==0){
+                            a.push("");
+                            d.push(true);
+                            b=i
+                        }
+                        if(i!=c){
+                            a.push(Terminos[i]);
+                            d.push(lado[i]);
+                        }
+                    }
+                }
+                a[b]=""+Number(Terminos[c])*(-1);
+                lado=d;
+                Terminos=a;
             }
-            a[b]=""+Number(Terminos[c])*(-1);
-            lado=d;
-            Terminos=a;
         }
+
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
 
     }
 
-    function valida(op){
+    /**
+     * Se encarga de validar los datos a ingresar al ejercicio
+     * @param op que opcion de validacion
+     * @returns {boolean} true si esta correcto de lo contrario false
+     */
+    function valida(op,mover){
         switch (op){
+            /*Valida las operaciones de terminos de lados diferentes*/
             case 1:{
                 if((lado[$('#T1').val()-1]==true && lado[$('#T2').val()-1]==true) || (lado[$('#T1').val()-1]==false && lado[$('#T2').val()-1]==false)){
                     alert('Si es posible operar');
@@ -409,9 +419,16 @@
                     return false;
                 }
             }break;
+            /*Valida si el término a mover está en el lado contrario, para ser posible moverlo*/
             case 2:{
-
+                if((lado[$('#T1').val()-1])==mover){
+                    return false;
+                }else{
+                    return true;
+                }
             }break;
         }
     }
+
+
 </script>
