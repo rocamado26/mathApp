@@ -184,10 +184,10 @@
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" onclick="cambiaLado(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
+                                                        <button type="button" onclick="moverTermimno(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" onclick="cambiaLado(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
+                                                        <button type="button" onclick="moverTermimno(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
 
@@ -210,28 +210,12 @@
 </div>
 <script>
     var opBtn=1;
+    /*
+    * Inicia el proceso de resolución de l ejercicio
+    * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
+    * */
     function inciarFuncion() {
-        pasaLabel($('#termino1').val(),$('#termino2').val());
-    }
-
-    function operar(op){
-        switch (op){
-            case 1:{
-
-            }break;
-            case 2:{
-
-            }break;
-            case 3:{
-
-            }break;
-            case 4:{
-
-            }break;
-            case 5:{
-
-            }break;
-        }
+        pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
     }
 
     /**
@@ -326,40 +310,51 @@
         var b=Number(Terminos[$('#T2').val()-1]);
         console.warn('termino a:',a);
         console.warn('termino b:',b);
-        if(valida(1)){
-            switch (op){
+        switch (op){
                     /*Suma de terminos*/
                 case 1:{
-                    console.warn('suma de terminos:',a+b);
-
+                    if(valida(1)){
+                        console.warn('suma de terminos:',a+b);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                    }
                 }break;
                     /*Reta de terminos*/
                 case 2:{
-                    console.warn('suma de terminos:',a-b);
+                    if(valida(1)){
+                        console.warn('suma de terminos:',a-b);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                    }
                 }break;
                     /*Multiplicacion de terminos*/
                 case 3:{
                     console.warn('suma de terminos:',a*b);
+
+                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a*b,false);
                 }break;
                     /*Division de terminos*/
                 case 4:{
                     console.warn('suma de terminos:',a/b);
+                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a/b,false);
                 }break;
             }
-        }
+    }
+
+    function moverTermimno(miembro){
+        cambiaLado(miembro,$('#T1').val()-1);
     }
 
     /**
      * Cambia de lado el término seleccionado
      * @param miembro boolean que indica al lado para el cual se movera
      */
-    function cambiaLado(miembro){
+    function cambiaLado(miembro,index){
         var c=0;
         var a=[];
         var d=[];
         var b=0;
-        c=$('#T1').val()-1;
-        debugger;
+        c=index;
+        //debugger;
+        //if(Terminos[$('#T1').val()-1]){}else{}
         if(valida(2,miembro)){
             if(miembro==false){
                 for(var i=0;i<lado.length;i++){
@@ -427,8 +422,54 @@
                     return true;
                 }
             }break;
+            case 3:{
+                var cont1=0;
+                var cont2=0
+                Terminos.forEach(function (item) {
+                    if(item.indexOf('x')!=-1){
+                        cont1++;
+                    }else{
+                        cont2++;
+                    }
+                });
+                if(cont1==1 && cont2==1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
         }
     }
 
-
+    /**
+     * Reduce los termino cuando se operan entre si.
+     * @param Termino1 primer término a eliminar del areglo Terminos
+     * @param Termino2 Segundo término a eliminar del areglo Terminos
+     * @param valor Valor de la operacion entre los dos términos
+     * @param miembro Miembro donde quedará el nuevo término.
+     */
+    function reduceTerminos(Termino1,Termino2, valor,miembro){
+        var a=[];
+        var b=[];
+        Terminos.forEach(function (item,index) { //Buscamos los términos a eliminar
+            if(index!=Termino1 && index!=Termino2){//inserta todos aquellos que sean diferentes
+                a.push(item);
+                b.push(lado[index]);//areglo que controla los lados miembros donde estan los terminos
+            }
+        });
+        //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
+        //al final del arreglo.
+        Terminos=a;
+        Terminos.push(''+(valor*-1));
+        lado=b;
+        if(miembro){
+            lado.push(false);
+            cambiaLado(true,Terminos.length-1);//Utilizamos la funcion ya creada para mover de lados los términos, solo si quedará en el
+            //miembro positivo
+        }else {
+            lado.push(false);
+        }
+        console.warn('Terminos',Terminos);
+        console.warn('Lados',lado);
+    }
 </script>
