@@ -313,28 +313,51 @@
         switch (op){
                     /*Suma de terminos*/
                 case 1:{
-                    if(valida(1)){
+                    if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a+b);
                         reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
                     }
                 }break;
                     /*Reta de terminos*/
                 case 2:{
-                    if(valida(1)){
+                    if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a-b);
                         reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
                     }
                 }break;
                     /*Multiplicacion de terminos*/
                 case 3:{
-                    console.warn('suma de terminos:',a*b);
+                    if(valida(3)){
+                        if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
+                            var coeficiente=Terminos[$('#T1').val()-1].split('x');
+                            console.warn('multi de terminos:',coeficiente);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(coeficiente[0])*b)*-1,false);
+                        }else{
+                            if(Terminos[$('#T2').val()-1]){
+                                var coeficiente=Terminos[$('#T2').val()-1].split('x');
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a*Number(coeficiente[0]))*-1,false);
+                            }else{
 
-                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a*b,false);
+                            }
+                        }
+                    }
                 }break;
                     /*Division de terminos*/
                 case 4:{
-                    console.warn('suma de terminos:',a/b);
-                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a/b,false);
+                    if(valida(3)){
+                        if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
+                            var coeficiente=Terminos[$('#T1').val()-1].split('x');
+                            console.warn('multi de terminos:',coeficiente);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0]))*-1,false);
+                        }else{
+                            if(Terminos[$('#T2').val()-1]){
+                                var coeficiente=Terminos[$('#T2').val()-1].split('x');
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0]))*-1,false);
+                            }else{
+
+                            }
+                        }
+                    }
                 }break;
             }
     }
@@ -422,6 +445,7 @@
                     return true;
                 }
             }break;
+            /*Evalua si aun quedan terminos independientes por operar*/
             case 3:{
                 var cont1=0;
                 var cont2=0
@@ -433,6 +457,14 @@
                     }
                 });
                 if(cont1==1 && cont2==1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+            /*Valida que no se operen terminos no semejantes*/
+            case 4:{
+                if(Terminos[$('#T1').val()-1].indexOf('x')==-1 && Terminos[$('#T2').val()-1].indexOf('x')==-1){
                     return true;
                 }else{
                     return false;
