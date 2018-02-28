@@ -128,7 +128,7 @@
                                                 </div>
                                                 <input type="text" id="termino2" class="form-control" placeholder="Introducir desigualdad">
                                                 <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-primary" onclick="pasaLabel()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                                    <button type="button" class="btn btn-primary" onclick="inciarFuncion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -169,25 +169,25 @@
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; + &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(1)" class="btn btn-info">&nbsp; + &nbsp;</button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; - &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(2)" class="btn btn-info">&nbsp; - &nbsp;</button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; * &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(3)" class="btn btn-info">&nbsp; * &nbsp;</button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" class="btn btn-info">&nbsp; / &nbsp;</button>
+                                                        <button type="button" onclick="operaciones(4)" class="btn btn-info">&nbsp; / &nbsp;</button>
                                                     </div>
                                                 </div>
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" onclick="cambiaLado(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
+                                                        <button type="button" onclick="moverTermimno(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
-                                                        <button type="button" onclick="cambiaLado(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
+                                                        <button type="button" onclick="moverTermimno(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
                                                     </div>
                                                     <div class="col-md-3 text-center">
 
@@ -210,53 +210,37 @@
 </div>
 <script>
     var opBtn=1;
-    function pasoSolucion() {
-        console.warn('Holaaaa');
-    }
-
-    function operar(op){
-        switch (op){
-            case 1:{
-
-            }break;
-            case 2:{
-
-            }break;
-            case 3:{
-
-            }break;
-            case 4:{
-
-            }break;
-            case 5:{
-
-            }break;
-        }
+    /*
+    * Inicia el proceso de resolución de l ejercicio
+    * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
+    * */
+    function inciarFuncion() {
+        pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
     }
 
     /**
      * Inserta en el label donde se hara el desarrollo del ejercicio
      */
-    function pasaLabel() {
-        divideTerminos();
+    function pasaLabel(termino1,termino2) {
+        divideTerminos(termino1,termino2);
         if(opBtn==1){
-            $('#areaResolucion1').html(''+$('#termino1').val());
+            $('#areaResolucion1').html(''+termino1);
             $('#areaResolucion2').html('>');
-            $('#areaResolucion3').html(''+$('#termino2').val());
+            $('#areaResolucion3').html(''+termino2);
         }else{
             if(opBtn==2){
-                $('#areaResolucion1').html(''+$('#termino1').val());
+                $('#areaResolucion1').html(''+termino1);
                 $('#areaResolucion2').html('≥');
-                $('#areaResolucion3').html(''+$('#termino2').val());
+                $('#areaResolucion3').html(''+termino2);
             }else{
                 if(opBtn==3){
-                    $('#areaResolucion1').html(''+$('#termino1').val());
+                    $('#areaResolucion1').html(''+termino1);
                     $('#areaResolucion2').html('<');
-                    $('#areaResolucion3').html(''+$('#termino2').val());
+                    $('#areaResolucion3').html(''+termino2);
                 }else{
-                    $('#areaResoliucion1').html(''+$('#termino1').val());
+                    $('#areaResoliucion1').html(''+termino1);
                     $('#areaResolucion2').html('≤');
-                    $('#areaResolucion3').html(''+$('#termino2').val());
+                    $('#areaResolucion3').html(''+termino2);
                 }
             }
         }
@@ -280,8 +264,8 @@
     /**
      * Divide la cadena en términos.
      */
-    function divideTerminos(){
-        var funcion=$('#termino1').val();
+    function divideTerminos(termino1,termino2){
+        var funcion=termino1;
         Terminos=[];
         lado=[];
         var inicio=0;
@@ -296,15 +280,15 @@
                 Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
         }
-        funcion=$('#termino2').val();
+        funcion=termino2;
         inicio=0;
-        for(var i=1;i<funcion.length;i++){
+        for(var i=1;i<=funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
                 Terminos.push(funcion.substr(inicio,i-inicio));
                 lado.push(false);
                 inicio=i;
             }
-            if(i+1==funcion.length){
+            if(i==funcion.length){
                 lado.push(false);
                 Terminos.push(funcion.substr(inicio,funcion.length-inicio));
             }
@@ -317,47 +301,207 @@
         console.warn('lados:',lado);
     }
 
-    function cambiaLado(miembro){
+    /**
+     * Realiza las 4 operaciones básicas
+     * @param op según la operación a realizar
+     */
+    function operaciones(op){
+        var a=Number(Terminos[$('#T1').val()-1]);
+        var b=Number(Terminos[$('#T2').val()-1]);
+        console.warn('termino a:',a);
+        console.warn('termino b:',b);
+        switch (op){
+                    /*Suma de terminos*/
+                case 1:{
+                    if(valida(1) && valida(4)){
+                        console.warn('suma de terminos:',a+b);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                    }
+                }break;
+                    /*Reta de terminos*/
+                case 2:{
+                    if(valida(1) && valida(4)){
+                        console.warn('suma de terminos:',a-b);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                    }
+                }break;
+                    /*Multiplicacion de terminos*/
+                case 3:{
+                    if(valida(3)){
+                        if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
+                            var coeficiente=Terminos[$('#T1').val()-1].split('x');
+                            console.warn('multi de terminos:',coeficiente);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(coeficiente[0])*b)*-1,false);
+                        }else{
+                            if(Terminos[$('#T2').val()-1]){
+                                var coeficiente=Terminos[$('#T2').val()-1].split('x');
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a*Number(coeficiente[0]))*-1,false);
+                            }else{
+
+                            }
+                        }
+                    }
+                }break;
+                    /*Division de terminos*/
+                case 4:{
+                    if(valida(3)){
+                        if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
+                            var coeficiente=Terminos[$('#T1').val()-1].split('x');
+                            console.warn('multi de terminos:',coeficiente);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0]))*-1,false);
+                        }else{
+                            if(Terminos[$('#T2').val()-1]){
+                                var coeficiente=Terminos[$('#T2').val()-1].split('x');
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0]))*-1,false);
+                            }else{
+
+                            }
+                        }
+                    }
+                }break;
+            }
+    }
+
+    function moverTermimno(miembro){
+        cambiaLado(miembro,$('#T1').val()-1);
+    }
+
+    /**
+     * Cambia de lado el término seleccionado
+     * @param miembro boolean que indica al lado para el cual se movera
+     */
+    function cambiaLado(miembro,index){
         var c=0;
         var a=[];
         var d=[];
         var b=0;
-        c=$('#T1').val()-1;
-        if(miembro==false){
-            for(var i=0;i<lado.length;i++){
-                if(i!=c){
-                    a.push(Terminos[i]);
-                    d.push(lado[i]);
-                }else{
-                    b=i;
-                }
-            }
-            a.push(Terminos[b]);
-            d.push(false);
-            lado=d;
-            Terminos=a;
-        }else{
-            for(var i=0;i<lado.length;i++){
-                if(lado[i]!=false){
-                    a.push(Terminos[i]);
-                    d.push(lado[i]);
-                }else{
-                    if(b==0){
-                        a.push("");
-                        d.push(true);
-                        b=i
-                    }
+        c=index;
+        //debugger;
+        //if(Terminos[$('#T1').val()-1]){}else{}
+        if(valida(2,miembro)){
+            if(miembro==false){
+                for(var i=0;i<lado.length;i++){
                     if(i!=c){
                         a.push(Terminos[i]);
                         d.push(lado[i]);
+                    }else{
+                        b=i;
                     }
                 }
+                a.push(''+Number(Terminos[b])*(-1));
+                d.push(false);
+                lado=d;
+                Terminos=a;
+            }else{
+                for(var i=0;i<lado.length;i++){
+                    if(lado[i]!=false){
+                        a.push(Terminos[i]);
+                        d.push(lado[i]);
+                    }else{
+                        if(b==0){
+                            a.push("");
+                            d.push(true);
+                            b=i
+                        }
+                        if(i!=c){
+                            a.push(Terminos[i]);
+                            d.push(lado[i]);
+                        }
+                    }
+                }
+                a[b]=""+Number(Terminos[c])*(-1);
+                lado=d;
+                Terminos=a;
             }
-            a[b]=Terminos[c];
-            lado=d;
-            Terminos=a;
         }
+
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
+
+    }
+
+    /**
+     * Se encarga de validar los datos a ingresar al ejercicio
+     * @param op que opcion de validacion
+     * @returns {boolean} true si esta correcto de lo contrario false
+     */
+    function valida(op,mover){
+        switch (op){
+            /*Valida las operaciones de terminos de lados diferentes*/
+            case 1:{
+                if((lado[$('#T1').val()-1]==true && lado[$('#T2').val()-1]==true) || (lado[$('#T1').val()-1]==false && lado[$('#T2').val()-1]==false)){
+                    alert('Si es posible operar');
+                    return true;
+                }else{
+                    alert('No es posible operar');
+                    return false;
+                }
+            }break;
+            /*Valida si el término a mover está en el lado contrario, para ser posible moverlo*/
+            case 2:{
+                if((lado[$('#T1').val()-1])==mover){
+                    return false;
+                }else{
+                    return true;
+                }
+            }break;
+            /*Evalua si aun quedan terminos independientes por operar*/
+            case 3:{
+                var cont1=0;
+                var cont2=0
+                Terminos.forEach(function (item) {
+                    if(item.indexOf('x')!=-1){
+                        cont1++;
+                    }else{
+                        cont2++;
+                    }
+                });
+                if(cont1==1 && cont2==1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+            /*Valida que no se operen terminos no semejantes*/
+            case 4:{
+                if(Terminos[$('#T1').val()-1].indexOf('x')==-1 && Terminos[$('#T2').val()-1].indexOf('x')==-1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+        }
+    }
+
+    /**
+     * Reduce los termino cuando se operan entre si.
+     * @param Termino1 primer término a eliminar del areglo Terminos
+     * @param Termino2 Segundo término a eliminar del areglo Terminos
+     * @param valor Valor de la operacion entre los dos términos
+     * @param miembro Miembro donde quedará el nuevo término.
+     */
+    function reduceTerminos(Termino1,Termino2, valor,miembro){
+        var a=[];
+        var b=[];
+        Terminos.forEach(function (item,index) { //Buscamos los términos a eliminar
+            if(index!=Termino1 && index!=Termino2){//inserta todos aquellos que sean diferentes
+                a.push(item);
+                b.push(lado[index]);//areglo que controla los lados miembros donde estan los terminos
+            }
+        });
+        //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
+        //al final del arreglo.
+        Terminos=a;
+        Terminos.push(''+(valor*-1));
+        lado=b;
+        if(miembro){
+            lado.push(false);
+            cambiaLado(true,Terminos.length-1);//Utilizamos la funcion ya creada para mover de lados los términos, solo si quedará en el
+            //miembro positivo
+        }else {
+            lado.push(false);
+        }
+        console.warn('Terminos',Terminos);
+        console.warn('Lados',lado);
     }
 </script>
