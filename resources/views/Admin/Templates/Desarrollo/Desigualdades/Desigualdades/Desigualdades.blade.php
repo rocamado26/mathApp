@@ -315,14 +315,14 @@
                 case 1:{
                     if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a+b);
-                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b)*-1,lado[$('#T1').val()-1]);
                     }
                 }break;
                     /*Reta de terminos*/
                 case 2:{
                     if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a-b);
-                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a-b)*-1,lado[$('#T1').val()-1]);
                     }
                 }break;
                     /*Multiplicacion de terminos*/
@@ -495,12 +495,12 @@
         Terminos.push(''+(valor*-1));
         lado=b;
         if(miembro){
-            lado.push(false);
-            cambiaLado(true,Terminos.length-1);//Utilizamos la funcion ya creada para mover de lados los términos, solo si quedará en el
-            //miembro positivo
-        }else {
-            lado.push(false);
+            lado.push(miembro);
+            cambiaLado(miembro,Terminos.length-1);//Utilizamos la funcion ya creada para mover de lados los términos, solo si quedará en el
+        }else{
+            lado.push(miembro);
         }
+        // miembro positivo
         console.warn('Terminos',Terminos);
         console.warn('Lados',lado);
     }
