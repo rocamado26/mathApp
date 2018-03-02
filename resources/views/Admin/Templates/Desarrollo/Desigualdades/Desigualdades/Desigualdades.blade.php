@@ -168,31 +168,31 @@
                                                 </div>
                                                 <br>
                                                 <div class="row">
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(1)" class="btn btn-info">&nbsp; + &nbsp;</button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(2)" class="btn btn-info">&nbsp; - &nbsp;</button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(3)" class="btn btn-info">&nbsp; * &nbsp;</button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(4)" class="btn btn-info">&nbsp; / &nbsp;</button>
                                                     </div>
                                                 </div>
                                                 <br>
                                                 <div class="row">
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="moverTermimno(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="moverTermimno(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
 
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
 
                                                     </div>
                                                 </div>
@@ -362,6 +362,20 @@
             }
     }
 
+
+    function creaCadena() {
+        var a="";
+        var b="";
+        Terminos.forEach(function (item,index) {
+            if(lado[index]==true){
+                a=a+item;
+            }else{
+                b=b+item;
+            }
+        });
+        pasaLabel(a,b);
+    }
+
     function moverTermimno(miembro){
         cambiaLado(miembro,$('#T1').val()-1);
     }
@@ -414,7 +428,7 @@
                 Terminos=a;
             }
         }
-
+        creaCadena();
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
 
@@ -503,5 +517,6 @@
         // miembro positivo
         console.warn('Terminos',Terminos);
         console.warn('Lados',lado);
+        creaCadena();
     }
 </script>
