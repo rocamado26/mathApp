@@ -168,31 +168,31 @@
                                                 </div>
                                                 <br>
                                                 <div class="row">
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(1)" class="btn btn-info">&nbsp; + &nbsp;</button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(2)" class="btn btn-info">&nbsp; - &nbsp;</button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(3)" class="btn btn-info">&nbsp; * &nbsp;</button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(4)" class="btn btn-info">&nbsp; / &nbsp;</button>
                                                     </div>
                                                 </div>
                                                 <br>
                                                 <div class="row">
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="moverTermimno(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="moverTermimno(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
 
                                                     </div>
-                                                    <div class="col-md-3 text-center">
+                                                    <div class="col-xs-3 text-center">
 
                                                     </div>
                                                 </div>
@@ -313,16 +313,20 @@
         switch (op){
                     /*Suma de terminos*/
                 case 1:{
-                    if(valida(1) && valida(4)){
-                        console.warn('suma de terminos:',a+b);
-                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                    if(valida(1)){
+                        if(valida(4)){
+                            console.warn('suma de terminos:',a+b);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1]);
+                        }else{
+
+                        }
                     }
                 }break;
                     /*Reta de terminos*/
                 case 2:{
                     if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a-b);
-                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,a+b,lado[$('#T1').val()-1]);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a-b),lado[$('#T1').val()-1]);
                     }
                 }break;
                     /*Multiplicacion de terminos*/
@@ -348,11 +352,11 @@
                         if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
                             var coeficiente=Terminos[$('#T1').val()-1].split('x');
                             console.warn('multi de terminos:',coeficiente);
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0]))*-1,false);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false);
                         }else{
                             if(Terminos[$('#T2').val()-1]){
                                 var coeficiente=Terminos[$('#T2').val()-1].split('x');
-                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0]))*-1,false);
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),false);
                             }else{
 
                             }
@@ -360,6 +364,20 @@
                     }
                 }break;
             }
+    }
+
+
+    function creaCadena() {
+        var a="";
+        var b="";
+        Terminos.forEach(function (item,index) {
+            if(lado[index]==true){
+                a=a+item;
+            }else{
+                b=b+item;
+            }
+        });
+        pasaLabel(a,b);
     }
 
     function moverTermimno(miembro){
@@ -376,8 +394,6 @@
         var d=[];
         var b=0;
         c=index;
-        //debugger;
-        //if(Terminos[$('#T1').val()-1]){}else{}
         if(valida(2,miembro)){
             if(miembro==false){
                 for(var i=0;i<lado.length;i++){
@@ -414,7 +430,7 @@
                 Terminos=a;
             }
         }
-
+        creaCadena();
         console.warn('terminos:',Terminos);
         console.warn('lados:',lado);
 
@@ -464,10 +480,10 @@
             }break;
             /*Valida que no se operen terminos no semejantes*/
             case 4:{
-                if(Terminos[$('#T1').val()-1].indexOf('x')==-1 && Terminos[$('#T2').val()-1].indexOf('x')==-1){
-                    return true;
-                }else{
+                if(Terminos[$('#T1').val()-1].indexOf('x')!=-1 || Terminos[$('#T2').val()-1].indexOf('x')!=-1){
                     return false;
+                }else{
+                    return true;
                 }
             }break;
         }
@@ -483,6 +499,9 @@
     function reduceTerminos(Termino1,Termino2, valor,miembro){
         var a=[];
         var b=[];
+        var c=[];
+        var d=[];
+        var e=true;
         Terminos.forEach(function (item,index) { //Buscamos los términos a eliminar
             if(index!=Termino1 && index!=Termino2){//inserta todos aquellos que sean diferentes
                 a.push(item);
@@ -491,17 +510,48 @@
         });
         //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
         //al final del arreglo.
-        Terminos=a;
-        Terminos.push(''+(valor*-1));
-        lado=b;
+        //Terminos=a;
+        //Terminos.push(''+(valor*-1));
+        //lado=b;
         if(miembro){
-            lado.push(false);
-            cambiaLado(true,Terminos.length-1);//Utilizamos la funcion ya creada para mover de lados los términos, solo si quedará en el
-            //miembro positivo
-        }else {
-            lado.push(false);
+            b.forEach(function (item, index) {
+                if(item==true){
+                    c.push(a[index]);
+                    d.push(item);
+                }else{
+                    if(e){
+                        c.push(signoMas(valor));
+                        d.push(miembro);
+                        e=false;
+                    }
+                    c.push(a[index]);
+                    d.push(item);
+                }
+            });
+            Terminos=c;
+            lado=d;
+        }else{
+            a.push(signoMas(valor));
+            b.push(miembro);
+            Terminos=a;
+            lado=b;
         }
+        // miembro positivo
         console.warn('Terminos',Terminos);
         console.warn('Lados',lado);
+        creaCadena();
+    }
+
+    /**
+     * Retorna una cadena con signo positivo
+     * @param valor dato a evaluar
+     * @returns {*}
+     */
+    function signoMas(valor){
+        if(Math.sign(Number(valor))==1){
+            return "+"+valor;
+        }else{
+            return valor;
+        }
     }
 </script>
