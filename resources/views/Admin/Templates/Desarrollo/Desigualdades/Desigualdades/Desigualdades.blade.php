@@ -142,14 +142,14 @@
 
                                             <div class="alert alert-warning">
                                                 <div class="row">
-                                                    <div class="col-xs-6 text-right">
-                                                        <label style="font-size: 20px" id="areaResolucion1"></label>
+                                                    <div class="col-xs-6 text-right" id="areaResolucion1">
+
                                                     </div>
-                                                    <div class="col-xs-1 text-center">
-                                                        <label style="font-size: 20px" id="areaResolucion2"></label>
+                                                    <div class="col-xs-1 text-center" id="areaResolucion2">
+
                                                     </div>
-                                                    <div class="col-xs-5 text-left">
-                                                        <label style="font-size: 20px" id="areaResolucion3"></label>
+                                                    <div class="col-xs-5 text-left" id="areaResolucion3">
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -223,24 +223,25 @@
      */
     function pasaLabel(termino1,termino2) {
         divideTerminos(termino1,termino2);
+        debugger;
         if(opBtn==1){
-            $('#areaResolucion1').html(''+termino1);
-            $('#areaResolucion2').html('>');
-            $('#areaResolucion3').html(''+termino2);
+            $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
+            $('#areaResolucion2').append('<label style="font-size: 20px">></label>');
+            $('#areaResolucion3').append('<label style="font-size: 20px">'+termino2+'</label><br>');
         }else{
             if(opBtn==2){
-                $('#areaResolucion1').html(''+termino1);
-                $('#areaResolucion2').html('≥');
-                $('#areaResolucion3').html(''+termino2);
+                $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
+                $('#areaResolucion2').append('<label style="font-size: 20px">≥</label>');
+                $('#areaResolucion3').append('<label style="font-size: 20px">'+termino2+'</label><br>');
             }else{
                 if(opBtn==3){
-                    $('#areaResolucion1').html(''+termino1);
-                    $('#areaResolucion2').html('<');
-                    $('#areaResolucion3').html(''+termino2);
+                    $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
+                    $('#areaResolucion2').append('<label style="font-size: 20px"><</label>');
+                    $('#areaResolucion3').append('<label style="font-size: 20px">'+termino2+'</label><br>');
                 }else{
-                    $('#areaResoliucion1').html(''+termino1);
-                    $('#areaResolucion2').html('≤');
-                    $('#areaResolucion3').html(''+termino2);
+                    $('#areaResoliucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
+                    $('#areaResolucion2').append('<label style="font-size: 20px">≤</label>');
+                    $('#areaResolucion3').append('<label style="font-size: 20px">'+termino2+'</label><br>');
                 }
             }
         }
@@ -404,7 +405,7 @@
                         b=i;
                     }
                 }
-                a.push(''+Number(Terminos[b])*(-1));
+                a.push(signoMas(Number(Terminos[b])*(-1)));
                 d.push(false);
                 lado=d;
                 Terminos=a;
@@ -425,7 +426,7 @@
                         }
                     }
                 }
-                a[b]=""+Number(Terminos[c])*(-1);
+                a[b]=signoMas(Number(Terminos[c])*(-1));
                 lado=d;
                 Terminos=a;
             }
@@ -446,10 +447,10 @@
             /*Valida las operaciones de terminos de lados diferentes*/
             case 1:{
                 if((lado[$('#T1').val()-1]==true && lado[$('#T2').val()-1]==true) || (lado[$('#T1').val()-1]==false && lado[$('#T2').val()-1]==false)){
-                    alert('Si es posible operar');
+                    //alert('Si es posible operar');
                     return true;
                 }else{
-                    alert('No es posible operar');
+                    //alert('No es posible operar');
                     return false;
                 }
             }break;
@@ -510,29 +511,31 @@
         });
         //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
         //al final del arreglo.
-        //Terminos=a;
-        //Terminos.push(''+(valor*-1));
-        //lado=b;
-        if(miembro){
-            b.forEach(function (item, index) {
-                if(item==true){
-                    c.push(a[index]);
-                    d.push(item);
-                }else{
-                    if(e){
-                        c.push(signoMas(valor));
-                        d.push(miembro);
-                        e=false;
+        if(valor!=0){
+            if(miembro){
+                b.forEach(function (item, index) {
+                    if(item==true){
+                        c.push(a[index]);
+                        d.push(item);
+                    }else{
+                        if(e){
+                            c.push(signoMas(valor));
+                            d.push(miembro);
+                            e=false;
+                        }
+                        c.push(a[index]);
+                        d.push(item);
                     }
-                    c.push(a[index]);
-                    d.push(item);
-                }
-            });
-            Terminos=c;
-            lado=d;
+                });
+                Terminos=c;
+                lado=d;
+            }else{
+                a.push(signoMas(valor));
+                b.push(miembro);
+                Terminos=a;
+                lado=b;
+            }
         }else{
-            a.push(signoMas(valor));
-            b.push(miembro);
             Terminos=a;
             lado=b;
         }
@@ -551,7 +554,7 @@
         if(Math.sign(Number(valor))==1){
             return "+"+valor;
         }else{
-            return valor;
+            return ""+valor;
         }
     }
 </script>
