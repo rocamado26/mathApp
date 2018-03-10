@@ -119,14 +119,14 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="input-group">
-                                                <input type="text" id="termino1" class="form-control" placeholder="Introducir desigualdad">
+                                                <input type="text" id="termino1" onkeyup="validaCadena1(value)" class="form-control" placeholder="Introducir desigualdad">
                                                 <div class="input-group-btn">
                                                     <button type="button" id="btn1" onclick="cambiaBoton(2)" class="btn btn-danger"><b>></b></button>
                                                     <button type="button" id="btn2" onclick="cambiaBoton(3)" style="display: none;" class="btn btn-danger"><b>≥</b></button>
                                                     <button type="button" id="btn3" onclick="cambiaBoton(4)" style="display: none;" class="btn btn-danger"><b><</b></button>
                                                     <button type="button" id="btn4" onclick="cambiaBoton(1)" style="display: none;" class="btn btn-danger"><b>≤</b></button>
                                                 </div>
-                                                <input type="text" id="termino2" class="form-control" placeholder="Introducir desigualdad">
+                                                <input type="text" id="termino2" class="form-control" onkeyup="validaCadena2(value)"  placeholder="Introducir desigualdad">
                                                 <div class="input-group-btn">
                                                     <button type="button" class="btn btn-primary" onclick="inciarFuncion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                                                 </div>
@@ -215,7 +215,11 @@
     * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
     * */
     function inciarFuncion() {
-        pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+        if(validaCadena($('#termino1').val())){
+            pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+        }else{
+            alert('error');
+        }
     }
 
     /**
@@ -556,5 +560,45 @@
         }else{
             return ""+valor;
         }
+    }
+
+    /**
+     * Valida que solo se ingrese numeros y la letra x
+     * @param palabra palabra a evaluar
+     * @returns {boolean} true si es correcto y false de lo contrario
+     */
+    function validaCadena1(palabra){
+        var clave=/^[x0-9+-]+$/;
+        var a=true;
+        for(var i=0;i<palabra.length;i++){
+            if(clave.test(palabra.charAt(i))){
+                a=true;
+            }else{
+                a=false;
+                $('#termino1').val(palabra.substr(0,i));
+                return a;
+            }
+        }
+        return a;
+    }
+
+    /**
+     * Valida que solo se ingrese numeros y la letra x
+     * @param palabra palabra a evaluar
+     * @returns {boolean} true si es correcto y false de lo contrario
+     */
+    function validaCadena2(palabra){
+        var clave=/^[x0-9+-]+$/;
+        var a=true;
+        for(var i=0;i<palabra.length;i++){
+            if(clave.test(palabra.charAt(i))){
+                a=true;
+            }else{
+                a=false;
+                $('#termino2').val(palabra.substr(0,i));
+                return a;
+            }
+        }
+        return a;
     }
 </script>
