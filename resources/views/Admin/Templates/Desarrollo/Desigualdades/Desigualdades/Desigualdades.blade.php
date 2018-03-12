@@ -118,6 +118,13 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                Ingresa tu ejercicio de la forma <b>ax + b > c</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
                                             <div class="input-group">
                                                 <input type="text" id="termino1" onkeyup="validaCadena1(value)" class="form-control" placeholder="Introducir desigualdad">
                                                 <div class="input-group-btn">
@@ -215,8 +222,13 @@
     * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
     * */
     function inciarFuncion() {
-        if(validaCadena($('#termino1').val())){
-            pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+        limpiaDesarrollo();
+        if(validaCadena1($('#termino1').val())){
+            if(validaCadena2($('#termino2').val())){
+                pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+            }else{
+                alert('error');
+            }
         }else{
             alert('error');
         }
@@ -227,7 +239,6 @@
      */
     function pasaLabel(termino1,termino2) {
         divideTerminos(termino1,termino2);
-        debugger;
         if(opBtn==1){
             $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
             $('#areaResolucion2').append('<label style="font-size: 20px">></label>');
@@ -580,6 +591,15 @@
             }
         }
         return a;
+    }
+
+    /**
+     * Limpia los label de la resolucion del ejercicio
+     * */
+    function limpiaDesarrollo(){
+        $('#areaResolucion1').html('');
+        $('#areaResolucion2').html('');
+        $('#areaResolucion3').html('');
     }
 
     /**
