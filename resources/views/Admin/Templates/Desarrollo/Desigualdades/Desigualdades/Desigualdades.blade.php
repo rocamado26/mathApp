@@ -405,6 +405,7 @@
      * @param miembro boolean que indica al lado para el cual se movera
      */
     function cambiaLado(miembro,index){
+        //debugger;
         var c=0;
         var a=[];
         var d=[];
@@ -420,7 +421,13 @@
                         b=i;
                     }
                 }
-                a.push(signoMas(Number(Terminos[b])*(-1)));
+
+                if(Terminos[b].indexOf('x')!=-1){
+                    var co=Terminos[b].split('x');
+                    a.push(signoMas(Number(co[0])*(-1))+"x");
+                }else{
+                    a.push(signoMas(Number(Terminos[b])*(-1)));
+                }
                 d.push(false);
                 lado=d;
                 Terminos=a;
@@ -441,7 +448,12 @@
                         }
                     }
                 }
-                a[b]=signoMas(Number(Terminos[c])*(-1));
+                if(Terminos[c].indexOf('x')!=-1){
+                    var co=Terminos[c].split('x');
+                    a[b]=signoMas(Number(co[0])*(-1))+"x";
+                }else{
+                    a[b]=signoMas(Number(Terminos[c])*(-1));
+                }
                 lado=d;
                 Terminos=a;
             }
@@ -497,6 +509,14 @@
             /*Valida que no se operen terminos no semejantes*/
             case 4:{
                 if(Terminos[$('#T1').val()-1].indexOf('x')!=-1 || Terminos[$('#T2').val()-1].indexOf('x')!=-1){
+                    return false;
+                }else{
+                    return true;
+                }
+            }break;
+            /*valida que el termino a mover sea o no el que tiene x */
+            case 5:{
+                if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
                     return false;
                 }else{
                     return true;
@@ -566,6 +586,7 @@
      * @returns {*}
      */
     function signoMas(valor){
+        //debugger;
         if(Math.sign(Number(valor))==1){
             return "+"+valor;
         }else{
