@@ -332,9 +332,11 @@
                     if(valida(1)){
                         if(valida(4)){
                             console.warn('suma de terminos:',a+b);
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1]);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1],"");
                         }else{
-
+                            e=Terminos[$('#T1').val()-1].split('x');
+                            f=Terminos[$('#T2').val()-1].split('x');
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(e[0])+Number(f[0])),lado[$('#T1').val()-1],"x");
                         }
                     }
                 }break;
@@ -342,7 +344,7 @@
                 case 2:{
                     if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a-b);
-                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a-b),lado[$('#T1').val()-1]);
+                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a-b),lado[$('#T1').val()-1],"");
                     }
                 }break;
                     /*Multiplicacion de terminos*/
@@ -367,12 +369,12 @@
                     if(valida(3)){
                         if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
                             var coeficiente=Terminos[$('#T1').val()-1].split('x');
-                            console.warn('multi de terminos:',coeficiente);
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false);
+                            //console.warn('multi de terminos:',coeficiente);
+                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false,"");
                         }else{
                             if(Terminos[$('#T2').val()-1]){
                                 var coeficiente=Terminos[$('#T2').val()-1].split('x');
-                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),false);
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),false,"");
                             }else{
 
                             }
@@ -508,7 +510,7 @@
             }break;
             /*Valida que no se operen terminos no semejantes*/
             case 4:{
-                if(Terminos[$('#T1').val()-1].indexOf('x')!=-1 || Terminos[$('#T2').val()-1].indexOf('x')!=-1){
+                if(Terminos[$('#T1').val()-1].indexOf('x')!=-1 && Terminos[$('#T2').val()-1].indexOf('x')!=-1){
                     return false;
                 }else{
                     return true;
@@ -532,7 +534,7 @@
      * @param valor Valor de la operacion entre los dos términos
      * @param miembro Miembro donde quedará el nuevo término.
      */
-    function reduceTerminos(Termino1,Termino2, valor,miembro){
+    function reduceTerminos(Termino1,Termino2, valor,miembro,x){
         var a=[];
         var b=[];
         var c=[];
@@ -554,7 +556,7 @@
                         d.push(item);
                     }else{
                         if(e){
-                            c.push(signoMas(valor));
+                            c.push(signoMas(valor)+""+x);
                             d.push(miembro);
                             e=false;
                         }
@@ -565,7 +567,7 @@
                 Terminos=c;
                 lado=d;
             }else{
-                a.push(signoMas(valor));
+                a.push(signoMas(valor)+""+x);
                 b.push(miembro);
                 Terminos=a;
                 lado=b;
