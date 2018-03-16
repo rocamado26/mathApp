@@ -175,32 +175,28 @@
                                                 </div>
                                                 <br>
                                                 <div class="row">
-                                                    <div class="col-xs-3 text-center">
-                                                        <button type="button" onclick="operaciones(1)" class="btn btn-info">&nbsp; + &nbsp;</button>
+                                                    <div class="col-xs-6 text-center">
+                                                        <button id="btn1p1" class="btn-default btn dim" onclick="operaciones(1)"><b>operar</b></button>
                                                     </div>
+                                                    <!--
                                                     <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(2)" class="btn btn-info">&nbsp; - &nbsp;</button>
                                                     </div>
                                                     <div class="col-xs-3 text-center">
                                                         <button type="button" onclick="operaciones(3)" class="btn btn-info">&nbsp; * &nbsp;</button>
                                                     </div>
-                                                    <div class="col-xs-3 text-center">
-                                                        <button type="button" onclick="operaciones(4)" class="btn btn-info">&nbsp; / &nbsp;</button>
+                                                    -->
+                                                    <div class="col-xs-6 text-center">
+                                                        <button id="btn1p1" class="btn-default btn dim" onclick="operaciones(4)"><b>despejar</b></button>
                                                     </div>
                                                 </div>
                                                 <br>
                                                 <div class="row">
-                                                    <div class="col-xs-3 text-center">
-                                                        <button type="button" onclick="moverTermimno(false)" class="btn btn-info"><font face='symbol'>&#222</font></button>
+                                                    <div class="col-xs-6 text-center">
+                                                        <button id="btn1p1" class="btn-default btn dim" onclick="moverTermimno(false)">mover ></button>
                                                     </div>
-                                                    <div class="col-xs-3 text-center">
-                                                        <button type="button" onclick="moverTermimno(true)" class="btn btn-info"><font face='symbol'>&#220</font></button>
-                                                    </div>
-                                                    <div class="col-xs-3 text-center">
-
-                                                    </div>
-                                                    <div class="col-xs-3 text-center">
-
+                                                    <div class="col-xs-6 text-center">
+                                                        <button id="btn1p1" class="btn-default btn dim" onclick="moverTermimno(true)">mover < </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -238,7 +234,9 @@
      * Inserta en el label donde se hara el desarrollo del ejercicio
      */
     function pasaLabel(termino1,termino2) {
-        divideTerminos(termino1,termino2);
+        //if(Terminos.length!=1){
+            divideTerminos(termino1,termino2);
+        //}
         if(opBtn==1){
             $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
             $('#areaResolucion2').append('<label style="font-size: 20px">></label>');
@@ -331,8 +329,12 @@
                 case 1:{
                     if(valida(1)){
                         if(valida(4)){
-                            console.warn('suma de terminos:',a+b);
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1],"");
+                            if(valida(6)){
+                                console.warn('suma de terminos:',a+b);
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1],"");
+                            }else{
+
+                            }
                         }else{
                             e=Terminos[$('#T1').val()-1].split('x');
                             f=Terminos[$('#T2').val()-1].split('x');
@@ -384,7 +386,9 @@
             }
     }
 
-
+    /**
+     * Crea la cadena a imprimir
+     * */
     function creaCadena() {
         var a="";
         var b="";
@@ -395,11 +399,24 @@
                 b=b+item;
             }
         });
-        pasaLabel(a,b);
+        if(Terminos.length==1){
+            if(a==""){
+                pasaLabel('x',b);
+            }else{
+                pasaLabel(a,"x");
+            }
+           respuesta();
+        }else{
+            pasaLabel(a,b);
+        }
     }
 
     function moverTermimno(miembro){
         cambiaLado(miembro,$('#T1').val()-1);
+    }
+
+    function respuesta(){
+
     }
 
     /**
@@ -519,6 +536,14 @@
             /*valida que el termino a mover sea o no el que tiene x */
             case 5:{
                 if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
+                    return false;
+                }else{
+                    return true;
+                }
+            }break;
+                /*valida que los terminos a operar sean semejantes*/
+            case 6:{
+                if(Terminos[$('#T1').val()-1].indexOf('x')!=-1 || Terminos[$('#T2').val()-1].indexOf('x')!=-1){
                     return false;
                 }else{
                     return true;
