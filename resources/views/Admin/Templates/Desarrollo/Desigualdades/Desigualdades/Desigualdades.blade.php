@@ -212,6 +212,7 @@
     </div>
 </div>
 <script>
+    //swal("¡Borrado!", "Progreso borrado.", "success");
     var opBtn=1;
     /*
     * Inicia el proceso de resolución de l ejercicio
@@ -219,15 +220,19 @@
     * */
     function inciarFuncion() {
         limpiaDesarrollo();
-        if(validaCadena1($('#termino1').val())){
-            if(validaCadena2($('#termino2').val())){
-                pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
-            }else{
-                alert('error');
-            }
-        }else{
-            alert('error');
-        }
+        if(valida(9)){
+            if(valida(10)){
+                if(validaCadena1($('#termino1').val())){
+                    if(validaCadena2($('#termino2').val())){
+                        pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+                    }else{
+                        toastr.error('Revisa los datos ingresados.','Error');
+                    }
+                }else{
+                    toastr.error('Revisa los datos ingresados.','Error');
+                }
+            }else{toastr.error('Revisa los datos ingresados.','Error');}
+        }else{toastr.error('Ingresa valores en los dos miembros.','Error');}
     }
 
     /**
@@ -324,23 +329,26 @@
         var b=Number(Terminos[$('#T2').val()-1]);
         console.warn('termino a:',a);
         console.warn('termino b:',b);
-        switch (op){
+        if(Terminos[$('#T1').val()-1]!='+' && Terminos[$('#T2').val()-1]!='-'){
+            switch (op){
                     /*Suma de terminos*/
                 case 1:{
-                    if(valida(1)){
-                        if(valida(4)){
-                            if(valida(6)){
-                                console.warn('suma de terminos:',a+b);
-                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1],"");
+                    if(valida(7)){
+                        if(valida(1)){
+                            if(valida(4)){
+                                if(valida(6)){
+                                    console.warn('suma de terminos:',a+b);
+                                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1],"");
+                                }else{
+                                    toastr.error('No es posible operar los términos.','Error');
+                                }
                             }else{
-
+                                e=Terminos[$('#T1').val()-1].split('x');
+                                f=Terminos[$('#T2').val()-1].split('x');
+                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(e[0])+Number(f[0])),lado[$('#T1').val()-1],"x");
                             }
-                        }else{
-                            e=Terminos[$('#T1').val()-1].split('x');
-                            f=Terminos[$('#T2').val()-1].split('x');
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(e[0])+Number(f[0])),lado[$('#T1').val()-1],"x");
-                        }
-                    }
+                        }else{toastr.error('No es posible operar los términos.','Error');}
+                    }else{toastr.error('No es posible operar los términos.','Error');}
                 }break;
                     /*Reta de terminos*/
                 case 2:{
@@ -368,22 +376,31 @@
                 }break;
                     /*Division de terminos*/
                 case 4:{
-                    if(valida(3)){
-                        if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
-                            var coeficiente=Terminos[$('#T1').val()-1].split('x');
-                            //console.warn('multi de terminos:',coeficiente);
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false,"");
-                        }else{
-                            if(Terminos[$('#T2').val()-1]){
-                                var coeficiente=Terminos[$('#T2').val()-1].split('x');
-                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),false,"");
+                    if(valida(7)){
+                        if(valida(3)){
+                            if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
+                                if(valida(8)){
+                                    var coeficiente=Terminos[$('#T1').val()-1].split('x');
+                                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false,"");
+                                }else{toastr.error('No es posible operar los términos.','Error');}
                             }else{
+                                if(Terminos[$('#T2').val()-1]){
+                                    if(valida(8)){
+                                        var coeficiente=Terminos[$('#T2').val()-1].split('x');
+                                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),false,"");
+                                    }else{toastr.error('No es posible operar los términos.','Error');}
 
+                                }else{
+                                    toastr.error('No es posible operar los términos.','Error');
+                                }
                             }
-                        }
-                    }
+                        }else{toastr.error('No es posible operar los términos.','Error');}
+                    }else{toastr.error('No es posible operar los términos.','Error');}
+
                 }break;
             }
+        }else{toastr.error('No es posible operar los términos.','Error');}
+
     }
 
     /**
@@ -405,7 +422,7 @@
             }else{
                 pasaLabel(a,"x");
             }
-           respuesta();
+           //respuesta();
         }else{
             pasaLabel(a,b);
         }
@@ -413,10 +430,6 @@
 
     function moverTermimno(miembro){
         cambiaLado(miembro,$('#T1').val()-1);
-    }
-
-    function respuesta(){
-
     }
 
     /**
@@ -430,57 +443,58 @@
         var d=[];
         var b=0;
         c=index;
-        if(valida(2,miembro)){
-            if(miembro==false){
-                for(var i=0;i<lado.length;i++){
-                    if(i!=c){
-                        a.push(Terminos[i]);
-                        d.push(lado[i]);
-                    }else{
-                        b=i;
-                    }
-                }
-
-                if(Terminos[b].indexOf('x')!=-1){
-                    var co=Terminos[b].split('x');
-                    a.push(signoMas(Number(co[0])*(-1))+"x");
-                }else{
-                    a.push(signoMas(Number(Terminos[b])*(-1)));
-                }
-                d.push(false);
-                lado=d;
-                Terminos=a;
-            }else{
-                for(var i=0;i<lado.length;i++){
-                    if(lado[i]!=false){
-                        a.push(Terminos[i]);
-                        d.push(lado[i]);
-                    }else{
-                        if(b==0){
-                            a.push("");
-                            d.push(true);
-                            b=i
-                        }
+        if(valida(7)){
+            if(valida(2,miembro)){
+                if(miembro==false){
+                    for(var i=0;i<lado.length;i++){
                         if(i!=c){
                             a.push(Terminos[i]);
                             d.push(lado[i]);
+                        }else{
+                            b=i;
                         }
                     }
-                }
-                if(Terminos[c].indexOf('x')!=-1){
-                    var co=Terminos[c].split('x');
-                    a[b]=signoMas(Number(co[0])*(-1))+"x";
-                }else{
-                    a[b]=signoMas(Number(Terminos[c])*(-1));
-                }
-                lado=d;
-                Terminos=a;
-            }
-        }
-        creaCadena();
-        console.warn('terminos:',Terminos);
-        console.warn('lados:',lado);
 
+                    if(Terminos[b].indexOf('x')!=-1){
+                        var co=Terminos[b].split('x');
+                        a.push(signoMas(Number(co[0])*(-1))+"x");
+                    }else{
+                        a.push(signoMas(Number(Terminos[b])*(-1)));
+                    }
+                    d.push(false);
+                    lado=d;
+                    Terminos=a;
+                }else{
+                    for(var i=0;i<lado.length;i++){
+                        if(lado[i]!=false){
+                            a.push(Terminos[i]);
+                            d.push(lado[i]);
+                        }else{
+                            if(b==0){
+                                a.push("");
+                                d.push(true);
+                                b=i
+                            }
+                            if(i!=c){
+                                a.push(Terminos[i]);
+                                d.push(lado[i]);
+                            }
+                        }
+                    }
+                    if(Terminos[c].indexOf('x')!=-1){
+                        var co=Terminos[c].split('x');
+                        a[b]=signoMas(Number(co[0])*(-1))+"x";
+                    }else{
+                        a[b]=signoMas(Number(Terminos[c])*(-1));
+                    }
+                    lado=d;
+                    Terminos=a;
+                }
+                creaCadena();
+            }else{
+                toastr.error('No posible mover el término','Error');
+            }
+        }else{toastr.error('No posible mover el término','Error');}
     }
 
     /**
@@ -493,8 +507,11 @@
             /*Valida las operaciones de terminos de lados diferentes*/
             case 1:{
                 if((lado[$('#T1').val()-1]==true && lado[$('#T2').val()-1]==true) || (lado[$('#T1').val()-1]==false && lado[$('#T2').val()-1]==false)){
-                    //alert('Si es posible operar');
-                    return true;
+                   if($('#T1').val()-1 !=$('#T2').val()-1){
+                       return true;
+                   }else{
+                       return false;
+                   }
                 }else{
                     //alert('No es posible operar');
                     return false;
@@ -547,6 +564,41 @@
                     return false;
                 }else{
                     return true;
+                }
+            }break;
+                /*valida que los terminos existan*/
+            case 7:{
+                if(Terminos.length>=$('#T1').val() && $('#T1').val()>0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+                /*valida que los terminos a despejar esten en lados diferentes*/
+            case 8:{
+                if(lado[$('#T1').val()-1]!=lado[$('#T2').val()-1]){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+                /*valida que los dos miembros tengan información*/
+            case 9:{
+                if($('#termino1').val()!="" && $('#termino2').val()!=""){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+                /*Valida que no halla signos repstidos juntos*/
+            case 10:{
+                if($('#termino1').val().indexOf('++')==-1 && $('#termino1').val().indexOf('--')==-1 &&
+                    $('#termino1').val().indexOf('-+')==-1 && $('#termino1').val().indexOf('+-')==-1 &&
+                    $('#termino2').val().indexOf('++')==-1 && $('#termino2').val().indexOf('--')==-1 &&
+                    $('#termino2').val().indexOf('-+')==-1 && $('#termino2').val().indexOf('+-')==-1){
+                    return true;
+                }else{
+                    return false;
                 }
             }break;
         }
@@ -602,8 +654,6 @@
             lado=b;
         }
         // miembro positivo
-        console.warn('Terminos',Terminos);
-        console.warn('Lados',lado);
         creaCadena();
     }
 
