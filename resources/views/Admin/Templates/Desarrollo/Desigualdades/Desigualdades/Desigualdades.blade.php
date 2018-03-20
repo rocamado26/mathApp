@@ -376,7 +376,7 @@
                 }break;
                     /*Division de terminos*/
                 case 4:{
-                    if(valida(7)){
+                    if(valida(7) && valida(11)){
                         if(valida(3)){
                             if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
                                 if(valida(8)){
@@ -464,7 +464,7 @@
                     d.push(false);
                     lado=d;
                     Terminos=a;
-                }else{
+                }else{debugger;
                     for(var i=0;i<lado.length;i++){
                         if(lado[i]!=false){
                             a.push(Terminos[i]);
@@ -596,6 +596,14 @@
                     $('#termino1').val().indexOf('-+')==-1 && $('#termino1').val().indexOf('+-')==-1 &&
                     $('#termino2').val().indexOf('++')==-1 && $('#termino2').val().indexOf('--')==-1 &&
                     $('#termino2').val().indexOf('-+')==-1 && $('#termino2').val().indexOf('+-')==-1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+                /*Valida que el término 2 exista entre el areglo*/
+            case 11:{
+                if(Terminos.length>=$('#T2').val() && $('#T2').val()>0){
                     return true;
                 }else{
                     return false;
