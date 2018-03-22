@@ -240,7 +240,9 @@
      */
     function pasaLabel(termino1,termino2) {
         //if(Terminos.length!=1){
-            divideTerminos(termino1,termino2);
+        divideTerminos(termino1,termino2);
+        if(termino1==''){termino1='0'}
+        if(termino2==''){termino2='0'}
         //}
         if(opBtn==1){
             $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
@@ -257,7 +259,7 @@
                     $('#areaResolucion2').append('<label style="font-size: 20px"><</label>');
                     $('#areaResolucion3').append('<label style="font-size: 20px">'+termino2+'</label><br>');
                 }else{
-                    $('#areaResoliucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
+                    $('#areaResolucion1').append('<label style="font-size: 20px">'+termino1+'</label><br>');
                     $('#areaResolucion2').append('<label style="font-size: 20px">≤</label>');
                     $('#areaResolucion3').append('<label style="font-size: 20px">'+termino2+'</label><br>');
                 }
@@ -464,7 +466,7 @@
                     d.push(false);
                     lado=d;
                     Terminos=a;
-                }else{debugger;
+                }else{
                     for(var i=0;i<lado.length;i++){
                         if(lado[i]!=false){
                             a.push(Terminos[i]);
@@ -595,7 +597,8 @@
                 if($('#termino1').val().indexOf('++')==-1 && $('#termino1').val().indexOf('--')==-1 &&
                     $('#termino1').val().indexOf('-+')==-1 && $('#termino1').val().indexOf('+-')==-1 &&
                     $('#termino2').val().indexOf('++')==-1 && $('#termino2').val().indexOf('--')==-1 &&
-                    $('#termino2').val().indexOf('-+')==-1 && $('#termino2').val().indexOf('+-')==-1){
+                    $('#termino2').val().indexOf('-+')==-1 && $('#termino2').val().indexOf('+-')==-1 &&
+                    $('#termino2').val().indexOf('xx')==-1 && $('#termino2').val().indexOf('xx')==-1){
                     return true;
                 }else{
                     return false;
@@ -605,6 +608,18 @@
             case 11:{
                 if(Terminos.length>=$('#T2').val() && $('#T2').val()>0){
                     return true;
+                }else{
+                    return false;
+                }
+            }break;
+                /*Valida que se ingrese un coeficiente para x*/
+            case 11:{
+                if($('#termino1').val().indexOf('x')!=-1){
+                    if(true){
+                        return true;
+                    }else{
+                        return false;
+                    }
                 }else{
                     return false;
                 }
@@ -649,6 +664,11 @@
                         d.push(item);
                     }
                 });
+                if(e){
+                    c.push(signoMas(valor)+""+x);
+                    d.push(miembro);
+                    e=false;
+                }
                 Terminos=c;
                 lado=d;
             }else{
