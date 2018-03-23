@@ -222,14 +222,18 @@
         limpiaDesarrollo();
         if(valida(9)){
             if(valida(10)){
-                if(validaCadena1($('#termino1').val())){
-                    if(validaCadena2($('#termino2').val())){
-                        pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+                if(valida(12)){
+                    if(validaCadena1($('#termino1').val())){
+                        if(validaCadena2($('#termino2').val())){
+                            pasaLabel($('#termino1').val(),$('#termino2').val());//Pasa los datos a los label para mostrarlos
+                        }else{
+                            toastr.error('Revisa los datos ingresados.','Error');
+                        }
                     }else{
                         toastr.error('Revisa los datos ingresados.','Error');
                     }
                 }else{
-                    toastr.error('Revisa los datos ingresados.','Error');
+                    toastr.error('Ingresa el coeficiente de x.','Error');
                 }
             }else{toastr.error('Revisa los datos ingresados.','Error');}
         }else{toastr.error('Ingresa valores en los dos miembros.','Error');}
@@ -613,16 +617,22 @@
                 }
             }break;
                 /*Valida que se ingrese un coeficiente para x*/
-            case 11:{
-                if($('#termino1').val().indexOf('x')!=-1){
-                    if(true){
-                        return true;
-                    }else{
-                        return false;
+            case 12:{
+                debugger;
+                var g=$('#termino1').val()+$('#termino2').val();
+                var h=0;
+                for(var i=0;i<g.length;i++){
+                    if(g.charAt(i)=='x'){
+                        if(i!=0){
+                          if(isNaN(g.charAt(i-1))){
+                              h++;
+                          }
+                        }else{
+                            return false;
+                        }
                     }
-                }else{
-                    return false;
                 }
+                if(h!=0){return false;}else{return true;}
             }break;
         }
     }
