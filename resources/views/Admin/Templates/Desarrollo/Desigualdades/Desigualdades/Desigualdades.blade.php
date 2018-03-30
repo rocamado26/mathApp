@@ -290,6 +290,7 @@
      * Divide la cadena en términos.
      */
     function divideTerminos(termino1,termino2){
+        debugger;
         var funcion=termino1;
         Terminos=[];
         lado=[];
@@ -618,7 +619,6 @@
             }break;
                 /*Valida que se ingrese un coeficiente para x*/
             case 12:{
-                debugger;
                 var g=$('#termino1').val()+$('#termino2').val();
                 var h=0;
                 for(var i=0;i<g.length;i++){
@@ -658,39 +658,44 @@
         });
         //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
         //al final del arreglo.
-        if(valor!=0){
-            if(miembro){
-                b.forEach(function (item, index) {
-                    if(item==true){
-                        c.push(a[index]);
-                        d.push(item);
-                    }else{
-                        if(e){
-                            c.push(signoMas(valor)+""+x);
-                            d.push(miembro);
-                            e=false;
-                        }
-                        c.push(a[index]);
-                        d.push(item);
+
+        if(miembro){
+            b.forEach(function (item, index) {
+                if(item==true){
+                    c.push(a[index]);
+                    d.push(item);
+                }else{
+                    if(e){
+                        c.push(signoMas(valor)+""+x);
+                        d.push(miembro);
+                        e=false;
                     }
-                });
-                if(e){
-                    c.push(signoMas(valor)+""+x);
-                    d.push(miembro);
-                    e=false;
+                    c.push(a[index]);
+                    d.push(item);
                 }
-                Terminos=c;
-                lado=d;
-            }else{
-                a.push(signoMas(valor)+""+x);
-                b.push(miembro);
-                Terminos=a;
-                lado=b;
+            });
+            if(e){
+                c.push(signoMas(valor)+""+x);
+                d.push(miembro);
+                e=false;
             }
+            Terminos=c;
+            lado=d;
         }else{
+            a.push(signoMas(valor)+""+x);
+            b.push(miembro);
             Terminos=a;
             lado=b;
         }
+
+        /*if(valor!=0){
+
+        }else{
+            //a.push(""+valor);
+            //b.pu
+            Terminos=a;
+            lado=b;
+        }*/
         // miembro positivo
         creaCadena();
     }
