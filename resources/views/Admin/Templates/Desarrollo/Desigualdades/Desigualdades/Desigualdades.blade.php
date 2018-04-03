@@ -187,16 +187,16 @@
                                                     </div>
                                                     -->
                                                     <div class="col-xs-6 text-center">
-                                                        <button id="btn1p1" class="btn-default btn dim" onclick="operaciones(4)"><b>despejar</b></button>
+                                                        <button id="btn1p2" class="btn-default btn dim" onclick="operaciones(4)"><b>despejar</b></button>
                                                     </div>
                                                 </div>
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-xs-6 text-center">
-                                                        <button id="btn1p1" class="btn-default btn dim" onclick="moverTermimno(false)">mover ></button>
+                                                        <button id="btn1p3" class="btn-default btn dim" onclick="moverTermimno(false)">mover ></button>
                                                     </div>
                                                     <div class="col-xs-6 text-center">
-                                                        <button id="btn1p1" class="btn-default btn dim" onclick="moverTermimno(true)">mover < </button>
+                                                        <button id="btn1p4" class="btn-default btn dim" onclick="moverTermimno(true)">mover < </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -244,6 +244,7 @@
      */
     function pasaLabel(termino1,termino2) {
         //if(Terminos.length!=1){
+
         divideTerminos(termino1,termino2);
         if(termino1==''){termino1='0'}
         if(termino2==''){termino2='0'}
@@ -290,11 +291,14 @@
      * Divide la cadena en términos.
      */
     function divideTerminos(termino1,termino2){
-        debugger;
+        //debugger;
         var funcion=termino1;
         Terminos=[];
         lado=[];
         var inicio=0;
+        if(funcion.length==1 && funcion.charAt(0)=='0'){
+            funcion=funcion+' ';
+        }
         for(var i=1;i<funcion.length;i++){
             if(funcion.charAt(i)=='+' || funcion.charAt(i)=='-'){
                 Terminos.push(funcion.substr(inicio,i-inicio));
@@ -394,7 +398,8 @@
                                 if(Terminos[$('#T2').val()-1]){
                                     if(valida(8)){
                                         var coeficiente=Terminos[$('#T2').val()-1].split('x');
-                                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),false,"");
+                                        finOperacion(false);
+                                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),true,"");
                                     }else{toastr.error('No es posible operar los términos.','Error');}
 
                                 }else{
@@ -411,6 +416,23 @@
     }
 
     /**
+     * Bloquea los botones y los habilita
+     **/
+    function finOperacion(op) {
+        if(op){
+            $("#btn1p1").removeAttr("disabled");
+            $("#btn1p2").removeAttr("disabled");
+            $("#btn1p3").removeAttr("disabled");
+            $("#btn1p4").removeAttr("disabled");
+        }else{
+            $("#btn1p1").attr("disabled", true);
+            $("#btn1p2").attr("disabled", true);
+            $("#btn1p3").attr("disabled", true);
+            $("#btn1p4").attr("disabled", true);
+        }
+    }
+
+    /**
      * Crea la cadena a imprimir
      * */
     function creaCadena() {
@@ -424,10 +446,18 @@
             }
         });
         if(Terminos.length==1){
-            if(a==""){
-                pasaLabel('x',b);
+            if(Terminos[0].indexOf('x')!=-1){
+                if(a==""){
+                    pasaLabel('',b);
+                }else{
+                    pasaLabel(a,"");
+                }
             }else{
-                pasaLabel(a,"x");
+                if(a==""){
+                    pasaLabel('x',b);
+                }else{
+                    pasaLabel(a,"x");
+                }
             }
            //respuesta();
         }else{
@@ -645,6 +675,7 @@
      * @param miembro Miembro donde quedará el nuevo término.
      */
     function reduceTerminos(Termino1,Termino2, valor,miembro,x){
+
         var a=[];
         var b=[];
         var c=[];
@@ -659,31 +690,38 @@
         //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
         //al final del arreglo.
 
-        if(miembro){
-            b.forEach(function (item, index) {
-                if(item==true){
-                    c.push(a[index]);
-                    d.push(item);
-                }else{
-                    if(e){
-                        c.push(signoMas(valor)+""+x);
-                        d.push(miembro);
-                        e=false;
+        if(valor!='0'){
+            if(miembro){
+                b.forEach(function (item, index) {
+                    if(item==true){
+                        c.push(a[index]);
+                        d.push(item);
+                    }else{
+                        if(e){
+                            c.push(signoMas(valor)+""+x);
+                            d.push(miembro);
+                            e=false;
+                        }
+                        c.push(a[index]);
+                        d.push(item);
                     }
-                    c.push(a[index]);
-                    d.push(item);
+                });
+                if(e){
+                    c.push(signoMas(valor)+""+x);
+                    d.push(miembro);
+                    e=false;
                 }
-            });
-            if(e){
-                c.push(signoMas(valor)+""+x);
-                d.push(miembro);
-                e=false;
+                Terminos=c;
+                lado=d;
+            }else{
+                a.push(signoMas(valor)+""+x);
+                b.push(miembro);
+                Terminos=a;
+                lado=b;
             }
-            Terminos=c;
-            lado=d;
         }else{
-            a.push(signoMas(valor)+""+x);
-            b.push(miembro);
+            //a.push(signoMas(valor));
+            //b.push(miembro);
             Terminos=a;
             lado=b;
         }
@@ -741,6 +779,7 @@
         $('#areaResolucion1').html('');
         $('#areaResolucion2').html('');
         $('#areaResolucion3').html('');
+        finOperacion(true);
     }
 
     /**
