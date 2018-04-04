@@ -689,7 +689,7 @@
         });
         //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
         //al final del arreglo.
-
+        debugger;
         if(valor!='0'){
             if(miembro){
                 b.forEach(function (item, index) {
@@ -720,21 +720,28 @@
                 lado=b;
             }
         }else{
-            //a.push(signoMas(valor));
-            //b.push(miembro);
-            Terminos=a;
-            lado=b;
+            if(b.length==1){
+                if(b[0]!=miembro){
+                    a.push(signoMas(valor));
+                    b.push(miembro);
+                    Terminos=a;
+                    lado=b;
+                }else{
+                    Terminos=a;
+                    lado=b;
+                }
+            }else{
+                if(a.length==0){
+                    a.push(signoMas(valor));
+                    b.push(miembro);
+                    Terminos=a;
+                    lado=b;
+                }else{
+                    Terminos=a;
+                    lado=b;
+                }
+            }
         }
-
-        /*if(valor!=0){
-
-        }else{
-            //a.push(""+valor);
-            //b.pu
-            Terminos=a;
-            lado=b;
-        }*/
-        // miembro positivo
         creaCadena();
     }
 
