@@ -34,27 +34,39 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong>Tipos de intervalos</strong><br><br>
+                                            <strong>Componentes de una desigualdad</strong><br><br>
                                             <p style="text-align: justify;">
-                                                Un subconjunto de la recta real se llama intervalo, y contiene a todos los números reales que están comprendidos entre dos cualesquiera de sus elementos.
-                                                Geométricamente los intervalos corresponden a segmentos de recta, semirrectas o la misma recta real.
+                                                Una desigualdad está compuesta por dos expresiones algebraicas, relacionadas mediante los signos de orden:
+                                                <b>< ,≤, >, ≥.</b>
                                                 <br>
-                                                Los intervalos de números correspondientes a segmentos de recta son intervalos finitos, los intervalos correspondientes a semirrectas y a la recta real son intervalos infinitos.
-                                                <br>Los intervalos finitos pueden ser cerrados, abiertos o semiabiertos.
-                                                Sean <b> a </b>y <b>b</b> dos números reales tales que <b> a < b</b>.
+                                                Se llama desigualdad lineal, fundamentalmente, porque la variable x que aparece en las expresiones algebraicas se
+                                                encuentra elevada a la potencia uno. <br>
+                                                <br>La forma general de una ecuación lineal se expresa: <br>
+                                                <b> ax + b ≥ 0; con a y b que representan números reales, a ≠ 0</b>.
                                                 <br><br>
-                                                <strong>Intervalo cerrado</strong><br>
-                                                Es el conjunto de números reales formado por a, b y todos los comprendidos entre ambos.
-                                                <br><br>
-                                                <strong>Intervalo cerrado</strong><br>
-                                                Es el conjunto de los números reales comprendidos entre a y b. <br><br>
-                                                <strong>Intervalo semiabierto a izquierda (o semicerrado a derecha)</strong><br>
-                                                Es el conjunto de números reales formado por b y los números comprendidos entre a y b.
-                                                <br><br>
-                                                <strong>Intervalo semiabierto a derecha (o semicerrado a izquierda)</strong><br>
-                                                Es el conjunto de números reales formado por a y los números comprendidos entre a y b.
-                                                <br><br>
-                                                <strong></strong><br>
+                                                <strong>Propiedades de las desigualdades</strong><br>
+                                                <br>Se puede sumar o restar una misma cantidad a ambos
+                                                lados de la igualdad (a ambos lados de la desigualdad y
+                                                esta mantiene la equivalencia con la primera). <br><br>
+
+                                            </p>
+                                            <div class="well">
+                                                <div class="row diff-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <b>x – 8 ≥ 2</b> <br>
+                                                            <b>x –8 + 8 ≥ 2 + 8</b>; se ha sumado 8 a ambos lados
+                                                            <b>x ≥ 10</b>; operando a ambos lados se ha obtenido la
+                                                            solución <b>S = [ 10, +∞ [</b><br><br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p style="text-align: justify">
+                                                Se puede multiplicar o dividir por una misma cantidad
+                                                positiva a ambos lados de la igualdad (a ambos lados de
+                                                la desigualdad y esta mantiene la equivalencia con
+                                                la primera). <br>
                                             </p>
                                         </div>
                                         <div class="col-md-4">
@@ -66,7 +78,8 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify;">
-
+                                                                Para operar con las desigualdades se emplean básicamente las mismas reglas que se utilizan con las
+                                                                ecuaciones para mantener la equivalencia.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -82,10 +95,9 @@
                                                             <p style="text-align: justify;">
                                                                 <b>Notación y clasificación :</b>
                                                                 <br><br>
-                                                                <b>[ m, n ]</b>: Los dos límites pertenecen al intervalo. (Intervalo cerrado – cerrado)<br><br>
-                                                                <b>[ m, n [</b>: El límite superior n, no pertenece al intervalo. (Intervalo cerrado – abierto)<br><br>
-                                                                <b>] m, n ]</b>: El límite inferior m, no pertenece al intervalo. (Intervalo abierto – cerrado)<br><br>
-                                                                <b>] m, n [</b>: Ninguno de los límites pertenece al intervalo. (Intervalo abierto – abierto)<br><br>
+                                                                Se puede sumar o restar una misma cantidad a ambos
+                                                                lados de la igualdad (a ambos lados de la desigualdad y
+                                                                esta mantiene la equivalencia con la primera).
                                                             </p>
                                                         </div>
                                                     </div>
