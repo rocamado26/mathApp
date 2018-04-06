@@ -54,10 +54,23 @@
                                                 <div class="row diff-wrapper">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <b>x – 8 ≥ 2</b> <br>
-                                                            <b>x –8 + 8 ≥ 2 + 8</b>; se ha sumado 8 a ambos lados
-                                                            <b>x ≥ 10</b>; operando a ambos lados se ha obtenido la
-                                                            solución <b>S = [ 10, +∞ [</b><br><br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x – 8 ≥ 2</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x –8 + 8 ≥ 2 + 8</b>; se ha sumado 8 a ambos lados
+                                                            <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x ≥ 10</b>; operando a ambos lados se ha obtenido la solución
+                                                            <br>&nbsp;&nbsp;<b style="font-size: 18px">S = [ 10, +∞ [</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="well">
+                                                <div class="row diff-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x + 5 < 11</b><br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x + 5 – 5 < 11 – 5</b>; se resta – 5 a ambos lados para aislar a 3x.
+                                                            <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x < 6</b>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -68,6 +81,19 @@
                                                 la desigualdad y esta mantiene la equivalencia con
                                                 la primera). <br>
                                             </p>
+                                            <div class="well">
+                                                <div class="row diff-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            &nbsp;&nbsp;<b style="font-size: 18px"><sup>3x</sup>/<sub>6</sub> < <sup>6</sup>/<sub>3</sub></b>; Se divide entre 3 a ambos lados para dejar
+                                                            sola la variable x <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px;">x < 2</b>; se llega a la última desigualdad equivalente; que resulta ser la solución.<br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px;">S = ] –∞, 2 [ </b>es la solución de la desigualdad.
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="row">
@@ -92,12 +118,11 @@
                                                             <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
                                                         </div>
                                                         <div class="panel-body">
-                                                            <p style="text-align: justify;">
-                                                                <b>Notación y clasificación :</b>
-                                                                <br><br>
-                                                                Se puede sumar o restar una misma cantidad a ambos
-                                                                lados de la igualdad (a ambos lados de la desigualdad y
-                                                                esta mantiene la equivalencia con la primera).
+                                                            <p style="text-align: justify">
+                                                                En los números reales la proposición: <b>–2 < 5</b> es verdadera. Si la multiplicas por una
+                                                                cantidad negativa, por ejemplo <b>–3</b>, y no cambias la relación de orden, la proposición se
+                                                                vuelve falsa: nota <b>( –3 )( –2 ) < ( –3 )( 5 ) → 8 < –15</b> ¡falso! No debes olvidar esto. Es
+                                                                un error muy frecuente cuando se resuelven desigualdades.
                                                             </p>
                                                         </div>
                                                     </div>
