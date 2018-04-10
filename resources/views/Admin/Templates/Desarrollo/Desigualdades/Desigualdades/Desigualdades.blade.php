@@ -141,7 +141,487 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
+                                    <div  class="row">
+                                        <div class="col-md-12">
+                                            <div align="center">
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades(1)">1</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades(2)">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades(3)">3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="ibox ui-resizable">
+                                                <div class="ibox-content">
+                                                    <div class="row animated fadeInUpBig" id="pract_identidades1">
+                                                        <div class="col-md-8">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            Resuelve la desigualdad: <br>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12" align="center">
+                                                                            <b style="font-size: 18px">
+                                                                               3 ( 3 - x ) ≥ x + 1
+                                                                            </b>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><br>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    Efectuamos la multiplicación:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP2"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;&nbsp; ≥ &nbsp;&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp; 3 + x </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Despejamos las <b>“x”</b> al lado izquierdo y los términos independientes al lado derecho:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td>-3x</td>
+                                                                                <td>&nbsp; - &nbsp;</td>
+                                                                                <td>&nbsp; x</td>
+                                                                                <td>&nbsp; ≥ &nbsp;</td>
+                                                                                <td>1</td>
+                                                                                <td>&nbsp; - &nbsp;</td>
+                                                                                <td>9 &nbsp;</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Operar los términos semejantes:
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;&nbsp; ≥ &nbsp;&nbsp;</td>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Despejamos <b>“x”</b> y operamos la división:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td>x&nbsp;</td>
+                                                                                <td>=&nbsp;</td>
+                                                                                <td>2x</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="row">
+                                                                <div id="CP1" class="col-lg-12 alert alert-warning">
+                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                                    <br><br>
+                                                                    <div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP1" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP14.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP3" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP13.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP4" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP12.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <p><br></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="EP1" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                    <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                                    <br>
+                                                                    <p style="text-align: justify;">
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
+                                                                        <br><br>
+                                                                    </p><center><font size="3"><b>sen x = sen x</b></font></center>
+                                                                    <p></p>
+                                                                </div>
+                                                                <div id="botonesPrac1" class="row col-lg-12">
+                                                                    <center>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="verificaPracticaIdentidades(1)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(1)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                    </center>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row animated fadeInUpBig" id="pract_identidades2" style="display: none;">
+                                                        <div class="col-md-8">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            Verifca la identidad trigonométrica: <br>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12" align="center">
+                                                                            <b>
+                                                                                <font size="3">
+                                                                                    <table border="0">
+                                                                                        <tr>
+                                                                                            <td>&nbsp;&nbsp;sen x</td>
+                                                                                            <td>&nbsp;&nbsp;</td>
+                                                                                            <td>&nbsp;&nbsp;cos x</td>
+                                                                                            <td>&nbsp;&nbsp;</td>
+                                                                                            <td>&nbsp;&nbsp;</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>----------</td>
+                                                                                            <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
+                                                                                            <td>----------</td>
+                                                                                            <td>&nbsp;&nbsp;=</td>
+                                                                                            <td align="center">&nbsp;&nbsp;1</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>&nbsp;&nbsp;csc x</td>
+                                                                                            <td>&nbsp;&nbsp;</td>
+                                                                                            <td>&nbsp;&nbsp;sec x</td>
+                                                                                            <td>&nbsp;&nbsp;</td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </font>
+                                                                            </b>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><br>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    Sustituimos las razones trigonométricas <b>csc x</b> y <b>sec x</b> por sus identidades:
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <br><br>
+                                                                    <font size="3">
+                                                                        <table border="0">
+                                                                            <tr>
+                                                                                <td>&nbsp;&nbsp;sen x</td>
+                                                                                <td>&nbsp;&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp;cos x</td>
+                                                                                <td>&nbsp;&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>----------</td>
+                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
+                                                                                <td>----------</td>
+                                                                                <td>&nbsp;&nbsp;=</td>
+                                                                                <td align="center">&nbsp;&nbsp;1</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="contenedor" id="DP5" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;&nbsp;</td>
+                                                                                <td>
+                                                                                    <div class="contenedor" id="DP6" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;&nbsp;</td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Opera cada fracción extremos por extremos y medios por medios: <br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table border="0">
+                                                                            <tr>
+                                                                                <td><div class="contenedor" id="DP7" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
+                                                                                <td><div class="contenedor" id="DP8" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
+                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+                                                                                <td>1</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="row">
+                                                                <div id="CP2" class="col-lg-12 alert alert-warning">
+                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                                    <br><br>
+                                                                    <div class="row">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP5" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP6" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP33.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP7" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP23.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP8" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP22.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="EP2" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                    <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                                    <br>
+                                                                    <p style="text-align: justify;">
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
+                                                                        <br><br>
+                                                                    </p><center><font size="3"><b>1 = 1</b></font></center>
+                                                                    <p></p>
+                                                                </div>
+                                                                <div id="botonesPrac2" class="row col-lg-12">
+                                                                    <center>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="verificaPracticaIdentidades(2)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(2)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                    </center>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row animated fadeInUpBig" id="pract_identidades3" style="display: none;">
+                                                        <div class="col-md-8">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            Comprobar la siguiente identidade trigonométrica:<br><br>
+                                                                        </div>
+                                                                        <div class="col-md-12" align="center">
+                                                                            <b>
+                                                                                <font size="3">
+                                                                                    <table>
+                                                                                        <tr>
+                                                                                            <td>( sec x</td>
+                                                                                            <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
+                                                                                            <td>tan x )&nbsp;</td>
+                                                                                            <td>( 1</td>
+                                                                                            <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                            <td>sen x )</td>
+                                                                                            <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+                                                                                            <td>cos x</td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </font>
+                                                                            </b>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><br>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <br><br>Sustituimos las funciones trigonométricas por sus identidades:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td><font size="4">(&nbsp;&nbsp;</font></td>
+                                                                                <td>
+                                                                                    <div class="contenedor" id="DP9" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
+                                                                                <td>
+                                                                                    <div class="contenedor" id="DP10" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td><font size="4">&nbsp;)&nbsp;</font></td>
+                                                                                <td>&nbsp;&nbsp;( 1</td>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td> sen x )</td>
+                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+                                                                                <td>cos x</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Luego de operar la suma de fracciones tenemos:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td rowspan="3"><font size="6">(&nbsp;&nbsp;</font></td>
+                                                                                <td align="center">1</td>
+                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
+                                                                                <td>sen x</td>
+                                                                                <td rowspan="3"><font size="6">&nbsp;&nbsp;)&nbsp;&nbsp;</font></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="3">---------------</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td>( 1</td>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td>sen x )&nbsp;&nbsp;</td>
+                                                                                <td>=&nbsp;&nbsp;</td>
+                                                                                <td>cos x</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td colspan="2" align="center">cos x</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Resolvemos el factor <b>(a-b) (a+b) = a<sup>2</sup> - b<sup>2</sup></b> : <br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td align="center">1</td>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td>sen<sup>2</sup> x</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="3">----------------</td>
+                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+                                                                                <td>cos x</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="3" align="center">cos x</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>Sustituimos por la identidad trigonométrica:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="contenedor" id="DP11" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>---------</td>
+                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+                                                                                <td>cos x</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>cos x</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="row">
+                                                                <div id="CP3" class="col-lg-12 alert alert-warning">
+                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                                    <br><br>
+                                                                    <div class="row">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP9" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP33.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP10" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP13.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP11" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="EP3" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                    <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
+                                                                    <br>
+                                                                    <p style="text-align: justify;">
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
+                                                                        <br><br>
+                                                                    </p><center><font size="3"><b>cos x = cos x</b></font></center>
+                                                                    <p></p>
+                                                                </div>
+                                                                <div id="botonesPrac3" class="row col-lg-12">
+                                                                    <center>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="verificaPracticaIdentidades(3)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(3)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                    </center>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -251,6 +731,15 @@
 <script>
     //swal("¡Borrado!", "Progreso borrado.", "success");
     var opBtn=1;
+
+    function practicas_desigualdades(op){
+        switch (op){
+            case '1':{}break;
+            case '1':{}break;
+            case '1':{}break;
+        }
+    }
+
     /*
     * Inicia el proceso de resolución de l ejercicio
     * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
