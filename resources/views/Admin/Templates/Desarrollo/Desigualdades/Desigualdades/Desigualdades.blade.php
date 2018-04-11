@@ -85,7 +85,7 @@
                                                 <div class="row diff-wrapper">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px"><sup>3x</sup>/<sub>6</sub> < <sup>6</sup>/<sub>3</sub></b>; Se divide entre 3 a ambos lados para dejar
+                                                            &nbsp;&nbsp;<b style="font-size: 18px"><sup>3x</sup>/<sub>3</sub> < <sup>6</sup>/<sub>3</sub></b>; Se divide entre 3 a ambos lados para dejar
                                                             sola la variable x <br>
                                                             &nbsp;&nbsp;<b style="font-size: 18px;">x < 2</b>; se llega a la última desigualdad equivalente; que resulta ser la solución.<br>
                                                             &nbsp;&nbsp;<b style="font-size: 18px;">S = ] –∞, 2 [ </b>es la solución de la desigualdad.
@@ -144,9 +144,9 @@
                                     <div  class="row">
                                         <div class="col-md-12">
                                             <div align="center">
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades(1)">1</button>
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades(2)">2</button>
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades(3)">3</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades('1')">1</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades('2')">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades('3')">3</button>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@
                                         <div class="col-md-12">
                                             <div class="ibox ui-resizable">
                                                 <div class="ibox-content">
-                                                    <div class="row animated fadeInUpBig" id="pract_identidades1">
+                                                    <div class="row animated fadeInUpBig" id="pract_desigualdades1">
                                                         <div class="col-md-8">
                                                             <div class="panel panel-default">
                                                                 <div class="panel-heading">
@@ -289,7 +289,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row animated fadeInUpBig" id="pract_identidades2" style="display: none;">
+                                                    <div class="row animated fadeInUpBig" id="pract_desigualdades2" style="display: none;">
                                                         <div class="col-md-8">
                                                             <div class="panel panel-default">
                                                                 <div class="panel-heading">
@@ -298,34 +298,22 @@
                                                                 <div class="panel-body">
                                                                     <div class="row">
                                                                         <div class="col-md-12">
-                                                                            Verifca la identidad trigonométrica: <br>
+                                                                            Resuelve la desigualdad: <br>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-md-12" align="center">
                                                                             <b>
                                                                                 <font size="3">
-                                                                                    <table border="0">
+                                                                                    <table>
                                                                                         <tr>
-                                                                                            <td>&nbsp;&nbsp;sen x</td>
-                                                                                            <td>&nbsp;&nbsp;</td>
-                                                                                            <td>&nbsp;&nbsp;cos x</td>
-                                                                                            <td>&nbsp;&nbsp;</td>
-                                                                                            <td>&nbsp;&nbsp;</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>----------</td>
-                                                                                            <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
-                                                                                            <td>----------</td>
-                                                                                            <td>&nbsp;&nbsp;=</td>
-                                                                                            <td align="center">&nbsp;&nbsp;1</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>&nbsp;&nbsp;csc x</td>
-                                                                                            <td>&nbsp;&nbsp;</td>
-                                                                                            <td>&nbsp;&nbsp;sec x</td>
-                                                                                            <td>&nbsp;&nbsp;</td>
-                                                                                            <td></td>
+                                                                                            <td>2x</td>
+                                                                                            <td>&nbsp; + &nbsp;</td>
+                                                                                            <td>5</td>
+                                                                                            <td> &nbsp; ≥ &nbsp;</td>
+                                                                                            <td>3</td>
+                                                                                            <td>&nbsp; - &nbsp;</td>
+                                                                                            <td>7x</td>
                                                                                         </tr>
                                                                                     </table>
                                                                                 </font>
@@ -336,55 +324,47 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    Sustituimos las razones trigonométricas <b>csc x</b> y <b>sec x</b> por sus identidades:
+                                                                    Operamos los términos semejantes
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <br><br>
                                                                     <font size="3">
-                                                                        <table border="0">
+                                                                        <table>
                                                                             <tr>
-                                                                                <td>&nbsp;&nbsp;sen x</td>
-                                                                                <td>&nbsp;&nbsp;</td>
-                                                                                <td>&nbsp;&nbsp;cos x</td>
-                                                                                <td>&nbsp;&nbsp;</td>
-                                                                                <td>&nbsp;&nbsp;</td>
+                                                                                <td>2x</td>
+                                                                                <td>&nbsp;+&nbsp;</td>
+                                                                                <td>7x</td>
+                                                                                <td>&nbsp;≥&nbsp;</td>
+                                                                                <td>3</td>
+                                                                                <td>&nbsp;-&nbsp;</td>
+                                                                                <td>5</td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td>----------</td>
-                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
-                                                                                <td>----------</td>
-                                                                                <td>&nbsp;&nbsp;=</td>
-                                                                                <td align="center">&nbsp;&nbsp;1</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <div class="contenedor" id="DP5" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
-                                                                                </td>
-                                                                                <td>&nbsp;&nbsp;</td>
-                                                                                <td>
-                                                                                    <div class="contenedor" id="DP6" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
-                                                                                </td>
-                                                                                <td>&nbsp;&nbsp;</td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                                <td>9x</td>
+                                                                                <td>&nbsp;≥&nbsp;</td>
+                                                                                <td>-1</td>
+                                                                                <td></td>
                                                                                 <td></td>
                                                                             </tr>
                                                                         </table>
+
                                                                     </font>
                                                                 </div>
                                                                 <div class="col-md-12">
-                                                                    <br><br>Opera cada fracción extremos por extremos y medios por medios: <br><br>
+                                                                    <br><br>El despeje de “x” sería de la manera siguiente:<br><br>
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <font size="3">
-                                                                        <table border="0">
-                                                                            <tr>
-                                                                                <td><div class="contenedor" id="DP7" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
-                                                                                <td><div class="contenedor" id="DP8" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div></td>
-                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
-                                                                                <td>1</td>
-                                                                            </tr>
-                                                                        </table>
+
                                                                     </font>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <br><br>La solución para la desigualdad es:<br><br>
+                                                                </div>
+                                                                <div class="col-md-12">
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -429,7 +409,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row animated fadeInUpBig" id="pract_identidades3" style="display: none;">
+                                                    <div class="row animated fadeInUpBig" id="pract_desigualdades3" style="display: none;">
                                                         <div class="col-md-8">
                                                             <div class="panel panel-default">
                                                                 <div class="panel-heading">
@@ -438,21 +418,18 @@
                                                                 <div class="panel-body">
                                                                     <div class="row">
                                                                         <div class="col-md-12">
-                                                                            Comprobar la siguiente identidade trigonométrica:<br><br>
+                                                                            Resuelve la desigualdad:<br><br>
                                                                         </div>
                                                                         <div class="col-md-12" align="center">
                                                                             <b>
                                                                                 <font size="3">
                                                                                     <table>
                                                                                         <tr>
-                                                                                            <td>( sec x</td>
-                                                                                            <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
-                                                                                            <td>tan x )&nbsp;</td>
-                                                                                            <td>( 1</td>
-                                                                                            <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
-                                                                                            <td>sen x )</td>
-                                                                                            <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
-                                                                                            <td>cos x</td>
+                                                                                            <td>2x</td>
+                                                                                            <td>&nbsp;+&nbsp;</td>
+                                                                                            <td>3</td>
+                                                                                            <td>&nbsp;>&nbsp;</td>
+                                                                                            <td>0</td>
                                                                                         </tr>
                                                                                     </table>
                                                                                 </font>
@@ -463,120 +440,61 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <br><br>Sustituimos las funciones trigonométricas por sus identidades:<br><br>
+                                                                    <br><br>Restamos un valor en ambos miembros:<br><br>
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
-                                                                                <td><font size="4">(&nbsp;&nbsp;</font></td>
-                                                                                <td>
-                                                                                    <div class="contenedor" id="DP9" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
-                                                                                </td>
-                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
-                                                                                <td>
-                                                                                    <div class="contenedor" id="DP10" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
-                                                                                </td>
-                                                                                <td><font size="4">&nbsp;)&nbsp;</font></td>
-                                                                                <td>&nbsp;&nbsp;( 1</td>
-                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
-                                                                                <td> sen x )</td>
-                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
-                                                                                <td>cos x</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>Luego de operar la suma de fracciones tenemos:<br><br>
-                                                                </div>
-                                                                <div class="col-md-12" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td rowspan="3"><font size="6">(&nbsp;&nbsp;</font></td>
-                                                                                <td align="center">1</td>
-                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
-                                                                                <td>sen x</td>
-                                                                                <td rowspan="3"><font size="6">&nbsp;&nbsp;)&nbsp;&nbsp;</font></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td colspan="3">---------------</td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td>( 1</td>
-                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
-                                                                                <td>sen x )&nbsp;&nbsp;</td>
-                                                                                <td>=&nbsp;&nbsp;</td>
-                                                                                <td>cos x</td>
+                                                                                <td>2x</td>
+                                                                                <td>&nbsp;+&nbsp;</td>
+                                                                                <td>3</td>
+                                                                                <td>&nbsp;-&nbsp;</td>
+                                                                                <td>3</td>
+                                                                                <td>&nbsp;>&nbsp;</td>
+                                                                                <td>0</td>
+                                                                                <td>&nbsp;-&nbsp;</td>
+                                                                                <td>3</td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td></td>
-                                                                                <td colspan="2" align="center">cos x</td>
                                                                                 <td></td>
                                                                                 <td></td>
                                                                                 <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
+                                                                                <td>2x</td>
+                                                                                <td>&nbsp;>&nbsp;</td>
+                                                                                <td>-&nbsp;</td>
+                                                                                <td>3</td>
                                                                             </tr>
                                                                         </table>
                                                                     </font>
                                                                 </div>
                                                                 <div class="col-md-12">
-                                                                    <br><br>Resolvemos el factor <b>(a-b) (a+b) = a<sup>2</sup> - b<sup>2</sup></b> : <br><br>
+                                                                    <br><br>Despejamos "x":<br><br>
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
-                                                                                <td align="center">1</td>
-                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
-                                                                                <td>sen<sup>2</sup> x</td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td colspan="3">----------------</td>
-                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
-                                                                                <td>cos x</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td colspan="3" align="center">cos x</td>
-                                                                                <td></td>
-                                                                                <td></td>
+                                                                                <td>x</td>
+                                                                                <td>&nbsp;>&nbsp;</td>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id=""  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
                                                                             </tr>
                                                                         </table>
                                                                     </font>
                                                                 </div>
                                                                 <div class="col-md-12">
-                                                                    <br><br>Sustituimos por la identidad trigonométrica:<br><br>
+                                                                    <br><br>El conjunto solución para la desigualdad es: <br><br>
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
-                                                                                <td>
-                                                                                    <div class="contenedor" id="DP11" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id=""  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>---------</td>
-                                                                                <td>&nbsp;&nbsp;=&nbsp;&nbsp;</td>
-                                                                                <td>cos x</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>cos x</td>
-                                                                                <td></td>
-                                                                                <td></td>
                                                                             </tr>
                                                                         </table>
                                                                     </font>
@@ -734,9 +652,21 @@
 
     function practicas_desigualdades(op){
         switch (op){
-            case '1':{}break;
-            case '1':{}break;
-            case '1':{}break;
+            case '1':{
+                $('#pract_desigualdades1').show();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').hide();
+            }break;
+            case '2':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').show();
+                $('#pract_desigualdades3').hide();
+            }break;
+            case '3':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').show();
+            }break;
         }
     }
 
