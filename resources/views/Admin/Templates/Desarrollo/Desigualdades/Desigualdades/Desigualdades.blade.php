@@ -222,11 +222,11 @@
                                                                         <table>
                                                                             <tr>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
                                                                                 <td>&nbsp;&nbsp; ≥ &nbsp;&nbsp;</td>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP4"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -265,9 +265,6 @@
                                                                         </div>
                                                                         <div class="col-md-3">
                                                                             <img id="AP4" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP12.png')}}">
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <p><br></p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -374,21 +371,7 @@
                                                                     <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br><br>
                                                                     <div class="row">
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP5" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP6" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP33.png')}}">
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP7" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP23.png')}}">
-                                                                        </div>
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP8" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP22.png')}}">
-                                                                        </div>
-                                                                        <div class="col-md-3">
 
-                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                                 <div id="EP2" class="col-lg-12 alert alert-success" style="display: none;">
@@ -479,7 +462,7 @@
                                                                                 <td>x</td>
                                                                                 <td>&nbsp;>&nbsp;</td>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id=""  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP5"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -493,7 +476,7 @@
                                                                         <table>
                                                                             <tr>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id=""  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP6"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -508,13 +491,16 @@
                                                                     <br><br>
                                                                     <div class="row">
                                                                         <div class="col-md-3">
-                                                                            <img id="AP9" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP33.png')}}">
+                                                                            <img id="AP5" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP33.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP10" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP13.png')}}">
+                                                                            <img id="AP6" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP13.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP11" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                            <img id="AP7" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP8" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1263,5 +1249,73 @@
             }
         }
         return a;
+    }
+
+
+    function ComprobarPracticas(op){
+        switch (op){
+            case 1:{
+                if(document.getElementById('AP7').parentNode.id=='DP7'){
+
+                }else{
+
+                }
+            }break;
+            case 2:{
+
+            }break;
+        }
+    }
+
+    function limpiarPracticas(op){
+        switch (op){
+            case 1:{
+
+            }break;
+            case 2:{
+
+            }break;
+        }
+    }
+
+    /**
+     * Función que se ejecuta al arrastrar el elemento.
+     **/
+    function start(e) {
+        e.dataTransfer.effecAllowed = 'move'; // Define el efecto como mover (Es el por defecto)
+        e.dataTransfer.setData("Text", e.target.id); // Coje el elemento que se va a mover
+        e.target.style.opacity = '0.4';
+    }
+    /**
+     * Función que se ejecuta se termina de arrastrar el elemento.
+     **/
+    function end(e){
+        e.target.style.opacity = ''; // Restaura la opacidad del elemento
+        e.dataTransfer.clearData("Data");
+    }
+    /**
+     * Función que se ejecuta cuando un elemento arrastrable entra en el elemento desde del que se llama.
+     **/
+    function enter(e) {
+        return true;
+    }
+
+    /**
+     * Función que se ejecuta cuando un elemento arrastrable esta sobre el elemento desde del que se llama.
+     * Devuelve false si el objeto se puede soltar en ese elemento y true en caso contrario.
+     **/
+    function over(e) {
+        if (e.target.id == "contenedorPiezas" || e.target.className == "contenedor")
+            return false;
+    }
+
+    /**
+     * Función que se ejecuta cuando un elemento arrastrable se suelta sobre el elemento desde del que se llama.
+     **/
+    function drop(e){
+        e.preventDefault(); // Evita que se ejecute la accion por defecto del elemento soltado.
+        var elementoArrastrado = e.dataTransfer.getData("Text");
+        e.target.appendChild(document.getElementById(elementoArrastrado)); // Coloca el elemento soltado sobre el elemento desde el que se llamo esta funcion
+        //comprobarPuzzle();
     }
 </script>
