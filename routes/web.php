@@ -315,3 +315,20 @@ Route::get('/intervalosDes', function () {
 Route::get('/DesigualdadesDes', function () {
     return view('Admin.Templates.Desarrollo.Desigualdades.Desigualdades.Desigualdades');
 });
+////////////////////////////////
+/////TRIANGULOS///////
+//////////////////////////////
+///
+/*
+*	Llamada al area de desarrollo para intervalos.
+*/
+Route::get('/TriangulosTeoremaSeno', function () {
+    return view('Admin.Templates.Desarrollo.Triangulos.Oblicuangolos.TeoremaSeno');
+});
+
+/*
+*	Llamada al area de desarrollo para intervalos.
+*/
+Route::get('/TriangulosTeoremaCoseno', function () {
+    return view('Admin.Templates.Desarrollo.Triangulos.Oblicuangolos.TeoremaCoseno');
+});
