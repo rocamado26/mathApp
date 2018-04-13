@@ -158,9 +158,9 @@
                                     <div  class="row">
                                         <div class="col-md-12" id="tour1-1">
                                             <div align="center">
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades('1')">1</button>
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades('2')">2</button>
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_desigualdades('3')">3</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_seno('1')">1</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_seno('2')">2</button>
+                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_seno('3')">3</button>
                                             </div>
                                         </div>
                                     </div>
@@ -865,6 +865,26 @@
         //comprobarPuzzle();
     }
     ///Para comprobar que las imagenes sean puestas en la posicion correcta
+
+    function practicas_seno(op){
+        switch (op){
+            case '1':{
+                $('#pract_desigualdades1').show();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').hide();
+            }break;
+            case '2':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').show();
+                $('#pract_desigualdades3').hide();
+            }break;
+            case '3':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').show();
+            }break;
+        }
+    }
     function verificaPractica1(){
         if((document.getElementById('P1P1').parentNode.id=='7P1') &&
             (document.getElementById('P2P1').parentNode.id=='8P1') &&
