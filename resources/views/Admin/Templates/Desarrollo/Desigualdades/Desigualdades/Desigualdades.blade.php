@@ -232,55 +232,41 @@
                                                                         </table>
                                                                     </font>
                                                                 </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>Despejamos <b>“x”</b> y operamos la división:<br><br>
-                                                                </div>
-                                                                <div class="col-md-12" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td>x&nbsp;</td>
-                                                                                <td>=&nbsp;</td>
-                                                                                <td>2x</td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="row">
-                                                                <div id="CP1" class="col-lg-12 alert alert-warning">
+                                                                <div id="EP1" class="col-lg-12 alert alert-warning">
                                                                     <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br><br>
                                                                     <div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
                                                                         <div class="col-md-3">
-                                                                            <img id="AP1" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                            <img id="AP3" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP3.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP2" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP14.png')}}">
+                                                                            <img id="AP1" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP1.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP3" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP13.png')}}">
+                                                                            <img id="AP4" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP4.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP4" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP12.png')}}">
+                                                                            <img id="AP2" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP2.png')}}">
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div id="EP1" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                <div id="SP1" class="col-lg-12 alert alert-success" style="display: none;">
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la desigualdad y el valor "x" es:
                                                                         <br><br>
-                                                                    </p><center><font size="3"><b>sen x = sen x</b></font></center>
+                                                                    </p><center><font size="3"><b> x = 2</b></font></center>
                                                                     <p></p>
                                                                 </div>
                                                                 <div id="botonesPrac1" class="row col-lg-12">
                                                                     <center>
-                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="verificaPracticaIdentidades(1)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(1)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPracticas(1)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="limpiarPracticas(1)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                                     </center>
                                                                 </div>
                                                             </div>
@@ -336,17 +322,7 @@
                                                                                 <td>&nbsp;-&nbsp;</td>
                                                                                 <td>5</td>
                                                                             </tr>
-                                                                            <tr>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td>9x</td>
-                                                                                <td>&nbsp;≥&nbsp;</td>
-                                                                                <td>-1</td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                            </tr>
                                                                         </table>
-
                                                                     </font>
                                                                 </div>
                                                                 <div class="col-md-12">
@@ -354,38 +330,72 @@
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <font size="3">
-
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP7"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                                <td>&nbsp;≥&nbsp;</td>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP8"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
                                                                     </font>
                                                                 </div>
                                                                 <div class="col-md-12">
                                                                     <br><br>La solución para la desigualdad es:<br><br>
                                                                 </div>
-                                                                <div class="col-md-12">
-
+                                                                <div class="col-md-12" align="center">
+                                                                    <font size="3">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td colspan="3" align="center">
+                                                                                    <div class="contenedor" id="DP9"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 100px; height: 34px;"></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </font>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="row">
-                                                                <div id="CP2" class="col-lg-12 alert alert-warning">
+                                                                <div id="EP2" class="col-lg-12 alert alert-warning">
                                                                     <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br><br>
                                                                     <div class="row">
-
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP14" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP14.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP11" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP11.png')}}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP12" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP12.png')}}">
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP13" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP13.png')}}">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div id="EP2" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                <div id="SP2" class="col-lg-12 alert alert-success" style="display: none;">
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado la desigualdad el valor de "x" es:
                                                                         <br><br>
-                                                                    </p><center><font size="3"><b>1 = 1</b></font></center>
-                                                                    <p></p>
+                                                                    </p><center><font size="3"><b> x = - <sup>2</sup>/<sub>9</sub></b></font></center>
+                                                                    <p style="text-align: justify;">
+                                                                        El conjunto solicuión es:
+                                                                    <center><font size="3"><b> [- <sup>2</sup>/<sub>9</sub> ; ∞)</b></font></center>
+                                                                    </p>
                                                                 </div>
                                                                 <div id="botonesPrac2" class="row col-lg-12">
                                                                     <center>
-                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="verificaPracticaIdentidades(2)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPracticas(2)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                                         <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(2)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                                     </center>
                                                                 </div>
@@ -476,7 +486,7 @@
                                                                         <table>
                                                                             <tr>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP6"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP6"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 100px; height: 34px;"></div>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -486,36 +496,41 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="row">
-                                                                <div id="CP3" class="col-lg-12 alert alert-warning">
+                                                                <div id="EP3" class="col-lg-12 alert alert-warning">
                                                                     <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br><br>
                                                                     <div class="row">
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP5" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP33.png')}}">
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP6" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP6.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP6" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP13.png')}}">
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP8" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP8.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP7" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP7" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP7.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-3">
-                                                                            <img id="AP8" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/trigonometria/areadesarrollo/practica-identidades/AP11.png')}}">
+                                                                        <div class="col-md-6">
+                                                                            <img id="AP5" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP5.png')}}">
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div id="EP3" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                <div id="SP3" class="col-lg-12 alert alert-success" style="display: none;">
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
                                                                         Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
                                                                         <br><br>
-                                                                    </p><center><font size="3"><b>cos x = cos x</b></font></center>
-                                                                    <p></p>
+                                                                    </p><center><font size="3"><b> x = - <sup>3</sup>/<sub>2</sub></b></font></center>
+                                                                    <p style="text-align: justify;">
+                                                                        El conjunto solicuión es:
+                                                                        <center><font size="3"><b> (-1.5 ; ∞) </b></font></center>
+                                                                    </p>
                                                                 </div>
                                                                 <div id="botonesPrac3" class="row col-lg-12">
                                                                     <center>
-                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="verificaPracticaIdentidades(3)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPracticas(3)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                                         <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(3)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                                     </center>
                                                                 </div>
@@ -599,14 +614,6 @@
                                                     <div class="col-xs-6 text-center">
                                                         <button id="btn1p1" class="btn-default btn dim" onclick="operaciones(1)"><b>operar</b></button>
                                                     </div>
-                                                    <!--
-                                                    <div class="col-xs-3 text-center">
-                                                        <button type="button" onclick="operaciones(2)" class="btn btn-info">&nbsp; - &nbsp;</button>
-                                                    </div>
-                                                    <div class="col-xs-3 text-center">
-                                                        <button type="button" onclick="operaciones(3)" class="btn btn-info">&nbsp; * &nbsp;</button>
-                                                    </div>
-                                                    -->
                                                     <div class="col-xs-6 text-center">
                                                         <button id="btn1p2" class="btn-default btn dim" onclick="operaciones(4)"><b>despejar</b></button>
                                                     </div>
@@ -1255,14 +1262,28 @@
     function ComprobarPracticas(op){
         switch (op){
             case 1:{
-                if(document.getElementById('AP7').parentNode.id=='DP7'){
-
+                if((document.getElementById('AP1').parentNode.id=='DP1') && (document.getElementById('AP2').parentNode.id=='DP2') && (document.getElementById('AP3').parentNode.id=='DP3')){
+                    $('#EP1').hide();
+                    $('#SP1').show();
                 }else{
-
+                    alert('malo');
                 }
             }break;
             case 2:{
-
+                if((document.getElementById('AP13').parentNode.id=='DP7') && (document.getElementById('AP14').parentNode.id=='DP8') && (document.getElementById('AP11').parentNode.id=='DP9')){
+                    $('#EP2').hide();
+                    $('#SP2').show();
+                }else{
+                    alert('malo');
+                }
+            }break;
+            case 3:{
+                if((document.getElementById('AP5').parentNode.id=='DP5') && (document.getElementById('AP7').parentNode.id=='DP6')){
+                    $('#EP3').hide();
+                    $('#SP3').show();
+                }else{
+                    alert('malo');
+                }
             }break;
         }
     }
@@ -1270,7 +1291,13 @@
     function limpiarPracticas(op){
         switch (op){
             case 1:{
-
+                $('#DP1').html('');
+                $('#DP2').html('');
+                $('#DP3').html('');
+                $('#DP4').html('');
+                $('#SP1').html('');
+                $("#EP1").fadeOut(0);
+                $("#SP1").fadeIn(300);
             }break;
             case 2:{
 
