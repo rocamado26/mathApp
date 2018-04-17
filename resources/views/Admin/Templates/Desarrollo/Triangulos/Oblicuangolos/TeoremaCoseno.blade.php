@@ -1465,13 +1465,13 @@
         var anguloA=document.getElementById("anguloA").value;
         var anguloB=document.getElementById("anguloB").value;
         var anguloC=document.getElementById("anguloC").value;
-        if(ladoA=="" && ladoB=="" && ladoC==""){
+        if((ladoA=="" && ladoB=="") || (ladoA=="" && ladoC=="") || (ladoB=="" && ladoC=="")){
             $("#DLA").fadeOut(0);
             $("#DLB").fadeOut(0);
             $("#DLC").fadeOut(0);
-            toastr.error('Debes ingresar al menos valor para un lado', 'Lo Siento');
+            toastr.error('Debes ingresar valores para dos lados', 'Lo Siento');
         }else{
-            if((anguloA!="" && anguloB!="") || (anguloA!="" && anguloC!="") || (anguloB!="" && anguloC!="")){
+            if(anguloA!="" || anguloB!="" || anguloC!=""){
                 if(ladoA==""){
                     $("#DLA").fadeIn(300);
                 }else{
@@ -1489,7 +1489,7 @@
                 }
             }
             else{
-                toastr.error('Debes ingresar al menos valor para 2 ángulos', 'Lo Siento');
+                toastr.error('Debes ingresar al menos valor para un ángulo', 'Lo Siento');
             }
         }
 
@@ -1504,11 +1504,11 @@
         var anguloA=document.getElementById("anguloA").value;
         var anguloB=document.getElementById("anguloB").value;
         var anguloC=document.getElementById("anguloC").value;
-        if(anguloA=="" && anguloB=="" && anguloC==""){
+        /*if(anguloA=="" && anguloB=="" && anguloC==""){
             toastr.error('Debes ingresar al menos valor para un ángulo', 'Lo Siento');
         }
         else{
-            if((ladoA!="" && ladoB!="") || (ladoA!="" && ladoC!="") || (ladoB!="" && ladoC!="")){
+            if((ladoA!="" && ladoB!="") || (ladoA!="" && ladoC!="") || (ladoB!="" && ladoC!="")){*/
                 if(anguloA==""){
                     $("#DAA").fadeIn(300);
                 }else{
@@ -1524,11 +1524,11 @@
                 }else{
                     $("#DAC").fadeOut(0);
                 }
-            }
+           /* }
             else{
                 toastr.error('Debes ingresar al menos valor para 2 lados', 'Lo Siento');
             }
-        }
+        }*/
     }
 
     function BuscarLado(opc){
@@ -1538,20 +1538,27 @@
         var anguloA=document.getElementById("anguloA").value;
         var anguloB=document.getElementById("anguloB").value;
         var anguloC=document.getElementById("anguloC").value;
+        $("#Resultado").fadeOut(0);
         switch(opc)
         {
             case 1:{
                 //lado a
                 $("#solucion").html("<center>Primero debemos identificar si conocemos el ángulo respecto al lado A, es decir α<br><br></center>");
                 if(anguloA==""){
-                    console.log(anguloB,anguloC);
-                    anguloA = 180 - parseFloat(anguloB) - parseFloat(anguloC);
-                    $("#solucion").append("<center>Para este caso, como desconocemos el ángulo α, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                        "<font size='3'>Ángulo α  = 180 - "+anguloB+" - "+anguloC+"</font>" +
-                        "<br><br>" +
-                        "<font size='3'><b>Ángulo α  = "+anguloA+"</b></font>" +
-                        "<br><br>" +
-                        "</center>");
+                    if(anguloB!="" && anguloC!=""){
+                        console.log(anguloB,anguloC);
+                        anguloA = 180 - parseFloat(anguloB) - parseFloat(anguloC);
+                        $("#solucion").append("<center>Para este caso, como desconocemos el ángulo α, lo obtenemos restando los demás ángulos a 180<br><br>" +
+                            "<font size='3'>Ángulo α  = 180 - "+anguloB+" - "+anguloC+"</font>" +
+                            "<br><br>" +
+                            "<font size='3'><b>Ángulo α  = "+anguloA+"</b></font>" +
+                            "<br><br>" +
+                            "</center>");
+                    }
+                    else{
+                        toastr.error("Debes agregar al menos dos ángulos si desconoces el valor del angulo α");
+                        break;
+                    }
                 }
                 else{
                     anguloA = parseFloat(anguloA);
@@ -1560,16 +1567,51 @@
                         "<br><br>" +
                         "</center>");
                 }
-                if(ladoB!=""){
-                    //lado b
-                    $("#solucion").append("<center>Para este caso utilizaremos el lado B, debemos identificar su ángulo, es decir β<br><br></center>");
-                    if(anguloB!=""){
-                        anguloB=parseFloat(anguloB);
-                        $("#solucion").append("<center>Para este caso,ya conocemos el ángulo para β<br><br>" +
-                            "<font size='3'><b>Ángulo β  = "+anguloB+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }else{
+                $("#solucion").append("<center>Ya que deseamos conocer el lado A, utilizaremos la siguiente fórmula<br><br>" +
+                    "<font size='3'><b>a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2 * b * c * cos(α) </b></font>" +
+                    "<br><br>" +
+                    "Sustituimos los valores que ya conocemos en la fórmula"+
+                    "<br><br>" +
+                    "<font size='3'><b>a<sup>2</sup> = "+ladoB+"<sup>2</sup> + "+ladoC+"<sup>2</sup> - 2 * "+ladoB+" * "+ladoC+" * cos("+anguloA+") </b></font>" +
+                    "<br><br>" +
+                    "</center>");
+                var b2=Math.pow(parseFloat(ladoB),2);
+                b2=b2.toFixed(2);
+                var c2=Math.pow(parseFloat(ladoC),2);
+                c2=c2.toFixed(2);
+                var sumaLados = parseFloat(b2) + parseFloat(c2);
+                var multi = 2 * parseFloat(ladoB) * parseFloat(ladoC);
+                multi = multi.toFixed(2);
+                var cosA = Math.cos(toDegrees(anguloA));
+                cosA = cosA.toFixed(2);
+                var multiCos = multi * cosA;
+                multiCos=multiCos.toFixed(2);
+                var resta=sumaLados - multiCos;
+                $("#solucion").append("<center>Operamos los valores<br><br>" +
+                    "<font size='3'><b>a<sup>2</sup> = "+b2+" + "+c2+" - "+multi+" * "+cosA+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>a<sup>2</sup> = "+sumaLados+" - "+multiCos+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>a<sup>2</sup> = "+resta+" </b></font>" +
+                    "<br><br>" +
+                    "</center>");
+                var raiz = Math.sqrt(resta);
+                raiz=raiz.toFixed(2);
+                $("#solucion").append("<center>Despejamos a y efectuamos la raíz<br><br>" +
+                    "<font size='3'><b>a = √ "+resta+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>a = "+raiz+"</b></font>" +
+                    "<br><br>" +
+                    "Por lo tanto el lado A equivale a <b>"+raiz+"</b>" +
+                    "</center>");
+                $("#Resultado").fadeIn(300);
+            }break;
+            case 2:{
+                //lado b
+                $("#solucion").html("<center>Primero debemos identificar si conocemos el ángulo respecto al lado B, es decir β<br><br></center>");
+                if(anguloB==""){
+                    if(anguloA!="" && anguloC!=""){
+                        console.log(anguloA,anguloC);
                         anguloB = 180 - parseFloat(anguloA) - parseFloat(anguloC);
                         $("#solucion").append("<center>Para este caso, como desconocemos el ángulo β, lo obtenemos restando los demás ángulos a 180<br><br>" +
                             "<font size='3'>Ángulo β  = 180 - "+anguloA+" - "+anguloC+"</font>" +
@@ -1577,191 +1619,10 @@
                             "<font size='3'><b>Ángulo β  = "+anguloB+"</b></font>" +
                             "<br><br>" +
                             "</center>");
-                    }
-                    $("#solucion").append("<center>Por lo tanto, según el teorema de los senos tenemos que: <br><br>" +
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td style='border-bottom: 1px solid black;'><b>A</b></td>"+
-                        "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoB+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloA+"</b></td>"+
-                        "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                        "<td><b>sen "+anguloB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Despejamos el valor de A"+
-                        "<br><br>"+
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * sen "+anguloA+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Obtenemos los valores de los senos"+
-                        "<br><br>"+
-                        "</center>");
-                    anguloA=parseFloat(anguloA);
-                    anguloB=parseFloat(anguloB);
-                    console.log(anguloA,anguloB);
-                    var senoA = Math.sin(toDegrees(anguloA));
-                    var senoB = Math.sin(toDegrees(anguloB));
-                    console.log(senoA,senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * "+senoA+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Multiplicamos"+
-                        "<br><br>"+
-                        "</center>");
-                    var multi= parseFloat(ladoB) * parseFloat(senoA);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Dividimos y obtenemos el valor para el lado A"+
-                        "<br><br>"+
-                        "</center>");
-                    var division=parseFloat(multi) / parseFloat(senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<b>A = "+parseFloat(division).toFixed(2)+"</b>"+
-                        "</font></center>");
-                    //console.log("Final B: ",ladoB,anguloB);
-                }else{
-                    //lado c
-                    $("#solucion").append("<center>Para este caso utilizaremos el lado C, debemos identificar su ángulo, es decir γ<br><br></center>");
-                    if(anguloC!=""){
-                        anguloC=parseFloat(anguloC);
-                        $("#solucion").append("<center>Para este caso,ya conocemos el ángulo para γ<br><br>" +
-                            "<font size='3'><b>Ángulo γ  = "+anguloC+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
                     }else{
-                        anguloC = 180 - parseFloat(anguloA) - parseFloat(anguloB);
-                        $("#solucion").append("<center>Para este caso, como desconocemos el ángulo γ, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                            "<font size='3'>Ángulo γ  = 180 - "+anguloA+" - "+anguloB+"</font>" +
-                            "<br><br>" +
-                            "<font size='3'><b>Ángulo γ  = "+anguloC+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
+                        toastr.error("Debes agregar al menos dos ángulos si desconoces el valor del angulo β");
+                        break;
                     }
-                    //obteniendo el resultado
-                    $("#solucion").append("<center>Por lo tanto, según el teorema de los senos tenemos que: <br><br>" +
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td style='border-bottom: 1px solid black;'><b>A</b></td>"+
-                        "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoC+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloA+"</b></td>"+
-                        "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                        "<td><b>sen "+anguloC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Despejamos el valor de A"+
-                        "<br><br>"+
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoC+" * sen "+anguloA+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Obtenemos los valores de los senos"+
-                        "<br><br>"+
-                        "</center>");
-                    anguloA=parseFloat(anguloA);
-                    anguloC=parseFloat(anguloC);
-                    console.log(anguloA,anguloC);
-                    var senoA = Math.sin(toDegrees(anguloA));
-                    var senoC = Math.sin(toDegrees(anguloC));
-                    console.log(senoA,senoC);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoC+" * "+senoA+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Multiplicamos"+
-                        "<br><br>"+
-                        "</center>");
-                    var multi= parseFloat(ladoC) * parseFloat(senoA);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Dividimos y obtenemos el valor para el lado A"+
-                        "<br><br>"+
-                        "</center>");
-                    var division=parseFloat(multi) / parseFloat(senoC);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<b>A = "+parseFloat(division).toFixed(2)+"</b>"+
-                        "</font></center>");
-                    //console.log("Final C: ",ladoC,anguloC);
-                }
-                $("#Resultado").fadeIn(300);
-            }break;
-            case 2:{
-                //lado b
-                $("#solucion").html("<center>Primero debemos identificar si conocemos el ángulo respecto al lado B, es decir β<br><br></center>");
-                if(anguloB==""){
-                    console.log(anguloA,anguloC);
-                    anguloB = 180 - parseFloat(anguloA) - parseFloat(anguloC);
-                    $("#solucion").append("<center>Para este caso, como desconocemos el ángulo β, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                        "<font size='3'>Ángulo β  = 180 - "+anguloA+" - "+anguloC+"</font>" +
-                        "<br><br>" +
-                        "<font size='3'><b>Ángulo β  = "+anguloB+"</b></font>" +
-                        "<br><br>" +
-                        "</center>");
                 }
                 else{
                     anguloB = parseFloat(anguloB);
@@ -1770,109 +1631,51 @@
                         "<br><br>" +
                         "</center>");
                 }
-                if(ladoA!=""){
-                    //lado b
-                    $("#solucion").append("<center>Para este caso utilizaremos el lado A, debemos identificar su ángulo, es decir α<br><br></center>");
-                    if(anguloA!=""){
-                        anguloA=parseFloat(anguloA);
-                        $("#solucion").append("<center>Para este caso,ya conocemos el ángulo para α<br><br>" +
-                            "<font size='3'><b>Ángulo α  = "+anguloA+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }else{
-                        anguloA = 180 - parseFloat(anguloB) - parseFloat(anguloC);
-                        $("#solucion").append("<center>Para este caso, como desconocemos el ángulo α, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                            "<font size='3'>Ángulo α  = 180 - "+anguloB+" - "+anguloC+"</font>" +
-                            "<br><br>" +
-                            "<font size='3'><b>Ángulo α  = "+anguloA+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }
-                    $("#solucion").append("<center>Por lo tanto, según el teorema de los senos tenemos que: <br><br>" +
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td style='border-bottom: 1px solid black;'><b>B</b></td>"+
-                        "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoA+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloB+"</b></td>"+
-                        "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                        "<td><b>sen "+anguloA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Despejamos el valor de B"+
-                        "<br><br>"+
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>B = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * sen "+anguloB+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Obtenemos los valores de los senos"+
-                        "<br><br>"+
-                        "</center>");
-                    anguloA=parseFloat(anguloA);
-                    anguloB=parseFloat(anguloB);
-                    console.log(anguloA,anguloB);
-                    var senoA = Math.sin(toDegrees(anguloA));
-                    var senoB = Math.sin(toDegrees(anguloB));
-                    console.log(senoA,senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>B = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * "+senoB+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Multiplicamos"+
-                        "<br><br>"+
-                        "</center>");
-                    var multi= parseFloat(ladoA) * parseFloat(senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Dividimos y obtenemos el valor para el lado A"+
-                        "<br><br>"+
-                        "</center>");
-                    var division=parseFloat(multi) / parseFloat(senoA);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<b>B = "+parseFloat(division).toFixed(2)+"</b>"+
-                        "</font></center>");
-                    //console.log("Final A: ",ladoA,anguloA);
-                }else{
-                    //lado c
-                    $("#solucion").append("<center>Para este caso utilizaremos el lado C, debemos identificar su ángulo, es decir γ<br><br></center>");
-                    if(anguloC!=""){
-                        anguloC=parseFloat(anguloC);
-                        $("#solucion").append("<center>Para este caso,ya conocemos el ángulo para γ<br><br>" +
-                            "<font size='3'><b>Ángulo γ  = "+anguloC+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }else{
+                $("#solucion").append("<center>Ya que deseamos conocer el lado B, utilizaremos la siguiente fórmula<br><br>" +
+                    "<font size='3'><b>b<sup>2</sup> = a<sup>2</sup> + c<sup>2</sup> - 2 * a * c * cos(β) </b></font>" +
+                    "<br><br>" +
+                    "Sustituimos los valores que ya conocemos en la fórmula"+
+                    "<br><br>" +
+                    "<font size='3'><b>b<sup>2</sup> = "+ladoA+"<sup>2</sup> + "+ladoC+"<sup>2</sup> - 2 * "+ladoA+" * "+ladoC+" * cos("+anguloB+") </b></font>" +
+                    "<br><br>" +
+                    "</center>");
+                var a2=Math.pow(parseFloat(ladoA),2);
+                a2=a2.toFixed(2);
+                var c2=Math.pow(parseFloat(ladoC),2);
+                c2=c2.toFixed(2);
+                var sumaLados = parseFloat(a2) + parseFloat(c2);
+                var multi = 2 * parseFloat(ladoA) * parseFloat(ladoC);
+                multi = multi.toFixed(2);
+                var cosB = Math.cos(toDegrees(anguloB));
+                cosB = cosB.toFixed(2);
+                var multiCos = multi * cosB;
+                multiCos=multiCos.toFixed(2);
+                var resta=sumaLados - multiCos;
+                $("#solucion").append("<center>Operamos los valores<br><br>" +
+                    "<font size='3'><b>b<sup>2</sup> = "+a2+" + "+c2+" - "+multi+" * "+cosB+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>b<sup>2</sup> = "+sumaLados+" - "+multiCos+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>b<sup>2</sup> = "+resta+" </b></font>" +
+                    "<br><br>" +
+                    "</center>");
+                var raiz = Math.sqrt(resta);
+                raiz=raiz.toFixed(2);
+                $("#solucion").append("<center>Despejamos a y efectuamos la raíz<br><br>" +
+                    "<font size='3'><b>b = √ "+resta+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>b = "+raiz+"</b></font>" +
+                    "<br><br>" +
+                    "Por lo tanto el lado B equivale a <b>"+raiz+"</b>" +
+                    "</center>");
+                $("#Resultado").fadeIn(300);
+            }break;
+            case 3:{
+                //lado c
+                $("#solucion").html("<center>Primero debemos identificar si conocemos el ángulo respecto al lado C, es decir γ<br><br></center>");
+                if(anguloC==""){
+                    if(anguloA!="" && anguloB!=""){
+                        console.log(anguloA,anguloB);
                         anguloC = 180 - parseFloat(anguloA) - parseFloat(anguloB);
                         $("#solucion").append("<center>Para este caso, como desconocemos el ángulo γ, lo obtenemos restando los demás ángulos a 180<br><br>" +
                             "<font size='3'>Ángulo γ  = 180 - "+anguloA+" - "+anguloB+"</font>" +
@@ -1881,96 +1684,10 @@
                             "<br><br>" +
                             "</center>");
                     }
-                    $("#solucion").append("<center>Por lo tanto, según el teorema de los senos tenemos que: <br><br>" +
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td style='border-bottom: 1px solid black;'><b>B</b></td>"+
-                        "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoC+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloB+"</b></td>"+
-                        "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                        "<td><b>sen "+anguloC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Despejamos el valor de B"+
-                        "<br><br>"+
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>B = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoC+" * sen "+anguloB+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Obtenemos los valores de los senos"+
-                        "<br><br>"+
-                        "</center>");
-                    anguloC=parseFloat(anguloC);
-                    anguloB=parseFloat(anguloB);
-                    console.log(anguloC,anguloB);
-                    var senoC = Math.sin(toDegrees(anguloC));
-                    var senoB = Math.sin(toDegrees(anguloB));
-                    console.log(senoC,senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>B = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoC+" * "+senoB+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Multiplicamos"+
-                        "<br><br>"+
-                        "</center>");
-                    var multi= parseFloat(ladoC) * parseFloat(senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>A = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoC+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Dividimos y obtenemos el valor para el lado A"+
-                        "<br><br>"+
-                        "</center>");
-                    var division=parseFloat(multi) / parseFloat(senoC);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<b>B = "+parseFloat(division).toFixed(2)+"</b>"+
-                        "</font></center>");
-                    //console.log("Final C: ",ladoC,anguloC);
-                }
-                $("#Resultado").fadeIn(300);
-            }break;
-            case 3:{
-                //lado c
-                $("#solucion").html("<center>Primero debemos identificar si conocemos el ángulo respecto al lado C, es decir γ<br><br></center>");
-                if(anguloC==""){
-                    console.log(anguloA,anguloB);
-                    anguloC = 180 - parseFloat(anguloA) - parseFloat(anguloB);
-                    $("#solucion").append("<center>Para este caso, como desconocemos el ángulo γ, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                        "<font size='3'>Ángulo γ  = 180 - "+anguloA+" - "+anguloB+"</font>" +
-                        "<br><br>" +
-                        "<font size='3'><b>Ángulo γ  = "+anguloC+"</b></font>" +
-                        "<br><br>" +
-                        "</center>");
+                    else{
+                        toastr.error("Debes agregar al menos dos ángulos si desconoces el valor del angulo γ");
+                        break;
+                    }
                 }
                 else{
                     anguloC = parseFloat(anguloC);
@@ -1979,193 +1696,43 @@
                         "<br><br>" +
                         "</center>");
                 }
-                if(ladoB!=""){
-                    //lado b
-                    $("#solucion").append("<center>Para este caso utilizaremos el lado B, debemos identificar su ángulo, es decir β<br><br></center>");
-                    if(anguloB!=""){
-                        anguloB=parseFloat(anguloB);
-                        $("#solucion").append("<center>Para este caso,ya conocemos el ángulo para β<br><br>" +
-                            "<font size='3'><b>Ángulo β  = "+anguloB+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }else{
-                        anguloB = 180 - parseFloat(anguloA) - parseFloat(anguloC);
-                        $("#solucion").append("<center>Para este caso, como desconocemos el ángulo β, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                            "<font size='3'>Ángulo β  = 180 - "+anguloA+" - "+anguloC+"</font>" +
-                            "<br><br>" +
-                            "<font size='3'><b>Ángulo β  = "+anguloB+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }
-                    $("#solucion").append("<center>Por lo tanto, según el teorema de los senos tenemos que: <br><br>" +
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td style='border-bottom: 1px solid black;'><b>C</b></td>"+
-                        "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoB+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloC+"</b></td>"+
-                        "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                        "<td><b>sen "+anguloB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Despejamos el valor de C"+
-                        "<br><br>"+
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>C = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * sen "+anguloC+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Obtenemos los valores de los senos"+
-                        "<br><br>"+
-                        "</center>");
-                    anguloC=parseFloat(anguloC);
-                    anguloB=parseFloat(anguloB);
-                    console.log(anguloC,anguloB);
-                    var senoC = Math.sin(toDegrees(anguloC));
-                    var senoB = Math.sin(toDegrees(anguloB));
-                    console.log(senoC,senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>C = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * "+senoC+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Multiplicamos"+
-                        "<br><br>"+
-                        "</center>");
-                    var multi= parseFloat(ladoB) * parseFloat(senoC);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>C = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoB+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Dividimos y obtenemos el valor para el lado A"+
-                        "<br><br>"+
-                        "</center>");
-                    var division=parseFloat(multi) / parseFloat(senoB);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<b>C = "+parseFloat(division).toFixed(2)+"</b>"+
-                        "</font></center>");
-                    //console.log("Final B: ",ladoB,anguloB);
-                }else{
-                    //lado a
-                    $("#solucion").append("<center>Para este caso utilizaremos el lado A, debemos identificar su ángulo, es decir α<br><br></center>");
-                    if(anguloA!=""){
-                        anguloA=parseFloat(anguloA);
-                        $("#solucion").append("<center>Para este caso,ya conocemos el ángulo para α<br><br>" +
-                            "<font size='3'><b>Ángulo α  = "+anguloA+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }else{
-                        anguloA = 180 - parseFloat(anguloB) - parseFloat(anguloC);
-                        $("#solucion").append("<center>Para este caso, como desconocemos el ángulo α, lo obtenemos restando los demás ángulos a 180<br><br>" +
-                            "<font size='3'>Ángulo α  = 180 - "+anguloB+" - "+anguloC+"</font>" +
-                            "<br><br>" +
-                            "<font size='3'><b>Ángulo α  = "+anguloA+"</b></font>" +
-                            "<br><br>" +
-                            "</center>");
-                    }
-                    $("#solucion").append("<center>Por lo tanto, según el teorema de los senos tenemos que: <br><br>" +
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td style='border-bottom: 1px solid black;'><b>C</b></td>"+
-                        "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoA+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloC+"</b></td>"+
-                        "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                        "<td><b>sen "+anguloA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Despejamos el valor de C"+
-                        "<br><br>"+
-                        "<font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>C = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * sen "+anguloC+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>sen "+anguloA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Obtenemos los valores de los senos"+
-                        "<br><br>"+
-                        "</center>");
-                    anguloC=parseFloat(anguloC);
-                    anguloA=parseFloat(anguloA);
-                    console.log(anguloC,anguloA);
-                    var senoC = Math.sin(toDegrees(anguloC));
-                    var senoA = Math.sin(toDegrees(anguloA));
-                    console.log(senoC,senoA);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>C = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * "+senoC+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Multiplicamos"+
-                        "<br><br>"+
-                        "</center>");
-                    var multi= parseFloat(ladoA) * parseFloat(senoC);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<table border='0' style='text-align: center;'>"+
-                        "<tr>"+
-                        "<td rowspan='2'><b>C = </b></td>"+
-                        "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                        "</tr>"+
-                        "<tr>"+
-                        "<td><b>"+senoA+"</b></td>"+
-                        "</tr>"+
-                        "</table>"+
-                        "</font>" +
-                        "<br><br>"+
-                        "Dividimos y obtenemos el valor para el lado A"+
-                        "<br><br>"+
-                        "</center>");
-                    var division=parseFloat(multi) / parseFloat(senoA);
-                    $("#solucion").append("<center><font size='3'>" +
-                        "<b>C = "+parseFloat(division).toFixed(2)+"</b>"+
-                        "</font></center>");
-                    //console.log("Final A: ",ladoA,anguloA);
-                }
+                $("#solucion").append("<center>Ya que deseamos conocer el lado C, utilizaremos la siguiente fórmula<br><br>" +
+                    "<font size='3'><b>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> - 2 * b * c * cos(γ) </b></font>" +
+                    "<br><br>" +
+                    "Sustituimos los valores que ya conocemos en la fórmula"+
+                    "<br><br>" +
+                    "<font size='3'><b>c<sup>2</sup> = "+ladoA+"<sup>2</sup> + "+ladoB+"<sup>2</sup> - 2 * "+ladoA+" * "+ladoB+" * cos("+anguloC+") </b></font>" +
+                    "<br><br>" +
+                    "</center>");
+                var a2=Math.pow(parseFloat(ladoA),2);
+                a2=a2.toFixed(2);
+                var b2=Math.pow(parseFloat(ladoB),2);
+                b2=b2.toFixed(2);
+                var sumaLados = parseFloat(a2) + parseFloat(b2);
+                var multi = 2 * parseFloat(ladoA) * parseFloat(ladoB);
+                multi = multi.toFixed(2);
+                var cosC = Math.cos(toDegrees(anguloC));
+                cosC = cosC.toFixed(2);
+                var multiCos = multi * cosC;
+                multiCos=multiCos.toFixed(2);
+                var resta=sumaLados - multiCos;
+                $("#solucion").append("<center>Operamos los valores<br><br>" +
+                    "<font size='3'><b>c<sup>2</sup> = "+a2+" + "+b2+" - "+multi+" * "+cosC+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>c<sup>2</sup> = "+sumaLados+" - "+multiCos+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>c<sup>2</sup> = "+resta+" </b></font>" +
+                    "<br><br>" +
+                    "</center>");
+                var raiz = Math.sqrt(resta);
+                raiz=raiz.toFixed(2);
+                $("#solucion").append("<center>Despejamos a y efectuamos la raíz<br><br>" +
+                    "<font size='3'><b>c = √ "+resta+" </b></font>" +
+                    "<br><br>" +
+                    "<font size='3'><b>c = "+raiz+"</b></font>" +
+                    "<br><br>" +
+                    "Por lo tanto el lado C equivale a <b>"+raiz+"</b>" +
+                    "</center>");
                 $("#Resultado").fadeIn(300);
             }break;
         }
@@ -2181,594 +1748,184 @@
         var paso=0;
         var paso1=0;
         var paso2=0;
+        $("#Resultado").fadeOut(0);
         switch(opc){
             case 1:{
                 //Angulo A
-                if(ladoA==""){
-                    toastr.error('Debes ingresar un valor para el lado A', 'Lo Siento');
+                if(ladoA=="" || ladoB=="" || ladoC==""){
+                    toastr.error('Debes ingresar valores para los 3 lados', 'Lo Siento');
                     document.getElementById("AA").checked = false;
                 }else{
-                    if(ladoB!="" && anguloB!=""){
-                        //ladoB
-                        paso=1;
-                        $("#solucion").html("<center>Para este caso utilizaremos el lado B y su ángulo respectivo, es decir β, usando el teorema de senos<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
+                    $("#solucion").append("<center>Ya que deseamos conocer el ángulo α, utilizaremos la siguiente fórmula<br><br>" +
+                        "<font size='3'><b>a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup> - 2 * b * c * cos(α) </b></font>" +
+                        "<br><br>" +
+                        "Sustituimos los valores que ya conocemos en la fórmula"+
+                        "<br><br>" +
+                        "<font size='3'><b>"+ladoA+"<sup>2</sup> = "+ladoB+"<sup>2</sup> + "+ladoC+"<sup>2</sup> - 2 * "+ladoB+" * "+ladoC+" * cos(α) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    var a2=Math.pow(parseFloat(ladoA),2);
+                    a2=a2.toFixed(2);
+                    var b2=Math.pow(parseFloat(ladoB),2);
+                    b2=b2.toFixed(2);
+                    var c2=Math.pow(parseFloat(ladoC),2);
+                    c2=c2.toFixed(2);
+                    var restaLados = parseFloat(a2) - parseFloat(b2) - parseFloat(c2);
+
+                    var multi = 2 * parseFloat(ladoB) * parseFloat(ladoC);
+                    multi = multi.toFixed(2);
+                    multi = multi * -1;
+                    $("#solucion").append("<center>Operamos los valores<br><br>" +
+                        "<font size='3'><b>"+a2+" = "+b2+" + "+c2+"  "+multi+" * cos(α) </b></font>" +
+                        "<br><br>" +
+                        "Despejamos cos(α)"+
+                        "<br><br>" +
+                        "<font size='3'>" +
+                        "<table border='0' style='text-align: center;'>"+
                             "<tr>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+"</b></td>"+
-                            "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+"</b></td>"+
+                                "<td rowspan='2'><b>α = arccos (&nbsp;&nbsp;</b></td>"+
+                                "<td style='border-bottom: 1px solid forestgreen'><b>"+restaLados+"</b></td>"+
+                                "<td rowspan='2'><b>&nbsp;&nbsp;)</b></td>"+
                             "</tr>"+
                             "<tr>"+
-                            "<td><b>sen α</b></td>"+
-                            "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                            "<td><b>sen "+anguloB+"</b></td>"+
+                                "<td><b>"+multi+"</b></td>"+
                             "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Despejamos seno de α"+
-                            "<br><br>"+
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen α = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * sen "+anguloB+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoB+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Obtenemos los valores de los senos"+
-                            "<br><br>"+
-                            "</center>");
-                        var senB = Math.sin(toDegrees(anguloB));
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen α = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * "+senB+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoB+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Multiplicamos"+
-                            "<br><br>"+
-                            "</center>");
-                        var multi = parseFloat(ladoA) * parseFloat(senB);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen α = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoB+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Dividimos y obtenemos el valor para el sen α"+
-                            "<br><br>"+
-                            "</center>");
-                        var division=parseFloat(multi) / parseFloat(ladoB);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>sen α = "+parseFloat(division).toFixed(2)+"</b>"+
-                            "</font>" +
-                            "<br><br>" +
-                            "Ahora obtenemos el arcoseno o inversa del seno, para conocer el ángulo de α" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "α = sen<sup>-1</sup>("+parseFloat(division).toFixed(2)+")"+
-                            "</font>" +
-                            "</center>");
-                        var senoA=parseFloat(division);
-                        console.error(senoA);
-                        var arcSeno=Math.asin(senoA);
-                        arcSeno = arcSeno * (180 / Math.PI);
-                        // arcSeno=arcSeno.toFixed(2);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>α = "+arcSeno.toFixed(2)+"°</b>"+
-                            "</font></center>");
-                    }
-                    if(paso==0 && ladoC!="" && anguloC!=""){
-                        //ladoC
-                        paso=1;
-                        $("#solucion").html("<center>Para este caso utilizaremos el lado C y su ángulo respectivo, es decir γ, usando el teorema de senos<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+"</b></td>"+
-                            "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>sen α</b></td>"+
-                            "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                            "<td><b>sen "+anguloC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Despejamos seno de α"+
-                            "<br><br>"+
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen α = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * sen "+anguloC+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Obtenemos los valores de los senos"+
-                            "<br><br>"+
-                            "</center>");
-                        var senC = Math.sin(toDegrees(anguloC));
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen α = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+" * "+senC+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Multiplicamos"+
-                            "<br><br>"+
-                            "</center>");
-                        var multi = parseFloat(ladoA) * parseFloat(senC);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen α = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Dividimos y obtenemos el valor para el sen α"+
-                            "<br><br>"+
-                            "</center>");
-                        var division=parseFloat(multi) / parseFloat(ladoC);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>sen α = "+parseFloat(division).toFixed(2)+"</b>"+
-                            "</font>" +
-                            "<br><br>" +
-                            "Ahora obtenemos el arcoseno o inversa del seno, para conocer el ángulo de α" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "α = sen<sup>-1</sup>("+parseFloat(division).toFixed(2)+")"+
-                            "</font>" +
-                            "</center>");
-                        var senoA=parseFloat(division);
-                        console.error(senoA);
-                        var arcSeno=Math.asin(senoA);
-                        arcSeno = arcSeno * (180 / Math.PI);
-                        // arcSeno=arcSeno.toFixed(2);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>α = "+arcSeno.toFixed(2)+"°</b>"+
-                            "</font></center>");
-                    }
-                    if(paso==0){
-                        if(ladoB!=""){
-                            toastr.error('Debes ingresar un valor para el ángulo β', 'Lo Siento');
-                        }
-                        if(ladoC!=""){
-                            toastr.error('Debes ingresar un valor para el ángulo γ', 'Lo Siento');
-                        }
-                        document.getElementById("AA").checked = false;
-                    }
-                    else{
-                        $("#Resultado").fadeIn(300);
-                    }
+                        "</table>"+
+                        "</font>" +
+                        "<br>"+
+                        "</center>");
+                    var division=parseFloat(restaLados) / parseFloat(multi);
+                    division=division.toFixed(2);
+                    var arccos= Math.acos(division);
+                    arccos = arccos * (180 / Math.PI);
+                    arccos=arccos.toFixed(2);
+                    $("#solucion").append("<center>Realizamos la división<br><br>" +
+                        "<font size='3'><b>α = arccos( "+division+" ) </b></font>" +
+                        "<br><br>" +
+                        "<font size='3'><b>α = "+arccos+"</b></font>" +
+                        "<br><br>" +
+                        "Por lo tanto el ángulo α equivale a <b>"+arccos+"</b>" +
+                        "</center>");
                 }
+                $("#Resultado").fadeIn(300);
             }break;
             case 2:{
                 //Angulo B
-                if(ladoB==""){
-                    toastr.error('Debes ingresar un valor para el lado B', 'Lo Siento');
-                    document.getElementById("AB").checked = false;
+                if(ladoA=="" || ladoB=="" || ladoC==""){
+                    toastr.error('Debes ingresar valores para los 3 lados', 'Lo Siento');
+                    document.getElementById("AA").checked = false;
                 }else{
-                    if(ladoA!="" && anguloA!=""){
-                        //ladoA
-                        paso1=1;
-                        $("#solucion").html("<center>Para este caso utilizaremos el lado A y su ángulo respectivo, es decir α, usando el teorema de senos<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+"</b></td>"+
-                            "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoA+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>sen β</b></td>"+
-                            "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                            "<td><b>sen "+anguloA+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Despejamos seno de α"+
-                            "<br><br>"+
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen β = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * sen "+anguloA+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoA+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Obtenemos los valores de los senos"+
-                            "<br><br>"+
-                            "</center>");
-                        var senA = Math.sin(toDegrees(anguloA));
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen β = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * "+senA+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoA+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Multiplicamos"+
-                            "<br><br>"+
-                            "</center>");
-                        var multi = parseFloat(ladoB) * parseFloat(senA);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen β = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoA+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Dividimos y obtenemos el valor para el sen β"+
-                            "<br><br>"+
-                            "</center>");
-                        var division=parseFloat(multi) / parseFloat(ladoA);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>sen β = "+parseFloat(division).toFixed(2)+"</b>"+
-                            "</font>" +
-                            "<br><br>" +
-                            "Ahora obtenemos el arcoseno o inversa del seno, para conocer el ángulo de β" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "β = sen<sup>-1</sup>("+parseFloat(division).toFixed(2)+")"+
-                            "</font>" +
-                            "</center>");
-                        var senoB=parseFloat(division);
-                        console.error(senoB);
-                        var arcSeno=Math.asin(senoB);
-                        arcSeno = arcSeno * (180 / Math.PI);
-                        // arcSeno=arcSeno.toFixed(2);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>β = "+arcSeno.toFixed(2)+"°</b>"+
-                            "</font></center>");
-                    }
-                    if(paso1==0 && ladoC!="" && anguloC!=""){
-                        //ladoC
-                        paso1=1;
-                        $("#solucion").html("<center>Para este caso utilizaremos el lado C y su ángulo respectivo, es decir γ, usando el teorema de senos<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+"</b></td>"+
-                            "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>sen β</b></td>"+
-                            "<td>&nbsp;&nbsp;&nbsp;</td>"+
-                            "<td><b>sen "+anguloC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Despejamos seno de α"+
-                            "<br><br>"+
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen β = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * sen "+anguloC+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Obtenemos los valores de los senos"+
-                            "<br><br>"+
-                            "</center>");
-                        var senC = Math.sin(toDegrees(anguloC));
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen β = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+ladoB+" * "+senC+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Multiplicamos"+
-                            "<br><br>"+
-                            "</center>");
-                        var multi = parseFloat(ladoB) * parseFloat(senC);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>"+
-                            "<tr>"+
-                            "<td rowspan='2'><b>sen β = </b></td>"+
-                            "<td style='border-bottom: 1px solid black;'><b>"+multi+"</b></td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td><b>"+ladoC+"</b></td>"+
-                            "</tr>"+
-                            "</table>"+
-                            "</font>" +
-                            "<br><br>"+
-                            "Dividimos y obtenemos el valor para el sen β"+
-                            "<br><br>"+
-                            "</center>");
-                        var division=parseFloat(multi) / parseFloat(ladoC);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>sen β = "+parseFloat(division).toFixed(2)+"</b>"+
-                            "</font>" +
-                            "<br><br>" +
-                            "Ahora obtenemos el arcoseno o inversa del seno, para conocer el ángulo de β" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "β = sen<sup>-1</sup>("+parseFloat(division).toFixed(2)+")"+
-                            "</font>" +
-                            "</center>");
-                        var senoB=parseFloat(division);
-                        console.error(senoB);
-                        var arcSeno=Math.asin(senoB);
-                        arcSeno = arcSeno * (180 / Math.PI);
-                        // arcSeno=arcSeno.toFixed(2);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>β = "+arcSeno.toFixed(2)+"°</b>"+
-                            "</font></center>");
-                    }
-                    if(paso1==0){
-                        if(ladoA!=""){
-                            toastr.error('Debes ingresar un valor para el ángulo α', 'Lo Siento');
-                        }
-                        if(ladoC!=""){
-                            toastr.error('Debes ingresar un valor para el ángulo γ', 'Lo Siento');
-                        }
-                        document.getElementById("AB").checked = false;
-                    }
-                    else{
-                        $("#Resultado").fadeIn(300);
-                    }
+                    $("#solucion").append("<center>Ya que deseamos conocer el ángulo β, utilizaremos la siguiente fórmula<br><br>" +
+                        "<font size='3'><b>b<sup>2</sup> = a<sup>2</sup> + c<sup>2</sup> - 2 * a * c * cos(β) </b></font>" +
+                        "<br><br>" +
+                        "Sustituimos los valores que ya conocemos en la fórmula"+
+                        "<br><br>" +
+                        "<font size='3'><b>"+ladoB+"<sup>2</sup> = "+ladoA+"<sup>2</sup> + "+ladoC+"<sup>2</sup> - 2 * "+ladoA+" * "+ladoC+" * cos(β) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    var a2=Math.pow(parseFloat(ladoA),2);
+                    a2=a2.toFixed(2);
+                    var b2=Math.pow(parseFloat(ladoB),2);
+                    b2=b2.toFixed(2);
+                    var c2=Math.pow(parseFloat(ladoC),2);
+                    c2=c2.toFixed(2);
+                    var restaLados = parseFloat(b2) - parseFloat(a2) - parseFloat(c2);
+
+                    var multi = 2 * parseFloat(ladoA) * parseFloat(ladoC);
+                    multi = multi.toFixed(2);
+                    multi = multi * -1;
+                    $("#solucion").append("<center>Operamos los valores<br><br>" +
+                        "<font size='3'><b>"+b2+" = "+a2+" + "+c2+"  "+multi+" * cos(β) </b></font>" +
+                        "<br><br>" +
+                        "Despejamos cos(β)"+
+                        "<br><br>" +
+                        "<font size='3'>" +
+                        "<table border='0' style='text-align: center;'>"+
+                        "<tr>"+
+                        "<td rowspan='2'><b>α = arccos (&nbsp;&nbsp;</b></td>"+
+                        "<td style='border-bottom: 1px solid forestgreen'><b>"+restaLados+"</b></td>"+
+                        "<td rowspan='2'><b>&nbsp;&nbsp;)</b></td>"+
+                        "</tr>"+
+                        "<tr>"+
+                        "<td><b>"+multi+"</b></td>"+
+                        "</tr>"+
+                        "</table>"+
+                        "</font>" +
+                        "<br>"+
+                        "</center>");
+                    var division=parseFloat(restaLados) / parseFloat(multi);
+                    division=division.toFixed(2);
+                    var arccos= Math.acos(division);
+                    arccos = arccos * (180 / Math.PI);
+                    arccos=arccos.toFixed(2);
+                    $("#solucion").append("<center>Realizamos la división<br><br>" +
+                        "<font size='3'><b>β = arccos( "+division+" ) </b></font>" +
+                        "<br><br>" +
+                        "<font size='3'><b>β = "+arccos+"</b></font>" +
+                        "<br><br>" +
+                        "Por lo tanto el ángulo β equivale a <b>"+arccos+"</b>" +
+                        "</center>");
                 }
+                $("#Resultado").fadeOut(0);
             }break;
             case 3:{
                 //Angulo C
-                if(ladoC==""){
-                    toastr.error('Debes ingresar un valor para el lado C', 'Lo Siento');
-                    document.getElementById("AC").checked = false;
-                }else {
-                    if (ladoA != "" && anguloA != "") {
-                        //ladoA
-                        paso2 = 1;
-                        $("#solucion").html("<center>Para este caso utilizaremos el lado A y su ángulo respectivo, es decir α, usando el teorema de senos<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoC + "</b></td>" +
-                            "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoA + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>sen γ</b></td>" +
-                            "<td>&nbsp;&nbsp;&nbsp;</td>" +
-                            "<td><b>sen " + anguloA + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Despejamos seno de γ" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td rowspan='2'><b>sen γ = </b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoC + " * sen " + anguloA + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>" + ladoA + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Obtenemos los valores de los senos" +
-                            "<br><br>" +
-                            "</center>");
-                        var senA = Math.sin(toDegrees(anguloA));
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td rowspan='2'><b>sen γ = </b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoC + " * " + senA + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>" + ladoA + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Multiplicamos" +
-                            "<br><br>" +
-                            "</center>");
-                        var multi = parseFloat(ladoC) * parseFloat(senA);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td rowspan='2'><b>sen γ = </b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + multi + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>" + ladoA + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Dividimos y obtenemos el valor para el sen γ" +
-                            "<br><br>" +
-                            "</center>");
-                        var division = parseFloat(multi) / parseFloat(ladoA);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>sen γ = " + parseFloat(division).toFixed(2) + "</b>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Ahora obtenemos el arcoseno o inversa del seno, para conocer el ángulo de γ" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "γ = sen<sup>-1</sup>(" + parseFloat(division).toFixed(2) + ")" +
-                            "</font>" +
-                            "</center>");
-                        var senoC = parseFloat(division);
-                        console.error(senoC);
-                        var arcSeno = Math.asin(senoC);
-                        arcSeno = arcSeno * (180 / Math.PI);
-                        // arcSeno=arcSeno.toFixed(2);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>γ = " + arcSeno.toFixed(2) + "°</b>" +
-                            "</font></center>");
-                    }
-                    if (paso2 == 0 && ladoB != "" && anguloB != "") {
-                        //ladoC
-                        paso2 = 1;
-                        $("#solucion").html("<center>Para este caso utilizaremos el lado B y su ángulo respectivo, es decir β, usando el teorema de senos<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoC + "</b></td>" +
-                            "<td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoB + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>sen γ</b></td>" +
-                            "<td>&nbsp;&nbsp;&nbsp;</td>" +
-                            "<td><b>sen " + anguloB + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Despejamos seno de α" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td rowspan='2'><b>sen γ = </b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoC + " * sen " + anguloB + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>" + ladoB + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Obtenemos los valores de los senos" +
-                            "<br><br>" +
-                            "</center>");
-                        var senB = Math.sin(toDegrees(anguloB));
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td rowspan='2'><b>sen γ = </b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + ladoC + " * " + senB + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>" + ladoB + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Multiplicamos" +
-                            "<br><br>" +
-                            "</center>");
-                        var multi = parseFloat(ladoC) * parseFloat(senB);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<table border='0' style='text-align: center;'>" +
-                            "<tr>" +
-                            "<td rowspan='2'><b>sen γ = </b></td>" +
-                            "<td style='border-bottom: 1px solid black;'><b>" + multi + "</b></td>" +
-                            "</tr>" +
-                            "<tr>" +
-                            "<td><b>" + ladoB + "</b></td>" +
-                            "</tr>" +
-                            "</table>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Dividimos y obtenemos el valor para el sen γ" +
-                            "<br><br>" +
-                            "</center>");
-                        var division = parseFloat(multi) / parseFloat(ladoB);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>sen γ = " + parseFloat(division).toFixed(2) + "</b>" +
-                            "</font>" +
-                            "<br><br>" +
-                            "Ahora obtenemos el arcoseno o inversa del seno, para conocer el ángulo de γ" +
-                            "<br><br>" +
-                            "<font size='3'>" +
-                            "γ = sen<sup>-1</sup>(" + parseFloat(division).toFixed(2) + ")" +
-                            "</font>" +
-                            "</center>");
-                        var senoC = parseFloat(division);
-                        console.error(senoC);
-                        var arcSeno = Math.asin(senoC);
-                        arcSeno = arcSeno * (180 / Math.PI);
-                        // arcSeno=arcSeno.toFixed(2);
-                        $("#solucion").append("<center><font size='3'>" +
-                            "<b>γ = " + arcSeno.toFixed(2) + "°</b>" +
-                            "</font></center>");
-                    }
-                    if (paso2 == 0) {
-                        if (ladoA != "") {
-                            toastr.error('Debes ingresar un valor para el ángulo α', 'Lo Siento');
-                        }
-                        if (ladoB != "") {
-                            toastr.error('Debes ingresar un valor para el ángulo β', 'Lo Siento');
-                        }
-                        document.getElementById("AC").checked = false;
-                    }
-                    else {
-                        $("#Resultado").fadeIn(300);
-                    }
+                if(ladoA=="" || ladoB=="" || ladoC==""){
+                    toastr.error('Debes ingresar valores para los 3 lados', 'Lo Siento');
+                    document.getElementById("AA").checked = false;
+                }else{
+                    $("#solucion").append("<center>Ya que deseamos conocer el ángulo γ, utilizaremos la siguiente fórmula<br><br>" +
+                        "<font size='3'><b>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup> - 2 * a * b * cos(α) </b></font>" +
+                        "<br><br>" +
+                        "Sustituimos los valores que ya conocemos en la fórmula"+
+                        "<br><br>" +
+                        "<font size='3'><b>"+ladoC+"<sup>2</sup> = "+ladoA+"<sup>2</sup> + "+ladoB+"<sup>2</sup> - 2 * "+ladoA+" * "+ladoB+" * cos(γ) </b></font>" +
+                        "<br><br>" +
+                        "</center>");
+                    var a2=Math.pow(parseFloat(ladoA),2);
+                    a2=a2.toFixed(2);
+                    var b2=Math.pow(parseFloat(ladoB),2);
+                    b2=b2.toFixed(2);
+                    var c2=Math.pow(parseFloat(ladoC),2);
+                    c2=c2.toFixed(2);
+                    var restaLados = parseFloat(c2) - parseFloat(a2) - parseFloat(b2);
+
+                    var multi = 2 * parseFloat(ladoA) * parseFloat(ladoB);
+                    multi = multi.toFixed(2);
+                    multi = multi * -1;
+                    $("#solucion").append("<center>Operamos los valores<br><br>" +
+                        "<font size='3'><b>"+c2+" = "+a2+" + "+b2+"  "+multi+" * cos(γ) </b></font>" +
+                        "<br><br>" +
+                        "Despejamos cos(γ)"+
+                        "<br><br>" +
+                        "<font size='3'>" +
+                        "<table border='0' style='text-align: center;'>"+
+                        "<tr>"+
+                        "<td rowspan='2'><b>γ = arccos (&nbsp;&nbsp;</b></td>"+
+                        "<td style='border-bottom: 1px solid forestgreen'><b>"+restaLados+"</b></td>"+
+                        "<td rowspan='2'><b>&nbsp;&nbsp;)</b></td>"+
+                        "</tr>"+
+                        "<tr>"+
+                        "<td><b>"+multi+"</b></td>"+
+                        "</tr>"+
+                        "</table>"+
+                        "</font>" +
+                        "<br>"+
+                        "</center>");
+                    var division=parseFloat(restaLados) / parseFloat(multi);
+                    division=division.toFixed(2);
+                    var arccos= Math.acos(division);
+                    arccos = arccos * (180 / Math.PI);
+                    arccos=arccos.toFixed(2);
+                    $("#solucion").append("<center>Realizamos la división<br><br>" +
+                        "<font size='3'><b>γ = arccos( "+division+" ) </b></font>" +
+                        "<br><br>" +
+                        "<font size='3'><b>γ = "+arccos+"</b></font>" +
+                        "<br><br>" +
+                        "Por lo tanto el ángulo γ equivale a <b>"+arccos+"</b>" +
+                        "</center>");
                 }
+                $("#Resultado").fadeIn(300);
             }break;
         }
     }
