@@ -1065,6 +1065,7 @@
 	 */
 	function reestablecerP1(op){
 		if (op==1) {
+
 			$('#CP1').html('');
 			$('#DP1').html('');
 			$('#DP2').html('');

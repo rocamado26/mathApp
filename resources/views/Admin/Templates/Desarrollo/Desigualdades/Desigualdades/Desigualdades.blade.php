@@ -137,6 +137,11 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" aria-expanded="false">Ejemplos prácticos</a>
+                                    <div class="nav navbar-top-links navbar-right ">
+                                        <div class="col-xs-3" id="ayuda_boton">
+                                            <button type="button" onclick="ayuda_ejemplos()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                        </div>
+                                    </div>
                                 </h4>
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
@@ -179,7 +184,7 @@
                                                                 <div class="col-md-12">
                                                                     Efectuamos la multiplicación:<br><br>
                                                                 </div>
-                                                                <div class="col-md-12" align="center">
+                                                                <div class="col-md-12" id="A1" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
@@ -328,7 +333,7 @@
                                                                 <div class="col-md-12">
                                                                     <br><br>El despeje de “x” sería de la manera siguiente:<br><br>
                                                                 </div>
-                                                                <div class="col-md-12" align="center">
+                                                                <div class="col-md-12" id="A2" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
@@ -396,7 +401,7 @@
                                                                 <div id="botonesPrac2" class="row col-lg-12">
                                                                     <center>
                                                                         <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPracticas(2)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(2)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="limpiarPracticas(2)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                                     </center>
                                                                 </div>
                                                             </div>
@@ -465,7 +470,7 @@
                                                                 <div class="col-md-12">
                                                                     <br><br>Despejamos "x":<br><br>
                                                                 </div>
-                                                                <div class="col-md-12" align="center">
+                                                                <div class="col-md-12" id="A3" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
@@ -531,7 +536,7 @@
                                                                 <div id="botonesPrac3" class="row col-lg-12">
                                                                     <center>
                                                                         <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPracticas(3)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(3)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="limpiarPracticas(3)"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                                     </center>
                                                                 </div>
                                                             </div>
@@ -548,6 +553,11 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false">Práctica</a>
+                                    <div class="nav navbar-top-links navbar-right ">
+                                        <div class="col-xs-3" id="ayuda_boton">
+                                            <button type="button" onclick="ayuda_practicas()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                        </div>
+                                    </div>
                                 </h4>
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
@@ -555,30 +565,34 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="alert alert-info">
-                                                Ingresa tu ejercicio de la forma <b>ax + b > c</b>
+                                                Ingresa tu ejercicio de la forma <b>ax + b > c</b><br>
+                                                <li>Para mover de miembro un término debes colocar el número de termino en la caja de texto “Primer Término” luego presiona el botón mover bajo la caja.</li>
+                                                <li>Para operar dos términos tienes que colocar el número de termino en las cajas de texto “Primer Término” y “Segundo Término” luego presiona uno de los botones “Operar” o “Despajar”.</li>
+                                                <li>El botón despejar solo realiza la operación cuando llegas a la forma: <b>ax = b</b>; es acá donde realiza e despeje de "x".</li>
+                                                <li>Si deseas reiniciar el ejercicio persona el botón con el mas (+) con el cual inicias el ejercicio.</li>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <div class="input-group">
-                                                <input type="text" id="termino1" onkeyup="validaCadena1(value)" class="form-control" placeholder="Introducir desigualdad">
-                                                <div class="input-group-btn">
+                                            <div class="input-group" id="paso1p">
+                                                <input type="text" id="termino1" onkeyup="validaCadena1(value)" class="form-control" placeholder="Miembro derecho">
+                                                <div class="input-group-btn" id="paso2p">
                                                     <button type="button" id="btn1" onclick="cambiaBoton(2)" class="btn btn-danger"><b>></b></button>
                                                     <button type="button" id="btn2" onclick="cambiaBoton(3)" style="display: none;" class="btn btn-danger"><b>≥</b></button>
                                                     <button type="button" id="btn3" onclick="cambiaBoton(4)" style="display: none;" class="btn btn-danger"><b><</b></button>
                                                     <button type="button" id="btn4" onclick="cambiaBoton(1)" style="display: none;" class="btn btn-danger"><b>≤</b></button>
                                                 </div>
-                                                <input type="text" id="termino2" class="form-control" onkeyup="validaCadena2(value)"  placeholder="Introducir desigualdad">
-                                                <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-primary" onclick="inciarFuncion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                                <input type="text" id="termino2" class="form-control" onkeyup="validaCadena2(value)"  placeholder="Miembro Izquierdo">
+                                                <div class="input-group-btn" id="btnMas" >
+                                                    <button type="button"class="btn btn-primary" onclick="inciarFuncion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" id="paso3p">
                                             <div class="alert alert-info">
                                                 <label for="">Terminos: <b id="nTerminos"></b></label>
                                             </div>
@@ -599,18 +613,18 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="alert alert-warning">
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                                <div class="row" >
+                                                    <div class="col-md-6" id="paso4p">
                                                         <label for="">N° Termino</label>
                                                         <input type="number" class="form-control" id="T1" placeholder="Primer termino">
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-6" id="paso5p">
                                                         <label for="">N° Termino</label>
                                                         <input type="number" class="form-control" id="T2" placeholder="Segundo termino">
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <div class="row">
+                                                <div class="row" id="paso6p">
                                                     <div class="col-xs-6 text-center">
                                                         <button id="btn1p1" class="btn-default btn dim" onclick="operaciones(1)"><b>operar</b></button>
                                                     </div>
@@ -619,7 +633,7 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <div class="row">
+                                                <div class="row" id="paso7p">
                                                     <div class="col-xs-6 text-center">
                                                         <button id="btn1p3" class="btn-default btn dim" onclick="moverTermimno(false)">mover ></button>
                                                     </div>
@@ -642,6 +656,7 @@
 <script>
     //swal("¡Borrado!", "Progreso borrado.", "success");
     var opBtn=1;
+    var paso1="#EP1",paso2="#A1",paso3="#botonesPrac1";
 
     function practicas_desigualdades(op){
         switch (op){
@@ -649,18 +664,201 @@
                 $('#pract_desigualdades1').show();
                 $('#pract_desigualdades2').hide();
                 $('#pract_desigualdades3').hide();
+                paso1="#EP1";
+                paso2="#A1";
+                paso3="#botonesPrac1";
             }break;
             case '2':{
                 $('#pract_desigualdades1').hide();
                 $('#pract_desigualdades2').show();
                 $('#pract_desigualdades3').hide();
+                paso1="#EP2";
+                paso2="#A2";
+                paso3="#botonesPrac2";
             }break;
             case '3':{
                 $('#pract_desigualdades1').hide();
                 $('#pract_desigualdades2').hide();
                 $('#pract_desigualdades3').show();
+                paso1="#EP3";
+                paso2="#A3";
+                paso3="#botonesPrac3";
             }break;
         }
+    }
+
+    function ayuda_practicas(){
+        var tour = new Tour({
+            steps: [{
+                element: "#paso1p",
+                title: "Paso 1",
+                content: "Ingresa los datos del miembro derecho y izquierdo de la desigualdad.",
+                placement: "top",
+                backdrop: true,
+                backdropContainer: '#wrapper',
+                onShown: function (tour){
+                    $('body').addClass('tour-open')
+                },
+                onHidden: function (tour){
+                    $('body').removeClass('tour-close')
+                }
+            },
+                {
+                    element: "#paso2p",
+                    title: "Paso 2",
+                    content: "Da clic sobre el botón para cambiar el símbolo.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#btnMas",
+                    title: "Paso 3",
+                    content: "Da clic para iniciar el ejercicio.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#paso3p",
+                    title: "Paso 4",
+                    content: "Observa el número que se le ha asignado al termino ya que ese te servirá para operar o mover los términos.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#paso4p",
+                    title: "Paso 5",
+                    content: "Caja donde digitaras el número del término a operar o mover de miembro.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#paso5p",
+                    title: "Paso 6",
+                    content: "Caja donde digitaras el número del término a operar con el primer término.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#paso6p",
+                    title: "Paso 7",
+                    content: "Botones con las dos operaciones elementales a realizar.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: "#paso7p",
+                    title: "Paso 8",
+                    content: "Botones con las dos operaciones de mover.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                }
+            ]});
+        // Initialize the tour
+        tour.init();
+        tour.restart();
+        // Start the tour
+        tour.start();
+    }
+
+    function ayuda_ejemplos(){
+        var tour = new Tour({
+            steps: [{
+                element: paso1,
+                title: "Paso 1",
+                content: "Haz clic sobre cada elemento y arrástralo al correspondiente espacio.",
+                placement: "top",
+                backdrop: true,
+                backdropContainer: '#wrapper',
+                onShown: function (tour){
+                    $('body').addClass('tour-open')
+                },
+                onHidden: function (tour){
+                    $('body').removeClass('tour-close')
+                }
+            },
+                {
+                    element: paso2,
+                    title: "Paso 2",
+                    content: "Coloca el elemento en su espacio.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                },
+                {
+                    element: paso3,
+                    title: "Paso 3",
+                    content: "Dar clic sobre el botón “Comprobar” para verificar el ejercicio o “Reestablecer” para reiniciar la práctica.",
+                    placement: "top",
+                    backdrop: true,
+                    backdropContainer: '#contenido',
+                    onShown: function (tour){
+                        $('body').addClass('tour-open')
+                    },
+                    onHidden: function (tour){
+                        $('body').removeClass('tour-close')
+                    }
+                }
+            ]});
+        // Initialize the tour
+        tour.init();
+        tour.restart();
+        // Start the tour
+        tour.start();
     }
 
     /*
@@ -1263,26 +1461,29 @@
         switch (op){
             case 1:{
                 if((document.getElementById('AP1').parentNode.id=='DP1') && (document.getElementById('AP2').parentNode.id=='DP2') && (document.getElementById('AP3').parentNode.id=='DP3')){
+                    swal("Excelente!", "Has resuelto correctamente el ejercicio", "success");
                     $('#EP1').hide();
                     $('#SP1').show();
                 }else{
-                    alert('malo');
+                    swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
                 }
             }break;
             case 2:{
                 if((document.getElementById('AP13').parentNode.id=='DP7') && (document.getElementById('AP14').parentNode.id=='DP8') && (document.getElementById('AP11').parentNode.id=='DP9')){
+                    swal("Excelente!", "Has resuelto correctamente el ejercicio", "success");
                     $('#EP2').hide();
                     $('#SP2').show();
                 }else{
-                    alert('malo');
+                    swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
                 }
             }break;
             case 3:{
                 if((document.getElementById('AP5').parentNode.id=='DP5') && (document.getElementById('AP7').parentNode.id=='DP6')){
+                    swal("Excelente!", "Has resuelto correctamente el ejercicio", "success");
                     $('#EP3').hide();
                     $('#SP3').show();
                 }else{
-                    alert('malo');
+                    swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
                 }
             }break;
         }
@@ -1295,12 +1496,32 @@
                 $('#DP2').html('');
                 $('#DP3').html('');
                 $('#DP4').html('');
-                $('#SP1').html('');
-                $("#EP1").fadeOut(0);
-                $("#SP1").fadeIn(300);
+                $('#EP1').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"><div class="col-md-3"><img id="AP3" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP3.png')}}"></div><div class="col-md-3"><img id="AP1" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP1.png')}}"></div><div class="col-md-3"><img id="AP4" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP4.png')}}"></div><div class="col-md-3"><img id="AP2" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP2.png')}}"></div></div>');
+                $("#SP1").fadeOut(0);
+                $("#EP1").fadeIn(300);
             }break;
             case 2:{
-
+                $('#DP7').html('');
+                $('#DP8').html('');
+                $('#DP9').html('');
+                $('#EP2').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row"><div class="col-md-6"><img id="AP14" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP14.png')}}"></div><div class="col-md-6"><img id="AP11" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP11.png')}}"></div></div><div class="row"><div class="col-md-6"><img id="AP12" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP12.png')}}"></div><div class="col-md-6"><img id="AP13" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP13.png')}}"></div></div>');
+                $("#SP2").fadeOut(0);
+                $("#EP2").fadeIn(300);
+            }break;
+            case 3:{
+                $('#DP5').html('');
+                $('#DP6').html('');
+                $('#EP3').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row"><div class="col-md-6"><img id="AP6"' +
+                    ' style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" ' +
+                    'src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP6.png')}}"></div>' +
+                '<div class="col-md-6"><img id="AP8" style="cursor: pointer" draggable="true" ondragstart="start(event)" ' +
+                'ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP8.png')}}">' +
+                '</div></div><div class="row"><div class="col-md-6"><img id="AP7" style="cursor: pointer" draggable="true"' +
+                ' ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP7.png')}}">' +
+                '</div><div class="col-md-6"><img id="AP5" style="cursor: pointer" draggable="true" ondragstart="start(event)"' +
+                ' ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP5.png')}}"></div></div>');
+                $("#SP3").fadeOut(0);
+                $("#EP3").fadeIn(300);
             }break;
         }
     }
