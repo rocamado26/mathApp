@@ -570,6 +570,7 @@
                                                 <li>Para operar dos términos tienes que colocar el número de termino en las cajas de texto “Primer Término” y “Segundo Término” luego presiona uno de los botones “Operar” o “Despajar”.</li>
                                                 <li>El botón despejar solo realiza la operación cuando llegas a la forma: <b>ax = b</b>; es acá donde realiza e despeje de "x".</li>
                                                 <li>Si deseas reiniciar el ejercicio persona el botón con el mas (+) con el cual inicias el ejercicio.</li>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1034,16 +1035,20 @@
                 }break;
                     /*Division de terminos*/
                 case 4:{
+                    debugger;
                     if(valida(7) && valida(11)){
                         if(valida(3)){
                             if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
                                 if(valida(8)){
                                     var coeficiente=Terminos[$('#T1').val()-1].split('x');
+                                    if(Terminos.length==1){b=0}
+                                    finOperacion(false);
                                     reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false,"");
                                 }else{toastr.error('No es posible operar los términos.','Error');}
                             }else{
                                 if(Terminos[$('#T2').val()-1]){
                                     if(valida(8)){
+                                        if(Terminos.length==1){a=0}
                                         var coeficiente=Terminos[$('#T2').val()-1].split('x');
                                         finOperacion(false);
                                         reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),true,"");
@@ -1054,12 +1059,23 @@
                                 }
                             }
                         }else{toastr.error('No es posible operar los términos.','Error');}
-                    }else{toastr.error('No es posible operar los términos.','Error');}
+                    }else{
+
+                        toastr.error('No es posible operar los términos.','Error');
+                    }
 
                 }break;
             }
         }else{toastr.error('No es posible operar los términos.','Error');}
 
+    }
+
+    function retornaCero(numero){
+        if(numero!=""){
+            return Number(numero);
+        }else{
+            return 0;
+        }
     }
 
     /**
@@ -1212,7 +1228,7 @@
             /*Evalua si aun quedan terminos independientes por operar*/
             case 3:{
                 var cont1=0;
-                var cont2=0
+                var cont2=0;
                 Terminos.forEach(function (item) {
                     if(item.indexOf('x')!=-1){
                         cont1++;
@@ -1223,7 +1239,11 @@
                 if(cont1==1 && cont2==1){
                     return true;
                 }else{
-                    return false;
+                    if(Terminos.length==1){
+                        return true;
+                    }else{
+                        return false;
+                    }
                 }
             }break;
             /*Valida que no se operen terminos no semejantes*/
@@ -1255,7 +1275,11 @@
                 if(Terminos.length>=$('#T1').val() && $('#T1').val()>0){
                     return true;
                 }else{
-                    return false;
+                    if(Terminos.length==1){
+                        return true;
+                    }else{
+                        return false;
+                    }
                 }
             }break;
                 /*valida que los terminos a despejar esten en lados diferentes*/
@@ -1291,7 +1315,11 @@
                 if(Terminos.length>=$('#T2').val() && $('#T2').val()>0){
                     return true;
                 }else{
-                    return false;
+                    if(Terminos.length==1){
+                        return true;
+                    }else{
+                        return false;
+                    }
                 }
             }break;
                 /*Valida que se ingrese un coeficiente para x*/
@@ -1300,8 +1328,11 @@
                 var h=0;
                 for(var i=0;i<g.length;i++){
                     if(g.charAt(i)=='x'){
-                        if(i!=0){
+                        if(i!=0){debugger
                           if(isNaN(g.charAt(i-1))){
+                              h++;
+                          }
+                          if(Number(g.charAt(i-1))==0){
                               h++;
                           }
                         }else{
