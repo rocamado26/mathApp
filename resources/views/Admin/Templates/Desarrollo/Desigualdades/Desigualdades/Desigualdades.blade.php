@@ -939,7 +939,6 @@
      * Divide la cadena en términos.
      */
     function divideTerminos(termino1,termino2){
-        //debugger;
         var funcion=termino1;
         Terminos=[];
         lado=[];
@@ -1035,7 +1034,6 @@
                 }break;
                     /*Division de terminos*/
                 case 4:{
-                    debugger;
                     if(valida(7) && valida(11)){
                         if(valida(3)){
                             if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
@@ -1137,63 +1135,64 @@
      * @param miembro boolean que indica al lado para el cual se movera
      */
     function cambiaLado(miembro,index){
-        //debugger;
         var c=0;
         var a=[];
         var d=[];
         var b=0;
         c=index;
-        if(valida(7)){
-            if(valida(2,miembro)){
-                if(miembro==false){
-                    for(var i=0;i<lado.length;i++){
-                        if(i!=c){
-                            a.push(Terminos[i]);
-                            d.push(lado[i]);
-                        }else{
-                            b=i;
-                        }
-                    }
-
-                    if(Terminos[b].indexOf('x')!=-1){
-                        var co=Terminos[b].split('x');
-                        a.push(signoMas(Number(co[0])*(-1))+"x");
-                    }else{
-                        a.push(signoMas(Number(Terminos[b])*(-1)));
-                    }
-                    d.push(false);
-                    lado=d;
-                    Terminos=a;
-                }else{
-                    for(var i=0;i<lado.length;i++){
-                        if(lado[i]!=false){
-                            a.push(Terminos[i]);
-                            d.push(lado[i]);
-                        }else{
-                            if(b==0){
-                                a.push("");
-                                d.push(true);
-                                b=i
-                            }
+        if(Terminos[index]!='0 ' && Terminos[index]!='0'){
+            if(valida(7)){
+                if(valida(2,miembro)){
+                    if(miembro==false){
+                        for(var i=0;i<lado.length;i++){
                             if(i!=c){
                                 a.push(Terminos[i]);
                                 d.push(lado[i]);
+                            }else{
+                                b=i;
                             }
                         }
-                    }
-                    if(Terminos[c].indexOf('x')!=-1){
-                        var co=Terminos[c].split('x');
-                        a[b]=signoMas(Number(co[0])*(-1))+"x";
+
+                        if(Terminos[b].indexOf('x')!=-1){
+                            var co=Terminos[b].split('x');
+                            a.push(signoMas(Number(co[0])*(-1))+"x");
+                        }else{
+                            a.push(signoMas(Number(Terminos[b])*(-1)));
+                        }
+                        d.push(false);
+                        lado=d;
+                        Terminos=a;
                     }else{
-                        a[b]=signoMas(Number(Terminos[c])*(-1));
+                        for(var i=0;i<lado.length;i++){
+                            if(lado[i]!=false){
+                                a.push(Terminos[i]);
+                                d.push(lado[i]);
+                            }else{
+                                if(b==0){
+                                    a.push("");
+                                    d.push(true);
+                                    b=i
+                                }
+                                if(i!=c){
+                                    a.push(Terminos[i]);
+                                    d.push(lado[i]);
+                                }
+                            }
+                        }
+                        if(Terminos[c].indexOf('x')!=-1){
+                            var co=Terminos[c].split('x');
+                            a[b]=signoMas(Number(co[0])*(-1))+"x";
+                        }else{
+                            a[b]=signoMas(Number(Terminos[c])*(-1));
+                        }
+                        lado=d;
+                        Terminos=a;
                     }
-                    lado=d;
-                    Terminos=a;
+                    creaCadena();
+                }else{
+                    toastr.error('No posible mover el término','Error');
                 }
-                creaCadena();
-            }else{
-                toastr.error('No posible mover el término','Error');
-            }
+            }else{toastr.error('No posible mover el término','Error');}
         }else{toastr.error('No posible mover el término','Error');}
     }
 
@@ -1328,7 +1327,7 @@
                 var h=0;
                 for(var i=0;i<g.length;i++){
                     if(g.charAt(i)=='x'){
-                        if(i!=0){debugger
+                        if(i!=0){
                           if(isNaN(g.charAt(i-1))){
                               h++;
                           }
@@ -1367,7 +1366,6 @@
         });
         //Luego le damos el nuevo arreglo a términos dejndo de lado los que eliminaríamos y el nuevo valor lo insertamos
         //al final del arreglo.
-        debugger;
         if(valor!='0'){
             if(miembro){
                 b.forEach(function (item, index) {
@@ -1429,7 +1427,6 @@
      * @returns {*}
      */
     function signoMas(valor){
-        //debugger;
         if(Math.sign(Number(valor))==1){
             return "+"+valor;
         }else{
