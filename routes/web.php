@@ -332,3 +332,10 @@ Route::get('/TriangulosTeoremaSeno', function () {
 Route::get('/TriangulosTeoremaCoseno', function () {
     return view('Admin.Templates.Desarrollo.Triangulos.Oblicuangolos.TeoremaCoseno');
 });
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Desigualdadesq', function () {
+    return view('Admin.Templates.Desarrollo.Desigualdades.Desigualdades.Desigualdadesq');
+});

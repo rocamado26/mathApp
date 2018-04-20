@@ -19,7 +19,6 @@
                         <li><a onclick="CargaOpciones('/razones','Trigonometría','Razones')">Razones </a></li>
                         <li><a onclick="CargaOpciones('/funciones','Trigonometría','Funciones')">Funciones </a></li>
                         <li><a onclick="CargaOpciones('/identidades','Trigonometría','Identidades')">Identidades </a></li>
-                        <li><a onclick="CargaOpciones('/ecuaciones','Trigonometría','Ecuaciones')">Ecuaciones </a></li>
                     </ul>
                 </li>
                 <li>

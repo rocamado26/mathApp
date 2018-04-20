@@ -6,24 +6,6 @@
                 <div class="file">
                     <a onclick="CargaOpciones('/DesigualdadesDes','','Desarrollo')">
                         <span class="corner"></span>
-                        <div class="icon">
-                        <!-- Imagen del tema -->
-                            <img src="{{asset('img/iconos/desigualdades/desigualdades/orden.png')}}" style="height: 85px; width:120px; overflow: hidden; padding: 5px 10px;  text-align: center;"/>
-                        </div>
-                        <div class="file-name">
-                            Propiedades de orden<br/>
-                            <small><br>&nbsp;</small>
-                            <span class="label label-danger pull-right">Primer Año</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="file-box">
-                <div class="file">
-                    <a href="#">
-                        <span class="corner"></span>
                         <!-- Debe de ser clase image si se pone una imagen "<div class="image">" y si es un icono debe ser icon <div class="icon"> -->
                             <div class="icon">
                             <!-- Imagen <img alt="image" class="img-responsive" src="img/p1.jpg"> -->
@@ -34,7 +16,7 @@
                                 <br/>
                                 <small><br>&nbsp;</small>
                             <span class="label label-danger pull-right">Primer Año</span>
-                            </div>
+                         </div>
                     </a>
                 </div>
             </div>
@@ -42,7 +24,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a >
+                    <a onclick="CargaOpciones('/Desigualdadesq','','Desarrollo')">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
