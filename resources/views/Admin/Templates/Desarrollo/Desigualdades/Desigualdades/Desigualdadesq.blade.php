@@ -34,62 +34,30 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong>Componentes de una desigualdad</strong><br><br>
+                                            <strong>Desigualdades Cuadráticas</strong><br><br>
                                             <p style="text-align: justify;">
-                                                Una desigualdad está compuesta por dos expresiones algebraicas, relacionadas mediante los signos de orden:
-                                                <b>< ,≤, >, ≥.</b>
+                                                Una desigualdad en la variable <b>x</b> se llama cuadrática cuando la podemosescribir en la forma
                                                 <br>
-                                                Se llama desigualdad lineal, fundamentalmente, porque la variable x que aparece en las expresiones algebraicas se
-                                                encuentra elevada a la potencia uno. <br>
-                                                <br>La forma general de una ecuación lineal se expresa: <br>
-                                                <b> ax + b ≥ 0; con a y b que representan números reales, a ≠ 0</b>.
+                                                <b>ax<sup>2</sup> + bx + c > 0 ( ≥ 0 )</b>, en donde <b>a,b</b> y <b>c</b> son constantes con <b>a ≠ 0</b>
                                                 <br><br>
-                                                <strong>Propiedades de las desigualdades</strong><br>
-                                                <br>Se puede sumar o restar una misma cantidad a ambos
-                                                lados de la igualdad (a ambos lados de la desigualdad y
-                                                esta mantiene la equivalencia con la primera). <br><br>
-
+                                                Para resolver esta desigualdad, es decir encontrar las <b>x</b> que satisfacen estadesigualdad,
+                                                escribimos el lado izquierdo como el producto de dos expresioneslineales, esto es, factorizamos
+                                                y examinamos el signo de los factores en losintervalos definidos por las raíces de los factores.
+                                                <br>
+                                                Observe que resolver: <b>( x - ... )( x + ...) > 0</b>
+                                                <br><br>
+                                                <strong>Para factorizar una expresion de la forma: <b>ax<sup>2</sup> + bx + c > 0</strong></b> lo realizamos de la forma siguiente:
+                                                <br><br>
+                                                <img style="width: 50%; height: 50%" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/factorizacion.png')}}" class="img-responsive">
                                             </p>
                                             <div class="well">
                                                 <div class="row diff-wrapper">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px">x – 8 ≥ 2</b> <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px">x –8 + 8 ≥ 2 + 8</b>; se ha sumado 8 a ambos lados
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x + ... )( x + ... ) </b> Colocamos una <b>x</b> en cada factor proveniente de la raíz cuadrada de <b>x<sup>2</sup></b><br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x + a )( x + ... )</b>; <b>a</b> proviene de la suma de dos números, conformando el término <b>cx</b>.
                                                             <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px">x ≥ 10</b>; operando a ambos lados se ha obtenido la solución
-                                                            <br>&nbsp;&nbsp;<b style="font-size: 18px">S = [ 10, +∞ [</b>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="well">
-                                                <div class="row diff-wrapper">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x + 5 < 11</b><br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x + 5 – 5 < 11 – 5</b>; se resta – 5 a ambos lados para aislar a 3x.
-                                                            <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x < 6</b>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p style="text-align: justify">
-                                                Se puede multiplicar o dividir por una misma cantidad
-                                                positiva a ambos lados de la igualdad (a ambos lados de
-                                                la desigualdad y esta mantiene la equivalencia con
-                                                la primera). <br>
-                                            </p>
-                                            <div class="well">
-                                                <div class="row diff-wrapper">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px"><sup>3x</sup>/<sub>3</sub> < <sup>6</sup>/<sub>3</sub></b>; Se divide entre 3 a ambos lados para dejar
-                                                            sola la variable x <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">x < 2</b>; se llega a la última desigualdad equivalente; que resulta ser la solución.<br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">S = ] –∞, 2 [ </b>es la solución de la desigualdad.
-                                                            <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x + a )( x + b )</b>; <b>b</b> proviene de la multiplicación de dos números, conformando el término <b>d</b>.
                                                         </div>
                                                     </div>
                                                 </div>
