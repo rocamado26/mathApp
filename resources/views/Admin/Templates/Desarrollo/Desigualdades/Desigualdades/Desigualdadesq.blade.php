@@ -62,6 +62,80 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                </div>
+                                                <div class="panel-body">
+                                                    Resolver la desigualdad: <b>x<sup>2</sup> - 3x - 4 > 0</b>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="well">
+                                                <div class="row diff-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            &nbsp;&nbsp;<b>( x - a ) ( x + b ) > 0</b> <br>
+                                                            &nbsp;&nbsp;<b>a = -4</b> <br>
+                                                            &nbsp;&nbsp;<b>b = 1</b>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            Creamos los dos factores <br>
+                                                            <b>a + b</b> tienen que forma a <b>-3</b> <br>
+                                                            <b>a b</b> tienen que forma a <b>-4</b> <br>
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            &nbsp;&nbsp;Nuestro ejercicio factorizado queda de la manera siguiente:
+                                                            <br>
+                                                            &nbsp;&nbsp;<b>( x - 4 ) ( x + 1 ) > 0</b> <br>
+                                                            &nbsp;&nbsp;El signo <b>-</b> del primer factor es el primer signo de la desigualdad
+                                                            <br>
+                                                            &nbsp;&nbsp;y el signo <b>+</b> del segundo factor es la multiplicación del primero y segundo signo de la desigualdad.
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    &nbsp;&nbsp;Es momento de encontrar el conjunto solución para la desigualdad:<br>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            &nbsp;&nbsp;<b>x - 4 = 0</b> <br>
+                                                            &nbsp;&nbsp;<b>x + 1 = 0</b> <br><br>
+                                                            &nbsp;&nbsp;<b>x<sub>1</sub> = 4</b> y <b>x<sub>2</sub> = -1</b>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            Igualamos cada fator a <b>"0"</b> <br> <br><br>
+                                                            Hemos encontrado las dos raíces
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <table>
+                                                                <tr>
+                                                                    <td><b>&nbsp;&nbsp;Factores&nbsp;&nbsp;</b></td>
+                                                                    <td><b>&nbsp;&nbsp;( -∞ , -1 )&nbsp;&nbsp;</b> </td>
+                                                                    <td><b>&nbsp;&nbsp;( -1 , 4 )&nbsp;&nbsp;</b></td>
+                                                                    <td><b>&nbsp;&nbsp;( 4 , +∞)&nbsp;&nbsp;</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x - 4)</td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> + </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x + 1)</td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> + </td>
+                                                                    <td align="center"> + </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="row">
