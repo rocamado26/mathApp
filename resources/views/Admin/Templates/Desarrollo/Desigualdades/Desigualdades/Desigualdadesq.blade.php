@@ -67,7 +67,7 @@
                                                     <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
                                                 </div>
                                                 <div class="panel-body">
-                                                    Resolver la desigualdad: <b>x<sup>2</sup> - 3x - 4 > 0</b>
+                                                    Resolver la desigualdad: <b style="font-size: 18px">x<sup>2</sup> - 3x - 4 > 0</b>
                                                 </div>
                                             </div>
                                             <br>
@@ -75,14 +75,14 @@
                                                 <div class="row diff-wrapper">
                                                     <div class="row">
                                                         <div class="col-md-4">
-                                                            &nbsp;&nbsp;<b>( x - a ) ( x + b ) > 0</b> <br>
-                                                            &nbsp;&nbsp;<b>a = -4</b> <br>
-                                                            &nbsp;&nbsp;<b>b = 1</b>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x - a ) ( x + b ) > 0</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">a = -4</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">b = 1</b>
                                                         </div>
                                                         <div class="col-md-8">
                                                             Creamos los dos factores <br>
-                                                            <b>a + b</b> tienen que forma a <b>-3</b> <br>
-                                                            <b>a b</b> tienen que forma a <b>-4</b> <br>
+                                                            <b style="font-size: 18px">a + b</b> tienen que forma a <b>-3</b> <br>
+                                                            <b style="font-size: 18px">a b</b> tienen que forma a <b>-4</b> <br>
                                                         </div>
                                                     </div>
                                                     <br><br>
@@ -90,29 +90,29 @@
                                                         <div class="col-xs-12">
                                                             &nbsp;&nbsp;Nuestro ejercicio factorizado queda de la manera siguiente:
                                                             <br>
-                                                            &nbsp;&nbsp;<b>( x - 4 ) ( x + 1 ) > 0</b> <br>
-                                                            &nbsp;&nbsp;El signo <b>-</b> del primer factor es el primer signo de la desigualdad
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x - 4 ) ( x + 1 ) > 0</b> <br>
+                                                            &nbsp;&nbsp;El signo <b style="font-size: 18px">-</b> del primer factor es el primer signo de la desigualdad
                                                             <br>
-                                                            &nbsp;&nbsp;y el signo <b>+</b> del segundo factor es la multiplicación del primero y segundo signo de la desigualdad.
+                                                            &nbsp;&nbsp;y el signo <b style="font-size: 18px">+</b> del segundo factor es la multiplicación del primero y segundo signo de la desigualdad.
                                                         </div>
                                                     </div>
                                                     <br><br>
                                                     &nbsp;&nbsp;Es momento de encontrar el conjunto solución para la desigualdad:<br>
                                                     <div class="row">
                                                         <div class="col-md-4">
-                                                            &nbsp;&nbsp;<b>x - 4 = 0</b> <br>
-                                                            &nbsp;&nbsp;<b>x + 1 = 0</b> <br><br>
-                                                            &nbsp;&nbsp;<b>x<sub>1</sub> = 4</b> y <b>x<sub>2</sub> = -1</b>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x - 4 = 0</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x + 1 = 0</b> <br><br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x<sub>1</sub> = 4</b> y <b style="font-size: 18px">x<sub>2</sub> = -1</b>
                                                         </div>
                                                         <div class="col-md-8">
-                                                            Igualamos cada fator a <b>"0"</b> <br> <br><br>
+                                                            Igualamos cada fator a <b style="font-size: 18px">"0"</b> <br> <br><br>
                                                             Hemos encontrado las dos raíces
                                                         </div>
                                                     </div>
                                                     <br><br>
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            <table>
+                                                        <div class="col-md-6">
+                                                            <table style="margin-left: 6px">
                                                                 <tr>
                                                                     <td><b>&nbsp;&nbsp;Factores&nbsp;&nbsp;</b></td>
                                                                     <td><b>&nbsp;&nbsp;( -∞ , -1 )&nbsp;&nbsp;</b> </td>
@@ -120,7 +120,10 @@
                                                                     <td><b>&nbsp;&nbsp;( 4 , +∞)&nbsp;&nbsp;</b></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td align="center">( x - 4)</td>
+                                                                    <td colspan="4">-----------------------------------------------------------------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x - 4 )</td>
                                                                     <td align="center"> - </td>
                                                                     <td align="center"> - </td>
                                                                     <td align="center"> + </td>
@@ -131,7 +134,25 @@
                                                                     <td align="center"> + </td>
                                                                     <td align="center"> + </td>
                                                                 </tr>
+                                                                <tr>
+                                                                    <td colspan="4">-----------------------------------------------------------------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x - 4 )( x + 1 )</td>
+                                                                    <td align="center"> + </td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> + </td>
+                                                                </tr>
                                                             </table>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p style="text-align: justify">
+                                                                Multiplicamos los signos por columna y colocamos el resultado en la última fila y
+                                                                evaluamos en cuál de los intervalos se cumple la desigualdad. Para este caso
+                                                                buscamos los valore mayores a cero. Y los intervalos q satisfacen esta desigualdad son:
+                                                                <br><br>
+                                                                Solución: <b style="font-size: 18px">( -∞ , -1 ) U ( 4 , +∞)</b>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -146,8 +167,13 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify;">
-                                                                Para operar con las desigualdades se emplean básicamente las mismas reglas que se utilizan con las
-                                                                ecuaciones para mantener la equivalencia.
+                                                                <strong>Para encontrar el conjunto solución</strong>
+                                                                <br>
+                                                                En cada intervalo se marca el signo
+                                                                que toma la expresión algebraica respectiva que está escrita en la parte izquierda
+                                                                al evaluarla en un número que pertenece a cada intervalo(como los encerrados en
+                                                                círculos). El producto de los signos de las expresiones algebraicas en su respectivo
+                                                                intervalo se ubica en la última fila.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -161,10 +187,29 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify">
-                                                                En los números reales la proposición: <b>–2 < 5</b> es verdadera. Si la multiplicas por una
-                                                                cantidad negativa, por ejemplo <b>–3</b>, y no cambias la relación de orden, la proposición se
-                                                                vuelve falsa: nota <b>( –3 )( –2 ) < ( –3 )( 5 ) → 8 < –15</b> ¡falso! No debes olvidar esto. Es
-                                                                un error muy frecuente cuando se resuelven desigualdades.
+                                                                <strong>Pasos a seguir para resolver desigualdades cuadráticas</strong>
+                                                                <br>
+                                                                <li>
+                                                                    Escribir la desigualdad en su forma canónica: <b>x<sup>2</sup> - 3x - 4 > 0  (<0; ≤ 0  ó  ≥ 0)</b>
+                                                                </li>
+                                                                <li>
+                                                                    Factorizar el lado izquierdo. En caso que no se pueda la solución es trivial: <b>R o ∅</b>
+                                                                </li>
+                                                                <li>
+                                                                    Colocar las raíces de los factores en la recta real.
+                                                                </li>
+                                                                <li>
+                                                                    Colocar dos pares de paréntesis encima de cada intervalo establecido por lasraíces.
+                                                                </li>
+                                                                <li>
+                                                                    Tomar valores de prueba, evaluar los factores en los valores de prueba ycolocar el signo resultante en el paréntesis respectivo del factor.
+                                                                </li>
+                                                                <li>
+                                                                    Debajo de cada intervalo definido por los factores colocar un par de paréntesis,realizar la multiplicación de signo de arriba y colocar el resultado en el paréntesisde abajo.
+                                                                </li>
+                                                                <li>
+                                                                    Responder la pregunta. Por ejemplo si la desigualdad es <0, colocar losintervalos en donde el signo dio negativo. Análogamente en los demás casos.
+                                                                </li>
                                                             </p>
                                                         </div>
                                                     </div>
