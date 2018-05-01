@@ -261,7 +261,7 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12" align="center">
                                                                             <b style="font-size: 18px">
-                                                                                3 ( 3 - x ) ≥ x + 1
+                                                                                6x<sup>2</sup> - 7x - 3 ≤ 0
                                                                             </b>
                                                                         </div>
                                                                     </div>
@@ -269,57 +269,28 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    Efectuamos la multiplicación:<br><br>
+                                                                    Al factorizarlo queda de la manera siguiente:<br><br>
                                                                 </div>
                                                                 <div class="col-md-12" id="A1" align="center">
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
+                                                                                <td>(</td>
                                                                                 <td colspan="3" align="center">
                                                                                     <div class="contenedor" id="DP1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
                                                                                 <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td> 3 </td>
+                                                                                <td> ) &nbsp;&nbsp;</td>
+                                                                                <td> ( </td>
+                                                                                <td> 3x </td>
+                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
                                                                                 <td colspan="3" align="center">
                                                                                     <div class="contenedor" id="DP2"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
-                                                                                <td>&nbsp;&nbsp; ≥ &nbsp;&nbsp;</td>
-                                                                                <td>&nbsp;&nbsp; 3 + x </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>Despejamos las <b>“x”</b> al lado izquierdo y los términos independientes al lado derecho:<br><br>
-                                                                </div>
-                                                                <div class="col-md-12" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td>-3x</td>
-                                                                                <td>&nbsp; - &nbsp;</td>
-                                                                                <td>&nbsp; x</td>
-                                                                                <td>&nbsp; ≥ &nbsp;</td>
-                                                                                <td>1</td>
-                                                                                <td>&nbsp; - &nbsp;</td>
-                                                                                <td>9 &nbsp;</td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>Operar los términos semejantes:
-                                                                </div>
-                                                                <div class="col-md-12" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
-                                                                                </td>
-                                                                                <td>&nbsp;&nbsp; ≥ &nbsp;&nbsp;</td>
-                                                                                <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP4"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
-                                                                                </td>
+                                                                                <td> ) </td>
+                                                                                <td>&nbsp;&nbsp; ≤ &nbsp;&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp; 0</td>
                                                                             </tr>
                                                                         </table>
                                                                     </font>
@@ -333,16 +304,16 @@
                                                                     <br><br>
                                                                     <div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
                                                                         <div class="col-md-3">
-                                                                            <img id="AP3" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP3.png')}}">
+                                                                            <img id="AP2" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP2.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP1" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP1.png')}}">
+                                                                            <img id="AP1" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP1.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP4" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP4.png')}}">
+                                                                            <img id="AP4" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP4.png')}}">
                                                                         </div>
                                                                         <div class="col-md-3">
-                                                                            <img id="AP2" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP2.png')}}">
+                                                                            <img id="AP3" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP3.png')}}">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -350,9 +321,9 @@
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la desigualdad y el valor "x" es:
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la desigualdad y el conjunto solución es:
                                                                         <br><br>
-                                                                    </p><center><font size="3"><b> x = 2</b></font></center>
+                                                                    </p><center><font size="3"><b>[- <sup>1</sup>/ <sub>3</sub> ; <sup>3</sup>/ <sub>2</sub>]</b></font></center>
                                                                     <p></p>
                                                                 </div>
                                                                 <div id="botonesPrac1" class="row col-lg-12">
@@ -378,20 +349,8 @@
                                                                     </div>
                                                                     <div class="row">
                                                                         <div class="col-md-12" align="center">
-                                                                            <b>
-                                                                                <font size="3">
-                                                                                    <table>
-                                                                                        <tr>
-                                                                                            <td>2x</td>
-                                                                                            <td>&nbsp; + &nbsp;</td>
-                                                                                            <td>5</td>
-                                                                                            <td> &nbsp; ≥ &nbsp;</td>
-                                                                                            <td>3</td>
-                                                                                            <td>&nbsp; - &nbsp;</td>
-                                                                                            <td>7x</td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </font>
+                                                                            <b style="font-size: 18px">
+                                                                                x<sup>2</sup> - 3x + 2 > 0
                                                                             </b>
                                                                         </div>
                                                                     </div>
@@ -406,45 +365,22 @@
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
-                                                                                <td>2x</td>
-                                                                                <td>&nbsp;+&nbsp;</td>
-                                                                                <td>7x</td>
-                                                                                <td>&nbsp;≥&nbsp;</td>
-                                                                                <td>3</td>
-                                                                                <td>&nbsp;-&nbsp;</td>
-                                                                                <td>5</td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>El despeje de “x” sería de la manera siguiente:<br><br>
-                                                                </div>
-                                                                <div class="col-md-12" id="A2" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
+                                                                                <td>(</td>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP7"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
-                                                                                <td>&nbsp;≥&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td> 2 </td>
+                                                                                <td> ) &nbsp;&nbsp;</td>
+                                                                                <td> ( </td>
+                                                                                <td> x </td>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP8"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP4"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>La solución para la desigualdad es:<br><br>
-                                                                </div>
-                                                                <div class="col-md-12" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP9"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 100px; height: 34px;"></div>
-                                                                                </td>
+                                                                                <td> ) </td>
+                                                                                <td>&nbsp;&nbsp; > &nbsp;&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp; 0</td>
                                                                             </tr>
                                                                         </table>
                                                                     </font>
@@ -457,19 +393,17 @@
                                                                     <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br><br>
                                                                     <div class="row">
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP14" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP14.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP6" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP4.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP11" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP11.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP8" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP3.png')}}">
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP12" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP12.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP7" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP2.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP13" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP13.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP5" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP5.png')}}">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -477,13 +411,9 @@
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado la desigualdad el valor de "x" es:
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado resolver la desigualdad y el conjunto solución es:
                                                                         <br><br>
-                                                                    </p><center><font size="3"><b> x = - <sup>2</sup>/<sub>9</sub></b></font></center>
-                                                                    <p style="text-align: justify;">
-                                                                        El conjunto solicuión es:
-                                                                    <center><font size="3"><b> [- <sup>2</sup>/<sub>9</sub> ; ∞)</b></font></center>
-                                                                    </p>
+                                                                    </p><center><font size="3"><b>( -∞ , 1 ) U ( 2 , +∞)</b></font></center>
                                                                 </div>
                                                                 <div id="botonesPrac2" class="row col-lg-12">
                                                                     <center>
@@ -502,23 +432,17 @@
                                                                 </div>
                                                                 <div class="panel-body">
                                                                     <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            Resuelve la desigualdad:<br><br>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                Resuelve la desigualdad: <br>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-md-12" align="center">
-                                                                            <b>
-                                                                                <font size="3">
-                                                                                    <table>
-                                                                                        <tr>
-                                                                                            <td>2x</td>
-                                                                                            <td>&nbsp;+&nbsp;</td>
-                                                                                            <td>3</td>
-                                                                                            <td>&nbsp;>&nbsp;</td>
-                                                                                            <td>0</td>
-                                                                                        </tr>
-                                                                                    </table>
-                                                                                </font>
-                                                                            </b>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12" align="center">
+                                                                                <b style="font-size: 18px">
+                                                                                    x<sup>2</sup> - 4x - 21 ≥ 0
+                                                                                </b>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -531,55 +455,22 @@
                                                                     <font size="3">
                                                                         <table>
                                                                             <tr>
-                                                                                <td>2x</td>
-                                                                                <td>&nbsp;+&nbsp;</td>
-                                                                                <td>3</td>
-                                                                                <td>&nbsp;-&nbsp;</td>
-                                                                                <td>3</td>
-                                                                                <td>&nbsp;>&nbsp;</td>
-                                                                                <td>0</td>
-                                                                                <td>&nbsp;-&nbsp;</td>
-                                                                                <td>3</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td></td>
-                                                                                <td>2x</td>
-                                                                                <td>&nbsp;>&nbsp;</td>
-                                                                                <td>-&nbsp;</td>
-                                                                                <td>3</td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>Despejamos "x":<br><br>
-                                                                </div>
-                                                                <div class="col-md-12" id="A3" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td>x</td>
-                                                                                <td>&nbsp;>&nbsp;</td>
+                                                                                <td>(</td>
                                                                                 <td colspan="3" align="center">
                                                                                     <div class="contenedor" id="DP5"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </font>
-                                                                </div>
-                                                                <div class="col-md-12">
-                                                                    <br><br>El conjunto solución para la desigualdad es: <br><br>
-                                                                </div>
-                                                                <div class="col-md-12" align="center">
-                                                                    <font size="3">
-                                                                        <table>
-                                                                            <tr>
+                                                                                <td>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+                                                                                <td> 3 </td>
+                                                                                <td> ) &nbsp;&nbsp;</td>
+                                                                                <td> ( </td>
+                                                                                <td> &nbsp;x </td>
+                                                                                <td>&nbsp;&nbsp;+&nbsp;&nbsp;</td>
                                                                                 <td colspan="3" align="center">
-                                                                                    <div class="contenedor" id="DP6"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 100px; height: 34px;"></div>
+                                                                                    <div class="contenedor" id="DP6"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
                                                                                 </td>
+                                                                                <td> ) </td>
+                                                                                <td>&nbsp;&nbsp; ≥ &nbsp;&nbsp;</td>
+                                                                                <td>&nbsp;&nbsp; 0</td>
                                                                             </tr>
                                                                         </table>
                                                                     </font>
@@ -592,19 +483,17 @@
                                                                     <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br><br>
                                                                     <div class="row">
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP6" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP6.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP9" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP1.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP8" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP8.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP12" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP7.png')}}">
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP7" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP7.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP10" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP4.png')}}">
                                                                         </div>
-                                                                        <div class="col-md-6">
-                                                                            <img id="AP5" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP5.png')}}">
+                                                                        <div class="col-md-3">
+                                                                            <img id="AP11" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP6.png')}}">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -612,13 +501,9 @@
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado comprobar la identidad y su valor es:
+                                                                        Excelente, has resuelto de manera correcta la practica, Has logrado resolver la desigualdad y el conjunto solución es:
                                                                         <br><br>
-                                                                    </p><center><font size="3"><b> x = - <sup>3</sup>/<sub>2</sub></b></font></center>
-                                                                    <p style="text-align: justify;">
-                                                                        El conjunto solicuión es:
-                                                                    <center><font size="3"><b> (-1.5 ; ∞) </b></font></center>
-                                                                    </p>
+                                                                    </p><center><font size="3"><b>[ -7 , 3]</b></font></center>
                                                                 </div>
                                                                 <div id="botonesPrac3" class="row col-lg-12">
                                                                     <center>
@@ -1575,7 +1460,7 @@
     function ComprobarPracticas(op){
         switch (op){
             case 1:{
-                if((document.getElementById('AP1').parentNode.id=='DP1') && (document.getElementById('AP2').parentNode.id=='DP2') && (document.getElementById('AP3').parentNode.id=='DP3')){
+                if((document.getElementById('AP1').parentNode.id=='DP1') && (document.getElementById('AP3').parentNode.id=='DP2')){
                     swal("Excelente!", "Has resuelto correctamente el ejercicio", "success");
                     $('#EP1').hide();
                     $('#SP1').show();
@@ -1584,7 +1469,7 @@
                 }
             }break;
             case 2:{
-                if((document.getElementById('AP13').parentNode.id=='DP7') && (document.getElementById('AP14').parentNode.id=='DP8') && (document.getElementById('AP11').parentNode.id=='DP9')){
+                if((document.getElementById('AP6').parentNode.id=='DP3') && (document.getElementById('AP8').parentNode.id=='DP4')){
                     swal("Excelente!", "Has resuelto correctamente el ejercicio", "success");
                     $('#EP2').hide();
                     $('#SP2').show();
@@ -1593,7 +1478,7 @@
                 }
             }break;
             case 3:{
-                if((document.getElementById('AP5').parentNode.id=='DP5') && (document.getElementById('AP7').parentNode.id=='DP6')){
+                if((document.getElementById('AP10').parentNode.id=='DP5') && (document.getElementById('AP11').parentNode.id=='DP6')){
                     swal("Excelente!", "Has resuelto correctamente el ejercicio", "success");
                     $('#EP3').hide();
                     $('#SP3').show();
@@ -1611,7 +1496,7 @@
                 $('#DP2').html('');
                 $('#DP3').html('');
                 $('#DP4').html('');
-                $('#EP1').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"><div class="col-md-3"><img id="AP3" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP3.png')}}"></div><div class="col-md-3"><img id="AP1" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP1.png')}}"></div><div class="col-md-3"><img id="AP4" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP4.png')}}"></div><div class="col-md-3"><img id="AP2" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP2.png')}}"></div></div>');
+                $('#EP1').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"><div class="col-md-3"><img id="AP2" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP2.png')}}"></div><div class="col-md-3"><img id="AP1" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP1.png')}}"></div><div class="col-md-3"><img id="AP4" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP4.png')}}"></div><div class="col-md-3"><img id="AP3" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP3.png')}}"></div></div>');
                 $("#SP1").fadeOut(0);
                 $("#EP1").fadeIn(300);
             }break;
@@ -1619,22 +1504,14 @@
                 $('#DP7').html('');
                 $('#DP8').html('');
                 $('#DP9').html('');
-                $('#EP2').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row"><div class="col-md-6"><img id="AP14" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP14.png')}}"></div><div class="col-md-6"><img id="AP11" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP11.png')}}"></div></div><div class="row"><div class="col-md-6"><img id="AP12" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP12.png')}}"></div><div class="col-md-6"><img id="AP13" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP13.png')}}"></div></div>');
+                $('#EP2').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row"><div class="col-md-3"><img id="AP6" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP4.png')}}"></div><div class="col-md-3"><img id="AP8" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP3.png')}}"></div><div class="col-md-3"><img id="AP7" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP2.png')}}"></div><div class="col-md-3"><img id="AP5" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP5.png')}}"></div></div>');
                 $("#SP2").fadeOut(0);
                 $("#EP2").fadeIn(300);
             }break;
             case 3:{
                 $('#DP5').html('');
                 $('#DP6').html('');
-                $('#EP3').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row"><div class="col-md-6"><img id="AP6"' +
-                    ' style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" ' +
-                    'src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP6.png')}}"></div>' +
-                '<div class="col-md-6"><img id="AP8" style="cursor: pointer" draggable="true" ondragstart="start(event)" ' +
-                'ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP8.png')}}">' +
-                '</div></div><div class="row"><div class="col-md-6"><img id="AP7" style="cursor: pointer" draggable="true"' +
-                ' ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP7.png')}}">' +
-                '</div><div class="col-md-6"><img id="AP5" style="cursor: pointer" draggable="true" ondragstart="start(event)"' +
-                ' ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_lineal/AP5.png')}}"></div></div>');
+                $('#EP3').html('<center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center><br><br><div class="row"><div class="col-md-3"><img id="AP9" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP1.png')}}"></div><div class="col-md-3"><img id="AP12" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP7.png')}}"></div><div class="col-md-3"><img id="AP10" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP4.png')}}"></div><div class="col-md-3"><img id="AP11" style="cursor: pointer" draggable="true" ondragstart="start(event)" ondragend="end(event)" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/practica_cua/AP6.png')}}"></div></div>');
                 $("#SP3").fadeOut(0);
                 $("#EP3").fadeIn(300);
             }break;
