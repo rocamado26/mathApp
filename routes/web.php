@@ -332,3 +332,13 @@ Route::get('/TriangulosTeoremaSeno', function () {
 Route::get('/TriangulosTeoremaCoseno', function () {
     return view('Admin.Templates.Desarrollo.Triangulos.Oblicuangolos.TeoremaCoseno');
 });
+////////////////////////////////
+/////LOGARITMOS///////
+//////////////////////////////
+///
+/*
+*	Llamada al area de desarrollo para intervalos.
+*/
+Route::get('/Logaritmos', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Logaritmica.Logaritmos');
+});
