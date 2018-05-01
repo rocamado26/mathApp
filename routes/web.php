@@ -342,3 +342,11 @@ Route::get('/TriangulosTeoremaCoseno', function () {
 Route::get('/Logaritmos', function () {
     return view('Admin.Templates.Desarrollo.Funciones.Logaritmica.Logaritmos');
 });
+
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Desigualdadesq', function () {
+    return view('Admin.Templates.Desarrollo.Desigualdades.Desigualdades.Desigualdadesq');
+});

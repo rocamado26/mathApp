@@ -34,62 +34,125 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong>Componentes de una desigualdad</strong><br><br>
+                                            <strong>Desigualdades Cuadráticas</strong><br><br>
                                             <p style="text-align: justify;">
-                                                Una desigualdad está compuesta por dos expresiones algebraicas, relacionadas mediante los signos de orden:
-                                                <b>< ,≤, >, ≥.</b>
+                                                Una desigualdad en la variable <b>x</b> se llama cuadrática cuando la podemosescribir en la forma
                                                 <br>
-                                                Se llama desigualdad lineal, fundamentalmente, porque la variable x que aparece en las expresiones algebraicas se
-                                                encuentra elevada a la potencia uno. <br>
-                                                <br>La forma general de una ecuación lineal se expresa: <br>
-                                                <b> ax + b ≥ 0; con a y b que representan números reales, a ≠ 0</b>.
+                                                <b>ax<sup>2</sup> + bx + c > 0 ( ≥ 0 )</b>, en donde <b>a,b</b> y <b>c</b> son constantes con <b>a ≠ 0</b>
                                                 <br><br>
-                                                <strong>Propiedades de las desigualdades</strong><br>
-                                                <br>Se puede sumar o restar una misma cantidad a ambos
-                                                lados de la igualdad (a ambos lados de la desigualdad y
-                                                esta mantiene la equivalencia con la primera). <br><br>
-
+                                                Para resolver esta desigualdad, es decir encontrar las <b>x</b> que satisfacen estadesigualdad,
+                                                escribimos el lado izquierdo como el producto de dos expresioneslineales, esto es, factorizamos
+                                                y examinamos el signo de los factores en losintervalos definidos por las raíces de los factores.
+                                                <br>
+                                                Observe que resolver: <b>( x - ... )( x + ...) > 0</b>
+                                                <br><br>
+                                                <strong>Para factorizar una expresion de la forma: <b>ax<sup>2</sup> + bx + c > 0</strong></b> lo realizamos de la forma siguiente:
+                                                <br><br>
+                                                <img style="width: 50%; height: 50%" src="{{asset('img/iconos/desigualdades/desarrollo/desigualdades/factorizacion.png')}}" class="img-responsive">
                                             </p>
                                             <div class="well">
                                                 <div class="row diff-wrapper">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px">x – 8 ≥ 2</b> <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px">x –8 + 8 ≥ 2 + 8</b>; se ha sumado 8 a ambos lados
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x + ... )( x + ... ) </b> Colocamos una <b>x</b> en cada factor proveniente de la raíz cuadrada de <b>x<sup>2</sup></b><br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x + a )( x + ... )</b>; <b>a</b> proviene de la suma de dos números, conformando el término <b>cx</b>.
                                                             <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px">x ≥ 10</b>; operando a ambos lados se ha obtenido la solución
-                                                            <br>&nbsp;&nbsp;<b style="font-size: 18px">S = [ 10, +∞ [</b>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x + a )( x + b )</b>; <b>b</b> proviene de la multiplicación de dos números, conformando el término <b>d</b>.
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="well">
-                                                <div class="row diff-wrapper">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x + 5 < 11</b><br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x + 5 – 5 < 11 – 5</b>; se resta – 5 a ambos lados para aislar a 3x.
-                                                            <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">3x < 6</b>
-                                                        </div>
-                                                    </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                </div>
+                                                <div class="panel-body">
+                                                    Resolver la desigualdad: <b style="font-size: 18px">x<sup>2</sup> - 3x - 4 > 0</b>
                                                 </div>
                                             </div>
-                                            <p style="text-align: justify">
-                                                Se puede multiplicar o dividir por una misma cantidad
-                                                positiva a ambos lados de la igualdad (a ambos lados de
-                                                la desigualdad y esta mantiene la equivalencia con
-                                                la primera). <br>
-                                            </p>
+                                            <br>
                                             <div class="well">
                                                 <div class="row diff-wrapper">
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            &nbsp;&nbsp;<b style="font-size: 18px"><sup>3x</sup>/<sub>3</sub> < <sup>6</sup>/<sub>3</sub></b>; Se divide entre 3 a ambos lados para dejar
-                                                            sola la variable x <br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">x < 2</b>; se llega a la última desigualdad equivalente; que resulta ser la solución.<br>
-                                                            &nbsp;&nbsp;<b style="font-size: 18px;">S = ] –∞, 2 [ </b>es la solución de la desigualdad.
+                                                        <div class="col-md-4">
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x - a ) ( x + b ) > 0</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">a = -4</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">b = 1</b>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            Creamos los dos factores <br>
+                                                            <b style="font-size: 18px">a + b</b> tienen que forma a <b>-3</b> <br>
+                                                            <b style="font-size: 18px">a b</b> tienen que forma a <b>-4</b> <br>
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            &nbsp;&nbsp;Nuestro ejercicio factorizado queda de la manera siguiente:
                                                             <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">( x - 4 ) ( x + 1 ) > 0</b> <br>
+                                                            &nbsp;&nbsp;El signo <b style="font-size: 18px">-</b> del primer factor es el primer signo de la desigualdad
+                                                            <br>
+                                                            &nbsp;&nbsp;y el signo <b style="font-size: 18px">+</b> del segundo factor es la multiplicación del primero y segundo signo de la desigualdad.
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    &nbsp;&nbsp;Es momento de encontrar el conjunto solución para la desigualdad:<br>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x - 4 = 0</b> <br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x + 1 = 0</b> <br><br>
+                                                            &nbsp;&nbsp;<b style="font-size: 18px">x<sub>1</sub> = 4</b> y <b style="font-size: 18px">x<sub>2</sub> = -1</b>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            Igualamos cada fator a <b style="font-size: 18px">"0"</b> <br> <br><br>
+                                                            Hemos encontrado las dos raíces
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <table style="margin-left: 6px">
+                                                                <tr>
+                                                                    <td><b>&nbsp;&nbsp;Factores&nbsp;&nbsp;</b></td>
+                                                                    <td><b>&nbsp;&nbsp;( -∞ , -1 )&nbsp;&nbsp;</b> </td>
+                                                                    <td><b>&nbsp;&nbsp;( -1 , 4 )&nbsp;&nbsp;</b></td>
+                                                                    <td><b>&nbsp;&nbsp;( 4 , +∞)&nbsp;&nbsp;</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="4">-----------------------------------------------------------------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x - 4 )</td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> + </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x + 1)</td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> + </td>
+                                                                    <td align="center"> + </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="4">-----------------------------------------------------------------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center">( x - 4 )( x + 1 )</td>
+                                                                    <td align="center"> + </td>
+                                                                    <td align="center"> - </td>
+                                                                    <td align="center"> + </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p style="text-align: justify">
+                                                                Multiplicamos los signos por columna y colocamos el resultado en la última fila y
+                                                                evaluamos en cuál de los intervalos se cumple la desigualdad. Para este caso
+                                                                buscamos los valore mayores a cero. Y los intervalos q satisfacen esta desigualdad son:
+                                                                <br><br>
+                                                                Solución: <b style="font-size: 18px">( -∞ , -1 ) U ( 4 , +∞)</b>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -104,8 +167,13 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify;">
-                                                                Para operar con las desigualdades se emplean básicamente las mismas reglas que se utilizan con las
-                                                                ecuaciones para mantener la equivalencia.
+                                                                <strong>Para encontrar el conjunto solución</strong>
+                                                                <br>
+                                                                En cada intervalo se marca el signo
+                                                                que toma la expresión algebraica respectiva que está escrita en la parte izquierda
+                                                                al evaluarla en un número que pertenece a cada intervalo(como los encerrados en
+                                                                círculos). El producto de los signos de las expresiones algebraicas en su respectivo
+                                                                intervalo se ubica en la última fila.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -119,10 +187,29 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify">
-                                                                En los números reales la proposición: <b>–2 < 5</b> es verdadera. Si la multiplicas por una
-                                                                cantidad negativa, por ejemplo <b>–3</b>, y no cambias la relación de orden, la proposición se
-                                                                vuelve falsa: nota <b>( –3 )( –2 ) < ( –3 )( 5 ) → 8 < –15</b> ¡falso! No debes olvidar esto. Es
-                                                                un error muy frecuente cuando se resuelven desigualdades.
+                                                                <strong>Pasos a seguir para resolver desigualdades cuadráticas</strong>
+                                                                <br>
+                                                                <li>
+                                                                    Escribir la desigualdad en su forma canónica: <b>x<sup>2</sup> - 3x - 4 > 0  (<0; ≤ 0  ó  ≥ 0)</b>
+                                                                </li>
+                                                                <li>
+                                                                    Factorizar el lado izquierdo. En caso que no se pueda la solución es trivial: <b>R o ∅</b>
+                                                                </li>
+                                                                <li>
+                                                                    Colocar las raíces de los factores en la recta real.
+                                                                </li>
+                                                                <li>
+                                                                    Colocar dos pares de paréntesis encima de cada intervalo establecido por lasraíces.
+                                                                </li>
+                                                                <li>
+                                                                    Tomar valores de prueba, evaluar los factores en los valores de prueba ycolocar el signo resultante en el paréntesis respectivo del factor.
+                                                                </li>
+                                                                <li>
+                                                                    Debajo de cada intervalo definido por los factores colocar un par de paréntesis,realizar la multiplicación de signo de arriba y colocar el resultado en el paréntesisde abajo.
+                                                                </li>
+                                                                <li>
+                                                                    Responder la pregunta. Por ejemplo si la desigualdad es <0, colocar losintervalos en donde el signo dio negativo. Análogamente en los demás casos.
+                                                                </li>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -174,7 +261,7 @@
                                                                     <div class="row">
                                                                         <div class="col-md-12" align="center">
                                                                             <b style="font-size: 18px">
-                                                                               3 ( 3 - x ) ≥ x + 1
+                                                                                3 ( 3 - x ) ≥ x + 1
                                                                             </b>
                                                                         </div>
                                                                     </div>
@@ -530,7 +617,7 @@
                                                                     </p><center><font size="3"><b> x = - <sup>3</sup>/<sub>2</sub></b></font></center>
                                                                     <p style="text-align: justify;">
                                                                         El conjunto solicuión es:
-                                                                        <center><font size="3"><b> (-1.5 ; ∞) </b></font></center>
+                                                                    <center><font size="3"><b> (-1.5 ; ∞) </b></font></center>
                                                                     </p>
                                                                 </div>
                                                                 <div id="botonesPrac3" class="row col-lg-12">
@@ -863,9 +950,9 @@
     }
 
     /*
-    * Inicia el proceso de resolución de l ejercicio
-    * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
-    * */
+     * Inicia el proceso de resolución de l ejercicio
+     * función puente para unir los procesos con las funciones encargadas de realizar funciones especificas
+     * */
     function inciarFuncion() {
         limpiaDesarrollo();
         if(valida(9)){
@@ -989,7 +1076,7 @@
         console.warn('termino b:',b);
         if(Terminos[$('#T1').val()-1]!='+' && Terminos[$('#T2').val()-1]!='-'){
             switch (op){
-                    /*Suma de terminos*/
+                /*Suma de terminos*/
                 case 1:{
                     if(valida(7)){
                         if(valida(1)){
@@ -1008,14 +1095,14 @@
                         }else{toastr.error('No es posible operar los términos.','Error');}
                     }else{toastr.error('No es posible operar los términos.','Error');}
                 }break;
-                    /*Reta de terminos*/
+                /*Reta de terminos*/
                 case 2:{
                     if(valida(1) && valida(4)){
                         console.warn('suma de terminos:',a-b);
                         reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a-b),lado[$('#T1').val()-1],"");
                     }
                 }break;
-                    /*Multiplicacion de terminos*/
+                /*Multiplicacion de terminos*/
                 case 3:{
                     if(valida(3)){
                         if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
@@ -1032,7 +1119,7 @@
                         }
                     }
                 }break;
-                    /*Division de terminos*/
+                /*Division de terminos*/
                 case 4:{
                     if(valida(7) && valida(11)){
                         if(valida(3)){
@@ -1120,7 +1207,7 @@
                     pasaLabel(a,"x");
                 }
             }
-           //respuesta();
+            //respuesta();
         }else{
             pasaLabel(a,b);
         }
@@ -1206,11 +1293,11 @@
             /*Valida las operaciones de terminos de lados diferentes*/
             case 1:{
                 if((lado[$('#T1').val()-1]==true && lado[$('#T2').val()-1]==true) || (lado[$('#T1').val()-1]==false && lado[$('#T2').val()-1]==false)){
-                   if($('#T1').val()-1 !=$('#T2').val()-1){
-                       return true;
-                   }else{
-                       return false;
-                   }
+                    if($('#T1').val()-1 !=$('#T2').val()-1){
+                        return true;
+                    }else{
+                        return false;
+                    }
                 }else{
                     //alert('No es posible operar');
                     return false;
@@ -1261,7 +1348,7 @@
                     return true;
                 }
             }break;
-                /*valida que los terminos a operar sean semejantes*/
+            /*valida que los terminos a operar sean semejantes*/
             case 6:{
                 if(Terminos[$('#T1').val()-1].indexOf('x')!=-1 || Terminos[$('#T2').val()-1].indexOf('x')!=-1){
                     return false;
@@ -1269,7 +1356,7 @@
                     return true;
                 }
             }break;
-                /*valida que los terminos existan*/
+            /*valida que los terminos existan*/
             case 7:{
                 if(Terminos.length>=$('#T1').val() && $('#T1').val()>0){
                     return true;
@@ -1281,7 +1368,7 @@
                     }
                 }
             }break;
-                /*valida que los terminos a despejar esten en lados diferentes*/
+            /*valida que los terminos a despejar esten en lados diferentes*/
             case 8:{
                 if(lado[$('#T1').val()-1]!=lado[$('#T2').val()-1]){
                     return true;
@@ -1289,7 +1376,7 @@
                     return false;
                 }
             }break;
-                /*valida que los dos miembros tengan información*/
+            /*valida que los dos miembros tengan información*/
             case 9:{
                 if($('#termino1').val()!="" && $('#termino2').val()!=""){
                     return true;
@@ -1297,7 +1384,7 @@
                     return false;
                 }
             }break;
-                /*Valida que no halla signos repstidos juntos*/
+            /*Valida que no halla signos repstidos juntos*/
             case 10:{
                 if($('#termino1').val().indexOf('++')==-1 && $('#termino1').val().indexOf('--')==-1 &&
                     $('#termino1').val().indexOf('-+')==-1 && $('#termino1').val().indexOf('+-')==-1 &&
@@ -1309,7 +1396,7 @@
                     return false;
                 }
             }break;
-                /*Valida que el término 2 exista entre el areglo*/
+            /*Valida que el término 2 exista entre el areglo*/
             case 11:{
                 if(Terminos.length>=$('#T2').val() && $('#T2').val()>0){
                     return true;
@@ -1321,19 +1408,19 @@
                     }
                 }
             }break;
-                /*Valida que se ingrese un coeficiente para x*/
+            /*Valida que se ingrese un coeficiente para x*/
             case 12:{
                 var g=$('#termino1').val()+$('#termino2').val();
                 var h=0;
                 for(var i=0;i<g.length;i++){
                     if(g.charAt(i)=='x'){
                         if(i!=0){
-                          if(isNaN(g.charAt(i-1))){
-                              h++;
-                          }
-                          if(Number(g.charAt(i-1))==0){
-                              h++;
-                          }
+                            if(isNaN(g.charAt(i-1))){
+                                h++;
+                            }
+                            if(Number(g.charAt(i-1))==0){
+                                h++;
+                            }
                         }else{
                             return false;
                         }
