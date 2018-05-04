@@ -358,7 +358,7 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    Operamos los términos semejantes
+                                                                    Al factorizarlo queda de la manera siguiente:
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <br><br>
@@ -449,7 +449,8 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <br><br>Restamos un valor en ambos miembros:<br><br>
+                                                                    <br>Al factorizarlo queda de la manera siguiente:
+                                                                    <br> <br>
                                                                 </div>
                                                                 <div class="col-md-12" align="center">
                                                                     <font size="3">
@@ -537,55 +538,95 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="alert alert-info">
-                                                Ingresa tu ejercicio de la forma <b>ax + b + c > 0</b><br>
-                                                <li></li>
+                                                Ingresa tu ejercicio de la forma <b>x<sup>2</sup> + bx + c > 0</b> o de la forma: <b>ax<sup>2</sup> + bx + c > 0</b><br>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <!--
                                         <div class="col-xs-12">
-                                            <div class="input-group" id="paso1p">
-                                                <input type="text" id="termino1" onkeyup="validaCadena1(value)" class="form-control" placeholder="Miembro derecho">
-                                                <div class="input-group-btn" id="paso2p">
-                                                    <button type="button" id="btn1" onclick="cambiaBoton(2)" class="btn btn-danger"><b>></b></button>
-                                                    <button type="button" id="btn2" onclick="cambiaBoton(3)" style="display: none;" class="btn btn-danger"><b>≥</b></button>
-                                                    <button type="button" id="btn3" onclick="cambiaBoton(4)" style="display: none;" class="btn btn-danger"><b><</b></button>
-                                                    <button type="button" id="btn4" onclick="cambiaBoton(1)" style="display: none;" class="btn btn-danger"><b>≤</b></button>
-                                                </div>
-                                                <input type="text" id="termino2" class="form-control" onkeyup="validaCadena2(value)"  placeholder="Miembro Izquierdo">
-                                                <div class="input-group-btn" id="btnMas" >
-                                                    <button type="button"class="btn btn-primary" onclick="inciarFuncion()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                            <table style="font-size: 18px">
+                                                <tr>
+                                                    <td><input type="number" id="x2" placeholder="a" class="form-control" style="text-align: right"></td>
+                                                    <td><b>X<sup>2</sup>&nbsp;&nbsp;</b></td>
+                                                    <td>
+                                                        &nbsp;&nbsp;
+                                                        <button id="S1" style="margin-bottom: 0px;!important;" onclick="signos(true,false)" class="btn btn-default"><b>+</b></button>
+                                                        <button id="S2" style="display: none;margin-bottom: 0px;!important;" onclick="signos(true,true)" class="btn btn-default"><b>-</b></button>
+                                                        &nbsp;&nbsp;
+                                                    </td>
+                                                    <td><input type="Number" id="x" placeholder="b" class="form-control" style="text-align: right"></td>
+                                                    <td><b>X&nbsp;&nbsp;</b></td>
+                                                    <td>
+                                                        &nbsp;&nbsp;
+                                                        <button id="S3" style="display: none;margin-bottom: 0px;" onclick="signos(false,false)" class="btn btn-default"><b>+</b></button>
+                                                        <button id="S4" style="margin-bottom: 0px;!important;" onclick="signos(false,true)" class="btn btn-default"><b>-</b></button>
+                                                        &nbsp;&nbsp;
+                                                    </td>
+                                                    <td><input type="number" id="c" placeholder="c" class="form-control" style="text-align: right"></td>
+                                                    <td>
+                                                        &nbsp;&nbsp;
+                                                        <button type="button" id="btn1" onclick="cambiaBoton(2)" class="btn btn-danger" style="margin-bottom: 0px"><b>></b></button>
+                                                        <button type="button" id="btn2" onclick="cambiaBoton(3)" style="display: none;margin-bottom: 0px" class="btn btn-danger"><b>≥</b></button>
+                                                        <button type="button" id="btn3" onclick="cambiaBoton(4)" style="display: none;margin-bottom: 0px" class="btn btn-danger"><b><</b></button>
+                                                        <button type="button" id="btn4" onclick="cambiaBoton(1)" style="display: none;margin-bottom: 0px" class="btn btn-danger"><b>≤</b></button>
+                                                        &nbsp;&nbsp;
+                                                    </td>
+                                                    <td><b>&nbsp;&nbsp;0</b></td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="alert alert-info">
+                                                        Factoriza la expresión anterior
+                                                        <li>b = d + e</li>
+                                                        <li>c = (d) (e)</li>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        -->
-                                        <div class="col-xs-12" align="center">
                                             <div class="row">
-                                                <div class="col-sm-10">
-                                                    <table style="font-size: 18px">
-                                                        <tr>
-                                                            <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
-                                                            <td><b>X<sup>2</sup>&nbsp;&nbsp;</b></td>
-                                                            <td>&nbsp;&nbsp;<button style="margin-bottom: 0px" class="btn btn-default"><b>+</b></button>&nbsp;&nbsp;</td>
-                                                            <td><input type="Number" placeholder="b" class="form-control" style="text-align: right"></td>
-                                                            <td><b>X&nbsp;&nbsp;</b></td>
-                                                            <td>&nbsp;&nbsp;<button style="margin-bottom: 0px" class="btn btn-default"><b>+</b></button>&nbsp;&nbsp;</td>
-                                                            <td><input type="number" placeholder="c" class="form-control" style="text-align: right"></td>
-                                                            <td>
-                                                                &nbsp;&nbsp;
-                                                                <button type="button" id="btn1" onclick="cambiaBoton(2)" class="btn btn-danger" style="margin-bottom: 0px"><b>></b></button>
-                                                                <button type="button" id="btn2" onclick="cambiaBoton(3)" style="display: none;margin-bottom: 0px" class="btn btn-danger"><b>≥</b></button>
-                                                                <button type="button" id="btn3" onclick="cambiaBoton(4)" style="display: none;margin-bottom: 0px" class="btn btn-danger"><b><</b></button>
-                                                                <button type="button" id="btn4" onclick="cambiaBoton(1)" style="display: none;margin-bottom: 0px" class="btn btn-danger"><b>≤</b></button>
-                                                                &nbsp;&nbsp;
-                                                            </td>
-                                                            <td><b>&nbsp;&nbsp;0</b></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <button class="btn btn-primary">&nbsp;&nbsp;Listo&nbsp;&nbsp;</button>
+                                                <div class="col-sm-12">
+                                                    <div class="alert alert-warning">
+                                                        <div class="row" id="factor">
+                                                            <div class="col-sm-10">
+                                                                <table style="font-size: 18px">
+                                                                    <tr>
+                                                                        <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
+                                                                        <td id="btns1">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
+                                                                        <td><input type="number" placeholder="d" class="form-control" style="text-align: right"></td>
+                                                                        <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
+                                                                        <td><b>(</b>&nbsp;&nbsp;</td>
+                                                                        <td><b>X</b>&nbsp;&nbsp;</td>
+                                                                        <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
+                                                                        <td><input type="number" placeholder="e" class="form-control" style="text-align: right"></td>
+                                                                        <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
+                                                                        <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-sm-2 text-right">
+                                                                <button class="btn btn-primary">Continuar</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row" style="display: none;">
+                                                            <div class="col-sm-12">
+                                                                <table style="font-size: 18px">
+                                                                    <tr>
+                                                                        <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
+                                                                        <td>&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
+                                                                        <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
+                                                                        <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
+                                                                        <td><b>(</b>&nbsp;&nbsp;</td>
+                                                                        <td><b>X</b>&nbsp;&nbsp;</td>
+                                                                        <td>&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
+                                                                        <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
+                                                                        <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
+                                                                        <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -604,6 +645,7 @@
     //swal("¡Borrado!", "Progreso borrado.", "success");
     var opBtn=1;
     var paso1="#EP1",paso2="#A1",paso3="#botonesPrac1";
+    var signo1='+',signo2='-';
 
     function practicas_desigualdades(op){
         switch (op){
@@ -824,98 +866,66 @@
 
     var Terminos=[];
     var lado=[];
+    
 
-    /**
-     * Realiza las 4 operaciones básicas
-     * @param op según la operación a realizar
-     */
-    function operaciones(op){
-        var a=Number(Terminos[$('#T1').val()-1]);
-        var b=Number(Terminos[$('#T2').val()-1]);
-        console.warn('termino a:',a);
-        console.warn('termino b:',b);
-        if(Terminos[$('#T1').val()-1]!='+' && Terminos[$('#T2').val()-1]!='-'){
-            switch (op){
-                /*Suma de terminos*/
-                case 1:{
-                    if(valida(7)){
-                        if(valida(1)){
-                            if(valida(4)){
-                                if(valida(6)){
-                                    console.warn('suma de terminos:',a+b);
-                                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a+b),lado[$('#T1').val()-1],"");
-                                }else{
-                                    toastr.error('No es posible operar los términos.','Error');
-                                }
-                            }else{
-                                e=Terminos[$('#T1').val()-1].split('x');
-                                f=Terminos[$('#T2').val()-1].split('x');
-                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(e[0])+Number(f[0])),lado[$('#T1').val()-1],"x");
-                            }
-                        }else{toastr.error('No es posible operar los términos.','Error');}
-                    }else{toastr.error('No es posible operar los términos.','Error');}
-                }break;
-                /*Reta de terminos*/
-                case 2:{
-                    if(valida(1) && valida(4)){
-                        console.warn('suma de terminos:',a-b);
-                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a-b),lado[$('#T1').val()-1],"");
-                    }
-                }break;
-                /*Multiplicacion de terminos*/
-                case 3:{
-                    if(valida(3)){
-                        if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
-                            var coeficiente=Terminos[$('#T1').val()-1].split('x');
-                            console.warn('multi de terminos:',coeficiente);
-                            reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(Number(coeficiente[0])*b)*-1,false);
-                        }else{
-                            if(Terminos[$('#T2').val()-1]){
-                                var coeficiente=Terminos[$('#T2').val()-1].split('x');
-                                reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a*Number(coeficiente[0]))*-1,false);
-                            }else{
-
-                            }
-                        }
-                    }
-                }break;
-                /*Division de terminos*/
-                case 4:{
-                    if(valida(7) && valida(11)){
-                        if(valida(3)){
-                            if(Terminos[$('#T1').val()-1].indexOf('x')!=-1){
-                                if(valida(8)){
-                                    var coeficiente=Terminos[$('#T1').val()-1].split('x');
-                                    if(Terminos.length==1){b=0}
-                                    finOperacion(false);
-                                    reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(b/Number(coeficiente[0])),false,"");
-                                }else{toastr.error('No es posible operar los términos.','Error');}
-                            }else{
-                                if(Terminos[$('#T2').val()-1]){
-                                    if(valida(8)){
-                                        if(Terminos.length==1){a=0}
-                                        var coeficiente=Terminos[$('#T2').val()-1].split('x');
-                                        finOperacion(false);
-                                        reduceTerminos($('#T1').val()-1,$('#T2').val()-1,(a/Number(coeficiente[0])),true,"");
-                                    }else{toastr.error('No es posible operar los términos.','Error');}
-
-                                }else{
-                                    toastr.error('No es posible operar los términos.','Error');
-                                }
-                            }
-                        }else{toastr.error('No es posible operar los términos.','Error');}
-                    }else{
-
-                        toastr.error('No es posible operar los términos.','Error');
-                    }
-
-                }break;
-            }
-        }else{toastr.error('No es posible operar los términos.','Error');}
-
+    function verFactorizacion(op) {
+        if(op){
+            $('#factor').show();
+        }else{
+            $('#factor').hide();
+        }
     }
 
+    function signos(btn,valor) {
+        if(btn){
+            if(valor){
+                signo1='+';
+                $('#btns1').html('&nbsp;&nbsp;<b>'+signo1+'</b>&nbsp;&nbsp;');
+                if(signo1=='+' && signo2=='+'){
+                    $('#btns2').html('&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;');
+                }else{
+                    $('#btns2').html('&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;');
+                }
+                $('#S1').show();
+                $('#S2').hide();
+            }else{
+                signo1='-';
+                $('#btns1').html('&nbsp;&nbsp;<b>'+signo1+'</b>&nbsp;&nbsp;');
+                if(signo1=='-' && signo2=='-'){
+                    $('#btns2').html('&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;');
+                }else{
+                    $('#btns2').html('&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;');
+                }
+                $('#S2').show();
+                $('#S1').hide();
+            }
+        }else{
+            if(valor){
+                signo2='+';
+                if(signo1=='+' && signo2=='+'){
+                    $('#btns2').html('&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;');
+                }else{
+                    $('#btns2').html('&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;');
+                }
+                $('#S3').show();
+                $('#S4').hide();
+            }else{
+                signo2='-';
+                if(signo1=='-' && signo2=='-'){
+                    $('#btns2').html('&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;');
+                }else{
+                    $('#btns2').html('&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;');
+                }
+                $('#S4').show();
+                $('#S3').hide();
+            }
+        }
+    }
 
+    function factorizacion() {
+
+    }
+    
     function ComprobarPracticas(op){
         switch (op){
             case 1:{
@@ -977,6 +987,10 @@
         }
     }
 
+    
+    
+    
+    
     /**
      * Función que se ejecuta al arrastrar el elemento.
      **/
