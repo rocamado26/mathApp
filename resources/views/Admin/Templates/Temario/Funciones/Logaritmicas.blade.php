@@ -22,7 +22,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a href="#">
+                    <a onclick="CargaOpciones('/LogaritmosFuncion','','Logaritmos - Función Logarítmica')">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
@@ -38,13 +38,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3">
+        <!--<div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
                     <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
-                        <!-- Imagen en blanco -->
                             <img src="{{asset('img/iconos/funciones/logaritmicas/graficos.png')}}" style="height: 85px; width:120px; overflow: hidden; padding: 5px 10px;  text-align: center;"/>
                         </div>
                         <div class="file-name">
@@ -63,7 +62,6 @@
                     <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
-                            <!-- Imagen en blanco -->
                             <img src="{{asset('img/iconos/funciones/logaritmicas/caracteristicas.png')}}" style="height: 85px; width:120px; overflow: hidden; padding: 5px 10px;  text-align: center;"/>
                         </div>
                         <div class="file-name">
@@ -75,7 +73,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <script>

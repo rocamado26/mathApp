@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins  animated fadeInUpBig">
             <div class="ibox-title">
-                <h5>Logaritmos <small>- Logaritmos</small></h5>
+                <h5>Logaritmos <small>- Función Logaritmica</small></h5>
             </div>
             <div class="ibox-content">
                 <div class="panel-body">
@@ -17,47 +17,48 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong>Logaritmo</strong><br><br>
+                                            <strong>Funciones Logaritmicas</strong><br><br>
                                             <p style="text-align: justify;">
-                                                El logaritmo de un número, en una base dada, es el exponente al cual se debe elevar la base para obtener el número.
+                                                La función logarítmica "básica" es la función, y = log<sub>b</sub> x , donde b > 0 y b ≠ 1.
+                                                <br><br>
+                                                La gráfica de la función logarítmica y = log<sub>10</sub> x se muestra a continuación.
+                                                <br><br>
+                                                <center>
+                                                <img src="img/iconos/funciones/logaritmicas/funcion/teoria.gif" style="width: 50%">
+                                                </center>
+                                                <br><br>
+                                                Observe que la función logarítmica es la inversa de la función exponencial y = b<sup>x</sup> y tiene las siguientes propiedades.
+                                                <br><br>
+                                                1. El dominio es el conjunto de todos los números reales positivos.
+                                                <br><br>
+                                                2. El rango es el conjunto de todos los números reales.
                                                 <br>
-                                                <br>
-                                                <font size="4">
-                                                    <center>
-                                                        log<sub>a</sub> x = y --> a<sup>y</sup> = x
-                                                    </center>
-                                                </font>
+                                                (Ya que la función logarítmica es la inversa de la función exponencial, el dominio de la función logarítmica es el rango de la función exponencial y el rango de la función logarítmica es el dominio de la función exponencial)
+                                                La función es continua y uno-a-uno.
                                                 <br><br>
-                                                Se lee <b>"logaritmo de x en base a es igual a y"</b>, pero debe cumplir con la condición general de que <b>a</b> (la base) sea mayor que cero y  a la vez distinta de uno :
+                                                3. El eje de las y es la asíntota de la gráfica.
                                                 <br><br>
-                                                <font size="4">
-                                                    <center>
-                                                        a > 0
-                                                        <br>
-                                                        a ≠ 1
-                                                    </center>
-                                                </font>
+                                                4. La gráfica intersecta al eje de las x en (1, 0). Esto es, la intercepción en x es 1.
                                                 <br><br>
-                                                Para aclarar el concepto, podríamos decir que logaritmo <b>es solo otra forma de expresar la potenciación</b>, como en este ejemplo:
+                                                La función logarítmica, y = log b x , puede ser cambiada en k unidades verticalmente y h unidades horizontalmente con la ecuación y = log b ( x + h ) + k .
                                                 <br><br>
-                                                <font size="4">
-                                                    <center>
-                                                        3<sup>2</sup> = 9&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;log<sub>3</sub> 9 = 2
-                                                    </center>
-                                                </font>
+                                                <b>Cambio Vertical</b>
                                                 <br><br>
-                                                Que leeremos: logaritmo de 9 en base 3 es igual a 2
+                                                Si k > 0, la gráfica se desplazaría k unidades hacia arriba.
                                                 <br><br>
-                                                Esto significa que una potencia se puede expresar como logaritmo y un logaritmo se puede expresar como potencia.
+                                                Si k < 0, la gráfica se desplazaría k unidades hacia abajo.
                                                 <br><br>
-                                                El gráfico siguiente nos muestra el nombre que recibe cada uno de los elementos de una potencia al expresarla como logaritmo:
+                                                <b>Cambio Horizontal</b>
                                                 <br><br>
+                                                Si h > 0, la gráfica se desplazaría h unidades a la izquierda.
+                                                <br><br>
+                                                Si h < 0, la gráfica se desplazaría h unidades a la derecha.
                                             </p>
-                                            <div class="col-lg-12">
+                                           <!-- <div class="col-lg-12">
                                                 <center>
                                                     <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/teoria.png')}}" width="80%">
                                                 </center>
-                                            </div>
+                                            </div>-->
                                         </div>
                                         <div class="col-md-4">
                                             <div class="row">
@@ -68,11 +69,17 @@
                                                         </div>
                                                         <div class="panel-body">
                                                             <p style="text-align: justify;">
-                                                                Volvamos a la definición de logaritmo:
+                                                                <b>Propiedades y caracteristicas de la función logarítmica</b>
                                                                 <br><br>
-                                                                <b>“exponente al que es necesario elevar una cantidad positiva para que resulte un número determinado”.</b>
+                                                                1) Su dominio es el conjunto de números reales mayors de cero.
                                                                 <br><br>
-                                                                Si lo escribiera como ecuación, corresponde a resolver logb a = x, donde b es la base del logaritmo y a es su argumento, con a y b positivos.
+                                                                2) Su alcance es el conjunto de números reales.
+                                                                <br><br>
+                                                                3) Si 0<a<1, entonces su gráfica tienen comportamiento decreciente en todo su dominio.
+                                                                <br><br>
+                                                                4) Si a>1,entonces su gráfica tiene comportamiento creciente en todo su dominio.
+                                                                <br><br>
+                                                                5) Pasa por el punto (1,0), intercepto en el eje de x es igual a 1, no hay interceptos en el eje de y.
                                                             </p>
                                                         </div>
                                                     </div>
@@ -80,7 +87,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                   <!-- <div class="row">
                                         <div class="col-lg-12">
                                             <p style="text-align: justify;">
                                                 <center><font size="4">Propiedades de los logaritmos</font></center>
@@ -248,14 +255,14 @@
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" aria-expanded="false">Ejemplos prácticos</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Ejemplos</a>
                                     <div class="nav navbar-top-links navbar-right ">
                                         <div class="col-lg-3">
                                             <button type="button"  onclick="tour1()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
@@ -263,7 +270,421 @@
                                     </div>
                                 </h4>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="row" id="tour1-1">
+                                                <div class="col-xs-12">
+                                                    <div align="center">
+                                                        <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(1)">1</button>
+                                                        <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(2)">2</button>
+                                                        <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(3)">3</button>
+                                                        <button class="btn btn-outline btn-primary dim" type="button" onclick="cambioEjemplo(4)">4</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ibox" >
+                                                <div class="ibox-content" id="tour1-2">
+                                                    <div class="row animated fadeInRightBig" id="Ejemplo1">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="row">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <p style="text-align: justify;">
+                                                                                        Encontrar una tabla de valores para <b>fx = log<sub>2</sub> x</b>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Sabemos que la función fx = log<sub>2</sub> x es la inversa de fx = 2<sup>x</sup>
+                                                                        <br><br>
+                                                                        Por lo tanto tenemos que:
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">
+                                                                                    f(x) = 2 <sup>(-3)</sup> = <b><sup>1</sup>/<sub>8</sub></b>
+                                                                                    <br><br>
+                                                                                    f(x) = 2 <sup>(-2)</sup> = <b><sup>1</sup>/<sub>4</sub></b>
+                                                                                    <br><br>
+                                                                                    f(x) = 2 <sup>(-1)</sup> = <b><sup>1</sup>/<sub>2</sub></b>
+                                                                                    <br><br>
+                                                                                    f(x) = 2 <sup>(0)</sup> = <b>1</b>
+                                                                                    <br><br>
+                                                                                    f(x) = 2 <sup>(1)</sup> = <b>2</b>
+                                                                                    <br><br>
+                                                                                    f(x) = 2 <sup>(2)</sup> = <b>4</b>
+                                                                                    <br><br>
+                                                                                    f(x) = 2 <sup>(3)</sup> = <b>8</b>
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Teniendo una tabla de valores como:
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">
+                                                                                    <table border="1 dotted" style="text-align: center;">
+                                                                                        <tr>
+                                                                                            <td>&nbsp;<b>X</b>&nbsp;</td>
+                                                                                            <td>&nbsp;- 3&nbsp;</td>
+                                                                                            <td>&nbsp;- 2&nbsp;</td>
+                                                                                            <td>&nbsp;- 1&nbsp;</td>
+                                                                                            <td>&nbsp;0&nbsp;</td>
+                                                                                            <td>&nbsp;1&nbsp;</td>
+                                                                                            <td>&nbsp;2&nbsp;</td>
+                                                                                            <td>&nbsp;3&nbsp;</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>&nbsp;<b>f(x) = 2<sup>x</sup></b>&nbsp;</td>
+                                                                                            <td>&nbsp;<sup>1</sup>/<sub>8</sub>&nbsp;</td>
+                                                                                            <td>&nbsp;<sup>1</sup>/<sub>4</sub>&nbsp;</td>
+                                                                                            <td>&nbsp;<sup>1</sup>/<sub>2</sub>&nbsp;</td>
+                                                                                            <td>&nbsp;1&nbsp;</td>
+                                                                                            <td>&nbsp;2&nbsp;</td>
+                                                                                            <td>&nbsp;4&nbsp;</td>
+                                                                                            <td>&nbsp;8&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <div class="panel panel-warning">
+                                                                            <div class="panel-heading">
+                                                                                <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                            </div>
+                                                                            <div class="panel-body">
+                                                                                <p style="text-align: justify;">
+                                                                                    <br>
+                                                                                    * Es importante que recuerdes que para conocer los puntos de la gráfica de una función logaritmica
+                                                                                    debes conocer la inversa de esta; para este caso, la función fx = log<sub>2</sub> x es la inversa de fx = 2<sup>x</sup>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row animated fadeInRightBig" style="display: none;" id="Ejemplo2">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="row">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <p style="text-align: justify;">
+                                                                                        Encontrar la tabla de valores y dibujar la gráfica para <b>fx = log<sub>3</sub> x</b>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Sabemos que la función fx = log<sub>3</sub> x es la inversa de fx = 3<sup>x</sup>
+                                                                        <br><br>
+                                                                        Por lo tanto tenemos que:
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">
+                                                                                    f(x) = 3 <sup>(-2)</sup> = <b><sup>1</sup>/<sub>9</sub></b>
+                                                                                    <br><br>
+                                                                                    f(x) = 3 <sup>(-1)</sup> = <b><sup>1</sup>/<sub>3</sub></b>
+                                                                                    <br><br>
+                                                                                    f(x) = 3 <sup>(0)</sup> = <b>1</b>
+                                                                                    <br><br>
+                                                                                    f(x) = 3 <sup>(1)</sup> = <b>3</b>
+                                                                                    <br><br>
+                                                                                    f(x) = 3 <sup>(2)</sup> = <b>9</b>
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Teniendo una tabla de valores como:
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">
+                                                                                    <table border="1 dotted" style="text-align: center;">
+                                                                                        <tr>
+                                                                                            <td>&nbsp;<b>X</b>&nbsp;</td>
+                                                                                            <td>&nbsp;- 2&nbsp;</td>
+                                                                                            <td>&nbsp;- 1&nbsp;</td>
+                                                                                            <td>&nbsp;0&nbsp;</td>
+                                                                                            <td>&nbsp;1&nbsp;</td>
+                                                                                            <td>&nbsp;2&nbsp;</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>&nbsp;<b>f(x) = 2<sup>x</sup></b>&nbsp;</td>
+                                                                                            <td>&nbsp;<sup>1</sup>/<sub>9</sub>&nbsp;</td>
+                                                                                            <td>&nbsp;<sup>1</sup>/<sub>3</sub>&nbsp;</td>
+                                                                                            <td>&nbsp;1&nbsp;</td>
+                                                                                            <td>&nbsp;3&nbsp;</td>
+                                                                                            <td>&nbsp;9&nbsp;</td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Gráfica
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <img src="img/iconos/funciones/logaritmicas/funcion/ejemplo2.gif" style="width: 50%">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <div class="panel panel-warning">
+                                                                            <div class="panel-heading">
+                                                                                <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                            </div>
+                                                                            <div class="panel-body">
+                                                                                <p style="text-align: justify;">
+                                                                                    <br>
+                                                                                    * Es importante que recuerdes que para conocer los puntos de la gráfica de una función logaritmica
+                                                                                    debes conocer la inversa de esta; para este caso, la función fx = log<sub>3</sub> x es la inversa de fx = 3<sup>x</sup>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row animated fadeInRightBig" style="display: none;" id="Ejemplo3">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="row">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <p style="text-align: justify;">
+                                                                                        Determinar el rango y dominio del logaritmo f(x) = log<sub>2</sub>(x + 2)
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">El dominio de <b>f</b> es el conjunto de todos los valores de <b>x</b> tal que:</div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">
+                                                                                    x + 2 > 0
+                                                                                    <br><br>y
+                                                                                    <br><br>
+                                                                                    x > -2
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Es decir, que el dominio de esta función es:
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">(-1,-1)</font><br><br>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Su rango es: (-∞, ∞)
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <div class="panel panel-warning">
+                                                                            <div class="panel-heading">
+                                                                                <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                            </div>
+                                                                            <div class="panel-body">
+                                                                                <p style="text-align: justify;">
+                                                                                    <br>
+                                                                                    En primer lugar, comenzar con las propiedades de la gráfica de la función logarítmica de base de una base,
+                                                                                    <br><br>
+                                                                                    f (x) = log<sub>a</sub> (x), a > 0 y no es igual a 1.
+                                                                                    <br><br>
+                                                                                    El dominio de la función f es el intervalo (0, + ∞). El rango de f es el intervalo (-∞, + ∞).
+                                                                                    <br><br>
+                                                                                    La ∞ significa infinito.
+                                                                                    <br><br>
+                                                                                    La función f tiene una asíntota vertical dada por x = 0. Esta función tiene una x en la intersección (1, 0). f aumenta a medida que aumenta x.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row animated fadeInRightBig" style="display: none;" id="Ejemplo4">
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <div class="row">
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <p style="text-align: justify;">
+                                                                                        Determinar el rango y dominio del logaritmo f(x) = log<sub>2</sub>(x + 3)
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">El dominio de <b>f</b> es el conjunto de todos los valores de <b>x</b> tal que:</div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">
+                                                                                    x + 3 > 0
+                                                                                    <br><br>y
+                                                                                    <br><br>
+                                                                                    x > -3
+                                                                                </font>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Es decir, que el dominio de esta función es:
+                                                                    </div>
+                                                                </div><br>
+                                                                <div class="row">
+                                                                    <div class="well">
+                                                                        <div class="row diff-wrapper">
+                                                                            <div class="col-xs-12" align="center">
+                                                                                <font size="3">(-2,-2)</font><br><br>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        Su rango es: (-∞, ∞)
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-xs-12">
+                                                                        <div class="panel panel-warning">
+                                                                            <div class="panel-heading">
+                                                                                <center><img src="img/iconos/generales/target.png">&nbsp;&nbsp;<font size="4"><i><b>Punto de apoyo</b></i></font></center>
+                                                                            </div>
+                                                                            <div class="panel-body">
+                                                                                <p style="text-align: justify;">
+                                                                                    <br>
+                                                                                    En primer lugar, comenzar con las propiedades de la gráfica de la función logarítmica de base de una base,
+                                                                                    <br><br>
+                                                                                    f (x) = log<sub>a</sub> (x), a > 0 y no es igual a 1.
+                                                                                    <br><br>
+                                                                                    El dominio de la función f es el intervalo (0, + ∞). El rango de f es el intervalo (-∞, + ∞).
+                                                                                    <br><br>
+                                                                                    La ∞ significa infinito.
+                                                                                    <br><br>
+                                                                                    La función f tiene una asíntota vertical dada por x = 0. Esta función tiene una x en la intersección (1, 0). f aumenta a medida que aumenta x.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--cierre de la segunda pestaña del acordeon....-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false">Practica</a>
+                                    <div class="nav navbar-top-links navbar-right ">
+                                        <div class="col-lg-3">
+                                            <button type="button"  onclick="tour1()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
+                                        </div>
+                                    </div>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
                                     <div  class="row">
                                         <div class="col-md-12" id="tour1-1">
@@ -2609,6 +3030,53 @@
         tour.restart();
         // Start the tour
         tour.start();
+    }
+
+    function cambioEjemplo(opc)
+    {
+        switch(opc)
+        {
+            case 1:
+            {
+                $("#Ejemplo2").fadeOut(0);
+                $("#Ejemplo3").fadeOut(0);
+                $("#Ejemplo4").fadeOut(0);
+                $("#Ejemplo1").fadeIn(300);
+                $('#Ejemplo1').removeAttr('class').attr('class', '');
+                $('#Ejemplo1').addClass('animated');
+                $('#Ejemplo1').addClass('fadeInRightBig');
+            }break;
+            case 2:
+            {
+                $("#Ejemplo1").fadeOut(0);
+                $("#Ejemplo3").fadeOut(0);
+                $("#Ejemplo4").fadeOut(0);
+                $("#Ejemplo2").fadeIn(300);
+                $('#Ejemplo2').removeAttr('class').attr('class', '');
+                $('#Ejemplo2').addClass('animated');
+                $('#Ejemplo2').addClass('fadeInRightBig');
+            }break;
+            case 3:
+            {
+                $("#Ejemplo1").fadeOut(0);
+                $("#Ejemplo2").fadeOut(0);
+                $("#Ejemplo4").fadeOut(0);
+                $("#Ejemplo3").fadeIn(300);
+                $('#Ejemplo3').removeAttr('class').attr('class', '');
+                $('#Ejemplo3').addClass('animated');
+                $('#Ejemplo3').addClass('fadeInRightBig');
+            }break;
+            case 4:
+            {
+                $("#Ejemplo1").fadeOut(0);
+                $("#Ejemplo3").fadeOut(0);
+                $("#Ejemplo2").fadeOut(0);
+                $("#Ejemplo4").fadeIn(300);
+                $('#Ejemplo4').removeAttr('class').attr('class', '');
+                $('#Ejemplo4').addClass('animated');
+                $('#Ejemplo4').addClass('fadeInRightBig');
+            }break;
+        }
     }
 
     function toDegrees (angle) {

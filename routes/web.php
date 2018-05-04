@@ -343,6 +343,9 @@ Route::get('/Logaritmos', function () {
     return view('Admin.Templates.Desarrollo.Funciones.Logaritmica.Logaritmos');
 });
 
+Route::get('/LogaritmosFuncion', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Logaritmica.FuncionLogaritmica');
+});
 
 /*
 *	Llamada al area de desarrollo para desigualdades cuadraticas.
