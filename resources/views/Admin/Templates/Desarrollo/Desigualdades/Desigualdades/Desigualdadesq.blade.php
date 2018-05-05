@@ -593,19 +593,19 @@
                                                                     <tr>
                                                                         <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
                                                                         <td id="btns1">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" placeholder="d" class="form-control" style="text-align: right"></td>
+                                                                        <td><input type="number" id="d1" placeholder="d" class="form-control" style="text-align: right"></td>
                                                                         <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
                                                                         <td><b>(</b>&nbsp;&nbsp;</td>
                                                                         <td><b>X</b>&nbsp;&nbsp;</td>
                                                                         <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" placeholder="e" class="form-control" style="text-align: right"></td>
+                                                                        <td><input type="number" id="e1" placeholder="e" class="form-control" style="text-align: right"></td>
                                                                         <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
                                                                         <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
                                                                     </tr>
                                                                 </table>
                                                             </div>
                                                             <div class="col-sm-2 text-right">
-                                                                <button class="btn btn-primary">Continuar</button>
+                                                                <button class="btn btn-primary" onclick="operarFactor()">Continuar</button>
                                                             </div>
                                                         </div>
                                                         <div class="row" style="display: none;">
@@ -873,6 +873,73 @@
             $('#factor').show();
         }else{
             $('#factor').hide();
+        }
+    }
+
+    function operarFactor() {
+        if(valida(1)){
+            if(valida(2)){
+                if(valida(3)){
+                    var a=Number(signo1+$('#x').val());
+                    var b=Number(signo2+$('#c').val());
+                    var c=Number(signo1+$('#d1').val());
+                    var d=0;
+                    if((signo1=='+' && signo2=='+') || (signo1=='-' && signo2=='-')){
+                        d=Number('+'+$('#e1').val());
+                    }else{
+                        d=Number('-'+$('#e1').val());
+                    }
+                    console.warn('numero a:',a);
+                    console.warn('numero b:',b);
+                    console.warn('numero c:',c);
+                    console.warn('numero d:',d);
+                        if((c+d)==a){
+                            console.warn('d es correcto');
+                        }else{
+                            console.warn('d malo');
+                        }
+                    if((c*d)==b){
+                        console.warn('e es correcto');
+                    }else{
+                        console.warn('e es malo');
+                    }
+                }else{
+                    alert('noooo');
+                }
+            }else{
+                alert('nooo');
+            }
+        }else{
+            alert('nooo');
+        }
+    }
+
+    function valida(op){
+        switch (op){
+            case 1:{/*Valida que el campo x y c no esté vacío*/
+                if($('#x').val()!='' && $('#c').val()!=''){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
+            case 2:{/*Valida el coeficiente de x*/
+                if($.isNumeric($('#x').val()) && $.isNumeric($('#c').val())){
+                    console.warn('numero1:',$.isNumeric($('#x').val()));
+                    console.warn('numero2:',$.isNumeric($('#c').val()));
+                    return true;
+                }else{
+                    console.warn('no son numeros');
+                    return false;
+                }
+            }break;
+            case 3:{
+                if($.isNumeric($('#d1').val()) && $.isNumeric($('#e1').val())){
+                    return true;
+                }else{
+                    return false;
+                }
+            }break;
         }
     }
 
