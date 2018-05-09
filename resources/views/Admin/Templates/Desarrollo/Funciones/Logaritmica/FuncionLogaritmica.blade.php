@@ -693,7 +693,7 @@
                                                 <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_coseno('2')">2</button>
                                                 <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_coseno('3')">3</button>
                                                 <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_coseno('4')">4</button>
-                                                <button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_coseno('5')">5</button>
+                                                <!--<button class="btn btn-outline btn-primary dim" type="button" onclick="practicas_coseno('5')">5</button>-->
                                             </div>
                                         </div>
                                     </div>
@@ -709,153 +709,79 @@
                                                                 </div>
                                                                 <div class="panel-body">
                                                                     <div class="col-lg-12">
-                                                                    A continuación se te muestran 6 resultados de logaritmos diferentes, selecciona el que contenga la respuesta equivocada
+                                                                    Completa el cuadro de valores para la función <b>y = log x</b>
                                                                     </div>
                                                                 </div>
                                                             </div><br>
                                                             <div class="row">
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>log<sub>11</sub> 121 = 2</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="1rpe1" value="1" name="1rpe"
-                                                                                   onclick="VerificarEvaluacion1P();">
-                                                                            <label for="1rpe1"><b>Logaritmo 1</b></label>
-                                                                        </div>
-                                                                        <div id="False1P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i
-                                                                                class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>log<sub>13</sub> 169 = 2</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="1rpe2" value="2" name="1rpe"
-                                                                                   onclick="VerificarEvaluacion1P();">
-                                                                            <label for="1rpe2"><b>Logaritmo 2</b></label>
-                                                                        </div>
-                                                                        <div id="False2P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i
-                                                                                class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>log<sub>21</sub> 9260 = 3</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="1rpe3" value="3" name="1rpe"
-                                                                                   onclick="VerificarEvaluacion1P();">
-                                                                            <label for="1rpe3"><b>Logaritmo 3</b></label>
-                                                                        </div>
-                                                                        <div id="True3P1" style="display: none;">
-                                                                    <span class="badge badge-primary"><i
-                                                                                class="fa fa-thumbs-up"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                            </div>
-                                                            <br><br>
-                                                            <div class="row">
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>log<sub>1</sub> 1 = 2</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="1rpe4" value="4" name="1rpe"
-                                                                                   onclick="VerificarEvaluacion1P();">
-                                                                            <label for="1rpe4"><b>Logaritmo 4</b></label>
-                                                                        </div>
-                                                                        <div id="False4P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i
-                                                                                class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>log<sub>12</sub> 144 = 2</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="1rpe5" value="5" name="1rpe"
-                                                                                   onclick="VerificarEvaluacion1P();">
-                                                                            <label for="1rpe5"><b>Logaritmo 5</b></label>
-                                                                        </div>
-                                                                        <div id="False5P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i
-                                                                                class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>log<sub>15</sub> 15 = 1</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="1rpe6" value="6" name="1rpe"
-                                                                                   onclick="VerificarEvaluacion1P();">
-                                                                            <label for="1rpe6"><b>Logaritmo 6</b></label>
-                                                                        </div>
-                                                                        <div id="False6P1" style="display: none;">
-                                                                    <span class="badge badge-danger"><i
-                                                                                class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
+                                                                <div class="col-lg-12">
+                                                                    <table border="1" width="100%" style="text-align: center;">
+                                                                        <tr>
+                                                                            <td>x</td>
+                                                                            <td> -3</td>
+                                                                            <td> -2</td>
+                                                                            <td> -1</td>
+                                                                            <td> 0</td>
+                                                                            <td> 1</td>
+                                                                            <td> 2</td>
+                                                                            <td> 3</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>y = log x</td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="1P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="2P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="3P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="4P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="5P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="6P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="7P1"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-5">
                                                             <div class="row">
                                                                 <div id="CP1" class="col-lg-12 alert alert-warning">
-                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Práctica</b></i></font></center>
-                                                                    <br><br>
-                                                                    <div class="row" style="padding: 10px;">
-                                                                        <p style="text-align: justify;">
-                                                                            <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. ¡OJO! si la respuesta que seleccionaste es la correcta
-                                                                        se te mostrara el procedimiento con el cual se resuelve el ejercicio</font>
-                                                                        </p>
+                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
+                                                                    <br>
+                                                                    <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                                        <img id="pieza4E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/1.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza2E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/100.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza7E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/1000e.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza1E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/1000.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza6E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/100e.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza3E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/10.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza5E1" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/10e.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
                                                                     </div>
+                                                                </div>
+                                                                <br>
+                                                                <div id="botonesPract1" class="row col-lg-12">
+                                                                    <center>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica1();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP1(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                    </center>
                                                                 </div>
                                                                 <div id="EP1" class="col-lg-12 alert alert-success" style="display: none;">
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Primero identificaremos los elementos del logaritmo:
-                                                                        <br><br>
-                                                                        <b>base = 21</b>
-                                                                        <br><br>
-                                                                        <b>Exponente = 3</b>
-                                                                        <br><br>
-                                                                        Por lo tanto:
-                                                                        <br><br>
-                                                                        <b>21<sup>3</sup> = 9061</b>
-                                                                        <br><br>
-                                                                        Lo que es igual a:
-                                                                        <br><br>
-                                                                        <b>Log<sub>21</sub> 9061 = 3</b>
+                                                                        Excelente posicionaste los valores de forma correcta
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -869,21 +795,21 @@
                                                                 </div>
                                                                 <div class="panel-body">
                                                                     <div class="col-lg-12">
-                                                                        A continuación se te muestran 6 resultados de logaritmos diferentes, selecciona el que contenga la respuesta equivocada
+                                                                        ¿Cuál de las siguientes es la gráfica de <b>y = -3 log<sub>2</sub>(x - 4)</b>?
                                                                     </div>
                                                                 </div>
                                                             </div><br>
                                                             <div class="row">
-                                                                <div class="col-lg-3">
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>Log<sub>2</sub> 4 = 2</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio2/1.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="2rpe1" value="1"
                                                                                    name="2rpe"
                                                                                    onclick="VerificarEvaluacion2P();">
-                                                                            <label for="2rpe1"><b>Logaritmo 1</b></label>
+                                                                            <label for="2rpe1"><b>Gráfica 1</b></label>
                                                                         </div>
                                                                         <div id="False1P2" style="display: none;">
                                                                             &nbsp;&nbsp;
@@ -892,39 +818,39 @@
                                                                         </div>
                                                                     </center>
                                                                 </div>
-                                                                <div class="col-lg-1">
+                                                                <div class="col-lg-2">
                                                                     &nbsp;
                                                                 </div>
-                                                                <div class="col-lg-3">
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>Log<sub>2</sub> 8 = 3</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio2/2.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="2rpe2" value="2"
                                                                                    name="2rpe"
                                                                                    onclick="VerificarEvaluacion2P();">
-                                                                            <label for="2rpe2"><b>Logaritmo 2</b></label>
+                                                                            <label for="2rpe2"><b>Gráfica 2</b></label>
                                                                         </div>
-                                                                        <div id="False2P2" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                        <div id="True2P2" style="display: none;">
+                                                                        <span class="badge badge-success"><i
+                                                                                    class="fa fa-thumbs-up"></i></span>
                                                                         </div>
                                                                     </center>
                                                                 </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
+                                                            </div>
+                                                            <br><br>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>Log<sub>26</sub> 17576 = 3</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio2/3.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="2rpe3" value="3"
                                                                                    name="2rpe"
                                                                                    onclick="VerificarEvaluacion2P();">
-                                                                            <label for="2rpe3"><b>Logaritmo 3</b></label>
+                                                                            <label for="2rpe3"><b>Gráfica 3</b></label>
                                                                         </div>
                                                                         <div id="False3P2" style="display: none;">
                                                                         <span class="badge badge-danger"><i
@@ -932,63 +858,23 @@
                                                                         </div>
                                                                     </center>
                                                                 </div>
-                                                            </div>
-                                                            <br><br>
-                                                            <div class="row">
-                                                                <div class="col-lg-3">
+                                                                <div class="col-lg-2">
+                                                                    &nbsp;
+                                                                </div>
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>Log<sub>3</sub> 9 = 2</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio2/4.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="2rpe4" value="4"
                                                                                    name="2rpe"
                                                                                    onclick="VerificarEvaluacion2P();">
-                                                                            <label for="2rpe4"><b>Logaritmo 4</b></label>
+                                                                            <label for="2rpe4"><b>Gráfica 3</b></label>
                                                                         </div>
                                                                         <div id="False4P2" style="display: none;">
                                                                         <span class="badge badge-danger"><i
                                                                                     class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>Log<sub>3</sub> 27 = 3</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="2rpe5" value="5"
-                                                                                   name="2rpe"
-                                                                                   onclick="VerificarEvaluacion2P();">
-                                                                            <label for="2rpe5"><b>Logaritmo 5</b></label>
-                                                                        </div>
-                                                                        <div id="False5P2" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>Log<sub>3</sub> 75 = 4</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="2rpe6" value="6"
-                                                                                   name="2rpe"
-                                                                                   onclick="VerificarEvaluacion2P();">
-                                                                            <label for="2rpe6"><b>Logaritmo 6</b></label>
-                                                                        </div>
-                                                                        <div id="True6P2" style="display: none;">
-                                                                        <span class="badge badge-primary"><i
-                                                                                    class="fa fa-thumbs-up"></i></span>
                                                                         </div>
                                                                     </center>
                                                                 </div>
@@ -1001,8 +887,7 @@
                                                                     <br><br>
                                                                     <div class="row" style="padding: 10px;">
                                                                         <p style="text-align: justify;">
-                                                                            <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. ¡OJO! si la respuesta que seleccionaste es la correcta
-                                                                                se te mostrara el procedimiento con el cual se resuelve el ejercicio</font>
+                                                                            <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. </font>
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -1010,190 +895,88 @@
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Primero identificaremos los elementos del logaritmo:
-                                                                        <br><br>
-                                                                        <b>base = 3</b>
-                                                                        <br><br>
-                                                                        <b>Exponente = 4</b>
-                                                                        <br><br>
-                                                                        Por lo tanto:
-                                                                        <br><br>
-                                                                        <b>3<sup>4</sup> = 81</b>
-                                                                        <br><br>
-                                                                        Lo que es igual a:
-                                                                        <br><br>
-                                                                        <b>Log<sub>3</sub> 81 = 4</b>
+                                                                       Excelente has resuelto el ejercicio, la gráfica que corresponde a la función logaritmica presentada es la que tú elegiste,
+                                                                        ¡Bravo! Sigué así!
                                                                     </p>
                                                                 </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                     <div class="row animated fadeInUpBig" id="pract_desigualdades3" style="display: none;">
-                                                    <div class="col-md-7">
-                                                        <div class="panel panel-default">
-                                                            <div class="panel-heading">
-                                                                <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
-                                                            </div>
-                                                            <div class="panel-body">
+                                                        <div class="col-md-7">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="col-lg-12">
+                                                                        Completa el cuadro de valores para la función <b>y = log<sub>4</sub> (- x )</b>
+                                                                    </div>
+                                                                </div>
+                                                            </div><br>
+                                                            <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    A continuación se te muestran 6 resultados de logaritmos diferentes, selecciona el que contenga la respuesta equivocada
+                                                                    <table border="1" width="100%" style="text-align: center;">
+                                                                        <tr>
+                                                                            <td>x</td>
+                                                                            <td> -1</td>
+                                                                            <td> -2</td>
+                                                                            <td> -4</td>
+                                                                            <td> -8</td>
+                                                                            <td> -16</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>y = log<sub>4</sub> (- x )</td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="1P3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="2P3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="3P3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="4P3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                            <td width="50px">
+                                                                                <div class="contenedor" id="5P3"  ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="background-color: #b9b8b8; border-color: #ddd; width: 50px; height: 34px;"></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
                                                                 </div>
                                                             </div>
-                                                        </div><br>
-                                                        <div class="row">
-                                                            <div class="col-lg-3">
-                                                                <center>
-                                                                    <br>
-                                                                    <h3>Log<sub>9</sub> 81 = 2</h3>
-                                                                    <br>
-                                                                    <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe1" value="1"
-                                                                               name="3rpe"
-                                                                               onclick="VerificarEvaluacion3P();">
-                                                                        <label for="3rpe1"><b>Logaritmo 1</b></label>
-                                                                    </div>
-                                                                    <div id="False1P3" style="display: none;">
-                                                                        &nbsp;&nbsp;
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                    </div>
-                                                                </center>
-                                                            </div>
-                                                            <div class="col-lg-1">
-                                                                &nbsp;
-                                                            </div>
-                                                            <div class="col-lg-3">
-                                                                <center>
-                                                                    <br>
-                                                                    <h3>Log<sub>8</sub> 80 = 2</h3>
-                                                                    <br>
-                                                                    <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe2" value="2"
-                                                                               name="3rpe"
-                                                                               onclick="VerificarEvaluacion3P();">
-                                                                        <label for="3rpe2"><b>Logaritmo 2</b></label>
-                                                                    </div>
-                                                                    <div id="True2P3" style="display: none;">
-                                                                        <span class="badge badge-primary"><i
-                                                                                    class="fa fa-thumbs-up"></i></span>
-                                                                    </div>
-                                                                </center>
-                                                            </div>
-                                                            <div class="col-lg-1">
-                                                                &nbsp;
-                                                            </div>
-                                                            <div class="col-lg-3">
-                                                                <center>
-                                                                    <br>
-                                                                    <h3>Log<sub>7</sub> 49 = 2</h3>
-                                                                    <br>
-                                                                    <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe3" value="3"
-                                                                               name="3rpe"
-                                                                               onclick="VerificarEvaluacion3P();">
-                                                                        <label for="3rpe3"><b>Logaritmo 3</b></label>
-                                                                    </div>
-                                                                    <div id="False3P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                    </div>
-                                                                </center>
-                                                            </div>
                                                         </div>
-                                                        <br><br>
-                                                        <div class="row">
-                                                            <div class="col-lg-3">
-                                                                <center>
+                                                        <div class="col-md-5">
+                                                            <div class="row">
+                                                                <div id="CP3" class="col-lg-12 alert alert-warning">
+                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
                                                                     <br>
-                                                                    <h3>Log<sub>6</sub> 36 = 2</h3>
+                                                                    <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                                                                        <img id="pieza3E3" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/3.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza5E3" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/5.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza2E3" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/2.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza4E3" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/4.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <img id="pieza1E3" src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/1.png')}}" draggable="true" ondragstart="start(event)" ondragend="end(event)"/>&nbsp;&nbsp;
+                                                                        <div style="background-color: #fcf8e3; border-color: #fcf8e3; width: 75px; height: 34px;"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                                <div id="botonesPract3" class="row col-lg-12">
+                                                                    <center>
+                                                                        <button type="button" class="btn btn-primary btn-rounded" onclick="ComprobarPractica3();"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="reestablecerP3(0);"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                                    </center>
+                                                                </div>
+                                                                <div id="EP3" class="col-lg-12 alert alert-success" style="display: none;">
+                                                                    <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
-                                                                    <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe4" value="4"
-                                                                               name="3rpe"
-                                                                               onclick="VerificarEvaluacion3P();">
-                                                                        <label for="3rpe4"><b>Logaritmo 4</b></label>
-                                                                    </div>
-                                                                    <div id="False4P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                    </div>
-                                                                </center>
-                                                            </div>
-                                                            <div class="col-lg-1">
-                                                                &nbsp;
-                                                            </div>
-                                                            <div class="col-lg-3">
-                                                                <center>
-                                                                    <br>
-                                                                    <h3>Log<sub>4</sub> 16 = 2</h3>
-                                                                    <br>
-                                                                    <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe5" value="5"
-                                                                               name="3rpe"
-                                                                               onclick="VerificarEvaluacion3P();">
-                                                                        <label for="3rpe5"><b>Logaritmo 5</b></label>
-                                                                    </div>
-                                                                    <div id="False5P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                    </div>
-                                                                </center>
-                                                            </div>
-                                                            <div class="col-lg-1">
-                                                                &nbsp;
-                                                            </div>
-                                                            <div class="col-lg-3">
-                                                                <center>
-                                                                    <br>
-                                                                    <h3>Log<sub>7</sub> 343 = 3</h3>
-                                                                    <br>
-                                                                    <div class="radio radio-info radio-inline">
-                                                                        <input type="radio" id="3rpe6" value="6"
-                                                                               name="3rpe"
-                                                                               onclick="VerificarEvaluacion3P();">
-                                                                        <label for="3rpe6"><b>Logaritmo 6</b></label>
-                                                                    </div>
-                                                                    <div id="False6P3" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                    </div>
-                                                                </center>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <div class="row">
-                                                            <div id="CP3" class="col-lg-12 alert alert-warning">
-                                                                <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                                <br><br>
-                                                                <div class="row" style="padding: 10px;">
                                                                     <p style="text-align: justify;">
-                                                                        <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. ¡OJO! si la respuesta que seleccionaste es la correcta
-                                                                            se te mostrara el procedimiento con el cual se resuelve el ejercicio</font>
+                                                                        Excelente posicionaste los valores de forma correcta
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <div id="EP3" class="col-lg-12 alert alert-success" style="display: none;">
-                                                                <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                                <br>
-                                                                <p style="text-align: justify;">
-                                                                    Primero identificaremos los elementos del logaritmo:
-                                                                    <br><br>
-                                                                    <b>base = 8</b>
-                                                                    <br><br>
-                                                                    <b>Exponente = 2</b>
-                                                                    <br><br>
-                                                                    Por lo tanto:
-                                                                    <br><br>
-                                                                    <b>8<sup>2</sup> = 64</b>
-                                                                    <br><br>
-                                                                    Lo que es igual a:
-                                                                    <br><br>
-                                                                    <b>Log<sub>8</sub> 64 = 2</b>
-                                                                </p>
-                                                            </div>
                                                         </div>
-                                                    </div>
                                                 </div>
                                                     <div class="row animated fadeInUpBig" id="pract_desigualdades4" style="display: none;">
                                                         <div class="col-md-7">
@@ -1203,64 +986,44 @@
                                                                 </div>
                                                                 <div class="panel-body">
                                                                     <div class="col-lg-12">
-                                                                        Cual es el resultado del exponente para el siguiente logaritmo: <b>Log<sub>2</sub> 64 = ?</b>
+                                                                        ¿Cuál de las siguientes es la gráfica de <b>y = log<sub>3</sub>(x + 5) - 1</b>?
                                                                     </div>
                                                                 </div>
                                                             </div><br>
                                                             <div class="row">
-                                                                <div class="col-lg-3">
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>x = 6</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio4/1.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="4rpe1" value="1"
                                                                                    name="4rpe"
                                                                                    onclick="VerificarEvaluacion4P();">
-                                                                            <label for="4rpe1"><b>Logaritmo 1</b></label>
+                                                                            <label for="4rpe1"><b>Gráfica 1</b></label>
                                                                         </div>
-                                                                        <div id="True1P4" style="display: none;">
+                                                                        <div id="False1P4" style="display: none;">
                                                                             &nbsp;&nbsp;
-                                                                            <span class="badge badge-primary"><i
-                                                                                        class="fa fa-thumbs-up"></i></span>
+                                                                            <span class="badge badge-danger"><i
+                                                                                        class="fa fa-thumbs-down"></i></span>
                                                                         </div>
                                                                     </center>
                                                                 </div>
-                                                                <div class="col-lg-1">
+                                                                <div class="col-lg-2">
                                                                     &nbsp;
                                                                 </div>
-                                                                <div class="col-lg-3">
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>x = 4</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio4/2.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="4rpe2" value="2"
                                                                                    name="4rpe"
                                                                                    onclick="VerificarEvaluacion4P();">
-                                                                            <label for="4rpe2"><b>Logaritmo 2</b></label>
+                                                                            <label for="4rpe2"><b>Gráfica 2</b></label>
                                                                         </div>
                                                                         <div id="False2P4" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 8</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="4rpe3" value="3"
-                                                                                   name="4rpe"
-                                                                                   onclick="VerificarEvaluacion4P();">
-                                                                            <label for="4rpe3"><b>Logaritmo 3</b></label>
-                                                                        </div>
-                                                                        <div id="False3P4" style="display: none;">
                                                                         <span class="badge badge-danger"><i
                                                                                     class="fa fa-thumbs-down"></i></span>
                                                                         </div>
@@ -1269,60 +1032,40 @@
                                                             </div>
                                                             <br><br>
                                                             <div class="row">
-                                                                <div class="col-lg-3">
+                                                                <div class="col-lg-4">
                                                                     <center>
                                                                         <br>
-                                                                        <h3>x = 7</h3>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio4/3.png')}}" width="80%"/>
+                                                                        <br>
+                                                                        <div class="radio radio-info radio-inline">
+                                                                            <input type="radio" id="4rpe3" value="3"
+                                                                                   name="4rpe"
+                                                                                   onclick="VerificarEvaluacion4P();">
+                                                                            <label for="4rpe3"><b>Gráfica 3</b></label>
+                                                                        </div>
+                                                                        <div id="False3P4" style="display: none;">
+                                                                        <span class="badge badge-danger"><i
+                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                        </div>
+                                                                    </center>
+                                                                </div>
+                                                                <div class="col-lg-2">
+                                                                    &nbsp;
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                    <center>
+                                                                        <br>
+                                                                        <img src="{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio4/4.png')}}" width="80%"/>
                                                                         <br>
                                                                         <div class="radio radio-info radio-inline">
                                                                             <input type="radio" id="4rpe4" value="4"
                                                                                    name="4rpe"
                                                                                    onclick="VerificarEvaluacion4P();">
-                                                                            <label for="4rpe4"><b>Logaritmo 4</b></label>
+                                                                            <label for="4rpe4"><b>Gráfica 4</b></label>
                                                                         </div>
-                                                                        <div id="False4P4" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 9</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="4rpe5" value="5"
-                                                                                   name="4rpe"
-                                                                                   onclick="VerificarEvaluacion4P();">
-                                                                            <label for="4rpe5"><b>Logaritmo 5</b></label>
-                                                                        </div>
-                                                                        <div id="False5P4" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 2</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="4rpe6" value="6"
-                                                                                   name="4rpe"
-                                                                                   onclick="VerificarEvaluacion4P();">
-                                                                            <label for="4rpe6"><b>Logaritmo 6</b></label>
-                                                                        </div>
-                                                                        <div id="False6P4" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
+                                                                        <div id="True4P4" style="display: none;">
+                                                                        <span class="badge badge-success"><i
+                                                                                    class="fa fa-thumbs-up"></i></span>
                                                                         </div>
                                                                     </center>
                                                                 </div>
@@ -1335,8 +1078,7 @@
                                                                     <br><br>
                                                                     <div class="row" style="padding: 10px;">
                                                                         <p style="text-align: justify;">
-                                                                            <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. ¡OJO! si la respuesta que seleccionaste es la correcta
-                                                                                se te mostrara el procedimiento con el cual se resuelve el ejercicio</font>
+                                                                            <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. </font>
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -1344,198 +1086,8 @@
                                                                     <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
                                                                     <br>
                                                                     <p style="text-align: justify;">
-                                                                        Primero identificaremos los elementos del logaritmo:
-                                                                        <br><br>
-                                                                        <b>base = 2</b>
-                                                                        <br><br>
-                                                                        <b>Número = 64</b>
-                                                                        <br><br>
-                                                                        <b>Exponente = x</b>
-                                                                        <br><br>
-                                                                        Por lo tanto:
-                                                                        <br><br>
-                                                                        <b>2<sup>x</sup> = 64</b>
-                                                                        <br><br>
-                                                                        Buscamos un exponente para 2 que nos de 64, es decir:
-                                                                        <br><br>
-                                                                        <b>2<sup>6</sup> = 64</b>
-                                                                        <br><br>
-                                                                        Por lo que:
-                                                                        <br><br>
-                                                                        <b>Log<sup>2</sup> 64 = 6</b>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row animated fadeInUpBig" id="pract_desigualdades5" style="display: none;">
-                                                        <div class="col-md-7">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">
-                                                                    <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="col-lg-12">
-                                                                        Encuentra la base para el siguiente logaritmo: <b>Log<sub>?</sub> 125 = 3</b>
-                                                                    </div>
-                                                                </div>
-                                                            </div><br>
-                                                            <div class="row">
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 2</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="5rpe1" value="1"
-                                                                                   name="5rpe"
-                                                                                   onclick="VerificarEvaluacion5P();">
-                                                                            <label for="5rpe1"><b>Base 1</b></label>
-                                                                        </div>
-                                                                        <div id="False1P5" style="display: none;">
-                                                                            &nbsp;&nbsp;
-                                                                            <span class="badge badge-danger"><i
-                                                                                        class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 4</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="5rpe2" value="2"
-                                                                                   name="5rpe"
-                                                                                   onclick="VerificarEvaluacion5P();">
-                                                                            <label for="5rpe2"><b>Base 2</b></label>
-                                                                        </div>
-                                                                        <div id="False2P5" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 1</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="5rpe3" value="3"
-                                                                                   name="5rpe"
-                                                                                   onclick="VerificarEvaluacion5P();">
-                                                                            <label for="5rpe3"><b>Base 3</b></label>
-                                                                        </div>
-                                                                        <div id="False3P5" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                            </div>
-                                                            <br><br>
-                                                            <div class="row">
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 5</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="5rpe4" value="4"
-                                                                                   name="5rpe"
-                                                                                   onclick="VerificarEvaluacion5P();">
-                                                                            <label for="5rpe4"><b>Base 4</b></label>
-                                                                        </div>
-                                                                        <div id="True4P5" style="display: none;">
-                                                                        <span class="badge badge-success"><i
-                                                                                    class="fa fa-thumbs-up"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 8</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="5rpe5" value="5"
-                                                                                   name="5rpe"
-                                                                                   onclick="VerificarEvaluacion5P();">
-                                                                            <label for="5rpe5"><b>Base 5</b></label>
-                                                                        </div>
-                                                                        <div id="False5P5" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                                <div class="col-lg-1">
-                                                                    &nbsp;
-                                                                </div>
-                                                                <div class="col-lg-3">
-                                                                    <center>
-                                                                        <br>
-                                                                        <h3>x = 0</h3>
-                                                                        <br>
-                                                                        <div class="radio radio-info radio-inline">
-                                                                            <input type="radio" id="5rpe6" value="6"
-                                                                                   name="5rpe"
-                                                                                   onclick="VerificarEvaluacion5P();">
-                                                                            <label for="5rpe6"><b>Base 6</b></label>
-                                                                        </div>
-                                                                        <div id="False6P5" style="display: none;">
-                                                                        <span class="badge badge-danger"><i
-                                                                                    class="fa fa-thumbs-down"></i></span>
-                                                                        </div>
-                                                                    </center>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <div class="row">
-                                                                <div id="CP5" class="col-lg-12 alert alert-warning">
-                                                                    <center><img src="img/iconos/generales/pencil-case.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Elementos</b></i></font></center>
-                                                                    <br><br>
-                                                                    <div class="row" style="padding: 10px;">
-                                                                        <p style="text-align: justify;">
-                                                                            <font size="3">Desarrolla el ejercicio en tu cuaderno y selecciona la respuesta correcta. ¡OJO! si la respuesta que seleccionaste es la correcta
-                                                                                se te mostrara el procedimiento con el cual se resuelve el ejercicio</font>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div id="EP5" class="col-lg-12 alert alert-success" style="display: none;">
-                                                                    <center><img src="img/iconos/generales/badge.png">&nbsp;&nbsp;&nbsp;<font size="4"><i><b>Muy Bien</b></i></font></center>
-                                                                    <br>
-                                                                    <p style="text-align: justify;">
-                                                                        Primero identificaremos los elementos del logaritmo:
-                                                                        <br><br>
-                                                                        <b>Base = x</b>
-                                                                        <br><br>
-                                                                        <b>Número = 125</b>
-                                                                        <br><br>
-                                                                        <b>Exponente = 3</b>
-                                                                        <br><br>
-                                                                        Por lo tanto:
-                                                                        <br><br>
-                                                                        <b>x<sup>3</sup> = 125</b>
-                                                                        <br><br>
-                                                                        Buscamos un número que elevado 3 nos de 125, es decir:
-                                                                        <br><br>
-                                                                        <b>5<sup>3</sup> = 125</b>
-                                                                        <br><br>
-                                                                        Lo que es igual a:
-                                                                        <br><br>
-                                                                        <b>Log<sub>5</sub> 125 = 3</b>
+                                                                        Excelente has resuelto el ejercicio, la gráfica que corresponde a la función logaritmica presentada es la que tú elegiste,
+                                                                        ¡Bravo! Sigué así!
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -1734,16 +1286,18 @@
         //comprobarPuzzle();
     }
     ///Para comprobar que las imagenes sean puestas en la posicion correcta
-   /* function verificaPractica1(){
-        if((document.getElementById('P1P1').parentNode.id=='7P1') &&
-            (document.getElementById('P2P1').parentNode.id=='8P1') &&
-            (document.getElementById('P3P1').parentNode.id=='4949P1') &&
-            (document.getElementById('P4P1').parentNode.id=='061P1') &&
-            (document.getElementById('P5P1').parentNode.id=='3822P1'))
+   function ComprobarPractica1(){
+            if((document.getElementById('pieza1E1').parentNode.id=='1P1') &&
+            (document.getElementById('pieza2E1').parentNode.id=='2P1') &&
+            (document.getElementById('pieza3E1').parentNode.id=='3P1') &&
+            (document.getElementById('pieza4E1').parentNode.id=='4P1') &&
+            (document.getElementById('pieza5E1').parentNode.id=='5P1') &&
+            (document.getElementById('pieza6E1').parentNode.id=='6P1') &&
+            (document.getElementById('pieza7E1').parentNode.id=='7P1'))
         {
             swal("Excelente!", "Has colocado los datos correctamente", "success");
             $("#CP1").fadeOut(0);
-            $("#botonesPrac1").fadeOut(0);
+            $("#botonesPract1").fadeOut(0);
             $("#EP1").fadeIn(300);
 
         }
@@ -1770,29 +1324,36 @@
                     "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
                     "<br>"+
                     "<div class='col-md-3'>"+
-                    "<img id='P5P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/3822P1.png')}}'>"+
+                    "<img id='pieza3P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/10.png')}}'>"+
                     "</div>"+
                     "<div class='col-md-3'>"+
-                    "<img id='P3P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/494P1.png')}}'>"+
+                    "<img id='pieza6P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/100e.png')}}'>"+
                     "</div>"+
                     "<div class='col-md-3'>"+
-                    "<img id='P1P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/7P1.png')}}'>"+
+                    "<img id='pieza2P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/100.png')}}'>"+
                     "</div>"+
                     "<div class='col-md-3'>"+
-                    "<img id='P4P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/0618P1.png')}}'>"+
+                    "<img id='pieza1P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/1000.png')}}'>"+
                     "</div>"+
                     "<div class='col-md-3'>"+
-                    "<img id='P2P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/8P1.png')}}'>"+
+                    "<img id='pieza4P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/1.png')}}'>"+
+                    "</div>"+
+                    "<img id='pieza5P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/10e.png')}}'>"+
+                    "</div>"+
+                    "<div class='col-md-3'>"+
+                    "<img id='pieza7P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/1000e.png')}}'>"+
                     "</div>"+
                     "<div class='col-md-3'>"+
                     "<p><br></p>"+
                     "</div>");
                 //Limpiando espacios libres...
+                $("#1P1").html("");
+                $("#2P1").html("");
+                $("#3P1").html("");
+                $("#4P1").html("");
+                $("#5P1").html("");
+                $("#6P1").html("");
                 $("#7P1").html("");
-                $("#8P1").html("");
-                $("#4949P1").html("");
-                $("#061P1").html("");
-                $("#3822P1").html("");
             });//cierre del swal
         }
         else
@@ -1802,32 +1363,39 @@
                 "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
                 "<br>"+
                 "<div class='col-md-3'>"+
-                "<img id='P5P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/3822P1.png')}}'>"+
+                "<img id='pieza3P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/10.png')}}'>"+
                 "</div>"+
                 "<div class='col-md-3'>"+
-                "<img id='P3P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/494P1.png')}}'>"+
+                "<img id='pieza6P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/100e.png')}}'>"+
                 "</div>"+
                 "<div class='col-md-3'>"+
-                "<img id='P1P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/7P1.png')}}'>"+
+                "<img id='pieza2P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/100.png')}}'>"+
                 "</div>"+
                 "<div class='col-md-3'>"+
-                "<img id='P4P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/0618P1.png')}}'>"+
+                "<img id='pieza1P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/1000.png')}}'>"+
                 "</div>"+
                 "<div class='col-md-3'>"+
-                "<img id='P2P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/triangulos/oblicuangulos/seno/practica1/8P1.png')}}'>"+
+                "<img id='pieza4P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/1.png')}}'>"+
+                "</div>"+
+                "<img id='pieza5P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/10e.png')}}'>"+
+                "</div>"+
+                "<div class='col-md-3'>"+
+                "<img id='pieza7P1' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/1000e.png')}}'>"+
                 "</div>"+
                 "<div class='col-md-3'>"+
                 "<p><br></p>"+
                 "</div>");
             //Limpiando espacios libres...
+            $("#1P1").html("");
+            $("#2P1").html("");
+            $("#3P1").html("");
+            $("#4P1").html("");
+            $("#5P1").html("");
+            $("#6P1").html("");
             $("#7P1").html("");
-            $("#8P1").html("");
-            $("#4949P1").html("");
-            $("#061P1").html("");
-            $("#3822P1").html("");
         }
     }
-    function verificaPractica2(){
+    /*function verificaPractica2(){
         if((document.getElementById('P1P2').parentNode.id=='67P2') &&
             (document.getElementById('P2P2').parentNode.id=='36P2') &&
             (document.getElementById('P3P2').parentNode.id=='sen77P2') &&
@@ -2014,7 +1582,7 @@
         }
     }*/
 
-    function VerificarEvaluacion1P() {
+    /*function VerificarEvaluacion1P() {
         if ($('input:radio[name=1rpe]:checked').val() == 1) {
             $("#False2P1").fadeOut(0);
             $("#False4P1").fadeOut(0);
@@ -2093,14 +1661,12 @@
         } else {
             $("#False6P1").fadeOut(0);
         }
-    }
+    }*/
     function VerificarEvaluacion2P() {
         if ($('input:radio[name=2rpe]:checked').val() == 1) {
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#True6P2").fadeOut(0);
             $("#False3P2").fadeOut(0);
+            $("#False4P2").fadeOut(0);
+            $("#True2P2").fadeOut(0);
             $("#False1P2").fadeIn(300);
             toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
             $("#EP2").fadeOut(0);
@@ -2110,23 +1676,19 @@
         }
         if ($('input:radio[name=2rpe]:checked').val() == 2) {
             $("#False1P2").fadeOut(0);
+            $("#False3P2").fadeOut(0);
             $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#True6P2").fadeOut(0);
-            $("#True3P2").fadeOut(0);
-            $("#False2P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-            $("#EP2").fadeOut(0);
-            $("#CP2").fadeIn(300);
+            $("#True").fadeIn(300);
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
+            $("#CP2").fadeOut(0);
+            $("#EP2").fadeIn(300);
         } else {
-            $("#False2P2").fadeOut(0);
+            $("#True2P2").fadeOut(0);
         }
         if ($('input:radio[name=2rpe]:checked').val() == 3) {
             $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
             $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#True6P2").fadeOut(0);
+            $("#True2P2").fadeOut(0);
             $("#False3P2").fadeIn(300);
             toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
             $("#EP2").fadeOut(0);
@@ -2136,10 +1698,8 @@
         }
         if ($('input:radio[name=2rpe]:checked').val() == 4) {
             $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#True6P2").fadeOut(0);
             $("#False3P2").fadeOut(0);
+            $("#True2P2").fadeOut(0);
             $("#False4P2").fadeIn(300);
             toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
             $("#EP2").fadeOut(0);
@@ -2147,34 +1707,8 @@
         } else {
             $("#False4P2").fadeOut(0);
         }
-        if ($('input:radio[name=2rpe]:checked').val() == 5) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#True6P2").fadeOut(0);
-            $("#False3P2").fadeOut(0);
-            $("#False5P2").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-            $("#EP2").fadeOut(0);
-            $("#CP2").fadeIn(300);
-        } else {
-            $("#False5P2").fadeOut(0);
-        }
-        if ($('input:radio[name=2rpe]:checked').val() == 6) {
-            $("#False1P2").fadeOut(0);
-            $("#False2P2").fadeOut(0);
-            $("#False4P2").fadeOut(0);
-            $("#False5P2").fadeOut(0);
-            $("#False3P2").fadeOut(0);
-            $("#True6P2").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-            $("#CP2").fadeOut(0);
-            $("#EP2").fadeIn(300);
-        } else {
-            $("#True6P2").fadeOut(0);
-        }
     }
-    function VerificarEvaluacion3P() {
+    /*function VerificarEvaluacion3P() {
         if ($('input:radio[name=3rpe]:checked').val() == 1) {
             $("#True2P3").fadeOut(0);
             $("#False3P3").fadeOut(0);
@@ -2253,27 +1787,118 @@
         } else {
             $("#False6P3").fadeOut(0);
         }
+    }*/
+
+    function ComprobarPractica3(){
+        if((document.getElementById('pieza1E3').parentNode.id=='1P3') &&
+            (document.getElementById('pieza2E3').parentNode.id=='2P3') &&
+            (document.getElementById('pieza3E3').parentNode.id=='3P3') &&
+            (document.getElementById('pieza4E3').parentNode.id=='4P3') &&
+            (document.getElementById('pieza5E3').parentNode.id=='5P3'))
+        {
+            swal("Excelente!", "Has colocado los datos correctamente", "success");
+            $("#CP3").fadeOut(0);
+            $("#botonesPract3").fadeOut(0);
+            $("#EP3").fadeIn(300);
+
+        }
+        else
+        {
+            swal("Alto!", "Has colocado uno o varios elementos incorrectamente", "error");
+            reestablecerP3(1);
+        }
     }
+    function reestablecerP3(opc){
+        if (opc==0) {
+            swal({
+                title: "¿Esta Seguro?",
+                text: "Al reestablecer se borrará el progreso realizado hasta el momento",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, borrar!",
+                closeOnConfirm: false
+            }, function () {
+                swal("Limpiado!", "El proceso de limpieza se ha realizado con éxito", "success");
+                //Limpiando componentes...
+                $("#CP3").html(""+
+                    "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                    "<br>"+
+                    "<div class='col-md-3'>"+
+                    "<img id='pieza3P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/3.png')}}'>"+
+                    "</div>"+
+                    "<div class='col-md-3'>"+
+                    "<img id='pieza5P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/5.png')}}'>"+
+                    "</div>"+
+                    "<div class='col-md-3'>"+
+                    "<img id='pieza2P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/2.png')}}'>"+
+                    "</div>"+
+                    "<div class='col-md-3'>"+
+                    "<img id='pieza4P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/4.png')}}'>"+
+                    "</div>"+
+                    "<div class='col-md-3'>"+
+                    "<img id='pieza1P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/1.png')}}'>"+
+                    "</div>"+
+                    "<div class='col-md-3'>"+
+                    "<p><br></p>"+
+                    "</div>");
+                //Limpiando espacios libres...
+                $("#1P3").html("");
+                $("#2P3").html("");
+                $("#3P3").html("");
+                $("#4P3").html("");
+                $("#5P3").html("");
+            });//cierre del swal
+        }
+        else
+        {
+            //Limpiando componentes...
+            $("#CP3").html(""+
+                "<center><img src='img/iconos/generales/pencil-case.png'>&nbsp;&nbsp;&nbsp;<font size='4'><i><b>Elementos</b></i></font></center>"+
+                "<br>"+
+                "<div class='col-md-3'>"+
+                "<img id='pieza3P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/3.png')}}'>"+
+                "</div>"+
+                "<div class='col-md-3'>"+
+                "<img id='pieza5P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/5.png')}}'>"+
+                "</div>"+
+                "<div class='col-md-3'>"+
+                "<img id='pieza2P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/2.png')}}'>"+
+                "</div>"+
+                "<div class='col-md-3'>"+
+                "<img id='pieza4P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/4.png')}}'>"+
+                "</div>"+
+                "<div class='col-md-3'>"+
+                "<img id='pieza1P3' draggable='true' ondragstart='start(event)' ondragend='end(event)' src='{{asset('img/iconos/funciones/logaritmicas/logaritmo/ejercicio3/1.png')}}'>"+
+                "</div>"+
+                "<div class='col-md-3'>"+
+                "<p><br></p>"+
+                "</div>");
+            //Limpiando espacios libres...
+            $("#1P3").html("");
+            $("#2P3").html("");
+            $("#3P3").html("");
+            $("#4P3").html("");
+            $("#5P3").html("");
+        }
+    }
+
     function VerificarEvaluacion4P() {
         if ($('input:radio[name=4rpe]:checked').val() == 1) {
             $("#False2P4").fadeOut(0);
             $("#False3P4").fadeOut(0);
-            $("#False4P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True1P4").fadeIn(300);
-            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
-            $("#CP4").fadeOut(0);
-            $("#EP4").fadeIn(300);
+            $("#True4P4").fadeOut(0);
+            $("#False1P4").fadeIn(300);
+            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo siento');
+            $("#EP4").fadeOut(0);
+            $("#CP4").fadeIn(300);
         } else {
-            $("#True1P3").fadeOut(0);
+            $("#False1P4").fadeOut(0);
         }
         if ($('input:radio[name=4rpe]:checked').val() == 2) {
             $("#False3P4").fadeOut(0);
-            $("#False4P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True1P4").fadeOut(0);
+            $("#True4P4").fadeOut(0);
+            $("#False1P4").fadeOut(0);
             $("#False2P4").fadeIn(300);
             toastr.error('Has seleccionado la respuesta incorrecta', 'Lo siento');
             $("#EP4").fadeOut(0);
@@ -2283,10 +1908,8 @@
         }
         if ($('input:radio[name=4rpe]:checked').val() == 3) {
             $("#False2P4").fadeOut(0);
-            $("#False4P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True1P4").fadeOut(0);
+            $("#True4P4").fadeOut(0);
+            $("#False1P4").fadeOut(0);
             $("#False3P4").fadeIn(300);
             toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
             $("#EP4").fadeOut(0);
@@ -2297,44 +1920,16 @@
         if ($('input:radio[name=4rpe]:checked').val() == 4) {
             $("#False2P4").fadeOut(0);
             $("#False3P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True1P4").fadeOut(0);
-            $("#False4P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-            $("#EP4").fadeOut(0);
-            $("#CP4").fadeIn(300);
+            $("#False1P4").fadeOut(0);
+            $("#True4P4").fadeIn(300);
+            toastr.success('Has seleccionado la respuesta correcta, continua practicando', 'Excelente');
+            $("#CP4").fadeOut(0);
+            $("#EP4").fadeIn(300);
         } else {
-            $("#False4P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 5) {
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#False4P4").fadeOut(0);
-            $("#False6P4").fadeOut(0);
-            $("#True1P4").fadeOut(0);
-            $("#False5P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-            $("#EP4").fadeOut(0);
-            $("#CP4").fadeIn(300);
-        } else {
-            $("#False5P4").fadeOut(0);
-        }
-        if ($('input:radio[name=4rpe]:checked').val() == 6) {
-            $("#False2P4").fadeOut(0);
-            $("#False3P4").fadeOut(0);
-            $("#False4P4").fadeOut(0);
-            $("#False5P4").fadeOut(0);
-            $("#True1P4").fadeOut(0);
-            $("#False6P4").fadeIn(300);
-            toastr.error('Has seleccionado la respuesta incorrecta', 'Lo Siento');
-            $("#EP4").fadeOut(0);
-            $("#CP4").fadeIn(300);
-        } else {
-            $("#False6P4").fadeOut(0);
+            $("#True4P4").fadeOut(0);
         }
     }
-    function VerificarEvaluacion5P() {
+   /* function VerificarEvaluacion5P() {
         if ($('input:radio[name=5rpe]:checked').val() == 1) {
             $("#False2P5").fadeOut(0);
             $("#False3P5").fadeOut(0);
@@ -2504,31 +2099,7 @@
         var anguloA=document.getElementById("anguloA").value;
         var anguloB=document.getElementById("anguloB").value;
         var anguloC=document.getElementById("anguloC").value;
-        /*if(anguloA=="" && anguloB=="" && anguloC==""){
-            toastr.error('Debes ingresar al menos valor para un ángulo', 'Lo Siento');
-        }
-        else{
-            if((ladoA!="" && ladoB!="") || (ladoA!="" && ladoC!="") || (ladoB!="" && ladoC!="")){*/
-                if(anguloA==""){
-                    $("#DAA").fadeIn(300);
-                }else{
-                    $("#DAA").fadeOut(0);
-                }
-                if(anguloB==""){
-                    $("#DAB").fadeIn(300);
-                }else{
-                    $("#DAB").fadeOut(0);
-                }
-                if(anguloC==""){
-                    $("#DAC").fadeIn(300);
-                }else{
-                    $("#DAC").fadeOut(0);
-                }
-           /* }
-            else{
-                toastr.error('Debes ingresar al menos valor para 2 lados', 'Lo Siento');
-            }
-        }*/
+
     }
 
     function BuscarLado(opc){
@@ -2953,7 +2524,7 @@
         $("#DAA").fadeOut(0);
         $("#DAB").fadeOut(0);
         $("#DAC").fadeOut(0);
-    }
+    }*/
 
     function tour1() {
         var tour = new Tour({
@@ -3075,6 +2646,46 @@
                 $('#Ejemplo4').removeAttr('class').attr('class', '');
                 $('#Ejemplo4').addClass('animated');
                 $('#Ejemplo4').addClass('fadeInRightBig');
+            }break;
+        }
+    }
+
+    function practicas_coseno(op){
+        switch (op){
+            case '1':{
+                $('#pract_desigualdades1').show();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').hide();
+                $('#pract_desigualdades4').hide();
+                $('#pract_desigualdades5').hide();
+            }break;
+            case '2':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').show();
+                $('#pract_desigualdades3').hide();
+                $('#pract_desigualdades4').hide();
+                $('#pract_desigualdades5').hide();
+            }break;
+            case '3':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').show();
+                $('#pract_desigualdades4').hide();
+                $('#pract_desigualdades5').hide();
+            }break;
+            case '4':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').hide();
+                $('#pract_desigualdades4').show();
+                $('#pract_desigualdades5').hide();
+            }break;
+            case '5':{
+                $('#pract_desigualdades1').hide();
+                $('#pract_desigualdades2').hide();
+                $('#pract_desigualdades3').hide();
+                $('#pract_desigualdades4').hide();
+                $('#pract_desigualdades5').show();
             }break;
         }
     }
