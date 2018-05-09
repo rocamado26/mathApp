@@ -543,10 +543,29 @@
                                         </div>
                                     </div>
                                     <div class="row">
+                                        <div class="col-xs-6">
+                                            <div align="center">
+                                                <div class="radio radio-info radio-inline">
+                                                    <input type="radio" id="RadioX" value="2" name="radioInline" onchange="verFactorizacion(true)" checked>
+                                                    <label for="RadioX"><b>x<sup>2</sup> + bx + c > 0</b></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div align="center">
+                                                <div class="radio radio-info radio-inline">
+                                                    <input type="radio" id="RadioX2" value="2" name="radioInline" onchange="verFactorizacion(false)">
+                                                    <label for="RadioX2"><b>ax<sup>2</sup> + bx + c > 0</b></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
                                         <div class="col-xs-12">
                                             <table style="font-size: 18px">
                                                 <tr>
-                                                    <td><input type="number" id="x2" placeholder="a" class="form-control" style="text-align: right"></td>
+                                                    <td><input type="number" id="x2" placeholder="a" disabled class="form-control" style="text-align: right"></td>
                                                     <td><b>X<sup>2</sup>&nbsp;&nbsp;</b></td>
                                                     <td>
                                                         &nbsp;&nbsp;
@@ -608,22 +627,34 @@
                                                                 <button class="btn btn-primary" onclick="operarFactor()">Continuar</button>
                                                             </div>
                                                         </div>
-                                                        <div class="row" style="display: none;">
+                                                        <div class="row" id="tijera" align="center" style="display: none">
                                                             <div class="col-sm-12">
                                                                 <table style="font-size: 18px">
                                                                     <tr>
-                                                                        <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>(</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>X</b>&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
+                                                                        <td><input type="number" id="T1" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                        <td><input type="number" id="T2" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                        <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
+                                                                        <td><b id="T5"></b></td>
+                                                                        <td>&nbsp;&nbsp;X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type="number" id="T3" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                        <td><input type="number" id="T4" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                        <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
+                                                                        <td><b id="T6"></b>&nbsp;&nbsp;&nbsp;</td>
+                                                                        <td>&nbsp;&nbsp;X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td align="center"><b id="T7"></b> X<sup>2</sup></td>
+                                                                        <td align="center"><b id="T8"></b></td>
+                                                                        <td></td>
+                                                                        <td><b id="T9"></b></td>
+                                                                        <td>&nbsp;&nbsp;X</td>
                                                                     </tr>
                                                                 </table>
+                                                            </div>
+                                                            <div class="col-xs-12">
+                                                                <button onclick="calculoTijera(true)">clic</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -863,16 +894,29 @@
             case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;}break;
         }
     }
-
-    var Terminos=[];
-    var lado=[];
     
 
     function verFactorizacion(op) {
         if(op){
+            $( "#x2" ).prop( "disabled", true );
             $('#factor').show();
+            $('#tijera').hide();
         }else{
+            $( "#x2" ).prop( "disabled", false);
             $('#factor').hide();
+            $('#tijera').show();
+        }
+    }
+    
+    function calculoTijera(op) {
+        if(op){
+            $('#T5').html(Number($('#T3').val())*Number($('#T2').val()));
+            $('#T6').html(Number($('#T1').val())*Number($('#T4').val()));
+            $('#T7').html(Number($('#T1').val())*Number($('#T3').val()));
+            $('#T8').html(Number($('#T2').val())*Number($('#T4').val()));
+            $('#T9').html((Number($('#T3').val())*Number($('#T2').val()))+(Number($('#T1').val())*Number($('#T4').val())));
+        }else{
+
         }
     }
 
