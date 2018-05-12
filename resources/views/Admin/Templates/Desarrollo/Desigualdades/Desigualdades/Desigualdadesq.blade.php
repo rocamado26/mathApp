@@ -562,7 +562,7 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-xs-12">
+                                        <div class="col-xs-12" align="center">
                                             <table style="font-size: 18px">
                                                 <tr>
                                                     <td><input type="number" id="x2" placeholder="a" disabled class="form-control" style="text-align: right"></td>
@@ -594,75 +594,116 @@
                                                 </tr>
                                             </table>
                                             <br>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="alert alert-info">
-                                                        Factoriza la expresión anterior
-                                                        <li>b = d + e</li>
-                                                        <li>c = (d) (e)</li>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-offset-10 col-sm-2">
+                                            <button type="button" id="" class="btn btn-primary btn-rounded" onclick="desigualdad()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                Para resolver el ejercicio debes utilizar le método de tijeras
+                                                <li>b = d + e</li>
+                                                <li>c = (d) (e)</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="alert alert-warning">
+                                                <div class="row" id="factor">
+                                                    <div class="col-sm-12">
+                                                        <table>
+                                                            <tr>
+                                                                <td>Dos números que sumados </td>
+                                                                <td><b>&nbsp;&nbsp;d + e</b></td>
+                                                                <td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>
+                                                                <td><b id="b1">b</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dos números que multiplicados </td>
+                                                                <td><b>&nbsp;&nbsp;(d) (e)</b></td>
+                                                                <td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>
+                                                                <td><b id="c1">c</b></td>
+                                                            </tr>
+                                                        </table>
+                                                        <br>
+                                                        <br>
+                                                    </div>
+                                                    <div class="col-sm-10" align="center">
+                                                        <table style="font-size: 18px">
+                                                            <tr>
+                                                                <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
+                                                                <td id="btns1">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
+                                                                <td><input type="number" id="d1" placeholder="d" class="form-control" style="text-align: right"></td>
+                                                                <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
+                                                                <td><b>(</b>&nbsp;&nbsp;</td>
+                                                                <td><b>X</b>&nbsp;&nbsp;</td>
+                                                                <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
+                                                                <td><input type="number" id="e1" placeholder="e" class="form-control" style="text-align: right"></td>
+                                                                <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
+                                                                <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-sm-2 text-right">
+                                                        <button type="button" id="comprueba1" class="btn btn-primary btn-rounded" onclick="operarFactor()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                    </div>
+                                                    <br>
+                                                    <div class="col-sm-12">
+                                                        <div class="alert alert-success">
+                                                            Excelente
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="alert alert-warning">
-                                                        <div class="row" id="factor">
-                                                            <div class="col-sm-10">
-                                                                <table style="font-size: 18px">
-                                                                    <tr>
-                                                                        <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
-                                                                        <td id="btns1">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" id="d1" placeholder="d" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>(</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>X</b>&nbsp;&nbsp;</td>
-                                                                        <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" id="e1" placeholder="e" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                            <div class="col-sm-2 text-right">
-                                                                <button class="btn btn-primary" onclick="operarFactor()">Continuar</button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row" id="tijera" align="center" style="display: none">
-                                                            <div class="col-sm-12">
-                                                                <table style="font-size: 18px">
-                                                                    <tr>
-                                                                        <td><input type="number" id="T1" placeholder="a" class="form-control" style="text-align: center"></td>
-                                                                        <td><input type="number" id="T2" placeholder="a" class="form-control" style="text-align: center"></td>
-                                                                        <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
-                                                                        <td><b id="T5"></b></td>
-                                                                        <td>&nbsp;&nbsp;X</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><input type="number" id="T3" placeholder="a" class="form-control" style="text-align: center"></td>
-                                                                        <td><input type="number" id="T4" placeholder="a" class="form-control" style="text-align: center"></td>
-                                                                        <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
-                                                                        <td><b id="T6"></b>&nbsp;&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;X</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="center"><b id="T7"></b> X<sup>2</sup></td>
-                                                                        <td align="center"><b id="T8"></b></td>
-                                                                        <td></td>
-                                                                        <td><b id="T9"></b></td>
-                                                                        <td>&nbsp;&nbsp;X</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                            <div class="col-xs-12">
-                                                                <button onclick="calculoTijera(true)">clic</button>
-                                                            </div>
-                                                        </div>
+                                                <div class="row" id="tijera" align="center" style="display: none">
+                                                    <div class="col-sm-10">
+                                                        <table style="font-size: 18px">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <b>ax<sup>2</sup></b>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <b>c</b>
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td><b>bx</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="number" id="T1" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T2" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
+                                                                <td><b id="T5"></b></td>
+                                                                <td>&nbsp;&nbsp;X</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="number" id="T3" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T4" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
+                                                                <td><b id="T6"></b>&nbsp;&nbsp;&nbsp;</td>
+                                                                <td>&nbsp;&nbsp;X</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><b id="T7"></b> X<sup>2</sup></td>
+                                                                <td align="center"><b id="T8"></b></td>
+                                                                <td></td>
+                                                                <td><b id="T9"></b></td>
+                                                                <td>&nbsp;&nbsp;X</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="calculoTijera(true)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <br>
                                 </div>
                             </div>
                         </div>
@@ -881,6 +922,19 @@
         tour.start();
     }
 
+    function desigualdad(){
+        if(signo1=='+'){
+            $('#b1').html($('#x').val());
+        }else{
+            $('#b1').html('-'+$('#x').val());
+        }
+        if((signo1=='+' && signo2=='+') || (signo1=='-' && signo2=='-')){
+            //d=Number('+'+$('#e1').val());
+            $('#c1').html($('#c').val());
+        }else{
+            $('#c1').html('-'+$('#c').val());
+        }
+    }
 
     /**
      * Cambia el boton segun se presione.
