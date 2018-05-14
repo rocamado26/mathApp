@@ -603,12 +603,22 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row">
+                                    <div class="row" id="alert1">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                Para resolver el ejercicio debes encontrar los valores de <b>b</b> y <b>c</b> de la manera siguiente:
+                                                <li>b = d + e</li>
+                                                <li>c = (d) (e)</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="alert2" style="display: none">
                                         <div class="col-xs-12">
                                             <div class="alert alert-info">
                                                 Para resolver el ejercicio debes utilizar le método de tijeras
-                                                <li>b = d + e</li>
-                                                <li>c = (d) (e)</li>
+                                                <li>El producto cruzado de <b>v1</b> y <b>v4</b> más el producto cruzado de <b>v3</b> y <b>v2</b> tiene que dar como resultado el término <b>bx</b></li>
+                                                <li>El producto de <b>v1</b> y <b>v3</b> debe dar el término <b>ax<sup>2</sup></b></li>
+                                                <li>El producto de <b>v2</b> y <b>v4</b> debe dar el término <b>c</b></li>
                                             </div>
                                         </div>
                                     </div>
@@ -645,19 +655,13 @@
                                                                 <td><b>X</b>&nbsp;&nbsp;</td>
                                                                 <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
                                                                 <td><input type="number" id="e1" placeholder="e" class="form-control" style="text-align: right"></td>
-                                                                <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
+                                                                <td>&nbsp;&nbsp;<b id="simbolo1">></b>&nbsp;&nbsp;</td>
                                                                 <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
                                                             </tr>
                                                         </table>
                                                     </div>
                                                     <div class="col-sm-2 text-right">
                                                         <button type="button" id="comprueba1" class="btn btn-primary btn-rounded" onclick="operarFactor()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
-                                                    </div>
-                                                    <br>
-                                                    <div class="col-sm-12">
-                                                        <div class="alert alert-success">
-                                                            Excelente
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="row" id="tijera" align="center" style="display: none">
@@ -675,15 +679,15 @@
                                                                 <td><b>bx</b></td>
                                                             </tr>
                                                             <tr>
-                                                                <td><input type="number" id="T1" placeholder="a" class="form-control" style="text-align: center"></td>
-                                                                <td><input type="number" id="T2" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T1" placeholder="v1" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T2" placeholder="v2" class="form-control" style="text-align: center"></td>
                                                                 <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
                                                                 <td><b id="T5"></b></td>
                                                                 <td>&nbsp;&nbsp;X</td>
                                                             </tr>
                                                             <tr>
-                                                                <td><input type="number" id="T3" placeholder="a" class="form-control" style="text-align: center"></td>
-                                                                <td><input type="number" id="T4" placeholder="a" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T3" placeholder="v3" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T4" placeholder="v4" class="form-control" style="text-align: center"></td>
                                                                 <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
                                                                 <td><b id="T6"></b>&nbsp;&nbsp;&nbsp;</td>
                                                                 <td>&nbsp;&nbsp;X</td>
@@ -701,6 +705,13 @@
                                                         <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="calculoTijera(true)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="alert alert-success" id="respuesta1" style="display: none">
+
                                             </div>
                                         </div>
                                     </div>
@@ -923,6 +934,7 @@
     }
 
     function desigualdad(){
+        $('#respuesta1').hide();
         if(signo1=='+'){
             $('#b1').html($('#x').val());
         }else{
@@ -942,10 +954,10 @@
      */
     function cambiaBoton(op){
         switch(op){
-            case 1:{$('#btn1').show();$('#btn2').hide();$('#btn3').hide();$('#btn4').hide();opBtn=1;}break;
-            case 2:{$('#btn1').hide();$('#btn2').show();$('#btn3').hide();$('#btn4').hide();opBtn=2;}break;
-            case 3:{$('#btn1').hide();$('#btn2').hide();$('#btn3').show();$('#btn4').hide();opBtn=3;}break;
-            case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;}break;
+            case 1:{$('#btn1').show();$('#btn2').hide();$('#btn3').hide();$('#btn4').hide();opBtn=1;$('#simbolo1').html('>');}break;
+            case 2:{$('#btn1').hide();$('#btn2').show();$('#btn3').hide();$('#btn4').hide();opBtn=2;$('#simbolo1').html('≥');}break;
+            case 3:{$('#btn1').hide();$('#btn2').hide();$('#btn3').show();$('#btn4').hide();opBtn=3;$('#simbolo1').html('<');}break;
+            case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;$('#simbolo1').html('≤');}break;
         }
     }
     
@@ -955,10 +967,14 @@
             $( "#x2" ).prop( "disabled", true );
             $('#factor').show();
             $('#tijera').hide();
+            $('#alert2').hide();
+            $('#alert1').show();
         }else{
             $( "#x2" ).prop( "disabled", false);
             $('#factor').hide();
             $('#tijera').show();
+            $('#alert1').hide();
+            $('#alert2').show();
         }
     }
     
@@ -987,28 +1003,31 @@
                     }else{
                         d=Number('-'+$('#e1').val());
                     }
-                    console.warn('numero a:',a);
-                    console.warn('numero b:',b);
-                    console.warn('numero c:',c);
-                    console.warn('numero d:',d);
-                        if((c+d)==a){
-                            console.warn('d es correcto');
-                        }else{
-                            console.warn('d malo');
-                        }
-                    if((c*d)==b){
-                        console.warn('e es correcto');
+                    if(((c+d)==a) && ((c*d)==b)){
+                        $('#respuesta1').show();
+                        console.warn('d es correcto');
+                        toastr.success('Haz resuelto el ejercicio.','Excelente');
+                        $('#respuesta1').html('<p>Para <b>X</b> tenemos dos raice o dos valores que cumplen la desigualdad:</p>El valor de <b>X<sub>1</sub></b> = <b></b> <b>'+(-1*c)+'</b><br>El valor de <b>X<sub>2</sub></b> = <b></b> <b>'+(-1*d)+'</b>')
                     }else{
-                        console.warn('e es malo');
+                        $('#respuesta1').html('');
+                        $('#respuesta1').hide();
+                        toastr.error('Los datos ingresados no cumplen las condiciones.','Error');
                     }
+
                 }else{
-                    alert('noooo');
+                    $('#respuesta1').html('');
+                    $('#respuesta1').hide();
+                    toastr.error('No es posible realizar operación.','Error');
                 }
             }else{
-                alert('nooo');
+                $('#respuesta1').html('');
+                $('#respuesta1').hide();
+                toastr.error('No es posible realizar operación.','Error');
             }
         }else{
-            alert('nooo');
+            $('#respuesta1').html('');
+            $('#respuesta1').hide();
+            toastr.error('No es posible realizar operación.','Error');
         }
     }
 
