@@ -599,7 +599,7 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-offset-10 col-sm-2">
-                                            <button type="button" id="" class="btn btn-primary btn-rounded" onclick="desigualdad()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                            <button type="button" id="" class="btn btn-primary btn-rounded" onclick="desigualdad()"><i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                         </div>
                                     </div>
                                     <br>
@@ -616,7 +616,7 @@
                                         <div class="col-xs-12">
                                             <div class="alert alert-info">
                                                 Para resolver el ejercicio debes utilizar le método de tijeras
-                                                <li>El producto cruzado de <b>v1</b> y <b>v4</b> más el producto cruzado de <b>v3</b> y <b>v2</b> tiene que dar como resultado el término <b>bx</b></li>
+                                                <li>El producto cruzado de <b>v1</b> y <b>v4</b> <b>más</b> el producto cruzado de <b>v3</b> y <b>v2</b> tiene que dar como resultado el término <b>bx</b></li>
                                                 <li>El producto de <b>v1</b> y <b>v3</b> debe dar el término <b>ax<sup>2</sup></b></li>
                                                 <li>El producto de <b>v2</b> y <b>v4</b> debe dar el término <b>c</b></li>
                                             </div>
@@ -711,6 +711,9 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="alert alert-success" id="respuesta1" style="display: none">
+
+                                            </div>
+                                            <div class="alert alert-success" id="respuesta2" style="display: block">
 
                                             </div>
                                         </div>
@@ -946,6 +949,7 @@
         }else{
             $('#c1').html('-'+$('#c').val());
         }
+        toastr.success('Encuentra los valores de "d" y "c" ','¡Listo!');
     }
 
     /**
@@ -979,15 +983,30 @@
     }
     
     function calculoTijera(op) {
-        if(op){
-            $('#T5').html(Number($('#T3').val())*Number($('#T2').val()));
-            $('#T6').html(Number($('#T1').val())*Number($('#T4').val()));
-            $('#T7').html(Number($('#T1').val())*Number($('#T3').val()));
-            $('#T8').html(Number($('#T2').val())*Number($('#T4').val()));
-            $('#T9').html((Number($('#T3').val())*Number($('#T2').val()))+(Number($('#T1').val())*Number($('#T4').val())));
-        }else{
 
+        var t1=Number($('#T1').val())*Number($('#T3').val());
+        var t2=Number($('#T2').val())*Number($('#T4').val());
+        var st=(Number($('#T3').val())*Number($('#T2').val()))+(Number($('#T1').val())*Number($('#T4').val()));
+        var x2=Number($('#x2').val());
+        var xb=Number(signo1+$('#x').val());
+        var c=Number(signo2+$('#c').val());
+
+        console.warn('x2',x2);
+        console.warn('xb',xb);
+        console.warn('c',c);
+
+        $('#T5').html(Number($('#T3').val())*Number($('#T2').val()));
+        $('#T6').html(Number($('#T1').val())*Number($('#T4').val()));
+        $('#T7').html(t1);
+        $('#T8').html(t2);
+        $('#T9').html(st);
+        if(x2==t1 && xb==st && t2==c){
+            toastr.success('Haz resuelto el ejercicio.','Excelente');
+        }else{
+            toastr.error('Los datos ingresados no cumplen las condiciones.','Error');
         }
+
+        //if(){}else{}
     }
 
     function operarFactor() {
