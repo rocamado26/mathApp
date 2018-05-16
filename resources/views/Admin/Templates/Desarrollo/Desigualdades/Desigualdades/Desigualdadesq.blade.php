@@ -543,19 +543,25 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-6">
-                                            <div align="center">
-                                                <div class="radio radio-info radio-inline">
-                                                    <input type="radio" id="RadioX" value="2" name="radioInline" onchange="verFactorizacion(true)" checked>
-                                                    <label for="RadioX"><b>x<sup>2</sup> + bx + c > 0</b></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div align="center">
-                                                <div class="radio radio-info radio-inline">
-                                                    <input type="radio" id="RadioX2" value="2" name="radioInline" onchange="verFactorizacion(false)">
-                                                    <label for="RadioX2"><b>ax<sup>2</sup> + bx + c > 0</b></label>
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-warning">
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div align="center">
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="RadioX" value="2" name="radioInline" onchange="verFactorizacion(true)" checked>
+                                                                <label for="RadioX"><b>x<sup>2</sup> + bx + c > 0</b></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div align="center">
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="RadioX2" value="2" name="radioInline" onchange="verFactorizacion(false)">
+                                                                <label for="RadioX2"><b>ax<sup>2</sup> + bx + c > 0</b></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -597,18 +603,16 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row">
+                                    <div class="row" id="listo">
                                         <div class="col-sm-offset-10 col-sm-2">
-                                            <button type="button" id="" class="btn btn-primary btn-rounded" onclick="desigualdad()"><i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                            <button type="button" class="btn btn-primary btn-rounded" onclick="desigualdad()"><i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row" id="alert1">
                                         <div class="col-xs-12">
                                             <div class="alert alert-info">
-                                                Para resolver el ejercicio debes encontrar los valores de <b>b</b> y <b>c</b> de la manera siguiente:
-                                                <li>b = d + e</li>
-                                                <li>c = (d) (e)</li>
+                                                Para resolver el ejercicio debes encontrar los valores de <b>b</b> y <b>c</b>
                                             </div>
                                         </div>
                                     </div>
@@ -713,8 +717,7 @@
                                             <div class="alert alert-success" id="respuesta1" style="display: none">
 
                                             </div>
-                                            <div class="alert alert-success" id="respuesta2" style="display: block">
-
+                                            <div class="alert alert-success" id="respuesta2" style="display: none">
                                             </div>
                                         </div>
                                     </div>
@@ -973,17 +976,23 @@
             $('#tijera').hide();
             $('#alert2').hide();
             $('#alert1').show();
+            $('#respuesta2').hide();
+            $('#listo').show();
         }else{
             $( "#x2" ).prop( "disabled", false);
             $('#factor').hide();
             $('#tijera').show();
             $('#alert1').hide();
             $('#alert2').show();
+            $('#respuesta1').hide();
+            $('#listo').hide();
         }
     }
     
     function calculoTijera(op) {
 
+        var sig1='';
+        var sig2='';
         var t1=Number($('#T1').val())*Number($('#T3').val());
         var t2=Number($('#T2').val())*Number($('#T4').val());
         var st=(Number($('#T3').val())*Number($('#T2').val()))+(Number($('#T1').val())*Number($('#T4').val()));
@@ -1002,6 +1011,20 @@
         $('#T9').html(st);
         if(x2==t1 && xb==st && t2==c){
             toastr.success('Haz resuelto el ejercicio.','Excelente');
+            if(Math.sign(Number($('#T2').val()))!=-1){
+                sig1='+';
+            }else{
+                sig1='';
+            }
+            if(Math.sign(Number($('#T4').val()))!=-1){
+                sig2='+';
+            }else{
+                sig2='';
+            }
+            $('#respuesta2').show();
+            $('#respuesta2').html('La factorización del trinomio queda de la siguiente manera: <b style="font-size: 18px"> ( '+$('#T1').val()+'x '+(sig1+$('#T2').val())+') ( '+$('#T3').val()+'x '+(sig2+$('#T4').val())+')</b>' +
+                '<br> Iguala cada producto a <b>0</b> y despeja <b>x</b> de cada uno de ellos para encontrar sus valores. <br>' +
+                '');
         }else{
             toastr.error('Los datos ingresados no cumplen las condiciones.','Error');
         }
