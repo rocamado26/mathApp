@@ -543,7 +543,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-12">
+                                        <div class="col-xs-12" id="paso1p">
                                             <div class="alert alert-warning">
                                                 <div class="row">
                                                     <div class="col-xs-6">
@@ -567,7 +567,7 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row">
+                                    <div class="row" id="paso2p">
                                         <div class="col-xs-12" align="center">
                                             <table style="font-size: 18px">
                                                 <tr>
@@ -648,7 +648,7 @@
                                                         <br>
                                                         <br>
                                                     </div>
-                                                    <div class="col-sm-10" align="center">
+                                                    <div id="paso3p" class="col-sm-10" align="center">
                                                         <table style="font-size: 18px">
                                                             <tr>
                                                                 <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
@@ -664,7 +664,7 @@
                                                             </tr>
                                                         </table>
                                                     </div>
-                                                    <div class="col-sm-2 text-right">
+                                                    <div class="col-sm-2 text-right" id="paso4p">
                                                         <button type="button" id="comprueba1" class="btn btn-primary btn-rounded" onclick="operarFactor()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                     </div>
                                                 </div>
@@ -705,8 +705,9 @@
                                                             </tr>
                                                         </table>
                                                     </div>
-                                                    <div class="col-sm-2">
+                                                    <div class="col-sm-2" id="paso6p">
                                                         <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="calculoTijera(true)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="limpiaPractica2()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -770,7 +771,7 @@
             steps: [{
                 element: "#paso1p",
                 title: "Paso 1",
-                content: "Ingresa los datos del miembro derecho y izquierdo de la desigualdad.",
+                content: "Selecciona la forma del trinomio.",
                 placement: "top",
                 backdrop: true,
                 backdropContainer: '#wrapper',
@@ -784,7 +785,7 @@
                 {
                     element: "#paso2p",
                     title: "Paso 2",
-                    content: "Da clic sobre el botón para cambiar el símbolo.",
+                    content: "Ingresa los valores que corresponda a cada coeficiente.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -796,7 +797,7 @@
                     }
                 },
                 {
-                    element: "#btnMas",
+                    element: "#listo",
                     title: "Paso 3",
                     content: "Da clic para iniciar el ejercicio.",
                     placement: "top",
@@ -812,7 +813,7 @@
                 {
                     element: "#paso3p",
                     title: "Paso 4",
-                    content: "Observa el número que se le ha asignado al termino ya que ese te servirá para operar o mover los términos.",
+                    content: "Encuentra los valores para d y e.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -826,7 +827,7 @@
                 {
                     element: "#paso4p",
                     title: "Paso 5",
-                    content: "Caja donde digitaras el número del término a operar o mover de miembro.",
+                    content: "Clic para comprobar el ejercicio.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -838,9 +839,9 @@
                     }
                 },
                 {
-                    element: "#paso5p",
+                    element: "#tijera",
                     title: "Paso 6",
-                    content: "Caja donde digitaras el número del término a operar con el primer término.",
+                    content: "Resuelve el trinomio por medio del método de las tijeras.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -854,21 +855,7 @@
                 {
                     element: "#paso6p",
                     title: "Paso 7",
-                    content: "Botones con las dos operaciones elementales a realizar.",
-                    placement: "top",
-                    backdrop: true,
-                    backdropContainer: '#contenido',
-                    onShown: function (tour){
-                        $('body').addClass('tour-open')
-                    },
-                    onHidden: function (tour){
-                        $('body').removeClass('tour-close')
-                    }
-                },
-                {
-                    element: "#paso7p",
-                    title: "Paso 8",
-                    content: "Botones con las dos operaciones de mover.",
+                    content: "Clic para comprobar el ejercicio.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -940,6 +927,8 @@
     }
 
     function desigualdad(){
+        $('#d1').val('');
+        $('#e1').val('');
         $('#respuesta1').hide();
         if(signo1=='+'){
             $('#b1').html($('#x').val());
@@ -987,6 +976,22 @@
             $('#respuesta1').hide();
             $('#listo').hide();
         }
+    }
+
+    function limpiaPractica2(){
+        $('#x2').val('');
+        $('#x').val('');
+        $('#c').val('');
+        $('#T1').val('');
+        $('#T2').val('');
+        $('#T3').val('');
+        $('#T4').val('');
+        $('#T5').html('');
+        $('#T6').html('');
+        $('#T7').html('');
+        $('#T8').html('');
+        $('#T9').html('');
+        $('#respuesta2').hide();
     }
     
     function calculoTijera(op) {
