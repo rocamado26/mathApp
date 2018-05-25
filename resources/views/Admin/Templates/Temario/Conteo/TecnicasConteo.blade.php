@@ -38,7 +38,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a href="#">
+                    <a onclick="CargaOpciones('/Conteo','','Desarrollo')">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen del tema -->

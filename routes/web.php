@@ -353,3 +353,11 @@ Route::get('/LogaritmosFuncion', function () {
 Route::get('/Desigualdadesq', function () {
     return view('Admin.Templates.Desarrollo.Desigualdades.Desigualdades.Desigualdadesq');
 });
+
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Conteo', function () {
+    return view('Admin.Templates.Desarrollo.Conteo.Factorial.factorialNumero');
+});
