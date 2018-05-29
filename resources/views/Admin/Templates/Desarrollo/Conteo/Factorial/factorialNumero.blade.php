@@ -51,6 +51,21 @@
                                                 </div>
                                             </div>
                                             A este número, <b>6!</b> le llamamos generalmente “<b>6 factorial</b>”, aunque también es correcto decir “<b>factorial de 6</b>”.
+                                            <br>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <b>¿De cuántas formas distintas se pueden sentar 5 personas en un banco?</b><br><br>
+                                                            Sencillamente son las permutaciones de 5 elementos tomados de 5 en 5, y ese número es el factorial de <b>5 => 5! = 2·3·4·5 = 120</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="panel panel-warning">
@@ -60,6 +75,8 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-12">
+                                                            <strong>Propiedad:  n! = n·(n –1)! </strong>
+                                                            <br><br>
                                                             <strong>Factorial de 1 (1!)</strong><br><br>
                                                             1 factorial es, lógicamente, 1, ya que multiplicamos 1 x 1
                                                         </div>
@@ -75,8 +92,8 @@
                                                         <div class="col-md-12">
                                                             <strong>Factorial de 0 (0!)</strong>
                                                             ¿cómo podemos calcular el 0 factorial? Bueno, esto no tiene sentido cuando aplicamos la norma de que hay que
-                                                            multiplicar todos los números enteros positivos entre el 0 y el 1, ya que 0 x 1 es 0.<br>
-                                                            Al final, por convenio se ha acordado que lo más útil es que el 0 factorial sea igual a 1.<br><br> Así que recuerda: 0! = 1
+                                                            multiplicar todos los números enteros positivos entre el <b>0</b> y el <b>1</b>, ya que <b>0 x 1</b> es <b>0</b>.<br>
+                                                            Al final, por convenio se ha acordado que lo más útil es que el 0 factorial sea igual a 1.<br><br> Así que recuerda: <b>0! = 1</b>
                                                         </div>
                                                     </div>
                                                 </div>
