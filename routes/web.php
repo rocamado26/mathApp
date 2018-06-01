@@ -361,3 +361,17 @@ Route::get('/Desigualdadesq', function () {
 Route::get('/Conteo', function () {
     return view('Admin.Templates.Desarrollo.Conteo.Factorial.factorialNumero');
 });
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Permutacion', function () {
+    return view('Admin.Templates.Desarrollo.Conteo.Permutaciones.permutacion');
+});
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Combinacion', function () {
+    return view('Admin.Templates.Desarrollo.Conteo.Combinaciones.combinacion');
+});

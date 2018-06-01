@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins animated fadeInUpBig">
             <div class="ibox-title">
-                <h5>Factorial de un Número</h5>
+                <h5>Permutación</h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -34,24 +34,30 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong>Factorial</strong><br><br>
-                                            La función factorial se representa con un signo de exclamación “ <b>!</b> ” detrás de un número.
-                                            Esta exclamación quiere decir que hay que multiplicar todos los números enteros positivos que hay entre ese número y el 1.
+                                            <strong>¿Cómo defines entonces lo que es una permutación?</strong><br><br>
+
+                                            Una permutación es una combinación en donde el orden es importante. La notación para permutaciones
+                                            es <b>P(n,r)</b> que es la cantidad de permutaciones de “<b>n</b>” elementos si solamente se seleccionan “<b>r</b>”.
+
                                             <br><br>
-                                            Por ejemplo:
-                                            <div class="well">
-                                                <div class="row diff-wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <p style="font-size: 18px; text-align: justify;">
-                                                                <b>&nbsp;&nbsp;&nbsp;6! = 6 x 5  x 4 x 3 x 2 x 1</b>
-                                                            </p>
+                                            Permutaciones con "<b>n</b>" objetos diferentes tomados todos a la vez <br><br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <b>¿Cuántos números de 5 cifras diferentes se puede formar con los dígitos: 1, 2, 3, 4, 5.?</b><br><br>
+                                                            Tenemos 5 números y necesitamos saber cuantas cantidades diferentes de 5 dígitos podemos formar con ellos.
+                                                            <br><br>
+                                                            Entonces tenemos <b><sub>n</sub>P<sub>r</sub></b> = <b><sub>5</sub>P<sub>5</sub></b> = 5 x 4 x 3 x 2 x 1 = <b>120</b>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            A este número, <b>6!</b> le llamamos generalmente “<b>6 factorial</b>”, aunque también es correcto decir “<b>factorial de 6</b>”.
                                             <br>
+                                            Permutaciones con “<b>n</b>” objetos diferentes tomando “<b>r</b>”
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -60,8 +66,10 @@
                                                             <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
                                                         </div>
                                                         <div class="panel-body">
-                                                            <b>¿De cuántas formas distintas se pueden sentar 5 personas en un banco?</b><br><br>
-                                                            Sencillamente son las permutaciones de 5 elementos tomados de 5 en 5, y ese número es el factorial de <b>5 => 5! =1 x 2 x 3 x 4 x 5 = 120</b>
+                                                            <b>¿Cuántos números de 3 cifras diferentes se puede formar con los dígitos: 1, 2, 3, 4, 5.?</b><br><br>
+                                                            Tenemos 5 números y necesitamos saber cuantas cantidades diferentes de 3 dígitos podemos formar con ellos.
+                                                            <br><br>
+                                                            Entonces tenemos <b><sub>n</sub>P<sub>r</sub></b> = <b><sub>5</sub>P<sub>3</sub></b> = 5 x 4 x 3 = <b>60</b>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -75,10 +83,10 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <strong>Propiedad:  n! = n·(n –1)! </strong>
-                                                            <br><br>
-                                                            <strong>Factorial de 1 (1!)</strong><br><br>
-                                                            1 factorial es, lógicamente, 1, ya que multiplicamos 1 x 1
+                                                            <strong>Para <sub>n</sub>P<sub>r</sub>:</strong>
+                                                            <br>
+                                                            En general, el número de permutaciones que pueden formarse tomando grupos "<b>r</b>" de
+                                                            "<b>n</b>" elementos está dado por
                                                         </div>
                                                     </div>
                                                 </div>
@@ -90,10 +98,9 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <strong>Factorial de 0 (0!)</strong>
-                                                            ¿cómo podemos calcular el 0 factorial? Bueno, esto no tiene sentido cuando aplicamos la norma de que hay que
-                                                            multiplicar todos los números enteros positivos entre el <b>0</b> y el <b>1</b>, ya que <b>0 x 1</b> es <b>0</b>.<br>
-                                                            Al final, por convenio se ha acordado que lo más útil es que el 0 factorial sea igual a 1.<br><br> Así que recuerda: <b>0! = 1</b>
+                                                            <strong>Permutación</strong><br>
+                                                            Permutación es una disposición ordenada de un conjunto de objetos; en los cuales hay un primero,
+                                                            un segundo, etc.
                                                         </div>
                                                     </div>
                                                 </div>
