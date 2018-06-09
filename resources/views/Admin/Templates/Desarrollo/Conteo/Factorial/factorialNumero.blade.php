@@ -116,7 +116,42 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                <li>Puedes ingresar un número desde <b>1</b> hasta <b>170</b> del cual deseas encontrar su factorial.</li>
+                                                <li>Si ingresas número con parte decimal serán redondeados al entero más próximo</li>
+                                                <li>Da clic en el botón para realizar el cálculo del factorial.</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="alert alert-warning">
+                                                <div class="row">
+                                                    <div id="paso1" class="col-sm-6">
+                                                        <label><b>Valor de "n":</b></label>
+                                                        <div class="input-group m-b">
+                                                            <input id="factor" type="number" class="form-control" placeholder="n" style="text-align: right">
+                                                            <span class="input-group-addon"><b>&nbsp;!&nbsp;</b></span>
+                                                        </div>
+                                                        <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="imprimeFactor()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="cleanFactor()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                    </div>
+                                                    <div id="cadenaMulti" class="col-sm-6">
+                                                        <label>Operación: </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div id="solicionFactorial" class="alert alert-success">
 
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -126,16 +161,15 @@
         </div>
     </div>
 </div>
-
 <script>
 
     function ayuda_grafica(){
 
         var tour = new Tour({
             steps: [{
-                element: "#config",
+                element: "#paso1",
                 title: "Paso 1",
-                content: "Selecciona la función trigonométrica que desees graficar, luego podrás modificar los valores de la formula general y identifica el efecto que tendrá la gráfica. Dar clic en el botón “Comprobar”",
+                content: "Ingresa el valor de “n”",
                 placement: "top",
                 backdrop: true,
                 backdropContainer: '#contenido',
@@ -147,9 +181,9 @@
                 }
             },
                 {
-                    element: "#graf",
+                    element: "#comprueba2",
                     title: "Paso 2",
-                    content: "Área donde visualizaras el grafico de la función seleccionada.",
+                    content: "Da clic al botón “Comprobar”",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -167,5 +201,43 @@
         // Start the tour
         tour.start();
 
+    }
+
+    function factorialRecursivo (n) {
+        if (n == 0){
+            return 1;
+        }
+        return n * factorialRecursivo (n-1);
+    }
+
+    function imprimeFactor(){
+        var round=Math.round($('#factor').val());
+        if(Number(round)<171){
+            $('#solicionFactorial').html('El factorial de <b>'+round+'</b> es: <b>'+factorialRecursivo(Number(round))+'</b>');
+            imprimeMultiplicacion(round);
+        }else{
+            toastr.error('Fuera de rango de cálculo','Error');
+        }
+    }
+    /**
+     * Crea la cadena de la multiplicación del factorial.
+     * @param n valor de n
+     */
+    function imprimeMultiplicacion(n){
+        var cadena="";
+        for(var i=n;i>0;i--){
+            if(i==1){
+                cadena=cadena+" "+i;
+            }else{
+                cadena=cadena+""+i+" x ";
+            }
+        }
+        $('#cadenaMulti').html('<label>Operación: </label><br><b>'+n+'! </b>= '+cadena);
+    }
+
+    function cleanFactor(){
+        $('#factor').val('');
+        $('#solicionFactorial').html('');
+        $('#cadenaMulti').html('<label>Operación: </label>');
     }
 </script>
