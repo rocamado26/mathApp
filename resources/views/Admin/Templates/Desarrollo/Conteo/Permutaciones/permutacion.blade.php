@@ -123,7 +123,48 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
 
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-warning">
+                                                <div class="row">
+                                                    <div class="col-xs-2">
+                                                        <label>Valor de "n"</label>
+                                                        <input id="n" type="number" class="form-control" placeholder="n" style="text-align: right">
+                                                    </div>
+                                                    <div class="col-xs-1" align="center">
+                                                        <br><br>
+                                                        <b>P</b>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <label>Valor de "r"</label>
+                                                        <input id="r" type="number" class="form-control" placeholder="r" style="text-align: left">
+                                                    </div>
+                                                    <div class="col-xs-1">
+
+                                                    </div>
+                                                    <div class="col-sm-6" id="procesoSolucion">
+                                                        <label for="">Operación: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 1em">
+                                                    <div class="col-xs-12">
+                                                        <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="resulevePermutacion()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="cleanFactor()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-success" id="respuestaPermutacion">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -174,5 +215,42 @@
         // Start the tour
         tour.start();
 
+    }
+
+    function resulevePermutacion(){
+        $('#respuestaPermutacion').html('La permutación <b><sub>'+$('#n').val()+'</sub>P<sub>'+$('#r').val()+'</sub></b> = '+permutacion($('#n').val(),$('#r').val()));
+        imprimeMultiplicacion($('#n').val(),$('#r').val());
+    }
+
+    function permutacion(n,r){
+        if (r == 0){
+            return 1;
+        }
+        return n * permutacion (n-1,r-1);
+    }
+
+    /**
+     * Crea la cadena de la multiplicación del factorial.
+     * @param n valor de n
+     */
+    function imprimeMultiplicacion(n,r){
+        var cadena="";
+        var cont=n;
+        for(var i=r;i>0;i--){
+            if(i==1){
+                cadena=cadena+" "+cont;
+            }else{
+                cadena=cadena+""+cont+" x ";
+            }
+            cont--;
+        }
+        $('#procesoSolucion').html('<label>Operación: </label><br><b><sub>'+n+'</sub>P<sub>'+r+'</sub></b>= '+cadena);
+    }
+
+    function cleanFactor(){
+        $('#n').val('');
+        $('#r').val('');
+        $('#respuestaPermutacion').html('');
+        $('#procesoSolucion').html('<label>Operación: </label>');
     }
 </script>
