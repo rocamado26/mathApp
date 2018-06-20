@@ -365,3 +365,25 @@ Route::get('/Exponenciales', function () {
 Route::get('/FuncionInversa', function () {
     return view('Admin.Templates.Desarrollo.Funciones.Polinomiales.FuncionIversa');
 });
+
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Conteo', function () {
+    return view('Admin.Templates.Desarrollo.Conteo.Factorial.factorialNumero');
+});
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Permutacion', function () {
+    return view('Admin.Templates.Desarrollo.Conteo.Permutaciones.permutacion');
+});
+
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Combinacion', function () {
+    return view('Admin.Templates.Desarrollo.Conteo.Combinaciones.combinacion');
+});

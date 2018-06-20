@@ -543,10 +543,35 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-12">
+                                        <div class="col-xs-12" id="paso1p">
+                                            <div class="alert alert-warning">
+                                                <div class="row">
+                                                    <div class="col-xs-6">
+                                                        <div align="center">
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="RadioX" value="2" name="radioInline" onchange="verFactorizacion(true)" checked>
+                                                                <label for="RadioX"><b>x<sup>2</sup> + bx + c > 0</b></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div align="center">
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="RadioX2" value="2" name="radioInline" onchange="verFactorizacion(false)">
+                                                                <label for="RadioX2"><b>ax<sup>2</sup> + bx + c > 0</b></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="paso2p">
+                                        <div class="col-xs-12" align="center">
                                             <table style="font-size: 18px">
                                                 <tr>
-                                                    <td><input type="number" id="x2" placeholder="a" class="form-control" style="text-align: right"></td>
+                                                    <td><input type="number" id="x2" placeholder="a" disabled class="form-control" style="text-align: right"></td>
                                                     <td><b>X<sup>2</sup>&nbsp;&nbsp;</b></td>
                                                     <td>
                                                         &nbsp;&nbsp;
@@ -575,63 +600,128 @@
                                                 </tr>
                                             </table>
                                             <br>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="alert alert-info">
-                                                        Factoriza la expresión anterior
-                                                        <li>b = d + e</li>
-                                                        <li>c = (d) (e)</li>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="listo">
+                                        <div class="col-sm-offset-10 col-sm-2">
+                                            <button type="button" class="btn btn-primary btn-rounded" onclick="desigualdad()"><i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="alert1">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                Para resolver el ejercicio debes encontrar los valores de <b>b</b> y <b>c</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="alert2" style="display: none">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                Para resolver el ejercicio debes utilizar le método de tijeras
+                                                <li>El producto cruzado de <b>v1</b> y <b>v4</b> <b>más</b> el producto cruzado de <b>v3</b> y <b>v2</b> tiene que dar como resultado el término <b>bx</b></li>
+                                                <li>El producto de <b>v1</b> y <b>v3</b> debe dar el término <b>ax<sup>2</sup></b></li>
+                                                <li>El producto de <b>v2</b> y <b>v4</b> debe dar el término <b>c</b></li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="alert alert-warning">
+                                                <div class="row" id="factor">
+                                                    <div class="col-sm-12">
+                                                        <table>
+                                                            <tr>
+                                                                <td>Dos números que sumados </td>
+                                                                <td><b>&nbsp;&nbsp;d + e</b></td>
+                                                                <td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>
+                                                                <td><b id="b1">b</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Dos números que multiplicados </td>
+                                                                <td><b>&nbsp;&nbsp;(d) (e)</b></td>
+                                                                <td><b>&nbsp;&nbsp;=&nbsp;&nbsp;</b></td>
+                                                                <td><b id="c1">c</b></td>
+                                                            </tr>
+                                                        </table>
+                                                        <br>
+                                                        <br>
+                                                    </div>
+                                                    <div id="paso3p" class="col-sm-10" align="center">
+                                                        <table style="font-size: 18px">
+                                                            <tr>
+                                                                <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
+                                                                <td id="btns1">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
+                                                                <td><input type="number" id="d1" placeholder="d" class="form-control" style="text-align: right"></td>
+                                                                <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
+                                                                <td><b>(</b>&nbsp;&nbsp;</td>
+                                                                <td><b>X</b>&nbsp;&nbsp;</td>
+                                                                <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
+                                                                <td><input type="number" id="e1" placeholder="e" class="form-control" style="text-align: right"></td>
+                                                                <td>&nbsp;&nbsp;<b id="simbolo1">></b>&nbsp;&nbsp;</td>
+                                                                <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-sm-2 text-right" id="paso4p">
+                                                        <button type="button" id="comprueba1" class="btn btn-primary btn-rounded" onclick="operarFactor()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="alert alert-warning">
-                                                        <div class="row" id="factor">
-                                                            <div class="col-sm-10">
-                                                                <table style="font-size: 18px">
-                                                                    <tr>
-                                                                        <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
-                                                                        <td id="btns1">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" id="d1" placeholder="d" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>(</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>X</b>&nbsp;&nbsp;</td>
-                                                                        <td id="btns2">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" id="e1" placeholder="e" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                            <div class="col-sm-2 text-right">
-                                                                <button class="btn btn-primary" onclick="operarFactor()">Continuar</button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row" style="display: none;">
-                                                            <div class="col-sm-12">
-                                                                <table style="font-size: 18px">
-                                                                    <tr>
-                                                                        <td>(&nbsp;&nbsp;<b>X</b> &nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b>)</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>(</b>&nbsp;&nbsp;</td>
-                                                                        <td><b>X</b>&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</td>
-                                                                        <td><input type="number" placeholder="a" class="form-control" style="text-align: right"></td>
-                                                                        <td>&nbsp;&nbsp;<b><</b>&nbsp;&nbsp;</td>
-                                                                        <td>&nbsp;&nbsp;<b>0</b>&nbsp;&nbsp;</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </div>
-                                                        </div>
+                                                <div class="row" id="tijera" align="center" style="display: none">
+                                                    <div class="col-sm-10">
+                                                        <table style="font-size: 18px">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <b>ax<sup>2</sup></b>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <b>c</b>
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td><b>bx</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="number" id="T1" placeholder="v1" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T2" placeholder="v2" class="form-control" style="text-align: center"></td>
+                                                                <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
+                                                                <td><b id="T5"></b></td>
+                                                                <td>&nbsp;&nbsp;X</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="number" id="T3" placeholder="v3" class="form-control" style="text-align: center"></td>
+                                                                <td><input type="number" id="T4" placeholder="v4" class="form-control" style="text-align: center"></td>
+                                                                <td>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;</td>
+                                                                <td><b id="T6"></b>&nbsp;&nbsp;&nbsp;</td>
+                                                                <td>&nbsp;&nbsp;X</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><b id="T7"></b> X<sup>2</sup></td>
+                                                                <td align="center"><b id="T8"></b></td>
+                                                                <td></td>
+                                                                <td><b id="T9"></b></td>
+                                                                <td>&nbsp;&nbsp;X</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-sm-2" id="paso6p">
+                                                        <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="calculoTijera(true)"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="limpiaPractica2()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="alert alert-success" id="respuesta1" style="display: none">
+
+                                            </div>
+                                            <div class="alert alert-success" id="respuesta2" style="display: none">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -681,7 +771,7 @@
             steps: [{
                 element: "#paso1p",
                 title: "Paso 1",
-                content: "Ingresa los datos del miembro derecho y izquierdo de la desigualdad.",
+                content: "Selecciona la forma del trinomio.",
                 placement: "top",
                 backdrop: true,
                 backdropContainer: '#wrapper',
@@ -695,7 +785,7 @@
                 {
                     element: "#paso2p",
                     title: "Paso 2",
-                    content: "Da clic sobre el botón para cambiar el símbolo.",
+                    content: "Ingresa los valores que corresponda a cada coeficiente.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -707,7 +797,7 @@
                     }
                 },
                 {
-                    element: "#btnMas",
+                    element: "#listo",
                     title: "Paso 3",
                     content: "Da clic para iniciar el ejercicio.",
                     placement: "top",
@@ -723,7 +813,7 @@
                 {
                     element: "#paso3p",
                     title: "Paso 4",
-                    content: "Observa el número que se le ha asignado al termino ya que ese te servirá para operar o mover los términos.",
+                    content: "Encuentra los valores para d y e.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -737,7 +827,7 @@
                 {
                     element: "#paso4p",
                     title: "Paso 5",
-                    content: "Caja donde digitaras el número del término a operar o mover de miembro.",
+                    content: "Clic para comprobar el ejercicio.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -749,9 +839,9 @@
                     }
                 },
                 {
-                    element: "#paso5p",
+                    element: "#tijera",
                     title: "Paso 6",
-                    content: "Caja donde digitaras el número del término a operar con el primer término.",
+                    content: "Resuelve el trinomio por medio del método de las tijeras.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -765,21 +855,7 @@
                 {
                     element: "#paso6p",
                     title: "Paso 7",
-                    content: "Botones con las dos operaciones elementales a realizar.",
-                    placement: "top",
-                    backdrop: true,
-                    backdropContainer: '#contenido',
-                    onShown: function (tour){
-                        $('body').addClass('tour-open')
-                    },
-                    onHidden: function (tour){
-                        $('body').removeClass('tour-close')
-                    }
-                },
-                {
-                    element: "#paso7p",
-                    title: "Paso 8",
-                    content: "Botones con las dos operaciones de mover.",
+                    content: "Clic para comprobar el ejercicio.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -850,6 +926,23 @@
         tour.start();
     }
 
+    function desigualdad(){
+        $('#d1').val('');
+        $('#e1').val('');
+        $('#respuesta1').hide();
+        if(signo1=='+'){
+            $('#b1').html($('#x').val());
+        }else{
+            $('#b1').html('-'+$('#x').val());
+        }
+        if((signo1=='+' && signo2=='+') || (signo1=='-' && signo2=='-')){
+            //d=Number('+'+$('#e1').val());
+            $('#c1').html($('#c').val());
+        }else{
+            $('#c1').html('-'+$('#c').val());
+        }
+        toastr.success('Encuentra los valores de "d" y "c" ','¡Listo!');
+    }
 
     /**
      * Cambia el boton segun se presione.
@@ -857,23 +950,91 @@
      */
     function cambiaBoton(op){
         switch(op){
-            case 1:{$('#btn1').show();$('#btn2').hide();$('#btn3').hide();$('#btn4').hide();opBtn=1;}break;
-            case 2:{$('#btn1').hide();$('#btn2').show();$('#btn3').hide();$('#btn4').hide();opBtn=2;}break;
-            case 3:{$('#btn1').hide();$('#btn2').hide();$('#btn3').show();$('#btn4').hide();opBtn=3;}break;
-            case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;}break;
+            case 1:{$('#btn1').show();$('#btn2').hide();$('#btn3').hide();$('#btn4').hide();opBtn=1;$('#simbolo1').html('>');}break;
+            case 2:{$('#btn1').hide();$('#btn2').show();$('#btn3').hide();$('#btn4').hide();opBtn=2;$('#simbolo1').html('≥');}break;
+            case 3:{$('#btn1').hide();$('#btn2').hide();$('#btn3').show();$('#btn4').hide();opBtn=3;$('#simbolo1').html('<');}break;
+            case 4:{$('#btn1').hide();$('#btn2').hide();$('#btn3').hide();$('#btn4').show();opBtn=4;$('#simbolo1').html('≤');}break;
         }
     }
-
-    var Terminos=[];
-    var lado=[];
     
 
     function verFactorizacion(op) {
         if(op){
+            $( "#x2" ).prop( "disabled", true );
             $('#factor').show();
+            $('#tijera').hide();
+            $('#alert2').hide();
+            $('#alert1').show();
+            $('#respuesta2').hide();
+            $('#listo').show();
         }else{
+            $( "#x2" ).prop( "disabled", false);
             $('#factor').hide();
+            $('#tijera').show();
+            $('#alert1').hide();
+            $('#alert2').show();
+            $('#respuesta1').hide();
+            $('#listo').hide();
         }
+    }
+
+    function limpiaPractica2(){
+        $('#x2').val('');
+        $('#x').val('');
+        $('#c').val('');
+        $('#T1').val('');
+        $('#T2').val('');
+        $('#T3').val('');
+        $('#T4').val('');
+        $('#T5').html('');
+        $('#T6').html('');
+        $('#T7').html('');
+        $('#T8').html('');
+        $('#T9').html('');
+        $('#respuesta2').hide();
+    }
+    
+    function calculoTijera(op) {
+
+        var sig1='';
+        var sig2='';
+        var t1=Number($('#T1').val())*Number($('#T3').val());
+        var t2=Number($('#T2').val())*Number($('#T4').val());
+        var st=(Number($('#T3').val())*Number($('#T2').val()))+(Number($('#T1').val())*Number($('#T4').val()));
+        var x2=Number($('#x2').val());
+        var xb=Number(signo1+$('#x').val());
+        var c=Number(signo2+$('#c').val());
+
+        console.warn('x2',x2);
+        console.warn('xb',xb);
+        console.warn('c',c);
+
+        $('#T5').html(Number($('#T3').val())*Number($('#T2').val()));
+        $('#T6').html(Number($('#T1').val())*Number($('#T4').val()));
+        $('#T7').html(t1);
+        $('#T8').html(t2);
+        $('#T9').html(st);
+        if(x2==t1 && xb==st && t2==c){
+            toastr.success('Haz resuelto el ejercicio.','Excelente');
+            if(Math.sign(Number($('#T2').val()))!=-1){
+                sig1='+';
+            }else{
+                sig1='';
+            }
+            if(Math.sign(Number($('#T4').val()))!=-1){
+                sig2='+';
+            }else{
+                sig2='';
+            }
+            $('#respuesta2').show();
+            $('#respuesta2').html('La factorización del trinomio queda de la siguiente manera: <b style="font-size: 18px"> ( '+$('#T1').val()+'x '+(sig1+$('#T2').val())+') ( '+$('#T3').val()+'x '+(sig2+$('#T4').val())+')</b>' +
+                '<br> Iguala cada producto a <b>0</b> y despeja <b>x</b> de cada uno de ellos para encontrar sus valores. <br>' +
+                '');
+        }else{
+            toastr.error('Los datos ingresados no cumplen las condiciones.','Error');
+        }
+
+        //if(){}else{}
     }
 
     function operarFactor() {
@@ -889,28 +1050,31 @@
                     }else{
                         d=Number('-'+$('#e1').val());
                     }
-                    console.warn('numero a:',a);
-                    console.warn('numero b:',b);
-                    console.warn('numero c:',c);
-                    console.warn('numero d:',d);
-                        if((c+d)==a){
-                            console.warn('d es correcto');
-                        }else{
-                            console.warn('d malo');
-                        }
-                    if((c*d)==b){
-                        console.warn('e es correcto');
+                    if(((c+d)==a) && ((c*d)==b)){
+                        $('#respuesta1').show();
+                        console.warn('d es correcto');
+                        toastr.success('Haz resuelto el ejercicio.','Excelente');
+                        $('#respuesta1').html('<p>Para <b>X</b> tenemos dos raice o dos valores que cumplen la desigualdad:</p>El valor de <b>X<sub>1</sub></b> = <b></b> <b>'+(-1*c)+'</b><br>El valor de <b>X<sub>2</sub></b> = <b></b> <b>'+(-1*d)+'</b>')
                     }else{
-                        console.warn('e es malo');
+                        $('#respuesta1').html('');
+                        $('#respuesta1').hide();
+                        toastr.error('Los datos ingresados no cumplen las condiciones.','Error');
                     }
+
                 }else{
-                    alert('noooo');
+                    $('#respuesta1').html('');
+                    $('#respuesta1').hide();
+                    toastr.error('No es posible realizar operación.','Error');
                 }
             }else{
-                alert('nooo');
+                $('#respuesta1').html('');
+                $('#respuesta1').hide();
+                toastr.error('No es posible realizar operación.','Error');
             }
         }else{
-            alert('nooo');
+            $('#respuesta1').html('');
+            $('#respuesta1').hide();
+            toastr.error('No es posible realizar operación.','Error');
         }
     }
 
