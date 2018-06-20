@@ -715,7 +715,7 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <table border="1" width="100%" style="text-align: center;">
+                                                                    <table border="1" width="100%" style="text-align: center;"  bordercolor="#19aa8d">
                                                                         <tr>
                                                                             <td>x</td>
                                                                             <td> -3</td>
@@ -916,7 +916,7 @@
                                                             </div><br>
                                                             <div class="row">
                                                                 <div class="col-lg-12">
-                                                                    <table border="1" width="100%" style="text-align: center;">
+                                                                    <table border="1" width="100%" style="text-align: center;"  bordercolor="#19aa8d">
                                                                         <tr>
                                                                             <td>x</td>
                                                                             <td> -1</td>
