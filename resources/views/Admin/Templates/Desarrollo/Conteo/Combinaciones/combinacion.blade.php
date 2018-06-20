@@ -34,9 +34,8 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <strong>Factorial</strong><br><br>
-                                            La función factorial se representa con un signo de exclamación “ <b>!</b> ” detrás de un número.
-                                            Esta exclamación quiere decir que hay que multiplicar todos los números enteros positivos que hay entre ese número y el 1.
+                                            <strong>Combinaciones</strong><br><br>
+                                            Para las combinaciones, el orden no importa. ¿Cómo cambia esto el número de resultados? El número de permutaciones que se vuelven la misma cuando el orden ya no importa es el número de maneras distintas de arreglar objetos en un grupo.
                                             <br><br>
                                             Por ejemplo:
                                             <div class="well">
@@ -75,10 +74,27 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <strong>Propiedad:  n! = n·(n –1)! </strong>
+                                                            <strong>En general</strong>
                                                             <br><br>
-                                                            <strong>Factorial de 1 (1!)</strong><br><br>
-                                                            1 factorial es, lógicamente, 1, ya que multiplicamos 1 x 1
+                                                            La fórmula del número de combinaciones de <b>n</b> objetos cuando se toma <b>r</b> es:
+                                                            <br><br>
+                                                            <b>
+                                                            <table>
+                                                                <tr>
+                                                                    <td rowspan="3"><sub>n</sub>C<sub>r</sub></td>
+                                                                    <td></td>
+                                                                    <td align="center">n!</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;=&nbsp;</td>
+                                                                    <td>-----------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">r! (n-r)!</td>
+                                                                </tr>
+                                                            </table>
+                                                            </b>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -90,10 +106,8 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <strong>Factorial de 0 (0!)</strong>
-                                                            ¿cómo podemos calcular el 0 factorial? Bueno, esto no tiene sentido cuando aplicamos la norma de que hay que
-                                                            multiplicar todos los números enteros positivos entre el <b>0</b> y el <b>1</b>, ya que <b>0 x 1</b> es <b>0</b>.<br>
-                                                            Al final, por convenio se ha acordado que lo más útil es que el 0 factorial sea igual a 1.<br><br> Así que recuerda: <b>0! = 1</b>
+                                                            <strong></strong>
+                                                            En una combinación no importa el orden.
                                                         </div>
                                                     </div>
                                                 </div>
@@ -116,7 +130,48 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
                                 <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-info">
+                                                <li>Si ingresas números con parte decimal serán redondeados al entero más próximo.</li>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-warning">
+                                                <div class="row" id="paso1">
+                                                    <div class="col-xs-2">
+                                                        <label>Valor de "n"</label>
+                                                        <input id="n" type="number" class="form-control" placeholder="n" style="text-align: right">
+                                                    </div>
+                                                    <div class="col-xs-1" align="center">
+                                                        <br><br>
+                                                        <b>C</b>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <label>Valor de "r"</label>
+                                                        <input id="r" type="number" class="form-control" placeholder="r" style="text-align: left">
+                                                    </div>
+                                                    <div class="col-xs-1">
 
+                                                    </div>
+                                                    <div class="col-sm-6" id="procesoSolucion">
+                                                        <label for="">Operación: </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding-top: 1em" id="paso2">
+                                                    <div class="col-xs-12">
+                                                        <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="resulevePermutacion()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
+                                                        <button type="button" class="btn btn-danger btn-rounded" onclick="cleanFactor()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="alert alert-success" id="respuestaPermutacion">
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -128,14 +183,13 @@
 </div>
 
 <script>
-
     function ayuda_grafica(){
 
         var tour = new Tour({
             steps: [{
-                element: "#config",
+                element: "#paso1",
                 title: "Paso 1",
-                content: "Selecciona la función trigonométrica que desees graficar, luego podrás modificar los valores de la formula general y identifica el efecto que tendrá la gráfica. Dar clic en el botón “Comprobar”",
+                content: "Ingresa los valores para “n” y “r”.",
                 placement: "top",
                 backdrop: true,
                 backdropContainer: '#contenido',
@@ -147,9 +201,9 @@
                 }
             },
                 {
-                    element: "#graf",
+                    element: "#paso2",
                     title: "Paso 2",
-                    content: "Área donde visualizaras el grafico de la función seleccionada.",
+                    content: "Da clic al botón “Comprobar”.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -167,5 +221,56 @@
         // Start the tour
         tour.start();
 
+    }
+
+    function resulevePermutacion(){
+        if(Number($('#n').val())>=Number($('#r').val())){
+            var n=Math.round($('#n').val());
+            var r=Math.round($('#r').val());
+            $('#respuestaPermutacion').html('La combinación <b><sub>'+n+'</sub>C<sub>'+r+'</sub></b> = '+(permutacion(n,r)/factorialRecursivo(r)));
+            imprimeMultiplicacion(n,r);
+        }else{
+            toastr.error('El valor de "n" es menor a "r"','Error');
+        }
+
+    }
+
+    function permutacion(n,r){
+        if (r == 0){
+            return 1;
+        }
+        return n * permutacion (n-1,r-1);
+    }
+
+    function factorialRecursivo (n) {
+        if (n == 0){
+            return 1;
+        }
+        return n * factorialRecursivo (n-1);
+    }
+
+    /**
+     * Crea la cadena de la multiplicación del factorial.
+     * @param n valor de n
+     */
+    function imprimeMultiplicacion(n,r){
+        var cadena="";
+        var cont=n;
+        for(var i=r;i>0;i--){
+            if(i==1){
+                cadena=cadena+" "+cont;
+            }else{
+                cadena=cadena+""+cont+" x ";
+            }
+            cont--;
+        }
+        $('#procesoSolucion').html('<label>Operación: </label><br><b><sub>'+n+'</sub>C<sub>'+r+'</sub></b>= '+cadena);
+    }
+
+    function cleanFactor(){
+        $('#n').val('');
+        $('#r').val('');
+        $('#respuestaPermutacion').html('');
+        $('#procesoSolucion').html('<label>Operación: </label>');
     }
 </script>

@@ -85,8 +85,11 @@
                                                         <div class="col-md-12">
                                                             <strong>Para <sub>n</sub>P<sub>r</sub>:</strong>
                                                             <br>
-                                                            En general, el número de permutaciones que pueden formarse tomando grupos "<b>r</b>" de
-                                                            "<b>n</b>" elementos está dado por
+                                                            <p style="text-align: justify">
+                                                                En general, el número de permutaciones que pueden formarse tomando grupos "<b>r</b>" de
+                                                                "<b>n</b>" elementos está dado por: <br><br>
+                                                                <b><sub>n</sub>P<sub>r</sub> =  n (n – 1)(n – 2). . . (n – r + 1)</b>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -99,8 +102,10 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <strong>Permutación</strong><br>
-                                                            Permutación es una disposición ordenada de un conjunto de objetos; en los cuales hay un primero,
-                                                            un segundo, etc.
+                                                            <p style="text-align: justify">
+                                                                Permutación es una disposición ordenada de un conjunto de objetos; en los cuales hay un primero,
+                                                                un segundo, etc.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -126,12 +131,12 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="alert alert-info">
-
+                                                <li>Si ingresas números con parte decimal serán redondeados al entero más próximo.</li>
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="alert alert-warning">
-                                                <div class="row">
+                                                <div class="row" id="paso1">
                                                     <div class="col-xs-2">
                                                         <label>Valor de "n"</label>
                                                         <input id="n" type="number" class="form-control" placeholder="n" style="text-align: right">
@@ -151,7 +156,7 @@
                                                         <label for="">Operación: </label>
                                                     </div>
                                                 </div>
-                                                <div class="row" style="padding-top: 1em">
+                                                <div class="row" style="padding-top: 1em" id="paso2">
                                                     <div class="col-xs-12">
                                                         <button type="button" id="comprueba2" class="btn btn-primary btn-rounded" onclick="resulevePermutacion()"><i class="fa fa-check"></i>&nbsp;Comprobar</button>
                                                         <button type="button" class="btn btn-danger btn-rounded" onclick="cleanFactor()"><i class="fa fa-repeat"></i>&nbsp;Reestablecer</button>
@@ -181,9 +186,9 @@
 
         var tour = new Tour({
             steps: [{
-                element: "#config",
+                element: "#paso1",
                 title: "Paso 1",
-                content: "Selecciona la función trigonométrica que desees graficar, luego podrás modificar los valores de la formula general y identifica el efecto que tendrá la gráfica. Dar clic en el botón “Comprobar”",
+                content: "Ingresa los valores para “n” y “r”.",
                 placement: "top",
                 backdrop: true,
                 backdropContainer: '#contenido',
@@ -195,9 +200,9 @@
                 }
             },
                 {
-                    element: "#graf",
+                    element: "#paso2",
                     title: "Paso 2",
-                    content: "Área donde visualizaras el grafico de la función seleccionada.",
+                    content: "Da clic al botón “Comprobar”.",
                     placement: "top",
                     backdrop: true,
                     backdropContainer: '#contenido',
@@ -218,8 +223,15 @@
     }
 
     function resulevePermutacion(){
-        $('#respuestaPermutacion').html('La permutación <b><sub>'+$('#n').val()+'</sub>P<sub>'+$('#r').val()+'</sub></b> = '+permutacion($('#n').val(),$('#r').val()));
-        imprimeMultiplicacion($('#n').val(),$('#r').val());
+        if(Number($('#n').val())>=Number($('#r').val())){
+            var n=Math.round($('#n').val());
+            var r=Math.round($('#r').val());
+            $('#respuestaPermutacion').html('La permutación <b><sub>'+n+'</sub>P<sub>'+r+'</sub></b> = '+permutacion(n,r));
+            imprimeMultiplicacion(n,r);
+        }else{
+            toastr.error('El valor de "n" es menor a "r"','Error');
+        }
+
     }
 
     function permutacion(n,r){
