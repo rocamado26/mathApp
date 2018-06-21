@@ -225,7 +225,7 @@
             var fx1 = parseInt(document.getElementById("f1x").value);
             var fy1 = parseInt(document.getElementById("f1y").value);
             var px = parseInt(document.getElementById("px").value);
-            var py = parseInt(document.getElementById("py").value);
+            var py = parseInt(document.getElementById("py").value);|
             var brd1 = JXG.JSXGraph.initBoard('grafica-seno', {boundingbox: [-10, 10, 10, -10], axis:true});
             var A = brd1.create('point',[fx,fy]);
             var B = brd1.create('point',[fx1,fy1]);

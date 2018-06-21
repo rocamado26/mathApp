@@ -353,6 +353,18 @@ Route::get('/LogaritmosFuncion', function () {
 Route::get('/Desigualdadesq', function () {
     return view('Admin.Templates.Desarrollo.Desigualdades.Desigualdades.Desigualdadesq');
 });
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/Exponenciales', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Exponenciales.Exponenciales');
+});
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/FuncionInversa', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Polinomiales.FuncionIversa');
+});
 
 
 /*
