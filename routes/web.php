@@ -387,3 +387,10 @@ Route::get('/Permutacion', function () {
 Route::get('/Combinacion', function () {
     return view('Admin.Templates.Desarrollo.Conteo.Combinaciones.combinacion');
 });
+
+/*
+*	Llamada al area de desarrollo para funciones cuadrática.
+*/
+Route::get('/Funcioncuadratica', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Polinomiales.Funcioncuadra');
+});
