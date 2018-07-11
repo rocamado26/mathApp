@@ -12,7 +12,7 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-plus-square-o"></i><b> Teoría</b></a>
                         </h5>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
+                    <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-8">
@@ -2003,17 +2003,14 @@ function ImprimeRespuesta(v1,v2,op,vx,ft){
         switch(op){
             case 1:{
                 funcion=OperacionFunciones(v2,ft);
-                alert('v1= '+v1+'  1fun='+funcion);
                 resultado=v1/funcion;
             }break;
             case 2:{
                 funcion=OperacionFunciones(v2,ft);
-                alert('v1= '+v1+'  2 fun='+funcion+'  ft: '+ft+' aquiiii');
                 resultado=v1*funcion;
             }break;
             case 3:{
                 resultado=v1/v2;
-                alert('res '+resultado+'  1v  '+v1+'  2v  '+v2+'  '+AnguloFunciones(resultado,ft)+'  ft  '+ft);
                 resultado=AnguloFunciones(resultado,ft);
             }break;
             case 4:{
@@ -2042,7 +2039,6 @@ function validar_num(num){
  * @param {[int]} op     [Función trigonométrica seleccionada]
  */
 function OperacionFunciones(angulo,op) {
-    alert('angulo: '+angulo+' op '+op);
     switch(op){
         case 1:{return Math.sin(radianes(angulo));}break;
         case 2:{return Math.cos(radianes(angulo));}break;

@@ -40,17 +40,83 @@
                                             Por ejemplo:
                                             <div class="well">
                                                 <div class="row diff-wrapper">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
+                                                    <div class="row" style="font-weight:bold">
+                                                        <div class="col-sm-3" align="center">
                                                             <p style="font-size: 18px; text-align: justify;">
-                                                                <b>&nbsp;&nbsp;&nbsp;6! = 6 x 5  x 4 x 3 x 2 x 1</b>
+                                                             <table>
+                                                                <tr>
+                                                                    <td rowspan="3"><sub>4</sub>C<sub>2</sub></td>
+                                                                    <td></td>
+                                                                    <td align="center">4!</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;=&nbsp;</td>
+                                                                    <td align="center">---------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">2! (4-2)!</td>
+                                                                </tr>
+                                                            </table>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-3" align="center">
+                                                            <p style="font-size: 18px; text-align: justify;">
+                                                            <table>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">4!</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;=&nbsp;</td>
+                                                                    <td align="center">---------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">2!.2!</td>
+                                                                </tr>
+                                                            </table>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-3" align="center">
+                                                            <p style="font-size: 18px; text-align: justify;">
+                                                            <table>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">24</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;=&nbsp;</td>
+                                                                    <td align="center">---------</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">4</td>
+                                                                </tr>
+                                                            </table>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-3" align="center">
+                                                            <p style="font-size: 18px; text-align: justify;">
+                                                            <table>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;=&nbsp;</td>
+                                                                    <td align="center"> &nbsp;&nbsp;6 </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td align="center"></td>
+                                                                </tr>
+                                                            </table>
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            A este número, <b>6!</b> le llamamos generalmente “<b>6 factorial</b>”, aunque también es correcto decir “<b>factorial de 6</b>”.
-                                            <br>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -59,8 +125,90 @@
                                                             <center><img src="img/iconos/generales/notebook.png">&nbsp;&nbsp;<font size="4"><i><b>Problema</b></i></font></center>
                                                         </div>
                                                         <div class="panel-body">
-                                                            <b>¿De cuántas formas distintas se pueden sentar 5 personas en un banco?</b><br><br>
-                                                            Sencillamente son las permutaciones de 5 elementos tomados de 5 en 5, y ese número es el factorial de <b>5 => 5! =1 x 2 x 3 x 4 x 5 = 120</b>
+                                                            <b>En una heladería se venden helados de dos sabores diferentes, ¿cuántos helados de sabores diferentes podemos elegir entre los sabores de nata, vainilla, chocolate, limón y naranja?</b><br><br>
+                                                            <br>
+                                                            Verificamos los siguientes puntos: <br>
+                                                            <li>No se toman todos los elementos del grupo (se toman solo de dos en dos) → correcto</li>
+                                                            <li>No se repiten elementos (los helados son de dos sabores diferentes) → correcto</li>
+                                                            <li>El orden no importa (un helado de chocolate y vainilla es el mismo que uno de vainilla y chocolate) → correcto</li>
+                                                            <li>m = 5 sabores diferentes</li>
+                                                            <li>n = 2 (helados de dos sabores</li>
+                                                            <br>
+                                                            <div class="row" style="font-weight:bold">
+                                                                <div class="col-sm-3" align="center">
+                                                                    <p style="font-size: 18px; text-align: justify;">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td rowspan="3"><sub>5</sub>C<sub>2</sub></td>
+                                                                            <td></td>
+                                                                            <td align="center">5!</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;=&nbsp;</td>
+                                                                            <td align="center">---------</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center">2! (5-2)!</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-sm-3" align="center">
+                                                                    <p style="font-size: 18px; text-align: justify;">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center">5!</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;=&nbsp;</td>
+                                                                            <td align="center">---------</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center">2! . 3!</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-sm-3" align="center">
+                                                                    <p style="font-size: 18px; text-align: justify;">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center">120</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;=&nbsp;</td>
+                                                                            <td align="center">---------</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center">12</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-sm-3" align="center">
+                                                                    <p style="font-size: 18px; text-align: justify;">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center">&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;=&nbsp;</td>
+                                                                            <td align="center"> &nbsp;&nbsp;10 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td align="center"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -183,6 +331,8 @@
 </div>
 
 <script>
+    var f=0;
+    var p=0;
     function ayuda_grafica(){
 
         var tour = new Tour({
@@ -227,8 +377,11 @@
         if(Number($('#n').val())>=Number($('#r').val())){
             var n=Math.round($('#n').val());
             var r=Math.round($('#r').val());
-            $('#respuestaPermutacion').html('La combinación <b><sub>'+n+'</sub>C<sub>'+r+'</sub></b> = '+(permutacion(n,r)/factorialRecursivo(r)));
+            f=factorialRecursivo(r);
+            p=permutacion(n,r);
+            $('#respuestaPermutacion').html('La combinación <b><sub>'+n+'</sub>C<sub>'+r+'</sub> = '+(p/f)+'</b>');
             imprimeMultiplicacion(n,r);
+            imprimeFactorial(n);
         }else{
             toastr.error('El valor de "n" es menor a "r"','Error');
         }
@@ -264,7 +417,24 @@
             }
             cont--;
         }
-        $('#procesoSolucion').html('<label>Operación: </label><br><b><sub>'+n+'</sub>C<sub>'+r+'</sub></b>= '+cadena);
+        $('#procesoSolucion').html('<label>Permutación: </label><br><b><sub>'+n+'</sub>P<sub>'+r+'</sub></b>= '+cadena+' = <b>'+p+'</b>');
+    }
+
+    /**
+     * Crea la cadena de la multiplicación del factorial.
+     * @param n valor de n
+     */
+    function imprimeFactorial(n){
+        var cadena="";
+        for(var i=n;i>0;i--){
+            if(i==1){
+                cadena=cadena+" "+i;
+            }else{
+                cadena=cadena+""+i+" x ";
+            }
+        }
+        $('#procesoSolucion').append('<br><br><label>Factorial: </label><br><b>'+n+'! </b>= '+cadena+' = <b>'+f+'</b>');
+        $('#procesoSolucion').append('<br><br><label>respuesta: </label><br>'+p+'/'+f+' = <b>'+(p/f)+'</b>');
     }
 
     function cleanFactor(){

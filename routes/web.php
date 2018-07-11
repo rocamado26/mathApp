@@ -444,3 +444,11 @@ Route::get('/fpolproporcionalidad', function () {
 Route::get('/fpolinversa', function () {
     return view('Admin.Templates.Desarrollo.Funciones.PolInversa');
 });
+
+
+/*
+*	Llamada al area de desarrollo para funciones cuadrática.
+*/
+Route::get('/Funcioncuadratica', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Polinomiales.Funcioncuadra');
+});
