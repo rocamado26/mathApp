@@ -31,7 +31,7 @@
                 <li>
                     <a href=""><i class="fa fa-superscript"></i> <span class="nav-label">Funciones </span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a onclick="CargaOpciones('/algebraicas','Funciones','Algebraicas')">Algebraicas</a></li>
+                        <!--<li><a onclick="CargaOpciones('/algebraicas','Funciones','Algebraicas')">Algebraicas</a></li>-->
                         <li><a onclick="CargaOpciones('/polinomiales','Funciones','Polinomiales')">Polinomiales</a></li>
                         <li><a onclick="CargaOpciones('/exponenciales','Funciones','Exponenciales')">Exponenciales</a></li>
                         <li><a onclick="CargaOpciones('/logaritmicas','Funciones','Logarítmicas')">Logarítmica</a></li>

@@ -365,7 +365,12 @@ Route::get('/Exponenciales', function () {
 Route::get('/FuncionInversa', function () {
     return view('Admin.Templates.Desarrollo.Funciones.Polinomiales.FuncionIversa');
 });
-
+/*
+*	Llamada al area de desarrollo para desigualdades cuadraticas.
+*/
+Route::get('/FuncionRaiz', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.Polinomiales.RaizCuadrada');
+});
 
 /*
 *	Llamada al area de desarrollo para desigualdades cuadraticas.
@@ -386,4 +391,56 @@ Route::get('/Permutacion', function () {
 */
 Route::get('/Combinacion', function () {
     return view('Admin.Templates.Desarrollo.Conteo.Combinaciones.combinacion');
+});
+////////////////////////////////
+//////////FUNCIONES////////////
+//////////////////////////////
+
+/*
+*	Llamada al area de desarrollo para Funciones .
+*/
+Route::get('/fpolcar', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolCaracteristicas');
+});
+/*
+*	Llamada al area de desarrollo para Funciones Constantes.
+*/
+Route::get('/fpolconstantes', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolConstantes');
+});
+/*
+*	Llamada al area de desarrollo para Funciones Lineales.
+*/
+Route::get('/fpollineales', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolLineales');
+});
+/*
+*	Llamada al area de desarrollo para Funciones .
+*/
+Route::get('/fpolcuadraticas', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolCuadraticas');
+});
+/*
+*	Llamada al area de desarrollo para Funciones .
+*/
+Route::get('/fpolcubicas', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolCubicas');
+});
+/*fpolraiz2
+*	Llamada al area de desarrollo para Funciones .
+*/
+Route::get('/fpolraiz2', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolRaiz2');
+});
+/*
+*	Llamada al area de desarrollo para Funciones .
+*/
+Route::get('/fpolproporcionalidad', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolProporcionalidad');
+});
+/*
+*	Llamada al area de desarrollo para Funciones .
+*/
+Route::get('/fpolinversa', function () {
+    return view('Admin.Templates.Desarrollo.Funciones.PolInversa');
 });

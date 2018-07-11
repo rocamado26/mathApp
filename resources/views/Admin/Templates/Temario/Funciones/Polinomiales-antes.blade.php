@@ -4,7 +4,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolcar','Funciones/Polinomiales','Propiedades')">
+                    <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen del tema -->
@@ -21,7 +21,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolconstantes','Funciones/Polinomiales','Constantes')">
+                    <a href="#">
                         <span class="corner"></span>
                         <!-- Debe de ser clase image si se pone una imagen "<div class="image">" y si es un icono debe ser icon <div class="icon"> -->
                             <div class="icon">
@@ -41,7 +41,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpollineales','Funciones/Polinomiales','Lineales')">
+                    <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
@@ -60,7 +60,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolcuadraticas','Funciones/Polinomiales','Cuadátricas')">
+                    <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
@@ -81,7 +81,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolcubicas','Funciones/Polinomiales','Cúbicas')">
+                    <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
@@ -100,7 +100,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolraiz2','Funciones/Polinomiales','Raíz Cuadrada')">
+                    <a onclick="CargaOpciones('/FuncionRaiz','','Polinomiales - Raíz Cuadrada')">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
@@ -119,7 +119,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolproporcionalidad','Funciones/Polinomiales','Proporcionalidad')">
+                    <a href="#">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
@@ -138,7 +138,7 @@
         <div class="col-lg-3">
             <div class="file-box">
                 <div class="file">
-                    <a onclick="CargaOpciones('/fpolinversa','Funciones/Polinomiales','Función Inversa')">
+                    <a onclick="CargaOpciones('/FuncionInversa','','Polinomiales - Funciones Inversa')">
                         <span class="corner"></span>
                         <div class="icon">
                         <!-- Imagen en blanco -->
