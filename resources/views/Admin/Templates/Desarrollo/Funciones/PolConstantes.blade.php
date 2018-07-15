@@ -5,10 +5,10 @@
 	<div class="ibox-content">
 		<div class="panel-body">
 			<div class="panel-group" id="accordion">
-				<div class="panel panel-default"  style="border-color: #23c6c8">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h5 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-plus-square-o"></i>  <b>Teoría</b></a>
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">  <b>Teoría</b></a>
 						</h5>
 					</div>
 					<div id="collapseOne" class="panel-collapse collapse in">
@@ -46,10 +46,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel panel-default"  style="border-color: #23c6c8">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a onclick="ejemplos(1)" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-plus-square-o"></i>  <b>Ejemplos</b></a>
+							<a onclick="ejemplos(1)" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>Ejemplos</b></a>
 						</h4>
 					</div>
 					<div id="collapseTwo" class="panel-collapse collapse on">
@@ -471,13 +471,10 @@
 	<div class="ibox-content">
 		<div class="panel-body"><!--Uno-->
 			<div id="accordion2" class="panel-group">
-				<div class="panel panel-default" style="border-color: #23c6c8">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree3" onclick="cerrarteoria()">
-								<i class="fa fa-plus-square-o">
-
-								</i>
 								<b>Analisis del ejercicio</b>
 							</a>
 							<div class="nav navbar-top-links navbar-right ">
@@ -552,13 +549,10 @@
 						</div><!-- /panel-body[collapseThree3] -->
 					</div>
 				</div>
-				<div class="panel panel-default" style="border-color: #23c6c8">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree4" onclick="">
-								<i class="fa fa-plus-square-o">
-
-								</i>
 								<b>Configuración y desarrolo</b>
 							</a>
 							<div class="nav navbar-top-links navbar-right ">
@@ -673,13 +667,10 @@
 	<div class="ibox-content">
 		<div class="panel-body"><!--Uno-->
 			<div id="accordion3" class="panel-group">
-				<div class="panel panel-default" style="border-color: #23c6c8">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion3" href="#collapseF" onclick="cerrarteoria()">
-								<i class="fa fa-plus-square-o">
-
-								</i>
 								<b>Resolución de problemas</b>
 							</a>
 							<div class="nav navbar-top-links navbar-right ">
