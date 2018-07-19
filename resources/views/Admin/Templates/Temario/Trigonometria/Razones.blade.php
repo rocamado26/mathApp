@@ -10,7 +10,8 @@
                         </div>
                         <div class="file-name">
                             Razones<br/>
-                            <small>seno x, coseno x, tangente x, cotangente x, secante x y cosecante x.</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-danger pull-right">Primer Año</span>
                         </div>
                     </a>
                 </div>
@@ -27,7 +28,8 @@
                             <div class="file-name">
                                 Razones para ángulos.
                                 <br/>
-                                <small>30<font face='symbol'>&#176</font>, 45<font face='symbol'>&#176</font> y 60<font face='symbol'>&#176</font></small>
+                                <small><br>&nbsp;</small>
+                                <span class="label label-danger pull-right">Primer Año</span>
                             </div>
                     </a>
                 </div>
@@ -44,7 +46,8 @@
                         <div class="file-name">
                             Ángulos de elevación y presión
                             <br/>
-                            <small>...</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-danger pull-right">Primer Año</span>
                         </div>
                     </a>
                 </div>
