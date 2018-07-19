@@ -9,7 +9,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h5 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-plus-square-o"></i><b> Teoría</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><b> Teoría</b></a>
                         </h5>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
@@ -99,7 +99,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-plus-square-o"></i>  <b>Ejercicios resueltos</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>Ejercicios resueltos</b></a>
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
@@ -527,7 +527,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"><i class="fa fa-plus-square-o"></i>  <b>Prática</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"><b>Prática</b></a>
                         </h4>
                     </div>
                     <div id="collapseSeven" class="panel-collapse collapse">
@@ -638,7 +638,7 @@
                 <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion1" href="#desarrollo1"><i class="fa fa-plus-square-o"></i>  <b>Análisis del ejercicio</b></a>
+                                    <a data-toggle="collapse" data-parent="#accordion1" href="#desarrollo1"><b>Análisis del ejercicio</b></a>
                                     <div class="nav navbar-top-links navbar-right ">
                                         <div class="col-xs-3">
                                             <button type="button"  onclick="tour1()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
@@ -815,7 +815,7 @@
                 <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion1" href="#desarrollo2"><i class="fa fa-plus-square-o"></i>  <b>Elaboración del plan</b></a>
+                                    <a data-toggle="collapse" data-parent="#accordion1" href="#desarrollo2"><b>Elaboración del plan</b></a>
                                     <div class="nav navbar-top-links navbar-right ">
                                         <div class="col-lg-3">
                                             <button type="button" onclick="tour2()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>
@@ -1005,7 +1005,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion1" href="#desarrollo3"><i class="fa fa-plus-square-o"></i>  <b>Aplicación del plan</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion1" href="#desarrollo3"><b>Aplicación del plan</b></a>
                             <div class="nav navbar-top-links navbar-right ">
                                 <div class="col-xs-3">
                                     <button type="button" onclick="tour3()" class="btn btn-primary btn-xs"><i class="fa fa-question-circle"></i></button>

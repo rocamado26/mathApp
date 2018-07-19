@@ -39,29 +39,7 @@
         <!-- Contenedor principal-->
         <div class="wrapper wrapper-content">
             <div id="contenido">
-                <div class="col-sm-offset-1 col-lg-offset-1 col-sm-10 col-lg-10">
-                   <!-- <div class="ism-slider" data-play_type="once" id="my-slider">
-                        <ol>
-                            <li>
-                                <img src="ism/image/slides/_u/1513926577620_391576.jpg">
-                            </li>
-                            <li>
-                                <img src="ism/image/slides/_u/1513926575843_262266.jpg">
-                            </li>
-                            <li>
-                                <img src="ism/image/slides/_u/1513926575011_133926.jpg">
-                            </li>
-                            <li>
-                                <img src="ism/image/slides/_u/1513926574455_227839.jpg">
-                            </li>
-                            <li>
-                                <img src="ism/image/slides/_u/1513926572892_388869.jpg">
-                            </li>
-                            <li>
-                                <img src="ism/image/slides/_u/1513926562636_837246.jpg">
-                            </li>
-                        </ol>
-                    </div>-->
+                <div class="col-sm-12">
                     <div class="panel panel-success" id="Consejo1" style="display: none;">
                         <div class="panel-heading">
                             <center><img src="img/logo_small2.png" width="50px" height="50px">&nbsp;&nbsp;<font size="5"><i><b>Consejos MathApp</b></i></font></center>
