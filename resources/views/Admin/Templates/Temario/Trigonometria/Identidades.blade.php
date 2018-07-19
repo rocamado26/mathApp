@@ -10,7 +10,8 @@
                         </div>
                         <div class="file-name">
                             Identidades básicas<br/>
-                            <small>csc x = 1/sen x <br>sec x = 1/cos x <br>cot x = 1/tan x</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-info pull-right">Segundo Año</span>
                         </div>
                     </a>
                 </div>

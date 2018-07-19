@@ -10,7 +10,8 @@
                         </div>
                         <div class="file-name">
                             Circulo trigonométrico unitario<br/>
-                            <small>0<font face='symbol'>&#176</font> (1,0) ; 90<font face='symbol'>&#176</font> (0,1) ; 180<font face='symbol'>&#176</font> (-1,0) ; 270<font face='symbol'>&#176</font> (0,1) <br>Funciones trigonométricas para ángulos cuadrantes <br>Gráfica de funciones</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-info pull-right">Segundo Año</span>
                         </div>
                     </a>
                 </div>
@@ -27,7 +28,8 @@
                             <div class="file-name">
                                 Dominio recorrido y periodo 
                                 <br/>
-                                <small>Dominio, recorrido y periodo <br>y = a sen [ b(x+c)] +d <br>y = a cos [ b(x+c)] +d </small>
+                                <small><br>&nbsp;</small>
+                                <span class="label label-info pull-right">Segundo Año</span>
                             </div>
                     </a>
                 </div>

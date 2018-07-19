@@ -12,7 +12,8 @@
                         </div>
                         <div class="file-name">
                             Factorial de un número<br/>
-                            <small>Notación factorial<br/> n! = n.(n-1).(n-2)... 2.1 <br/> Propiedades especiales<br/> 0! = 1</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-info pull-right">Segundo Año</span>
                         </div>
                     </a>
                 </div>
@@ -29,7 +30,8 @@
                         </div>
                         <div class="file-name">
                             Permutaciones<br/>
-                            <small>Tomando todos los elementos<br/>nPr = (n!) / (n.r)!</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-info pull-right">Segundo Año</span>
                         </div>
                     </a>
                 </div>
@@ -48,7 +50,8 @@
                         </div>
                         <div class="file-name">
                             Combinaciones<br/>
-                            <small>nCr = (n!) / (r! (n-r)! )</small>
+                            <small><br>&nbsp;</small>
+                            <span class="label label-info pull-right">Segundo Año</span>
                         </div>
                     </a>
                 </div>
