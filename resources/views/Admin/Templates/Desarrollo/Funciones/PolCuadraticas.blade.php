@@ -343,7 +343,7 @@
 											</div>
 											<br>
 											<script type="text/javascript">
-												var brd1 = JXG.JSXGraph.initBoard('slider1', {boundingbox: [2, 0, 20, -20], showNavigation:false, showCopyright: false, axis:true});
+												var brd1 = JXG.JSXGraph.initBoard('slider1', {boundingbox: [2, -2, 20, -20], showNavigation:false, showCopyright: false, axis:true});
 												var a0 = brd1.create('slider',[[3,-5],[15,-5],[0.01,0,7]], {name:'a'});
 												var a1 = brd1.create('slider',[[3,-10],[15,-10],[0,0,6]], {name:'b'});
 												var a2 = brd1.create('slider',[[3,-15],[15,-15],[0,0,6]], {name:'c'});
@@ -599,6 +599,22 @@ $("#resultadorecorrido").html('');
 			toastr.error('Debe seleccionar al menos una opción','Aviso');
 		}
 	}//termina valores a validos
+}
+
+function cancelar() {
+	a0.setValue(a0._smin);
+	a1.setValue(a1._smin);
+	a2.setValue(a2._smin);
+	brd1.update();
+	$('#opc1').prop('checked', false); // Unchecks it
+	$('#opc2').prop('checked', false); // Unchecks it
+	$('#opc3').prop('checked', false); // Unchecks it
+	$("#a").html('0.01');
+	$("#b").html('0');
+	$("#c").html('0');
+	$("#resultadotabla").html('');
+	$("#resultadorecorrido").html('');
+	$("#resultadodominio").html('');
 }
 ////////////////////////////////////////////
 function randomPractica()
