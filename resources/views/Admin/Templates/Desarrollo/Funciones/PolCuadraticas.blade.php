@@ -338,13 +338,13 @@
 									<div class="row">
 										<div id="tour1_10" class="col-lg-6 col-md-6 col-sm-6">
 											<p>Deslice los puntos sobre la varra para cambiar valores de a, b y c.</p>
-											<p> <b>Considere que se aproximara al entero más proximo.</b> </p>
+											<p> <b>Considere que se podrá aproximar con dos decimales.</b> </p>
 											<div id='slider1' class='jxgbox' style='width:350px; height:100px;'>
 											</div>
 											<br>
 											<script type="text/javascript">
 												var brd1 = JXG.JSXGraph.initBoard('slider1', {boundingbox: [2, 0, 20, -20], showNavigation:false, showCopyright: false, axis:true});
-												var a0 = brd1.create('slider',[[3,-5],[15,-5],[1,0,7]], {name:'a'});
+												var a0 = brd1.create('slider',[[3,-5],[15,-5],[0.01,0,7]], {name:'a'});
 												var a1 = brd1.create('slider',[[3,-10],[15,-10],[0,0,6]], {name:'b'});
 												var a2 = brd1.create('slider',[[3,-15],[15,-15],[0,0,6]], {name:'c'});
 											</script>
@@ -356,7 +356,7 @@
 											<br><br>
 												f ( x ) =
 													<button type="button" id="btn1" onclick="fsigno(1)" class="btn btn-danger"><b>+</b></button>
-													<button type="button" id="btn11" onclick="fsigno(11)" style="display: none;" class="btn btn-danger"><b>-</b></button> <strong id="a">1</strong> x <sup>2</sup>
+													<button type="button" id="btn11" onclick="fsigno(11)" style="display: none;" class="btn btn-danger"><b>-</b></button> <strong id="a">0.01</strong> x <sup>2</sup>
 													<button type="button" id="btn2" onclick="fsigno(2)" class="btn btn-danger"><b>+</b></button>
 													<button type="button" id="btn22" onclick="fsigno(22)" style="display: none;" class="btn btn-danger"><b>-</b></button> <strong id="b" >0</strong> x
 													<button type="button" id="btn3" onclick="fsigno(3)" class="btn btn-danger"><b>+</b></button>
@@ -522,9 +522,9 @@ function fsigno(opc) {
 		}
 	}
 }
-a2.on('drag',function(){ $("#c").text(Math.round(a2.Value())); });
-a1.on('drag',function(){ $("#b").text(Math.round(a1.Value())); });
-a0.on('drag',function(){ $("#a").text(Math.round(a0.Value())); });
+a2.on('drag',function(){ $("#c").text(Math.round(a2.Value()*100)/100); });
+a1.on('drag',function(){ $("#b").text(Math.round(a1.Value()*100)/100); });
+a0.on('drag',function(){ $("#a").text(Math.round(a0.Value()*100)/100); });
 
 function resolver(){
 $("#resultadotabla").html('');
@@ -569,12 +569,12 @@ $("#resultadorecorrido").html('');
 						if (sig1==2 && sig2==2 && sig3==2) {
 							var aux=-1*(parseFloat(valora)*nn*nn)-parseFloat(valorb)*nn-parseFloat(valorc);
 						}
-						rec=rec+aux+', ';
+						rec=rec+Math.round(aux*100)/100 +', ';
 						if (nn==-3) {
 							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%"><b>f(x)</b></td><td width="20%">'+'='+'</td><td width="40%"><b>y</b></td></tr></table>');
-							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+aux+'</td></tr></table>');
+							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+Math.round(aux*100)/100+'</td></tr></table>');
 						}else {
-							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+aux+'</td></tr></table>');
+							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+Math.round(aux*100)/100+'</td></tr></table>');
 						}
 						nn++;
 						an++;
