@@ -3,23 +3,7 @@
         <div class="ibox float-e-margins  animated fadeInUpBig">
             <div class="ibox-title">
                 <h5>Desigualdades <small>-Generalidades</small></h5>
-                <div class="ibox-tools">
-                    <a class="collapse-link">
-                        <i class="fa fa-chevron-up"></i>
-                    </a>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-wrench"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#">Config option 1</a>
-                        </li>
-                        <li><a href="#">Config option 2</a>
-                        </li>
-                    </ul>
-                    <a class="close-link">
-                        <i class="fa fa-times"></i>
-                    </a>
-                </div>
+
             </div>
             <div class="ibox-content">
                 <div class="panel-body">
@@ -1054,7 +1038,8 @@
                         $('#respuesta1').show();
                         console.warn('d es correcto');
                         toastr.success('Haz resuelto el ejercicio.','Excelente');
-                        $('#respuesta1').html('<p>Para <b>X</b> tenemos dos raice o dos valores que cumplen la desigualdad:</p>El valor de <b>X<sub>1</sub></b> = <b></b> <b>'+(-1*c)+'</b><br>El valor de <b>X<sub>2</sub></b> = <b></b> <b>'+(-1*d)+'</b>')
+                        $('#respuesta1').html('<p>Para <b>X</b> tenemos dos raice o dos valores que cumplen la desigualdad:</p>El valor de <b>X<sub>1</sub></b> = <b></b> <b>'+(-1*c)+'</b><br>El valor de <b>X<sub>2</sub></b> = <b></b> <b>'+(-1*d)+'</b>' +
+                            '<p><b><br>Para resolver la desigualdad, tienes que evaluar los dos factores en la tabla como lo describe la teoría de este tema.</b></p>')
                     }else{
                         $('#respuesta1').html('');
                         $('#respuesta1').hide();
