@@ -749,6 +749,13 @@ function resolver(){
 		}
 	}*/
 }
+function cancelar() {
+	$("#resultadodes").html('');
+	$("#resultadok").html('');
+		$("#a").val('');
+			$("#b").val('');
+
+}
 function tgraf_fin(g,a,b){
 	var b_tgraf_01 = JXG.JSXGraph.initBoard('t_graf_fin',
 	{boundingbox: [-10, 10, 10, -10], axis:true, grid:true, showCopyright:false});

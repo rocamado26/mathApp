@@ -351,7 +351,7 @@
 											<br>
 											<script type="text/javascript">
 												var brd1 = JXG.JSXGraph.initBoard('slider1', {boundingbox: [2, 0, 20, -25], showNavigation:false, showCopyright: false, axis:false});
-												var a0 = brd1.create('slider',[[3,-5],[15,-5],[1,0,7]], {name:'a'});
+												var a0 = brd1.create('slider',[[3,-5],[15,-5],[0.01,0,7]], {name:'a'});
 												var a1 = brd1.create('slider',[[3,-10],[15,-10],[0,0,6]], {name:'b'});
 												var a2 = brd1.create('slider',[[3,-15],[15,-15],[0,0,6]], {name:'c'});
 												var a3 = brd1.create('slider',[[3,-20],[15,-20],[0,0,6]], {name:'d'});
@@ -364,7 +364,7 @@
 											<br><br>
 												f ( x ) =
 													<button type="button" id="btn1" onclick="fsigno(1)" class="btn btn-danger"><b>+</b></button>
-													<button type="button" id="btn11" onclick="fsigno(11)" style="display: none;" class="btn btn-danger"><b>-</b></button> <strong id="a">1</strong> x <sup>3</sup>
+													<button type="button" id="btn11" onclick="fsigno(11)" style="display: none;" class="btn btn-danger"><b>-</b></button> <strong id="a">0.01</strong> x <sup>3</sup>
 													<button type="button" id="btn2" onclick="fsigno(2)" class="btn btn-danger"><b>+</b></button>
 													<button type="button" id="btn22" onclick="fsigno(22)" style="display: none;" class="btn btn-danger"><b>-</b></button> <strong id="b" >0</strong> x <sup>2</sup>
 													<button type="button" id="btn3" onclick="fsigno(3)" class="btn btn-danger"><b>+</b></button>
@@ -559,10 +559,10 @@ function fsigno(opc) {
 		}
 	}
 }
-a3.on('drag',function(){ $("#d").text(Math.round(a3.Value())); });
-a2.on('drag',function(){ $("#c").text(Math.round(a2.Value())); });
-a1.on('drag',function(){ $("#b").text(Math.round(a1.Value())); });
-a0.on('drag',function(){ $("#a").text(Math.round(a0.Value())); });
+a3.on('drag',function(){ $("#d").text(Math.round(a3.Value()*100)/100); });
+a2.on('drag',function(){ $("#c").text(Math.round(a2.Value()*100)/100); });
+a1.on('drag',function(){ $("#b").text(Math.round(a1.Value()*100)/100); });
+a0.on('drag',function(){ $("#a").text(Math.round(a0.Value()*100)/100); });
 
 
 function resolver(){
@@ -635,12 +635,12 @@ $("#resultadorecorrido").html('');
 						if (sig1==2 && sig2==2 && sig3==2 && sig4==2) {
 							var aux=-1*(parseFloat(valora)*nn*nn*nn)-parseFloat(valorb)*nn*nn-parseFloat(valorc)*nn-parseFloat(valord);
 						}
-						rec=rec+aux+', ';
+						rec=rec+Math.round(aux*100)/100+', ';
 						if (nn==-3) {
 							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%"><b>f(x)</b></td><td width="20%">'+'='+'</td><td width="40%"><b>y</b></td></tr></table>');
-							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+aux+'</td></tr></table>');
+							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+Math.round(aux*100)/100+'</td></tr></table>');
 						}else {
-							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+aux+'</td></tr></table>');
+							$("#resultadotabla").append('<table border="1" width="80%"><tr align="center"><td width="40%">'+nn+'</td><td width="20%">'+'--'+'</td><td width="40%">'+Math.round(aux*100)/100+'</td></tr></table>');
 						}
 						nn++;
 						an++;
@@ -665,6 +665,23 @@ $("#resultadorecorrido").html('');
 			toastr.error('Debe seleccionar al menos una opción','Aviso');
 		}
 	}//termina valores a validos
+}
+function cancelar() {
+	a0.setValue(a0._smin);
+	a1.setValue(a1._smin);
+	a2.setValue(a2._smin);
+	a3.setValue(a3._smin);
+	brd1.update();
+	$('#opc1').prop('checked', false); // Unchecks it
+	$('#opc2').prop('checked', false); // Unchecks it
+	$('#opc3').prop('checked', false); // Unchecks it
+	$("#a").html('0.01');
+	$("#b").html('0');
+	$("#c").html('0');
+	$("#d").html('0');
+	$("#resultadotabla").html('');
+	$("#resultadorecorrido").html('');
+	$("#resultadodominio").html('');
 }
 ////////////////////////////////////////////
 function randomPractica()

@@ -574,20 +574,32 @@
 									<div class="alert alert-warning" id="tour1_05">
 										<font size="3">
 											<div class="checkbox checkbox-info">
-	                                			<input id="opcF1" type="checkbox">
-	                                			<label for="opF1"><strong>f(</strong><strong id="valF1"></strong>) = <strong id="valF11"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcF1" type="checkbox">
+		                                			<label for="opF1"><strong>f(</strong><strong id="valF1"></strong>) = <strong id="valF11"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chek1"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcF2" type="checkbox">
-	                                			<label for="opF2"><strong>f(</strong><strong id="valF2"></strong>) = <strong id="valF22"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcF2" type="checkbox">
+		                                			<label for="opF2"><strong>f(</strong><strong id="valF2"></strong>) = <strong id="valF22"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chek2"></div>
 	                                        </div>
 	                                        <div class="checkbox checkbox-info">
-	                                			<input id="opcF3" type="checkbox">
-	                                			<label for="opF3"><strong>f(</strong><strong id="valF3"></strong>) = <strong id="valF33"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcF3" type="checkbox">
+		                                			<label for="opF3"><strong>f(</strong><strong id="valF3"></strong>) = <strong id="valF33"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chek3"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcF4" type="checkbox">
-	                                			<label for="opF4"><strong>f(</strong><strong id="valF4"></strong>) = <strong id="valF44"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcF4" type="checkbox">
+		                                			<label for="opF4"><strong>f(</strong><strong id="valF4"></strong>) = <strong id="valF44"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chek4"></div>
 	                                		</div>
 	                                	</font>
 											<div align="right">
@@ -602,20 +614,32 @@
 									<div id="tour1_07" class="alert alert-warning">
 										<font size="3">
 											<div class="checkbox checkbox-info">
-	                                			<input id="opcD1" type="checkbox">
-	                                			<label for="opcD1">Dominio: <strong id="valD1"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcD1" type="checkbox">
+		                                			<label for="opcD1">Dominio: <strong id="valD1"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chekD1"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcD2" type="checkbox">
-	                                			<label for="opcD2">Dominio: <strong id="valD2"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcD2" type="checkbox">
+													<label for="opcD2">Dominio: <strong id="valD2"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chekD2"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcD3" type="checkbox">
-	                                			<label for="opcD3">Dominio: <strong id="valD3"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcD3" type="checkbox">
+		                                			<label for="opcD3">Dominio: <strong id="valD3"></strong></label>
+												</div>
+	                                			<div class="col-lg-2" id="chekD3"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcD4" type="checkbox">
-	                                			<label for="opcD4">Dominio: <strong id="valD4"></strong></label>
+												<div class="col-lg-10">
+	                                				<input id="opcD4" type="checkbox">
+	                                				<label for="opcD4">Dominio: <strong id="valD4"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chekD4"></div>
 	                                		</div>
 			                            </font>
 											<div align="right">
@@ -630,20 +654,32 @@
 									<div class="alert alert-warning" id="tour1_09">
 									<font size="3">
 											<div class="checkbox checkbox-info">
-	                                			<input id="opcR1" type="checkbox">
-	                                			<label for="opcR1">Recorrido: <strong id="valR1"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcR1" type="checkbox">
+													<label for="opcR1">Recorrido: <strong id="valR1"></strong></label>
+												</div>
+	                                			<div class="col-lg-2" id="chekR1"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcR2" type="checkbox">
-	                                			<label for="opcR2">Recorrido: <strong id="valR2"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcR2" type="checkbox">
+		                                			<label for="opcR2">Recorrido: <strong id="valR2"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chekR2"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcR3" type="checkbox">
-	                                			<label for="opcR3">Recorrido: <strong id="valR3"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcR3" type="checkbox">
+		                                			<label for="opcR3">Recorrido: <strong id="valR3"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chekR3"></div>
 	                                		</div>
 	                                		<div class="checkbox checkbox-info">
-	                                			<input id="opcR4" type="checkbox">
-	                                			<label for="opcR4">Recorrido: <strong id="valR4"></strong></label>
+												<div class="col-lg-10">
+													<input id="opcR4" type="checkbox">
+		                                			<label for="opcR4">Recorrido: <strong id="valR4"></strong></label>
+												</div>
+												<div class="col-lg-2" id="chekR4"></div>
 	                                		</div>
 			                            </font>
 										<div align="right">
@@ -1023,17 +1059,82 @@ function verificar(){
  * @return {[type]} [description]
  */
 function verificarF() {
+	$('#chek1').html('');
+	$('#chek2').html('');
+	$('#chek3').html('');
+	$('#chek4').html('');
+	if (vFuncion==1) {
+		if ($("#opcF1").prop('checked') ) {
+			$('#chek1').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcF2").prop('checked') ) {
+			$('#chek2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF3").prop('checked') ) {
+			$('#chek3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF4").prop('checked') ) {
+			$('#chek4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vFuncion==2) {
+		if ($("#opcF1").prop('checked') ) {
+			$('#chek1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF2").prop('checked') ) {
+			$('#chek2').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcF3").prop('checked') ) {
+			$('#chek3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF4").prop('checked') ) {
+			$('#chek4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vFuncion==3) {
+		if ($("#opcF2").prop('checked') ) {
+			$('#chek2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF1").prop('checked') ) {
+			$('#chek1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF3").prop('checked') ) {
+			$('#chek3').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcF4").prop('checked') ) {
+			$('#chek4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vFuncion==4) {
+		if ($("#opcF2").prop('checked') ) {
+			$('#chek2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF3").prop('checked') ) {
+			$('#chek3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF1").prop('checked') ) {
+			$('#chek1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcF4").prop('checked') ) {
+			$('#chek4').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+	}
+
 	if (vFuncion==1 && $("#opcF1").prop('checked') && !$("#opcF2").prop('checked') && !$("#opcF3").prop('checked') && !$("#opcF4").prop('checked')) {
 		toastr.success("Continue identificando el dominio","Excelente");
+		$('#chek1').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 	} else {
 		if (vFuncion==2 &&  $("#opcF2").prop('checked') && !$("#opcF1").prop('checked') && !$("#opcF3").prop('checked') && !$("#opcF4").prop('checked')) {
 			toastr.success("Continue identificando el dominio","Excelente");
+			$('#chek2').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 		} else {
 			if (vFuncion==3 &&  $("#opcF3").prop('checked') && !$("#opcF2").prop('checked') && !$("#opcF1").prop('checked') && !$("#opcF4").prop('checked')) {
 				toastr.success("Continue identificando el dominio","Excelente");
+				$('#chek3').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 			} else {
 				if (vFuncion==4 &&  $("#opcF4").prop('checked') && !$("#opcF3").prop('checked') && !$("#opcF2").prop('checked') && !$("#opcF1").prop('checked')) {
 					toastr.success("Continue identificando el dominio","Excelente");
+					$('#chek4').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 				} else {
 					toastr.error("Revise la teoria e intentelo nuevamente","Alto");
 				}
@@ -1043,17 +1144,82 @@ function verificarF() {
 }
 
 function verificarD() {
+	$('#chekD1').html('');
+	$('#chekD2').html('');
+	$('#chekD3').html('');
+	$('#chekD4').html('');
+	if (vDominio==1) {
+		if ($("#opcD1").prop('checked') ) {
+			$('#chekD1').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcD2").prop('checked') ) {
+			$('#chekD2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD3").prop('checked') ) {
+			$('#chekD3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD4").prop('checked') ) {
+			$('#chekD4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vDominio==2) {
+		if ($("#opcD1").prop('checked') ) {
+			$('#chekD1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD2").prop('checked') ) {
+			$('#chekD2').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcD3").prop('checked') ) {
+			$('#chekD3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD4").prop('checked') ) {
+			$('#chekD4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vDominio==3) {
+		if ($("#opcD2").prop('checked') ) {
+			$('#chekD2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD1").prop('checked') ) {
+			$('#chekD1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD3").prop('checked') ) {
+			$('#chekD3').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcD4").prop('checked') ) {
+			$('#chekD4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vDominio==4) {
+		if ($("#opcD2").prop('checked') ) {
+			$('#chekD2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD3").prop('checked') ) {
+			$('#chekD3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD1").prop('checked') ) {
+			$('#chekD1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcD4").prop('checked') ) {
+			$('#chekD4').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+	}
+
 	if (vDominio==1 && $("#opcD1").prop('checked') && !$("#opcD2").prop('checked') && !$("#opcD3").prop('checked') && !$("#opcD4").prop('checked')) {
 		toastr.success("Continue, identificando el recorrido de la grafica o función.","Excelente");
+		$('#chekD1').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 	} else {
 		if (vDominio==2 && $("#opcD2").prop('checked') && !$("#opcD1").prop('checked') && !$("#opcD3").prop('checked') && !$("#opcD4").prop('checked')) {
 			toastr.success("Continue, identificando el recorrido de la grafica o función.","Excelente");
+			$('#chekD2').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 		} else {
 			if (vDominio==3 && $("#opcD3").prop('checked') && !$("#opcD2").prop('checked') && !$("#opcD1").prop('checked') && !$("#opcD4").prop('checked')) {
 				toastr.success("Continue, identificando el recorrido de la grafica o función.","Excelente");
+				$('#chekD3').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 			} else {
 				if (vDominio==4 && $("#opcD4").prop('checked') && !$("#opcD3").prop('checked') && !$("#opcD2").prop('checked') && !$("#opcD1").prop('checked')) {
 					toastr.success("Continue, identificando el recorrido de la grafica o función.","Excelente");
+					$('#chekD4').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
 				} else {
 					toastr.error("Revise la teoria e intentelo nuevamente","Alto");
 				}
@@ -1062,6 +1228,67 @@ function verificarD() {
 	}
 }
 function verificarR() {
+	$('#chekR1').html('');
+	$('#chekR2').html('');
+	$('#chekR3').html('');
+	$('#chekR4').html('');
+	if (vRecorrido==1) {
+		if ($("#opcR1").prop('checked') ) {
+			$('#chekR1').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcR2").prop('checked') ) {
+			$('#chekR2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR3").prop('checked') ) {
+			$('#chekR3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR4").prop('checked') ) {
+			$('#chekR4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vRecorrido==2) {
+		if ($("#opcR1").prop('checked') ) {
+			$('#chekR1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR2").prop('checked') ) {
+			$('#chekR2').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcR3").prop('checked') ) {
+			$('#chekR3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR4").prop('checked') ) {
+			$('#chekR4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vRecorrido==3) {
+		if ($("#opcR2").prop('checked') ) {
+			$('#chekR2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR1").prop('checked') ) {
+			$('#chekR1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR3").prop('checked') ) {
+			$('#chekR3').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+		if ($("#opcR4").prop('checked') ) {
+			$('#chekR4').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+	}
+	if (vRecorrido==4) {
+		if ($("#opcR2").prop('checked') ) {
+			$('#chekR2').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR3").prop('checked') ) {
+			$('#chekR3').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR1").prop('checked') ) {
+			$('#chekR1').html('<span class="badge badge-danger"><i class="fa fa-thumbs-down"></i></span>');
+		}
+		if ($("#opcR4").prop('checked') ) {
+			$('#chekR4').html('<span class="badge badge-primary"><i class="fa fa-thumbs-up"></i></span>');
+		}
+	}
+
 	if (vRecorrido==1 && $("#opcR1").prop('checked') && !$("#opcR2").prop('checked') && !$("#opcR3").prop('checked') && !$("#opcR4").prop('checked')) {
 		toastr.success("Ha identificado el recorrido de la función","Excelente");
 	} else {
@@ -1225,8 +1452,8 @@ function recorrido() {
 		case 4:{
 			$('#valR1').html(' '+valx1);
 			$('#valR2').html(' '+getRand(-15,15));
-			$('#valR3').html(' '+valx+'>');
-			$('#valR4').html(' '+valy+'>');
+			$('#valR3').html(' '+valx+'');
+			$('#valR4').html(' '+valy+'');
 		}break;
 	}
 }
