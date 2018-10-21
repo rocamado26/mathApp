@@ -653,7 +653,7 @@
                                             <div class="alert alert-info">
                                                 <ul>
                                                     <li>
-                                                        Debes crear una escenario de tu ejercicio a resolver, así podrás tener un análisis más profundo que te ayudara en la compresión.
+                                                        Debes crear un escenario de tu ejercicio a resolver, así podrás tener un análisis más profundo que te ayudara en la compresión.
                                                     </li>
                                                     <li>
                                                         Si el ejercicio te presenta una figura diferente a un triángulo, busca la manera de recrear el triángulo a partir de lo que el enunciado diga.
@@ -1060,7 +1060,7 @@
                                                     <div class="row">
                                                         <div class="col-xs-12">
                                                             <div class="alert alert-info">
-                                                                <p style="text-align: justify;">Despeja la variable que deseas encontrar si es necesario, de lo contrario pulsa el botón para llegar a un valor numérico, si es posible.</p>
+                                                                <p style="text-align: justify;">Despeja la variable que deseas encontrar si es necesario, de lo contrario pulsa el botón "Comprobar" para llegar a un valor numérico, si es posible.</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1071,7 +1071,7 @@
                                                         <div class="col-xs-8">
                                                             
                                                             <div class="row">
-                                                                <div class="col-xs-12" width: 200px;height: 140px;" id="contenendor_degrade">
+                                                                <div class="col-xs-12" style="width:200px;height: 140px;" id="contenendor_degrade">
                                                                 <div type="button" style="position: relative; top: 34px; left: 138px;" class="btn btn-white btn-sm"><b>=</b></div>
                                                                 <div id="drop1" style="position: relative; top: 0px; left: 77px; width: 30px;height: 30px;background: #b9b8b8"><b></b></div>
                                                                 <div id="drop2" style="position: relative;  top: -32px; left: 193px; width: 30px;height: 30px;background: #b9b8b8"></div>
