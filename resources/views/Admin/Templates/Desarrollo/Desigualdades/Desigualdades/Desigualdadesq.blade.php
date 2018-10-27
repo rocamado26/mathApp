@@ -943,6 +943,7 @@
     
 
     function verFactorizacion(op) {
+        limpiaPractica2();
         if(op){
             $( "#x2" ).prop( "disabled", true );
             $('#factor').show();
@@ -975,6 +976,8 @@
         $('#T7').html('');
         $('#T8').html('');
         $('#T9').html('');
+        $('#d1').val('');
+        $('#e1').val('');
         $('#respuesta2').hide();
     }
     
